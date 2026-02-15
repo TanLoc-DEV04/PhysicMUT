@@ -1,3 +1,21 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+/* MathJax Specific Overrides */
+mjx-container[display="true"] {
+    display: block !important;
+    margin: 1em 0;
+}
+
+mjx-container[display="false"] {
+    display: inline-block !important;
+    margin: 0;
+}
+
+/* Fallback for containers without display attr if any - usually they are inline by default but let's be safe */
+mjx-container:not([display="true"]) {
+    display: inline-block !important;
+}
+
+/* Inline HTML Content Display - REMOVED */

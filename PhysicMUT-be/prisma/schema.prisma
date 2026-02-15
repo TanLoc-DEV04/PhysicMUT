@@ -1,0 +1,128 @@
+// This is your Prisma schema file,
+// learn more about it in the docs: https://pris.ly/d/prisma-schema
+
+generator client {
+  provider = "prisma-client-js"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+// User & Auth
+model User {
+  id            String    @id @default(uuid())
+  username      String    @unique
+  email         String    @unique
+  password_hash String
+  full_name     String?
+  
+  role_id       String?
+  role          Role?     @relation(fields: [role_id], references: [id])
+  
+  created_at    DateTime  @default(now())
+  updated_at    DateTime  @updatedAt
+}
+
+model Role {
+  id          String   @id @default(uuid())
+  name        String   @unique
+  description String?
+  permissions Json?
+  users       User[]
+  created_at  DateTime @default(now())
+  updated_at  DateTime @updatedAt
+}
+
+// Educational Content
+
+model Chapter {
+  id          String   @id @default(uuid())
+  name        String
+  description String?
+  order       Int      @default(0)
+  lessons     Lesson[]
+  created_at  DateTime @default(now())
+  updated_at  DateTime @updatedAt
+}
+
+model Lesson {
+  id          String    @id @default(uuid())
+  name        String
+  chapter_id  String
+  chapter     Chapter   @relation(fields: [chapter_id], references: [id])
+  order       Int       @default(0)
+  
+  // Content relations
+  theories    Theory[]
+  models3d    Model3D[]
+  examples    Example[]
+  exercises   Exercise[]
+  
+  created_at  DateTime @default(now())
+  updated_at  DateTime @updatedAt
+}
+
+model Theory {
+  id           String   @id @default(uuid())
+  lesson_id    String
+  lesson       Lesson   @relation(fields: [lesson_id], references: [id])
+  title        String
+  content_html String   // Rich text content
+  
+  type         String   @default("General")
+  status       String   @default("ACTIVE") // ACTIVE, INACTIVE
+  
+  created_at   DateTime @default(now())
+  updated_at   DateTime @updatedAt
+}
+
+model Model3D {
+  id            String   @id @default(uuid())
+  lesson_id     String
+  lesson        Lesson   @relation(fields: [lesson_id], references: [id])
+  name          String
+  description   String?
+  source_url    String   // Path to GLB/GLTF file
+  thumbnail_url String?
+  
+  type          String   @default("General")
+  status        String   @default("ACTIVE")
+  
+  created_at    DateTime @default(now())
+  updated_at    DateTime @updatedAt
+}
+
+model Example {
+  id           String   @id @default(uuid())
+  lesson_id    String
+  lesson       Lesson   @relation(fields: [lesson_id], references: [id])
+  title        String
+  problem      String   // Problem statement
+  solution     String   // Step-by-step solution
+  
+  type         String   @default("General")
+  status       String   @default("ACTIVE")
+  reference    String?
+  
+  created_at   DateTime @default(now())
+  updated_at   DateTime @updatedAt
+}
+
+model Exercise {
+  id             String   @id @default(uuid())
+  lesson_id      String
+  lesson         Lesson   @relation(fields: [lesson_id], references: [id])
+  question       String
+  options        Json     // Stores multiple choice options: [{id: "A", text: "Option A"}, ...]
+  correct_answer String   // ID of the correct option (e.g., "A")
+  level          String   @default("MEDIUM") // EASY, MEDIUM, HARD
+  
+  type           String   @default("General")
+  status         String   @default("ACTIVE")
+  reference      String?
+  
+  created_at     DateTime @default(now())
+  updated_at     DateTime @updatedAt
+}

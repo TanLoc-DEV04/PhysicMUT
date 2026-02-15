@@ -1,0 +1,22 @@
+import { Request, Response } from 'express';
+export declare const getChapters: (req: Request, res: Response) => Promise<void>;
+export declare const createChapter: (req: Request, res: Response) => Promise<void>;
+export declare const getLessonById: (req: Request, res: Response) => Promise<void>;
+export declare const createLesson: (req: Request, res: Response) => Promise<void>;
+export declare const getTheories: (req: Request, res: Response) => Promise<void>;
+export declare const createTheory: (req: Request, res: Response) => Promise<void>;
+export declare const updateTheory: (req: Request, res: Response) => Promise<void>;
+export declare const deleteTheory: (req: Request, res: Response) => Promise<void>;
+export declare const getModels3D: (req: Request, res: Response) => Promise<void>;
+export declare const createModel3D: (req: Request, res: Response) => Promise<void>;
+export declare const updateModel3D: (req: Request, res: Response) => Promise<void>;
+export declare const deleteModel3D: (req: Request, res: Response) => Promise<void>;
+export declare const getExamples: (req: Request, res: Response) => Promise<void>;
+export declare const createExample: (req: Request, res: Response) => Promise<void>;
+export declare const updateExample: (req: Request, res: Response) => Promise<void>;
+export declare const deleteExample: (req: Request, res: Response) => Promise<void>;
+export declare const getExercises: (req: Request, res: Response) => Promise<void>;
+export declare const createExercise: (req: Request, res: Response) => Promise<void>;
+export declare const updateExercise: (req: Request, res: Response) => Promise<void>;
+export declare const deleteExercise: (req: Request, res: Response) => Promise<void>;
+//# sourceMappingURL=contentController.d.ts.map
