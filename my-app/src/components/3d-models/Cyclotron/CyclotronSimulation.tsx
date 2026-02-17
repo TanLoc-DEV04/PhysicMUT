@@ -54,6 +54,7 @@ const CyclotronSimulation: React.FC = () => {
             mountRef.current.removeChild(mountRef.current.firstChild);
         }
 
+
         const scene = new THREE.Scene();
         // Use the same tech-y background color as before, or the CubeTexture if assets were available.
         // Stick to color for consistency with other parts of the app unless assets are guaranteed.

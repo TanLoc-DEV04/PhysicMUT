@@ -7,7 +7,7 @@ import Model3D from '../../pages/ModelDetail/Model3D';
 // Lazy load heavy simulation components
 const CyclotronSim = lazy(() => import('./Cyclotron/CyclotronSimulation'));
 const LoudspeakerSim = lazy(() => import('./Loudspeaker/LoudspeakerSimulation'));
-const MassSpectrometerSim = lazy(() => import('./MassSpectrometer/MassSpectrometerSimulation'));
+const MassSpectrometerSim = lazy(() => import('./MassSpectrometry/MassSpectrometerSimulation'));
 
 interface ModelRegistryProps {
     modelType?: string; // e.g., 'CYCLOTRON', 'MASS_SPECTROMETER'

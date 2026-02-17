@@ -493,6 +493,14 @@ export class Cyclotron3DService {
       .lil-gui { 
         --width: 350px;
         --name-width: 50%;
+        --background-color: #1f1f1f;
+        --text-color: #eaeaea;
+        --title-background-color: #111;
+        --widget-color: #444444;
+        --hover-color: #0088ff;
+        --focus-color: #646464;
+        --number-color: #2cc9ff; 
+        --string-color: #a2db3c;
         font-size: 15px !important;
       }
       .lil-gui .title { font-size: 17px !important; font-weight: bold; padding: 8px; }
