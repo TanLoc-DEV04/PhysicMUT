@@ -1,3 +1,4 @@
+
 import { useState } from 'react';
 import { Table, Button, Space, Popconfirm, message } from 'antd';
 import { PlusOutlined, DeleteOutlined, EyeOutlined } from '@ant-design/icons';
@@ -27,7 +28,7 @@ function AdminManagementList() {
 
 
   // Filter only Admins and apply search
-  const filteredData = (data || []).filter((u: any) => {
+  const filteredData = (Array.isArray(data) ? data : []).filter((u: any) => {
       // Filter out Students and Teachers, assuming everyone else has some admin privileges or is a custom role
       const isAdmin = u.role?.name && u.role?.name !== 'Student' && u.role?.name !== 'Teacher';
       const matchesSearch = !searchText || 

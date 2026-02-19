@@ -1,5 +1,5 @@
 import { useMutation, useQueryClient } from '@tanstack/react-query';
-import { userService } from '../../../services/api';
+import { userService } from '../../../services/userService';
 import { message } from 'antd';
 
 export const useUpdateAndAddAdmin = (onSuccess: () => void) => {

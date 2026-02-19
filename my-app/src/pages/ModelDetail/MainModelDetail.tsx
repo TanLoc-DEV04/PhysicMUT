@@ -12,6 +12,9 @@ import {
 } from '@ant-design/icons';
 import type { MenuProps } from 'antd';
 import ModelRegistry from '../../components/3d-models/ModelRegistry';
+import { HologramScene } from '../../components/physicmut-bot/HologramScene';
+import ChatInterface from '../../components/physicmut-bot/ChatInterface'; 
+import type { AvatarState } from '../../components/physicmut-bot/HoloAvatar';
 import Theory from './Theory';
 import ExampleExerciseTab from './ExampleExerciseTab';
 import { useParams } from 'react-router-dom';
@@ -41,7 +44,8 @@ function MainModelDetail() {
   const [collapsed, setCollapsed] = useState(false);
   const [mobileDrawerOpen, setMobileDrawerOpen] = useState(false);
   const [activeTab, setActiveTab] = useState('1'); // '1' = Examples, '2' = Exercises
-  
+  const [botState, setBotState] = useState<AvatarState>('IDLE');
+
   const { id } = useParams();
   const { data: lesson, isLoading, error } = useLesson(id);
   
@@ -54,14 +58,14 @@ function MainModelDetail() {
     if (!lesson) return [];
 
     const exampleItems = lesson.examples
-        ?.filter(ex => ex.status !== 'INACTIVE')
-        .map((ex, index) => 
+        ?.filter((ex: any) => ex.status !== 'INACTIVE')
+        .map((ex: any, index: number) => 
             getItem(`Bài ${index + 1}: ${ex.title || 'Bài tập'}`, `example-${ex.id}`, <FileTextOutlined />)
         ) || [];
 
     const exerciseItems = lesson.exercises
-        ?.filter(ex => ex.status !== 'INACTIVE')
-        .map((ex, index) => 
+        ?.filter((ex: any) => ex.status !== 'INACTIVE')
+        .map((ex: any, index: number) => 
             getItem(`Câu ${index + 1}`, `exercise-${ex.id}`, <FormOutlined />)
         ) || [];
 
@@ -84,7 +88,6 @@ function MainModelDetail() {
     }
 
     // Scroll logic
-    // Using setTimeout to allow Tab switch/render to happen first if needed
     setTimeout(() => {
         let targetId = key;
         
@@ -96,7 +99,6 @@ function MainModelDetail() {
         const element = document.getElementById(targetId);
         if (element) {
             element.scrollIntoView({ behavior: 'smooth', block: 'center' });
-            // Optional: Highlight effect could be added here
         }
     }, 100);
   };
@@ -119,6 +121,11 @@ function MainModelDetail() {
       />
     </>
   );
+
+  const handleUpdateSimulation = (modelName: string, params: any) => {
+    console.log(`[MainModelDetail] Updating ${modelName}:`, params);
+    // Future integration can happen here
+  };
 
   if (isLoading) {
       return (
@@ -248,6 +255,27 @@ function MainModelDetail() {
                 }}
             />
         </Drawer>
+
+        {/* Floating Hologram Bot */}
+        <div style={{
+            position: 'fixed',
+            bottom: '20px',
+            right: '400px', // Adjusted to be left of chat
+            width: '200px',
+            height: '300px',
+            zIndex: 1000,
+            pointerEvents: 'none'
+        }}>
+            <div style={{ pointerEvents: 'auto', width: '100%', height: '100%' }}>
+               <HologramScene botState={botState} />
+            </div>
+        </div>
+
+        {/* Chat Interface */}
+        <ChatInterface 
+            onUpdateSimulation={handleUpdateSimulation} 
+            onStateChange={setBotState} 
+        />
 
     </Layout>
   );

@@ -1,7 +1,7 @@
 import { Form, Input, Button, Checkbox, message } from 'antd';
 import { UserOutlined, LockOutlined } from '@ant-design/icons';
 import { useNavigate, Link } from 'react-router-dom';
-import { authService } from '../../services/api';
+import { authService } from '../../services/authService';
 import { useAuth } from '../../contexts/AuthContext';
 
 function LoginPage() {
@@ -28,7 +28,7 @@ function LoginPage() {
         login(mappedUser as any); // Cast to any to avoid strict type checks if types slightly differ, but mappedUser aligns better now.
         
         // Also save token (AuthContext might not handle token yet broadly, but login clears it on logout)
-        localStorage.setItem('token', response.access_token);
+        localStorage.setItem('token', response.access_token || '');
         
         message.success('Đăng nhập thành công');
         

@@ -1,0 +1,309 @@
+﻿THEORY
+<div class="cyclotron-theory">
+    <h1 style="text-align: center; color: #2c3e50;">CHUYÊN ĐỀ: MÁY GIA TỐC HẠT CYCLOTRON (XICLÔTRÔN)</h1>
+
+
+    <section>
+        <h2 style="color: #e67e22;">1. Định nghĩa và Cấu tạo</h2>
+        <p><strong>Định nghĩa:</strong> Cyclotron là một loại máy gia tốc hạt sử dụng phối hợp điện trường biến thiên và từ trường đều để tăng tốc cho các hạt mang điện (như proton, deuteron, hạt alpha...) di chuyển theo quỹ đạo tròn với bán kính tăng dần theo hình xoắn ốc [1, 2].</p>
+        
+        <p><strong>Cấu tạo chính:</strong></p>
+        <ul>
+            <li><strong>Hai hộp rỗng hình chữ D (Dees):</strong> Là hai điện cực kim loại rỗng hình chữ D, đặt đối diện nhau và cách nhau một khe hở hẹp [2, 3].</li>
+            <li><strong>Từ trường đều (B):</strong> Toàn bộ hệ thống hộp D được đặt trong chân không giữa hai cực của nam châm điện mạnh. Cảm ứng từ B vuông góc với mặt phẳng của các hộp D [2, 3].</li>
+            <li><strong>Nguồn điện xoay chiều (U<sub>~</sub>):</strong> Được nối vào hai hộp D để tạo ra điện trường biến thiên tần số cao tại khe hở giữa hai hộp [2].</li>
+            <li><strong>Nguồn phát hạt:</strong> Đặt ở tâm của máy (khe hở) để phát ra các hạt mang điện cần gia tốc [1].</li>
+        </ul>
+    </section>
+
+
+    <section>
+        <h2 style="color: #e67e22;">2. Nguyên lý hoạt động</h2>
+        <p>Quá trình gia tốc diễn ra theo chu trình sau:</p>
+        <ol>
+            <li><strong>Trong lòng hộp D:</strong> Bên trong hộp D là đẳng thế (không có điện trường). Hạt chỉ chịu tác dụng của <strong>lực Lo-ren-xơ</strong> do từ trường B gây ra. Hạt chuyển động tròn đều với bán kính <em>r</em> [1].</li>
+            <li><strong>Tại khe hở:</strong> Khi hạt đi đến khe hở, điện trường giữa hai hộp D đổi chiều sao cho hạt được tăng tốc. Hạt nhận năng lượng từ điện trường, vận tốc <em>v</em> tăng lên [2].</li>
+            <li><strong>Quỹ đạo xoắn ốc:</strong> Khi vận tốc tăng, bán kính quỹ đạo của hạt trong từ trường sẽ tăng theo (do <em>r ~ v</em>). Do đó, hạt di chuyển theo đường xoắn ốc từ tâm ra ngoài [2].</li>
+            <li><strong>Dẫn ra ngoài:</strong> Khi hạt đạt đến bán kính cực đại (mép ngoài của hộp D), nó được dẫn ra khỏi máy qua một cửa sổ để sử dụng [2, 4].</li>
+        </ol>
+    </section>
+
+
+    <section>
+        <h2 style="color: #e67e22;">3. Các công thức quan trọng (Dùng cho thi THPT QG)</h2>
+        <p>Giả sử hạt có khối lượng <em>m</em>, điện tích <em>q</em>, chuyển động trong từ trường đều <em>B</em>.</p>
+
+
+        <h3>a. Lực Lo-ren-xơ (Lực hướng tâm)</h3>
+        <p>Lực từ tác dụng lên hạt đóng vai trò là lực hướng tâm:</p>
+        <p style="background-color: #f1f1f1; padding: 10px; border-left: 5px solid #3498db;">
+            F = |q|vB = m(v<sup>2</sup> / r)
+        </p>
+        <p><em>Trong đó: v là vận tốc dài, r là bán kính quỹ đạo [1, 2].</em></p>
+
+
+        <h3>b. Bán kính quỹ đạo (r)</h3>
+        <p style="background-color: #f1f1f1; padding: 10px; border-left: 5px solid #3498db;">
+            r = (mv) / (|q|B)
+        </p>
+        <p><em>Nhận xét:</em> Bán kính tỉ lệ thuận với vận tốc. Khi hạt được gia tốc, <em>v</em> tăng thì <em>r</em> tăng [2, 5].</p>
+
+
+        <h3>c. Chu kỳ (T) và Tần số (f)</h3>
+        <p>Đây là đại lượng quan trọng nhất chứng minh khả năng đồng bộ hóa của Cyclotron.</p>
+        <ul>
+            <li><strong>Chu kỳ quay:</strong> T = (2&pi;r) / v = (2&pi;m) / (|q|B)</li>
+            <li><strong>Tần số Cyclotron:</strong> f = 1/T = (|q|B) / (2&pi;m)</li>
+            <li><strong>Tần số góc:</strong> &omega; = (|q|B) / m</li>
+        </ul>
+        <p><strong>Lưu ý cực kỳ quan trọng:</strong> Chu kỳ và tần số quay <strong>không phụ thuộc</strong> vào vận tốc <em>v</em> và bán kính <em>r</em> (trong phạm vi phi tương đối tính). Điều này cho phép dùng nguồn điện xoay chiều có tần số không đổi để gia tốc hạt liên tục [5-7].</p>
+
+
+        <h3>d. Động năng cực đại (W<sub>đmax</sub>)</h3>
+        <p>Hạt đạt động năng cực đại khi ở mép ngoài cùng của hộp D (bán kính R<sub>max</sub> của máy):</p>
+        <p style="background-color: #f1f1f1; padding: 10px; border-left: 5px solid #3498db;">
+            v<sub>max</sub> = (|q|B R<sub>max</sub>) / m <br>
+            W<sub>đmax</sub> = 0.5 * m * v<sub>max</sub><sup>2</sup> = (q<sup>2</sup> B<sup>2</sup> R<sub>max</sub><sup>2</sup>) / (2m)
+        </p>
+        <p><em>Nhận xét:</em> Động năng cực đại tỉ lệ với bình phương bán kính máy và bình phương cảm ứng từ, <strong>không phụ thuộc</strong> vào hiệu điện thế gia tốc <em>U</em> giữa hai bản cực [8].</p>
+
+
+        <h3>e. Số vòng quay (N)</h3>
+        <p>Giả sử hiệu điện thế giữa hai hộp D là <em>U</em>. Mỗi vòng quay hạt đi qua khe 2 lần, mỗi lần nhận năng lượng |q|U. Tổng động năng đạt được:</p>
+        <p>W<sub>đmax</sub> = N * (2|q|U) &rArr; N = W<sub>đmax</sub> / (2|q|U)</p>
+    </section>
+
+
+    <section>
+        <h2 style="color: #e67e22;">4. Ứng dụng thực tế</h2>
+        <ul>
+            <li><strong>Y học hạt nhân:</strong> Sản xuất đồng vị phóng xạ phục vụ chẩn đoán (PET/CT) và điều trị ung thư (Xạ trị hạt - Particle therapy) [9, 10].</li>
+            <li><strong>Nghiên cứu vật lý:</strong> Tạo chùm hạt năng lượng cao để bắn phá hạt nhân, nghiên cứu cấu trúc vật chất [10].</li>
+        </ul>
+    </section>
+
+
+    <section>
+        <h2 style="color: #e67e22;">5. Các dạng câu hỏi thường gặp</h2>
+        <ul>
+            <li><strong>Dạng 1 - Điều kiện cộng hưởng:</strong> Tần số của nguồn điện xoay chiều phải bằng tần số quay của hạt: f<sub>điện</sub> = f<sub>hạt</sub> = (|q|B) / (2&pi;m) [7].</li>
+            <li><strong>Dạng 2 - Yếu tố ảnh hưởng động năng cuối cùng:</strong> Chỉ phụ thuộc vào bán kính máy (R) và từ trường (B), không phụ thuộc vào hiệu điện thế U [8].</li>
+            <li><strong>Dạng 3 - So sánh chu kỳ các hạt:</strong> Lập tỉ số T ~ m / |q|. Ví dụ: So sánh hạt Proton và hạt Alpha.</li>
+        </ul>
+    </section>
+
+
+    <section>
+        <h2 style="color: #e67e22;">6. Ví dụ minh họa</h2>
+        <div style="border: 1px solid #ccc; padding: 15px; background-color: #fff9c4;">
+            <p><strong>Bài toán:</strong> Một hạt proton có khối lượng 1,67 &times; 10<sup>-27</sup> kg và điện tích 1,6 &times; 10<sup>-19</sup> C chuyển động trong từ trường B = 1T. Tính chu kỳ quay.</p>
+            <p><strong>Giải:</strong></p>
+            <p>Áp dụng công thức: T = (2&pi;m) / (|q|B)</p>
+            <p>T = (2 &times; 3,14 &times; 1,67 &times; 10<sup>-27</sup>) / (1,6 &times; 10<sup>-19</sup> &times; 1)</p>
+            <p><strong>T &approx; 6,6 &times; 10<sup>-8</sup> (s)</strong></p>
+        </div>
+    </section>
+</div>
+
+
+EXAMPLE
+PROBLEM
+<p>
+        Máy cyclotron là một loại máy gia tốc hạt sử dụng từ trường và điện trường để tăng tốc các hạt tích điện theo quỹ đạo có bán kính tăng dần. Thiết bị này được ứng dụng rộng rãi trong y học hạt nhân và nghiên cứu vật lý hạt. Hình bên mô tả cấu tạo một máy cyclotron gồm có hai hộp rỗng hình chữ D (hai cực \( D_1 \) và \( D_2 \)) làm bằng đồng ghép với nhau thành một hình tròn được đặt trong chân không từ trường đều có cảm ứng từ \( B \) vuông góc với mặt hộp. Hai cạnh thẳng đứng của các hộp D không đặt sát nhau mà cách nhau một khoảng hẹp, ở giữa khoảng hẹp có một điện trường \( E \). Điện tích phóng ra ở gần tâm máy được tăng tốc trực tiếp bởi lực điện khi đi qua điện trường giữa hai hộp D. Xét chuyển động của hạt Deuteron trong một máy cyclotron khi nó đang ở cực \( D_1 \) và bay theo phương vuông góc với các đường sức từ, lực từ tác dụng lên hạt có độ lớn \( F = Bv|q| \), có phương vuông góc với cảm ứng từ \( B \) và vận tốc \( v \) của hạt, cho tốc độ của hạt khi đó là \( 3,2 \cdot 10^6 \text{ m/s} \). Biết Deuteron có khối lượng là \( m = 3,31 \cdot 10^{-27} \text{ kg} \) và điện tích \( q = +1,6 \cdot 10^{-19} \text{ C} \). Hiệu điện thế giữa hai cực \( D_1, D_2 \) là \( 100 \text{ kV} \) và độ lớn cảm ứng từ \( B \) là \( 2,0 \text{ T} \). Lấy \( \pi = 3,14 \) trong các phép tính có dùng đến số \( \pi \). Sau 150 lần (kể từ lúc bắt đầu chuyển động của Deuteron) tăng tốc bởi điện trường thì bán kính quỹ đạo của Deuteron là bao nhiêu cm (kết quả làm tròn đến hàng phần mười).
+    </p>
+
+
+SOLUTION
+    <h1>Lời Giải: Bài Toán Máy Gia Tốc Cyclotron (Câu 6)</h1>
+
+
+    <h3>1. Tóm tắt dữ kiện đề bài</h3>
+    <ul>
+        <li><strong>Hạt:</strong> Deuteron ($D$).</li>
+        <li><strong>Khối lượng:</strong> $m = 3,31 \cdot 10^{-27} \text{ kg}$.</li>
+        <li><strong>Điện tích:</strong> $q = +1,6 \cdot 10^{-19} \text{ C}$.</li>
+        <li><strong>Vận tốc đầu:</strong> $v_0 = 3,2 \cdot 10^6 \text{ m/s}$.</li>
+        <li><strong>Từ trường:</strong> $B = 2,0 \text{ T}$.</li>
+        <li><strong>Hiệu điện thế tăng tốc:</strong> $U = 100 \text{ kV} = 100.000 \text{ V} = 10^5 \text{ V}$.</li>
+        <li><strong>Số lần tăng tốc:</strong> $N = 150$ lần.</li>
+    </ul>
+
+
+    <hr>
+
+
+    <h3>2. Phân tích hiện tượng vật lý</h3>
+    <p>Theo bài giảng của giáo viên, quá trình chuyển động của hạt trong máy Cyclotron chia làm 2 giai đoạn chính:</p>
+    <ul>
+        <li><strong>Trong hộp D (Từ trường $B$):</strong> Hạt chịu tác dụng của lực Lorenxo ($F = |q|vB$). Lực này đóng vai trò lực hướng tâm, làm hạt chuyển động tròn đều nhưng <em>không sinh công</em> (tốc độ không đổi).</li>
+        <li><strong>Tại khe hở giữa 2 hộp D (Điện trường $E$):</strong> Hạt chịu tác dụng của lực điện. Mỗi lần hạt đi qua khe hở này, điện trường sẽ thực hiện một công dương làm hạt tăng tốc.</li>
+    </ul>
+
+
+    <div class="box-highlight">
+        <strong>Nguyên lý tăng tốc:</strong>
+        <br>
+        Mỗi lần đi qua khe hở, động năng của hạt tăng thêm một lượng: $\Delta W_d = |q|U$.
+        <br>
+        Sau $N$ lần đi qua khe hở, tổng động năng tăng thêm là: $N \cdot |q|U$.
+    </div>
+
+
+    <hr>
+
+
+    <h3>3. Quy trình tính toán chi tiết</h3>
+
+
+    <h4>Bước 1: Áp dụng định lý biến thiên động năng</h4>
+    <p>Động năng lúc sau ($W_{d\_sau}$) trừ động năng ban đầu ($W_{d\_dau}$) bằng tổng công của lực điện sau $N$ lần tăng tốc:</p>
+    $$ W_{d\_sau} - W_{d\_dau} = N \cdot |q|U $$
+    $$ \Rightarrow \frac{1}{2}mv_N^2 - \frac{1}{2}mv_0^2 = N \cdot |q|U $$
+
+
+    <h4>Bước 2: Tính vận tốc hạt sau 150 lần tăng tốc ($v_N$)</h4>
+    <p>Từ công thức trên, ta rút ra $v_N$:</p>
+    $$ \frac{1}{2}mv_N^2 = \frac{1}{2}mv_0^2 + N|q|U $$
+    $$ \Rightarrow v_N = \sqrt{v_0^2 + \frac{2N|q|U}{m}} $$
+
+
+    <p>Thay số vào biểu thức:</p>
+    $$ v_N = \sqrt{(3,2 \cdot 10^6)^2 + \frac{2 \cdot 150 \cdot (1,6 \cdot 10^{-19}) \cdot (10^5)}{3,31 \cdot 10^{-27}}} $$
+    
+    <p><em>(Bấm máy tính phần phân số trước rồi cộng với bình phương vận tốc đầu)</em></p>
+    $$ v_N \approx \sqrt{10,24 \cdot 10^{12} + 1450,15 \cdot 10^{12}} \approx \sqrt{1460,39 \cdot 10^{12}} $$
+    $$ v_N \approx 38,215 \cdot 10^6 \text{ m/s} = 3,82 \cdot 10^7 \text{ m/s} $$
+
+
+    <h4>Bước 3: Tính bán kính quỹ đạo cuối cùng ($R$)</h4>
+    <p>Khi hạt chuyển động tròn trong từ trường với vận tốc $v_N$, lực Lorenxo là lực hướng tâm:</p>
+    $$ |q|v_NB = \frac{mv_N^2}{R} \Rightarrow R = \frac{m \cdot v_N}{|q|B} $$
+
+
+    <p>Thay số:</p>
+    $$ R = \frac{(3,31 \cdot 10^{-27}) \cdot (3,82 \cdot 10^7)}{(1,6 \cdot 10^{-19}) \cdot 2,0} $$
+    $$ R \approx \frac{12,644 \cdot 10^{-20}}{3,2 \cdot 10^{-19}} \approx 3,951 \cdot 10^{-1} \text{ m} $$
+    
+    <p>Đổi đơn vị sang cm ($1 \text{ m} = 100 \text{ cm}$):</p>
+    $$ R \approx 0,3951 \text{ m} = 39,51 \text{ cm} $$
+
+
+    <div class="box-highlight">
+        <strong>Kết quả cuối cùng (làm tròn đến hàng phần mười):</strong>
+        <br>
+        <span class="result">R ≈ 39,5 cm</span>
+    </div>
+
+
+
+
+EXERCISE
+PROBLEM 1
+<p> Xiclôtrôn là máy gia tốc gồm hai hộp rỗng bằng kim loại hình chữ D, cách nhau một khe (hình vẽ). Có một từ trường với cảm ứng từ vectơ B không đổi vuông góc với mặt hộp. Gần tâm của hai hộp đó có nguồn phát ra hạt tích điện dương với vectơ vận tốc v vuông góc với vectơ B. Biết khối lượng <em>m</em> và điện tích <em>q</em> của hạt.</p>
+
+
+<p><strong>a)</strong> Chứng minh rằng quỹ đạo của hạt trong từ trường là đường tròn. Tính bán kính đường tròn này.</p>
+
+
+<p><strong>b)</strong> Có một hiệu điện thế xoay chiều đặt vào hai hộp D với tần số thích hợp để hạt được tăng tốc mỗi lần đi qua khe. Quỹ đạo của hạt gần giống đường xoắn ốc. Chính xác thì quỹ đạo ấy có dạng như thế nào?</p>
+
+
+<p><strong>c)</strong> Tính tần số quay của hạt, cho nhận xét về tần số này. Tần số của điện áp xoay chiều phải bằng bao nhiêu để hạt được tăng tốc mỗi lần qua khe? Trong phần dưới đây, xét trường hợp gia tốc hạt prôtôn có khối lượng $m_p = 1,66 \cdot 10^{-27} \text{ kg}$ và điện tích $e = 1,6 \cdot 10^{-19} \text{C}$. Điện áp đặt vào các hộp D có tần số $f = 10^{17} \text{ Hz}$. Vòng cuối cùng của prôtôn trước khi ra khỏi xiclôtrôn có bán kính 0,42 m.</p>
+
+
+<p><strong>d)</strong> Tính cảm ứng từ B và động năng cuối cùng của prôtôn.</p>
+
+
+<p><strong>e)</strong> Cực đại của điện áp giữa các hộp D là 20 kV. Tính số vòng mà prôtôn đã quay trước khi ra khỏi xiclôtrôn.</p>
+SOLUTION 1 
+Đáp án đang được cập nhật
+PROBLEM 2
+
+
+<p> Xiclôtrôn là máy gia tốc gồm hai hộp rỗng bằng kim loại hình chữ D, cách nhau một khe (hình vẽ). Có một từ trường với cảm ứng từ vectơ B không đổi vuông góc với mặt hộp. Gần tâm của hai hộp đó có nguồn phát ra hạt tích điện dương với vectơ vận tốc v vuông góc với vectơ B. Biết khối lượng <em>m</em> và điện tích <em>q</em> của hạt.</p>
+
+
+<p><strong>a)</strong> Chứng minh rằng quỹ đạo của hạt trong từ trường là đường tròn. Tính bán kính đường tròn này.</p>
+
+
+<p><strong>b)</strong> Có một hiệu điện thế xoay chiều đặt vào hai hộp D với tần số thích hợp để hạt được tăng tốc mỗi lần đi qua khe. Quỹ đạo của hạt gần giống đường xoắn ốc. Chính xác thì quỹ đạo ấy có dạng như thế nào?</p>
+
+
+<p><strong>c)</strong> Tính tần số quay của hạt, cho nhận xét về tần số này. Tần số của điện áp xoay chiều phải bằng bao nhiêu để hạt được tăng tốc mỗi lần qua khe? Trong phần dưới đây, xét trường hợp gia tốc hạt prôtôn có khối lượng $m_p = 1,66 \cdot 10^{-27} \text{ kg}$ và điện tích $e = 1,6 \cdot 10^{-19} \text{ C}$. Điện áp đặt vào các hộp D có tần số $f = 10^{17} \text{ Hz}$. Vòng cuối cùng của prôtôn trước khi ra khỏi xiclôtrôn có bán kính $0,42 \text{ m}$.</p>
+
+
+<p><strong>d)</strong> Tính cảm ứng từ B và động năng cuối cùng của prôtôn.</p>
+
+
+<p><strong>e)</strong> Cực đại của điện áp giữa các hộp D là $20 \text{ kV}$. Tính số vòng mà prôtôn đã quay trước khi ra khỏi xiclôtrôn.</p>
+
+
+SOLUTION 2
+Đáp án đang được cập nhật
+
+
+PROBLEM 3
+<p><em>Sử dụng các thông tin sau cho Câu I, Câu II và Câu III:</em> Một máy gia tốc cyclotron dùng để tăng tốc electron, hai hộp kim loại hình chữ D được kết nối với hai cực của nguồn điện xoay chiều tần số cao. Hai hộp được đặt trong một từ trường đều có cảm ứng từ <em>B</em>. Hướng của từ trường vuông góc với đáy hộp và hướng xuống dưới. Hiệu điện thế giữa hai hộp hình chữ D luôn có độ lớn là <em>U</em> và nguồn electron được đặt gần tâm hộp. Biết electron có vận tốc ban đầu không đáng kể, khối lượng là <em>m</em>, độ lớn điện tích là <em>e</em> và bán kính cyclotron cực đại của nó là <em>R</em>.</p>
+
+
+<p><strong>Câu I.</strong> Tần số của nguồn điện xoay chiều là</p>
+<ul>
+    <li>A. $\frac{2\pi m}{eB}$</li>
+    <li>B. $\frac{eB}{2\pi m}$</li>
+    <li>C. $\frac{\pi m}{eB}$</li>
+    <li>D. $\frac{eB}{\pi m}$</li>
+</ul>
+
+
+<p><strong>Câu II.</strong> Tốc độ cực đại của electron khi rời khỏi máy là</p>
+<ul>
+    <li>A. $\frac{m}{eBR}$</li>
+    <li>B. $\frac{mR}{eB}$</li>
+    <li>C. $\frac{eBR}{m}$</li>
+    <li>D. $\frac{eB}{mR}$</li>
+</ul>
+
+
+<p><strong>Câu III.</strong> Nếu chỉ tăng <em>U</em> thì</p>
+<ul>
+    <li>A. Động năng cực đại của hạt tăng.</li>
+    <li>B. Thời gian để hạt đạt động năng cực đại tăng.</li>
+    <li>C. Động năng cực đại của hạt giảm.</li>
+    <li>D. Thời gian để hạt đạt động năng cực đại giảm.</li>
+</ul>
+
+
+
+
+SOLUTION 3
+Đáp án đang được cập nhật
+PROBLEM 4
+<p> Hai hạt khác nhau được tăng tốc bằng máy gia tốc cyclotron. Độ lớn cảm ứng từ của từ trường vuông góc với mặt hộp D không đổi, tần số của điện áp xoay chiều có thể điều chỉnh theo tần số chuyển động tròn của hai hạt.</p> <ul> <li>A. Hạt có điện tích lớn hơn có động lượng cuối cùng lớn hơn.</li> <li>B. Hạt có điện tích nhỏ hơn có động lượng cuối cùng lớn hơn.</li> <li>C. Hạt có điện tích lớn hơn có động năng cuối cùng lớn hơn.</li> <li>D. Hạt có điện tích nhỏ hơn có động năng cuối cùng lớn hơn.</li> </ul>
+SOLUTION 4
+Đáp án đang được cập nhật
+
+
+PROBLEM 5
+
+
+<p>Một máy gia tốc cyclotron có bán kính của hộp hình chữ D là <em>R</em>. Từ trường đều hướng vuông góc với mặt hộp có độ lớn cảm ứng từ <em>B</em>. Hiệu điện thế giữa hai hộp luôn có độ lớn là <em>U</em> được sử dụng để tăng tốc các proton có khối lượng <em>m</em> và điện tích <em>e</em>. Các proton xuất phát từ trạng thái nghỉ tại tâm hộp hình chữ D và sau khi được tăng tốc nhiều lần, chúng bị kéo ra khỏi mép hộp hình chữ D. Bỏ qua thời gian tăng tốc của proton trong điện trường và không xét đến các hiệu ứng tương đối tính và trọng lực của các hạt.</p> <p><strong>a)</strong> Mỗi chu kì, proton được tăng tốc một lần.<br> <strong>b)</strong> Tần số của điện áp xoay chiều là $\frac{eB}{\pi m}$.<br> <strong>c)</strong> Động năng cực đại mà một proton có thể đạt được là $\frac{e^2 B^2 R^2}{2m}$.<br> <strong>d)</strong> Tổng thời gian mà proton chuyển động trong máy gia tốc là $\frac{\pi B R^2}{2U}$.</p>
+SOLUTION 5
+Đáp án đang được cập nhật
+PROBLEM 6
+<p> Sử dụng máy gia tốc như hình bên để tăng tốc một hạt có độ lớn điện tích <em>q</em> và khối lượng <em>m</em>. Biết rằng bán kính của hộp hình chữ D là <em>R</em>, độ lớn cảm ứng từ của từ trường đặt vào là <em>B</em>, hiệu điện thế giữa a và b có độ lớn <em>U</em>, bỏ qua chiều rộng khe hở giữa hai hộp hình chữ D.</p> <p><strong>a)</strong> Năng lượng của hạt được cung cấp bởi điện trường tăng tốc và động năng cực đại có thể thu được liên quan đến hiệu điện thế <em>U</em>.<br> <strong>b)</strong> Chu kì của hiệu điện thế xoay chiều đặt vào a và b là $\frac{2\pi m}{qB}$.<br> <strong>c)</strong> Tốc độ cực đại của hạt được gia tốc trong máy là $\frac{qBR}{m}$.<br> <strong>d)</strong> Nếu hiệu điện thế <em>U</em> tăng thì tổng thời gian hạt chuyển động trong máy sẽ dài hơn.</p>
+SOLUTION 6
+Đáp án đang được cập nhật
+
+
+
+
+PROBLEM 7
+<p>Để nghiên cứu và ứng dụng các hạt vật chất nhỏ hơn nguyên tử, người ta thường sử dụng máy cyclotron (hình vẽ). Máy này hoạt động dựa trên nguyên tắc kết hợp điện trường và từ trường để làm tăng tốc các hạt điện tích chuyển động. Máy cyclotron có hai hộp rỗng hình chữ D (hai cực $D_1$ và $D_2$) làm bằng đồng ghép với nhau thành một hình tròn được đặt trong chân không có từ trường đều sao cho cảm ứng từ $\vec{B}$ vuông góc với mặt hộp. Hai cạnh thẳng đứng của các hộp D không đặt sát nhau mà cách nhau một khoảng hẹp, ở giữa khoảng hẹp có một điện trường đều có cường độ $\vec{E}$. Điện tích phóng ra ở gần tâm máy được tăng tốc trực tiếp bởi lực điện khi đi qua điện trường giữa hai hộp D và được lực từ làm cho chuyển động tròn trong hộp. Vì điện tích được tăng tốc dần nên bán kính quỹ đạo cũng tăng theo. Xét chuyển động của hạt deuterium trong một máy cyclotron. Biết deuterium có khối lượng nghỉ là $3,31 \cdot 10^{-27} \text{ kg}$ và điện tích $+1,6 \cdot 10^{-19} \text{ C}$, bay theo phương vuông góc với các đường sức từ với tốc độ $3,2 \cdot 10^6 \text{ m/s}$ (ở cực $D_1$). Lực từ tác dụng lên hạt điện tích có độ lớn $f = B \cdot v \cdot |q|$, có phương vuông góc với cảm ứng từ $\vec{B}$ và với vận tốc $\vec{v}$ của hạt. Hiệu điện thế giữa hai cực D là $100 \text{ kV}$ và độ lớn cảm ứng từ B là $1,6 \text{ T}$. Biết deuterium bay ra khỏi các cực theo phương song song với các đường sức điện của điện trường giữa hai cực.</p> <p><strong>a)</strong> Tốc độ của hạt bị thay đổi do tác dụng của điện trường giữa hai hộp D.<br> <strong>b)</strong> Bán kính quỹ đạo chuyển động của deuterium trong từ trường ở cực $D_1$ (lúc ban đầu) bằng $4,1375 \text{ cm}$.<br> <strong>c)</strong> Bán kính của quỹ đạo của deuterium trong từ trường ở cực $D_2$ (sau lần tăng tốc thứ nhất) xấp xỉ bằng $5,8 \text{ cm}$.<br> <strong>d)</strong> Nếu bán kính của cyclotron là $50 \text{ cm}$ thì hạt deuterium được tăng tốc bởi điện trường 189 lần so với lúc đầu.</p>
+
+
+SOLUTION 7
+Đáp án đang được cập nhật
+PROBLEM 8
+<p>Nguyên lý hoạt động của máy cyclotron, dùng để tăng tốc hạt mang điện như hình bên. Hai hộp rỗng I, II hình chữ D làm bằng đồng lá, hở ở phía cạnh thẳng, rất gần nhau, gọi là hai cực D. Giữa hai cạnh thẳng của hai cực có một điện trường, có thể đảo chiều nhờ dòng điện xoay chiều. Hai cực D đặt trong một từ trường độ lớn cảm ứng từ B (vách bằng đồng sẽ ngăn không cho điện trường xuyên vào hộp), có hướng vuông góc với mặt phẳng hình vẽ. Giả sử lúc đầu có một proton xuất phát từ một điểm rất gần với tâm S của máy cyclotron và đi vào hộp I đang mang điện âm. Lúc này, lực Lorentz xuất hiện và làm cho proton chuyển động theo quỹ đạo nửa đường tròn trong hộp I. Sau đó, khi proton quay lại cạnh thẳng của hộp I thì nguồn điện đổi chiều, điện trường sẽ tăng tốc cho proton, proton đi vào hộp II và lực Lorentz lại làm nhiệm vụ như trên, nhưng do vận tốc của proton đã tăng nên bán kính của nửa đường tròn quỹ đạo lúc này lớn hơn trước. Người ta đã chứng minh được rằng, thời gian chuyển động của proton bên trong các hộp luôn không đổi, vì vậy chỉ cần đặt nguồn điện xoay chiều có chu kỳ bằng hai lần thời gian chuyển động của proton trong các hộp D thì proton sẽ được tăng tốc nhiều lần và thu được vận tốc lớn. Đến mép ngoài hộp D, proton được phóng ra ngoài. Theo tính toán, bán kính quỹ đạo R của proton và tần số dao động $f_{dd}$ của dòng điện xoay chiều thỏa mãn các công thức: $R = \frac{mv}{Bq}$ và $qB = 2\pi m f_{dd}$, trong đó m, q, v là khối lượng, điện tích, tốc độ của proton. Cho biết $m = 1,67 \cdot 10^{-27} \text{ kg}$, $q = 1,6 \cdot 10^{-19} \text{ C}$. Một máy cyclotron hoạt động với $f_{dd} = 12 \text{ MHz}$ và bán kính của hộp D là $53 \text{ cm}$.</p> <p><strong>a)</strong> Lực tác dụng lên proton chỉ có lực từ.<br> <strong>b)</strong> Bán kính chuyển động của proton là không đổi.<br> <strong>c)</strong> Độ lớn của cảm ứng từ $B \approx 0,787 \text{ T}$ thì cyclotron có thể gia tốc được proton.<br> <strong>d)</strong> Năng lượng proton thu được khi ra khỏi máy là $8,3 \text{ MeV}$.</p>
+SOLUTION 8
+Đáp án đang được cập nhật

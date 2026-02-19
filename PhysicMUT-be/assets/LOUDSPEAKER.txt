@@ -1,0 +1,407 @@
+﻿THEORY
+<div class="loudspeaker-theory" style="font-family: Arial, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto;">
+    <h1 style="text-align: center; color: #c0392b; border-bottom: 2px solid #c0392b; padding-bottom: 10px;">CHUYÊN ĐỀ: LOA ĐIỆN ĐỘNG (DYNAMIC LOUDSPEAKER)</h1>
+
+
+    <section>
+        <h2 style="color: #2980b9;">1. Định nghĩa và Cấu tạo</h2>
+        <p><strong>Định nghĩa:</strong> Loa điện động là một thiết bị biến đổi tín hiệu điện (dao động điện) thành tín hiệu âm thanh (dao động cơ học của sóng âm) có cùng tần số [1].</p>
+        
+        <p><strong>Cấu tạo chính:</strong></p>
+        <ul>
+            <li><strong>Nam châm vĩnh cửu (Magnet):</strong> Thường là nam châm hình tròn hoặc hình trụ, được cố định vào khung loa. Chức năng là tạo ra một từ trường mạnh và đều (B) trong khe từ (khe hở) [1], [2].</li>
+            <li><strong>Cuộn dây (Voice Coil/Cuộn âm):</strong> Là một ống dây dẫn nhẹ, được đặt trong khe từ của nam châm nhưng không chạm vào nam châm. Dòng điện tín hiệu sẽ chạy qua cuộn dây này [1], [3].</li>
+            <li><strong>Màng loa (Cone/Diaphragm):</strong> Gắn chặt với cuộn dây. Khi cuộn dây dao động, màng loa dao động theo để nén và giãn không khí, tạo ra sóng âm [1], [4].</li>
+            <li><strong>Các bộ phận phụ trợ:</strong>
+                <ul>
+                    <li><em>Nhện loa (Spider) và Gân loa (Surround):</em> Giữ cho cuộn dây nằm chính giữa khe từ và giúp hệ thống đàn hồi trở về vị trí cân bằng [2], [5].</li>
+                    <li><em>Nắp che bụi (Dust cap):</em> Chắn bụi bẩn rơi vào khe từ [3].</li>
+                </ul>
+            </li>
+        </ul>
+    </section>
+
+
+    <section>
+        <h2 style="color: #2980b9;">2. Nguyên lý hoạt động</h2>
+        <p>Hoạt động của loa dựa trên <strong>tác dụng của từ trường lên dòng điện</strong> (Lực Lo-ren-xơ/Lực Ampère) [6].</p>
+        <ol>
+            <li><strong>Tín hiệu vào:</strong> Dòng điện xoay chiều (tín hiệu âm thanh) từ ampli chạy qua cuộn dây (Voice coil).</li>
+            <li><strong>Tương tác từ:</strong> Cuộn dây mang dòng điện nằm trong từ trường của nam châm vĩnh cửu sẽ chịu tác dụng của lực từ. Chiều của lực tuân theo <em>Quy tắc bàn tay trái</em> [7].
+                <ul>
+                    <li>Khi dòng điện đổi chiều, chiều của lực từ cũng thay đổi (hướng ra hoặc hướng vào), làm cuộn dây dao động dọc theo trục.</li>
+                </ul>
+            </li>
+            <li><strong>Tạo ra âm thanh:</strong> Cuộn dây gắn liền với màng loa nên màng loa cũng dao động theo với cùng tần số của dòng điện [8]. Màng loa nén và giãn lớp không khí tiếp xúc, tạo ra sóng dọc lan truyền ra môi trường [9].</li>
+        </ol>
+    </section>
+
+
+    <section>
+        <h2 style="color: #2980b9;">3. Các công thức quan trọng (Dùng cho thi THPT QG)</h2>
+        
+        <h3>a. Độ lớn lực từ (Lực đẩy/kéo màng loa)</h3>
+        <p>Lực từ tác dụng lên cuộn dây khi có dòng điện chạy qua:</p>
+        <div style="background-color: #f1f1f1; padding: 15px; border-left: 5px solid #27ae60; margin: 10px 0;">
+            <strong>F = B &cdot; I &cdot; &ell;</strong>
+        </div>
+        <p><em>Trong đó:</em></p>
+        <ul style="list-style-type: square;">
+            <li><strong>F:</strong> Lực từ (Newton - N).</li>
+            <li><strong>B:</strong> Cảm ứng từ của nam châm (Tesla - T).</li>
+            <li><strong>I:</strong> Cường độ dòng điện chạy qua cuộn dây (Ampe - A).</li>
+            <li><strong>&ell;:</strong> Tổng chiều dài dây dẫn trong từ trường (mét - m) [6].</li>
+        </ul>
+
+
+        <h3>b. Áp suất tác dụng lên màng loa (p)</h3>
+        <p>Trong các bài tập nâng cao, áp suất cực đại tác dụng lên màng loa có diện tích <em>S</em> được tính bằng:</p>
+        <div style="background-color: #f1f1f1; padding: 15px; border-left: 5px solid #27ae60; margin: 10px 0;">
+            <strong>p = F / S</strong>
+        </div>
+        <p>Nếu màng loa hình tròn bán kính R, diện tích là S = &pi;R<sup>2</sup> [10].</p>
+
+
+        <h3>c. Mối liên hệ tần số</h3>
+        <p>Tần số của sóng âm phát ra bằng tần số của dòng điện xoay chiều chạy trong cuộn dây:</p>
+        <p style="text-align: center;"><strong>f<sub>âm</sub> = f<sub>điện</sub></strong></p>
+    </section>
+
+
+    <section>
+        <h2 style="color: #2980b9;">4. Các nhận định thường gặp (Trắc nghiệm)</h2>
+        <table border="1" cellpadding="10" cellspacing="0" style="border-collapse: collapse; width: 100%; border-color: #ddd;">
+            <tr style="background-color: #ecf0f1;">
+                <th>Phát biểu</th>
+                <th>Đúng/Sai</th>
+                <th>Giải thích</th>
+            </tr>
+            <tr>
+                <td>Sóng âm từ loa có thể truyền trong chân không.</td>
+                <td style="color: red; font-weight: bold;">SAI</td>
+                <td>Sóng âm là sóng cơ học, cần môi trường vật chất để lan truyền [9].</td>
+            </tr>
+            <tr>
+                <td>Khi tăng cường độ dòng điện, âm thanh phát ra nhỏ đi.</td>
+                <td style="color: red; font-weight: bold;">SAI</td>
+                <td>I tăng &rarr; F tăng &rarr; Biên độ dao động mạnh hơn &rarr; Âm to hơn [4].</td>
+            </tr>
+            <tr>
+                <td>Loa hoạt động dựa trên hiện tượng cảm ứng điện từ.</td>
+                <td style="color: orange; font-weight: bold;">Cần lưu ý</td>
+                <td>Chính xác là dựa trên <strong>lực từ tác dụng lên dòng điện</strong>. Cảm ứng điện từ là nguyên lý của Micro (ngược lại với Loa) [11], [1].</td>
+            </tr>
+            <tr>
+                <td>Sóng âm do loa tạo ra trong không khí là sóng dọc.</td>
+                <td style="color: green; font-weight: bold;">ĐÚNG</td>
+                <td>Do quá trình nén và giãn của khối không khí [12].</td>
+            </tr>
+        </table>
+    </section>
+
+
+    <section>
+        <h2 style="color: #2980b9;">5. Ví dụ minh họa</h2>
+        <div style="border: 2px dashed #f39c12; padding: 15px; background-color: #fffaf0; border-radius: 5px;">
+            <p><strong>Bài toán:</strong> Trong một chiếc loa điện động, cuộn dây dẫn có tổng chiều dài <strong>&ell; = 25 cm</strong> đặt trong từ trường <strong>B = 0,35 T</strong>. Màng loa có đường kính <strong>D = 15 cm</strong>. Dòng điện chạy qua cuộn dây có phương trình <strong>i = 2cos(100&pi;t) (A)</strong>. Tính lực từ cực đại và áp suất cực đại tác dụng lên màng loa.</p>
+            <hr style="border: 0; border-top: 1px solid #f39c12;">
+            <p><strong>Giải:</strong></p>
+            <p>1. Đổi đơn vị: &ell; = 0,25 m; D = 0,15 m &rarr; R = 0,075 m; I<sub>0</sub> = 2 A.</p>
+            <p>2. Lực từ cực đại (F<sub>max</sub>):<br>
+               F<sub>max</sub> = B &cdot; I<sub>0</sub> &cdot; &ell; = 0,35 &cdot; 2 &cdot; 0,25 = <strong>0,175 (N)</strong> [13].
+            </p>
+            <p>3. Diện tích màng loa (S):<br>
+               S = &pi; &cdot; R<sup>2</sup> = &pi; &cdot; (0,075)<sup>2</sup> &approx; 0,01767 (m<sup>2</sup>) [10].
+            </p>
+            <p>4. Áp suất cực đại (p<sub>max</sub>):<br>
+               p<sub>max</sub> = F<sub>max</sub> / S = 0,175 / 0,01767 &approx; <strong>9,9 (Pa)</strong> [10].
+            </p>
+        </div>
+    </section>
+</div>
+
+
+<div style="font-family: 'Segoe UI', Arial, sans-serif; max-width: 800px; margin: 20px auto; border: 1px solid #ddd; border-radius: 12px; overflow: hidden; box-shadow: 0 4px 15px rgba(0,0,0,0.1); background: #fff;">
+    
+    <div style="background: #2c3e50; color: #fff; padding: 15px; text-align: center;">
+        <h3 style="margin: 0;">Mô phỏng Cấu tạo & Nguyên lý Loa Điện động</h3>
+    </div>
+
+
+    <div style="display: flex; flex-wrap: wrap; padding: 20px; gap: 20px;">
+        
+        <div style="flex: 1; min-width: 350px; background: #f9f9f9; border-radius: 8px; padding: 10px; display: flex; flex-direction: column; align-items: center;">
+            <svg width="350" height="300" viewBox="0 0 350 300">
+                <rect x="50" y="110" width="40" height="80" fill="#7f8c8d" stroke="#34495e" stroke-width="2" />
+                <rect x="90" y="130" width="30" height="40" fill="#e74c3c" stroke="#c0392b" stroke-width="2" /> <text x="105" y="155" fill="white" font-weight="bold" text-anchor="middle">N</text>
+                <text x="70" y="155" fill="white" font-weight="bold" text-anchor="middle">S</text>
+                <text x="70" y="210" font-size="12" font-weight="bold">Nam châm</text>
+
+
+                <g id="vibration-system">
+                    <animateTransform attributeName="transform" type="translate" values="-5 0; 5 0; -5 0" dur="0.2s" repeatCount="indefinite" />
+                    
+                    <rect x="120" y="125" width="15" height="50" fill="#d35400" stroke="#a04000" stroke-width="1" />
+                    <line x1="120" y1="135" x2="135" y2="135" stroke="#fff" stroke-width="1" stroke-dasharray="2,1" />
+                    <line x1="120" y1="145" x2="135" y2="145" stroke="#fff" stroke-width="1" stroke-dasharray="2,1" />
+                    <line x1="120" y1="155" x2="135" y2="155" stroke="#fff" stroke-width="1" stroke-dasharray="2,1" />
+                    <line x1="120" y1="165" x2="135" y2="165" stroke="#fff" stroke-width="1" stroke-dasharray="2,1" />
+
+
+                    <path d="M 135 150 L 250 50 L 250 250 Z" fill="rgba(52, 152, 219, 0.3)" stroke="#2980b9" stroke-width="3" />
+                    <line x1="250" y1="50" x2="270" y2="30" stroke="#2980b9" stroke-width="2" />
+                    <line x1="250" y1="250" x2="270" y2="270" stroke="#2980b9" stroke-width="2" />
+                    
+                    <g opacity="0.6">
+                        <circle cx="280" cy="150" r="10" fill="none" stroke="#3498db" stroke-width="2">
+                            <animate attributeName="r" from="10" to="60" dur="1s" repeatCount="indefinite" />
+                            <animate attributeName="opacity" from="0.6" to="0" dur="1s" repeatCount="indefinite" />
+                        </circle>
+                        <circle cx="280" cy="150" r="10" fill="none" stroke="#3498db" stroke-width="2">
+                            <animate attributeName="r" from="10" to="60" dur="1s" begin="0.5s" repeatCount="indefinite" />
+                            <animate attributeName="opacity" from="0.6" to="0" dur="1s" begin="0.5s" repeatCount="indefinite" />
+                        </circle>
+                    </g>
+                </g>
+
+
+                <text x="127" y="115" font-size="11" text-anchor="middle" font-weight="bold">Cuộn dây</text>
+                <text x="210" y="155" font-size="12" font-weight="bold">Màng loa</text>
+                <text x="300" y="155" font-size="11" fill="#2980b9" font-weight="bold">Sóng âm</text>
+
+
+                <path d="M 127 175 L 127 220 L 150 220" fill="none" stroke="#333" stroke-width="1.5" marker-end="url(#arrow)" />
+                <path d="M 150 240 L 127 240 L 127 175" fill="none" stroke="#333" stroke-width="1.5" />
+                <text x="160" y="235" font-size="11" font-style="italic">Tín hiệu AC</text>
+            </svg>
+            <p style="font-size: 13px; color: #666; margin-top: 10px;"><i>Hệ thống cuộn dây dao động trong từ trường tạo ra sóng âm.</i></p>
+        </div>
+    </div>
+</div>
+
+
+EXAMPLE
+PROBLEM
+<p>
+        Trong một chiếc loa điện động, một cuộn dây dẫn có chiều dài \( l = 25 \text{ cm} \) được đặt trong từ trường của nam châm vĩnh cửu có cường độ từ trường \( B = 0,35 \text{ T} \). Khi dòng điện xoay chiều chạy qua cuộn dây, từ trường của nam châm tác động lên cuộn dây khiến cuộn dây dao động. Cuộn dây này được gắn với màng loa có đường kính \( D = 15 \text{ cm} \) (màng dao động), và khi cuộn dây dao động, nó làm cho màng loa dao động theo, tạo ra âm thanh. Giả sử loa đang hoạt động với dòng điện xoay chiều: \( i = 2\cos(100\pi t) \text{ (A)} \).
+    </p>
+    
+    <ul>
+        <li><strong>1.</strong> Nguyên lí hoạt động của loa điện động dựa trên lực từ tác dụng lên dòng điện trong từ trường.</li>
+        <li><strong>2.</strong> Âm thanh phát ra từ loa điện động là do màng loa dao động làm rung không khí.</li>
+        <li><strong>3.</strong> Khi tăng cường độ dòng điện chạy qua cuộn dây thì âm phát thanh phát ra nhỏ đi. (Ảnh ghi chú: Sai, \( I \) tăng \(\rightarrow F_t\) tăng \(\rightarrow\) màng loa dđ mạnh hơn \(\rightarrow A\) lớn \(\rightarrow\) âm nghe to hơn).</li>
+        <li><strong>4.</strong> Sóng âm thanh được loa điện tạo ra là do quá trình nén và giãn của khối không khí do màng loa tạo ra khi dao động. (Ảnh ghi chú: Sóng âm truyền trong KK là sóng dọc).</li>
+        <li><strong>5.</strong> Sóng âm thanh phát ra từ loa có thể truyền trong chân không. (Ảnh đánh dấu: Sai).</li>
+        <li><strong>6.</strong> Cuộn dây và màng loa dao động theo tần số của dòng điện đầu vào, từ đó tạo ra âm thanh có cùng tần số.</li>
+        <li><strong>7.</strong> Trong quá trình rung động, áp suất cực đại tác dụng trên màn loa khoảng 9,9 Pa.</li>
+    </ul>
+
+
+SOLUTION
+<Strong>Tóm tắt dữ kiện đề bài:</Strong>
+    <ul>
+        <li>Chiều dài dây dẫn: \( l = 25 \text{ cm} = 0,25 \text{ m} \).</li>
+        <li>Cảm ứng từ: \( B = 0,35 \text{ T} \).</li>
+        <li>Đường kính màng loa: \( D = 15 \text{ cm} = 0,15 \text{ m} \).</li>
+        <li>Phương trình dòng điện: \( i = 2\cos(100\pi t) \text{ (A)} \).</li>
+        <li>Suy ra cường độ dòng điện cực đại: \( I_0 = 2 \text{ A} \).</li>
+    </ul>
+
+
+    <hr>
+
+
+    <Strong>Phân tích từng phát biểu:</Strong>
+
+
+    <p><strong>1. Nguyên lí hoạt động của loa điện động dựa trên lực từ tác dụng lên dòng điện trong từ trường.</strong></p>
+    <p><strong>Kết luận: ĐÚNG</strong></p>
+    <p><em>Giải thích:</em> Khi có dòng điện chạy qua cuộn dây đặt trong từ trường của nam châm vĩnh cửu, lực từ (lực Ampe) sẽ tác dụng lên cuộn dây làm nó chuyển động.</p>
+
+
+    <hr>
+
+
+    <p><strong>2. Âm thanh phát ra từ loa điện động là do màng loa dao động làm rung không khí.</strong></p>
+    <p><strong>Kết luận: ĐÚNG</strong></p>
+    <p><em>Giải thích:</em> Cuộn dây gắn liền với màng loa. Khi cuộn dây dao động dưới tác dụng của lực từ, màng loa dao động theo, nén và giãn lớp không khí tiếp xúc, tạo ra sóng âm.</p>
+
+
+    <hr>
+
+
+    <p><strong>3. Khi tăng cường độ dòng điện chạy qua cuộn dây thì âm phát thanh phát ra nhỏ đi.</strong></p>
+    <p><strong>Kết luận: SAI</strong></p>
+    <p><em>Giải thích:</em> Theo công thức lực từ \( F = B \cdot I \cdot l \). Khi cường độ dòng điện \( I \) tăng thì lực từ \( F \) tăng, làm màng loa dao động mạnh hơn (Biên độ \( A \) tăng), dẫn đến âm thanh phát ra phải <strong>to hơn</strong>.</p>
+
+
+    <hr>
+
+
+    <p><strong>4. Sóng âm thanh được loa điện tạo ra là do quá trình nén và giãn của khối không khí do màng loa tạo ra khi dao động.</strong></p>
+    <p><strong>Kết luận: ĐÚNG</strong></p>
+    <p><em>Giải thích:</em> Sóng âm truyền trong không khí là sóng dọc, được hình thành bởi các lớp không khí bị nén và giãn liên tục lan truyền đi.</p>
+
+
+    <hr>
+
+
+    <p><strong>5. Sóng âm thanh phát ra từ loa có thể truyền trong chân không.</strong></p>
+    <p><strong>Kết luận: SAI</strong></p>
+    <p><em>Giải thích:</em> Sóng âm là sóng cơ học, cần môi trường vật chất (Rắn, Lỏng, Khí) để lan truyền. Chân không không có vật chất nên sóng âm không truyền được.</p>
+
+
+    <hr>
+
+
+    <p><strong>6. Cuộn dây và màng loa dao động theo tần số của dòng điện đầu vào, từ đó tạo ra âm thanh có cùng tần số.</strong></p>
+    <p><strong>Kết luận: ĐÚNG</strong></p>
+    <p><em>Giải thích:</em> Loa là thiết bị biến đổi dao động điện thành dao động cơ có cùng tần số. Tần số dòng điện quyết định tần số rung của màng loa và cao độ của âm thanh.</p>
+
+
+    <hr>
+
+
+    <p><strong>7. Trong quá trình rung động, áp suất cực đại tác dụng trên màn loa khoảng 9,9 Pa.</strong></p>
+    <p><strong>Kết luận: ĐÚNG</strong></p>
+    <p><em>Giải thích chi tiết và tính toán:</em></p>
+    
+    <p><strong>Bước 1: Tính lực từ cực đại (\( F_{max} \))</strong></p>
+    <p>Lực từ cực đại tác dụng lên cuộn dây đạt được khi cường độ dòng điện đạt cực đại (\( I_0 = 2 \text{ A} \)):</p>
+    $$ F_{max} = B \cdot I_0 \cdot l = 0,35 \cdot 2 \cdot 0,25 = 0,175 \text{ (N)} $$
+    
+    <p><strong>Bước 2: Tính diện tích màng loa (\( S \))</strong></p>
+    <p>Màng loa hình tròn có đường kính \( D = 0,15 \text{ m} \), bán kính \( R = \frac{D}{2} = 0,075 \text{ m} \).</p>
+    $$ S = \pi \cdot R^2 = \pi \cdot (0,075)^2 \approx 0,01767 \text{ (m}^2\text{)} $$
+    
+    <p><strong>Bước 3: Tính áp suất cực đại (\( p_{max} \))</strong></p>
+    <p>Áp suất bằng lực chia cho diện tích bị ép:</p>
+    $$ p_{max} = \frac{F_{max}}{S} = \frac{0,175}{0,01767} \approx 9,903 \text{ (Pa)} $$
+    
+    <p><strong>Kết luận:</strong> Giá trị xấp xỉ \( 9,9 \text{ Pa} \). Mệnh đề đúng.</p>
+
+
+EXERCISE
+PROBLEM 1
+
+
+<div>
+    <p>
+        Loa là một thiết bị có nhiệm vụ phát ra âm thanh bằng cách chuyển tín hiệu điện thành tín hiệu âm thanh (sóng âm). Loa có thể được cấu tạo gồm các bộ phận đơn giản như (Hình a). Khi tín hiệu điện biến thiên theo tần số của tín hiệu âm thanh, cuộn dây và màng loa dao động cùng tần số, dẫn đến sự dao động của không khí và sóng âm được tạo ra.
+    </p>
+    <p>
+        Cấu tạo đơn giản của bộ phận tạo ra sự dao động của không khí của loa gồm hai phần: nam châm hình tròn được đặt cố định, trọng tâm nam châm đặt thẳng hàng với trọng tâm màng loa và cuộn dây hình tròn (Hình b). Khi dòng điện thay đổi theo thời gian chạy qua cuộn dây đặt trong từ trường của nam châm sẽ làm xuất hiện lực từ tác dụng lên cuộn dây, lực từ này có chiều thay đổi làm nón loa dao động theo, từ đó tạo ra âm thanh phát ra tương ứng với tín hiệu âm thanh đầu vào.
+    </p>
+    <ul>
+        <li>
+            <strong>a.</strong> Loa điện hoạt động dựa trên hiện tượng cảm ứng điện từ.
+        </li>
+        <li>
+            <strong>b.</strong> Loa có nhiệm vụ biến dao động điện thành dao động âm cùng tần số.
+        </li>
+        <li>
+            <strong>c.</strong> Sóng âm do loa tạo ra truyền trong không khí tới tai người nghe thuộc loại sóng dọc.
+        </li>
+        <li>
+            <strong>d.</strong> Biết từ trường của nam châm có độ lớn cảm ứng từ là 0,075T. Cuộn dây có đường kính khoảng 7,2cm, gồm 20 vòng dây và có điện trở là 5,8Ω. Khi kết nối với nguồn có hiệu điện thế 12V, dòng điện chạy trong cuộn dây tại một thời điểm xác định có chiều cùng chiều kim đồng hồ như (Hình b). Tại thời điểm này, lực từ tác dụng trên cuộn dây có độ lớn là 0,7N.
+        </li>
+    </ul>
+</div>
+
+
+SOLUTION 1 
+Đáp án đang được cập nhật
+PROBLEM 2
+<div>
+    <Strong> Quan sát mô hình loa điện động được mô tả như hình dưới. Xét tính đúng/sai các phát biểu sau</Strong>
+    <ul>
+        <li>
+            <strong>a.</strong> Khi cho dòng điện không đổi vào hai điểm nối tín hiệu thì loa chỉ phát ra âm với một tần số không đổi.
+        </li>
+        <li>
+            <strong>b.</strong> Sóng âm thanh phát ra từ loa có thể truyền trong chân không.
+        </li>
+        <li>
+            <strong>c.</strong> Khi có dòng điện xoay chiều chạy qua cuộn dây thì nam châm vĩnh cửu sẽ dao động làm cho màng loa dao động với tần số âm.
+        </li>
+        <li>
+            <strong>d.</strong> Nếu nối hai điểm nối tín hiệu vào loa với điện áp biểu diễn như hình thì tần số âm loa phát ra là \(\frac{4000}{3} Hz\).
+        </li>
+    </ul>
+</div>
+<div style="font-family: Arial, sans-serif; max-width: 600px; margin: 20px auto; padding: 20px; border: 1px solid #ddd; border-radius: 8px; background: #fff;">
+    <h4 style="text-align: center; margin-bottom: 10px;">Đồ thị Điện áp theo Thời gian (u - t)</h4>
+    
+    <svg width="100%" height="300" viewBox="0 0 500 300" style="overflow: visible;">
+        <line x1="50" y1="280" x2="50" y2="20" stroke="black" stroke-width="2" marker-end="url(#arrow)" />
+        <text x="60" y="30" font-weight="bold">u (V)</text>
+        
+        <line x1="50" y1="150" x2="480" y2="150" stroke="black" stroke-width="2" marker-end="url(#arrow)" />
+        <text x="460" y="175" font-weight="bold">t (10⁻⁵ s)</text>
+
+
+        <defs>
+            <marker id="arrow" markerWidth="10" markerHeight="10" refX="0" refY="5" orient="auto">
+                <path d="M0,0 L10,5 L0,10 Z" fill="black" />
+            </marker>
+        </defs>
+
+
+        <line x1="50" y1="50" x2="450" y2="50" stroke="#ccc" stroke-dasharray="5,5" /> <line x1="50" y1="75" x2="450" y2="75" stroke="#eee" stroke-dasharray="5,5" /> <line x1="50" y1="100" x2="450" y2="100" stroke="#eee" stroke-dasharray="5,5" /> <line x1="50" y1="125" x2="450" y2="125" stroke="#eee" stroke-dasharray="5,5" /> <line x1="50" y1="175" x2="450" y2="175" stroke="#eee" stroke-dasharray="5,5" /> <line x1="50" y1="200" x2="450" y2="200" stroke="#eee" stroke-dasharray="5,5" /> <line x1="50" y1="225" x2="450" y2="225" stroke="#eee" stroke-dasharray="5,5" /> <line x1="50" y1="250" x2="450" y2="250" stroke="#ccc" stroke-dasharray="5,5" /> <line x1="116.6" y1="50" x2="116.6" y2="250" stroke="#ccc" stroke-dasharray="5,5" /> <line x1="183.3" y1="50" x2="183.3" y2="250" stroke="#ccc" stroke-dasharray="5,5" /> <line x1="250" y1="50" x2="250" y2="250" stroke="#ccc" stroke-dasharray="5,5" /> <line x1="316.6" y1="50" x2="316.6" y2="250" stroke="#ccc" stroke-dasharray="5,5" /> <line x1="383.3" y1="50" x2="383.3" y2="250" stroke="#ccc" stroke-dasharray="5,5" /> <line x1="450" y1="50" x2="450" y2="250" stroke="#ccc" stroke-dasharray="5,5" /> <text x="35" y="55" font-size="12">4</text>
+        <text x="35" y="80" font-size="12">3</text>
+        <text x="35" y="105" font-size="12">2</text>
+        <text x="35" y="130" font-size="12">1</text>
+        <text x="35" y="155" font-size="12">0</text>
+        <text x="30" y="180" font-size="12">-1</text>
+        <text x="30" y="205" font-size="12">-2</text>
+        <text x="30" y="230" font-size="12">-3</text>
+        <text x="30" y="255" font-size="12">-4</text>
+
+
+        <text x="110" y="165" font-size="12">5</text>
+        <text x="175" y="165" font-size="12">10</text>
+        <text x="242" y="165" font-size="12">15</text>
+        <text x="308" y="165" font-size="12">20</text>
+        <text x="375" y="165" font-size="12">25</text>
+        <text x="442" y="165" font-size="12">30</text>
+
+
+        <path d="M 50,50 
+                 C 83.3,50 83.3,250 116.6,250
+                 C 150,250 150,50 183.3,50
+                 C 216.6,50 216.6,250 250,250
+                 C 283.3,250 283.3,50 316.6,50
+                 C 350,50 350,250 383.3,250
+                 C 416.6,250 416.6,50 450,50" 
+              fill="none" stroke="black" stroke-width="3" />
+    </svg>
+    
+    <div style="margin-top: 15px; font-size: 14px; background: #f1f8ff; padding: 10px; border-radius: 4px; border-left: 4px solid #007bff;">
+        <strong>Thông số từ đồ thị:</strong>
+        <ul style="margin: 5px 0; padding-left: 20px;">
+            <li>Biên độ điện áp: $U_0 = 4 \text{ V}$</li>
+            <li>Chu kỳ: $T = 7,5 \times 10^{-5} \text{ s}$ (từ $0$ đến $7,5$)</li>
+            <li>Tần số: $f = \frac{1}{T} = \frac{40000}{3} \text{ Hz}$</li>
+        </ul>
+    </div>
+</div>
+
+
+SOLUTION 2
+Đáp án đang được cập nhật
+
+
+
+
+PROBLEM 3
+
+
+
+
+SOLUTION 3
+Đáp án đang được cập nhật
+PROBLEM 4
+
+
+SOLUTION 4
+Đáp án đang được cập nhật

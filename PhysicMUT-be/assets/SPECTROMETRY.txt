@@ -1,0 +1,359 @@
+﻿THEORY
+<div class="mass-spectrometer-theory" style="font-family: Arial, sans-serif; line-height: 1.6; color: #333; max-width: 800px; margin: 0 auto;">
+    <h1 style="text-align: center; color: #2980b9; border-bottom: 2px solid #2980b9; padding-bottom: 10px;">CHUYÊN ĐỀ: MÁY QUANG PHỔ KHỐI (MASS SPECTROMETER)</h1>
+
+
+    <section>
+        <h2 style="color: #c0392b;">1. Định nghĩa và Cấu tạo</h2>
+        <p><strong>Định nghĩa:</strong> Máy quang phổ khối là thiết bị dùng để tách các ion theo tỉ số giữa khối lượng và điện tích (<em>m/q</em>), giúp xác định khối lượng phân tử và thành phần đồng vị.</p>
+        
+        <p><strong>Cấu tạo chính:</strong></p>
+        <ul>
+            <li><strong>Buồng ion hóa:</strong> Biến các phân tử trung hòa thành ion dương (thường bằng cách bắn phá electron).</li>
+            <li><strong>Buồng gia tốc:</strong> Dùng hiệu điện thế cao <em>U</em> để tăng tốc cho các ion, cung cấp động năng ban đầu.</li>
+            <li><strong>Buồng phân tích (Từ trường):</strong> Chứa từ trường đều <em>B</em>. Lực từ làm ion chuyển động theo quỹ đạo tròn để phân tách chúng theo khối lượng.</li>
+            <li><strong>Máy dò (Detector):</strong> Ghi nhận vị trí ion đập vào để phân tích số liệu.</li>
+        </ul>
+    </section>
+
+
+    <section>
+        <h2 style="color: #c0392b;">2. Nguyên lý hoạt động</h2>
+        <ol>
+            <li><strong>Gia tốc:</strong> Ion được tăng tốc bởi điện trường, chuyển thế năng tĩnh điện thành động năng.</li>
+            <li><strong>Phân tách:</strong> Trong từ trường, lực Lo-ren-xơ đóng vai trò lực hướng tâm. Các ion có khối lượng <em>m</em> khác nhau sẽ quay với bán kính <em>R</em> khác nhau ($R \sim \sqrt{m}$).</li>
+            <li><strong>Lưu ý quan trọng:</strong> Trong vùng từ trường, tốc độ của ion <strong>không đổi</strong> vì lực từ không sinh công.</li>
+        </ol>
+    </section>
+
+
+    <section>
+        <h2 style="color: #c0392b;">3. Các công thức quan trọng (Thi THPT QG)</h2>
+        <div style="background-color: #f9f9f9; padding: 15px; border-left: 5px solid #27ae60; margin: 10px 0;">
+            <p><strong>1. Vận tốc sau khi tăng tốc:</strong></p>
+            <p style="text-align: center; font-size: 1.2em;">$$v = \sqrt{\frac{2|q|U}{m}}$$</p>
+            
+            <p><strong>2. Bán kính quỹ đạo trong từ trường:</strong></p>
+            <p style="text-align: center; font-size: 1.2em;">$$R = \frac{mv}{|q|B}$$</p>
+
+
+            <p><strong>3. Công thức liên hệ (Khối lượng - Bán kính):</strong></p>
+            <p style="text-align: center; font-size: 1.2em;">$$\frac{|q|}{m} = \frac{2U}{B^2 R^2} \quad \text{hoặc} \quad m = \frac{|q|B^2 R^2}{2U}$$</p>
+        </div>
+        <p><em>Trong đó:</em> $m$ (kg), $q$ (C), $U$ (V), $B$ (T), $R$ (m).</p>
+    </section>
+
+
+    <section>
+        <h2 style="color: #c0392b;">4. Ví dụ minh họa</h2>
+        <div style="border: 1px solid #ddd; padding: 15px; background-color: #fffde7; border-radius: 5px;">
+            <p><strong>Bài toán:</strong> Một ion $^{35}Cl^-$ có khối lượng $m = 35 \cdot 1,66 \cdot 10^{-27}$ kg, điện tích $q = 1,6 \cdot 10^{-19}$ C. Ion được tăng tốc bởi hiệu điện thế $U = 3000$ V rồi bay vào từ trường $B = 3$ T. Tính bán kính quỹ đạo.</p>
+            <hr>
+            <p><strong>Giải:</strong></p>
+            <p>Áp dụng công thức:</p>
+            <p>$$R = \sqrt{\frac{2mU}{qB^2}} = \sqrt{\frac{2 \cdot (35 \cdot 1,66 \cdot 10^{-27}) \cdot 3000}{1,6 \cdot 10^{-19} \cdot 3^2}}$$</p>
+            <p>$$R \approx 0,0156 \text{ m} = 1,56 \text{ cm}$$</p>
+        </div>
+    </section>
+</div>
+
+
+EXAMPLE
+PROBLEM
+<p> Để xác định các chất trong một mẫu, người ta dùng một máy được gọi là máy quang phổ khối (khối phổ kế, hình bên). Khi cho mẫu vào máy này, hạt có khối lượng <em>m</em> bị ion hóa sẽ mang điện tích <em>q</em>. Sau đó, hạt được tăng tốc đến tốc độ <em>v</em> nhờ hiệu điện thế <em>U</em>. Tiếp theo, hạt sẽ chuyển động vào vùng từ trường theo phương vuông góc với cảm ứng từ $\vec{B}$. Lực từ tác dụng lên hạt có độ lớn $F = Bv|q|$, có phương vuông góc với cảm ứng từ $\vec{B}$ và với vận tốc $\vec{v}$ của hạt. Bán kính quỹ đạo tròn của hạt trong vùng có từ trường là <em>r</em>. Dựa trên tỉ số $\frac{|q|}{m}$, có thể xác định được các chất trong mẫu.</p>
+
+
+<p><strong>a)</strong> Tốc độ của hạt bị thay đổi do tác dụng của từ trường trong máy.</p>
+
+
+<p><strong>b)</strong> Bỏ qua tốc độ ban đầu của hạt. Sau khi được tăng tốc bởi hiệu điện thế <em>U</em>, tốc độ của hạt là $v = \sqrt{\frac{2|q|U}{m}}$.</p>
+
+
+<p><strong>c)</strong> Tỉ số giữa độ lớn điện tích và khối lượng của hạt là $\frac{|q|}{m} = \frac{2U}{Br^2}$.</p>
+
+
+<p><strong>d)</strong> Biết $U = 3,00 \text{ kV}$; $B = 3,00 \text{ T}$; $1 \text{ amu} = 1,66.10^{-27} \text{ kg}$; $|e| = 1,60.10^{-19} \text{ C}$. Bán kính quỹ đạo của ion âm $^{35}\text{Cl}^{-}$ trong vùng có trường là $r = 0,0156 \text{ m}$.</p>
+
+
+SOLUTION
+<h1>Giải Chi Tiết Bài Toán Máy Quang Phổ Khối</h1>
+    
+    <p>Dưới đây là trình tự giải bài toán dựa trên nguyên lý hoạt động của máy quang phổ khối, tương ứng với các câu hỏi <strong>a, b, c, d</strong> trong đề minh họa.</p>
+
+
+    <hr>
+
+
+    <h3>Bước 1: Phân tích quá trình gia tốc (Tại Buồng gia tốc)</h3>
+    <p>Các hạt (ion) được tăng tốc bởi hiệu điện thế \(U\). Theo định lý biến thiên động năng (bỏ qua vận tốc đầu):</p>
+    <p>Công của lực điện trường = Động năng nhận được.</p>
+    $$ \Delta W_đ = A_{dien} \Rightarrow \frac{1}{2}mv^2 = |q|U $$
+    <p>Suy ra vận tốc của hạt ngay trước khi vào từ trường:</p>
+    $$ v = \sqrt{\frac{2|q|U}{m}} $$
+    <p><em>(Đây là đáp án chứng minh cho ý <strong>b</strong>)</em></p>
+
+
+    <hr>
+
+
+    <h3>Bước 2: Phân tích quá trình chuyển động trong từ trường (Tại Buồng phân tích)</h3>
+    <p>Khi hạt bay vào từ trường đều \(\vec{B}\) với vận tốc \(\vec{v} \perp \vec{B}\):</p>
+    <ul>
+        <li>Lực Lo-ren-xơ tác dụng lên hạt: \(F = |q|vB\).</li>
+        <li>Vì lực Lo-ren-xơ luôn vuông góc với vận tốc (\(\vec{F} \perp \vec{v}\)) nên lực này <strong>không sinh công</strong> (\(A=0\)).</li>
+        <li>Do đó, động năng của hạt không đổi &rarr; <strong>Tốc độ của hạt không đổi</strong>.</li>
+    </ul>
+    <p><em>(Nhận xét ý <strong>a</strong>: "Tốc độ bị thay đổi" là <strong>SAI</strong>)</em></p>
+
+
+    <hr>
+
+
+    <h3>Bước 3: Xây dựng công thức bán kính quỹ đạo</h3>
+    <p>Trong từ trường, lực Lo-ren-xơ đóng vai trò là lực hướng tâm giúp hạt chuyển động tròn đều:</p>
+    $$ F_{ht} = F_{Lorentz} \Rightarrow \frac{mv^2}{r} = |q|vB $$
+    <p>Rút bán kính \(r\) ra:</p>
+    $$ r = \frac{mv}{|q|B} $$
+    <p>Thay thế \(v\) từ Bước 1 vào công thức trên:</p>
+    $$ r = \frac{m}{|q|B} \cdot \sqrt{\frac{2|q|U}{m}} = \frac{1}{B} \sqrt{\frac{m^2}{|q|^2} \cdot \frac{2|q|U}{m}} = \frac{1}{B} \sqrt{\frac{2mU}{|q|}} $$
+    <p>Bình phương hai vế để tìm mối liên hệ tỉ số \(\frac{|q|}{m}\):</p>
+    $$ r^2 = \frac{1}{B^2} \cdot \frac{2mU}{|q|} \Rightarrow \frac{|q|}{m} = \frac{2U}{B^2 r^2} $$
+    <p><em>(Đây là đáp án chứng minh cho ý <strong>c</strong>)</em></p>
+
+
+    <hr>
+
+
+    <h3>Bước 4: Tính toán số liệu thực tế (Cho ion \( ^{35}Cl^- \))</h3>
+    <p><strong>Dữ kiện bài toán:</strong></p>
+    <ul>
+        <li>\( U = 3,00 \text{ kV} = 3000 \text{ V} = 3 \cdot 10^3 \text{ V} \)</li>
+        <li>\( B = 3,00 \text{ T} \)</li>
+        <li>Khối lượng \( m = 35 \text{ amu} = 35 \cdot 1,66 \cdot 10^{-27} \text{ kg} \)</li>
+        <li>Điện tích \( q = -1e \Rightarrow |q| = 1,6 \cdot 10^{-19} \text{ C} \)</li>
+    </ul>
+    <p><strong>Thay số vào công thức ở Bước 3 để tính \( r \):</strong></p>
+    <p>Từ công thức \(\frac{|q|}{m} = \frac{2U}{B^2 r^2} \Rightarrow r^2 = \frac{2U \cdot m}{|q| \cdot B^2}\)</p>
+    $$ r = \sqrt{\frac{2 \cdot (3 \cdot 10^3) \cdot (35 \cdot 1,66 \cdot 10^{-27})}{(1,6 \cdot 10^{-19}) \cdot (3^2)}} $$
+    <p>Bấm máy tính:</p>
+    $$ r = \sqrt{\frac{348,6 \cdot 10^{-24}}{14,4 \cdot 10^{-19}}} = \sqrt{24,208 \cdot 10^{-5}} \approx 0,015559... \text{ (m)} $$
+    <p><strong>Kết luận:</strong> \( r \approx 0,0156 \text{ m} \)</p>
+    <p><em>(Kết quả khớp với ý <strong>d</strong>)</em></p>
+
+
+EXERCISE
+PROBLEM 1
+<p> Carbon có hai đồng vị phổ biến là $^{12}\text{C}$ và $^{14}\text{C}$. Đồng vị $^{14}\text{C}$ được sử dụng trong phương pháp định tuổi bằng phóng xạ. Một thiết bị phân tích khối lượng có thể tách hai đồng vị này như sau:</p> <p>Các ion chứa hạt nhân $^{12}\text{C}$ và $^{14}\text{C}$ (có cùng điện tích $q = 1,6.10^{-19} \text{ C}$) tăng tốc đến cùng vận tốc $v = 1,5.10^5 \text{ m/s}$, sau đó đưa vào vùng từ trường đều có cảm ứng từ $B = 0,4 \text{ T}$, phương vuông góc với vận tốc ban đầu. Bỏ qua trọng lực. Biết các ion chuyển động theo quỹ đạo tròn trong từ trường. Biết khối lượng của các ion chứa $^{12}\text{C}$ và $^{14}\text{C}$ lần lượt là $1,9926.10^{-26} \text{ kg}$ và $2,324.10^{-26} \text{ kg}$.</p> <ul> <li><strong>a.</strong> Tốc độ của các ion bị thay đổi do tác dụng của lực từ.</li> <li><strong>b.</strong> Khi các ion chuyển động tròn thì lực hướng tâm là lực từ.</li> <li><strong>c.</strong> Bán kính quỹ đạo của các ion trong vùng từ trường được tính theo công thức $r = \frac{mB}{|q|v}$.</li> <li><strong>d.</strong> Khoảng cách giữa các ion chứa hạt nhân $^{12}\text{C}$ và $^{14}\text{C}$ khi cùng chuyển động được nửa vòng tròn xấp xỉ là $0,016 \text{ m}$.</li> </ul>
+
+
+<div style="flex: 1; min-width: 320px; display: flex; flex-direction: column; align-items: center; border: 1px solid #e0e0e0; padding: 20px; border-radius: 12px; background-color: #fafafa; box-shadow: 0 4px 6px rgba(0,0,0,0.05);">
+            
+    <svg width="100%" height="auto" viewBox="0 0 350 420" style="max-width: 400px; overflow: visible;">
+        <defs>
+            <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+                <polygon points="0 0, 10 3.5, 0 7" fill="#555" />
+            </marker>
+        </defs>
+
+
+        <rect x="0" y="0" width="350" height="380" rx="15" fill="#ffffff" stroke="#ced4da" stroke-width="2" />
+        <text x="260" y="25" font-size="12" fill="#999" font-family="sans-serif">Chân không</text>
+        
+        <g transform="translate(40, 100)">
+            <circle cx="0" cy="0" r="12" fill="none" stroke="#28a745" stroke-width="1.5"/>
+            <text x="0" y="4" font-size="14" font-weight="bold" fill="#28a745" text-anchor="middle">X</text>
+            <text x="18" y="4" font-size="14" font-weight="bold" fill="#28a745">B</text>
+        </g>
+
+
+        <rect x="20" y="320" width="80" height="50" rx="4" fill="#343a40" stroke="#212529" stroke-width="2"/>
+        <text x="60" y="350" font-size="12" fill="#fff" text-anchor="middle" font-weight="bold" font-family="sans-serif">Nguồn CO₂</text>
+        
+        <line x1="60" y1="320" x2="60" y2="300" stroke="#343a40" stroke-width="3" />
+        <line x1="30" y1="300" x2="90" y2="300" stroke="#343a40" stroke-width="3" />
+        <circle cx="60" cy="300" r="3" fill="#fff" stroke="#343a40"/>
+
+
+        <path id="pathC12" d="M 60 300 A 110 110 0 0 1 280 300" fill="none" stroke="#007bff" stroke-width="2" stroke-dasharray="6,4"/>
+        <circle r="5" fill="#007bff">
+            <animateMotion repeatCount="indefinite" dur="3s" path="M 60 300 A 110 110 0 0 1 280 300" keyPoints="0;1" keyTimes="0;1" calcMode="linear" />
+        </circle>
+
+
+        <path id="pathC14" d="M 60 300 A 128 128 0 0 1 316 300" fill="none" stroke="#dc3545" stroke-width="2" stroke-dasharray="6,4"/>
+        <circle r="5" fill="#dc3545">
+            <animateMotion repeatCount="indefinite" dur="3.4s" path="M 60 300 A 128 128 0 0 1 316 300" keyPoints="0;1" keyTimes="0;1" calcMode="linear" />
+        </circle>
+
+
+        <g transform="translate(280, 290)">
+            <rect x="-15" y="0" width="30" height="30" fill="none" stroke="#007bff" stroke-width="2"/>
+            <line x1="-15" y1="0" x2="15" y2="0" stroke="#fff" stroke-width="4"/> <text x="0" y="-10" font-size="12" font-weight="bold" fill="#007bff" text-anchor="middle" font-family="sans-serif">C-12</text>
+        </g>
+
+
+        <g transform="translate(316, 290)">
+            <rect x="-15" y="0" width="30" height="30" fill="none" stroke="#dc3545" stroke-width="2"/>
+            <line x1="-15" y1="0" x2="15" y2="0" stroke="#fff" stroke-width="4"/>
+            <text x="0" y="-10" font-size="12" font-weight="bold" fill="#dc3545" text-anchor="middle" font-family="sans-serif">C-14</text>
+        </g>
+
+
+        <text x="140" y="220" font-size="11" fill="#007bff" font-style="italic" font-family="sans-serif">Quỹ đạo nhẹ (R₁)</text>
+        <text x="210" y="140" font-size="11" fill="#dc3545" font-style="italic" font-family="sans-serif">Quỹ đạo nặng (R₂)</text>
+
+
+    </svg>
+
+
+    <div style="margin-top: 15px; text-align: center; font-size: 14px; color: #666;">
+        <p style="margin: 0;"><strong>Minh họa nguyên lý tách đồng vị:</strong></p>
+        <div style="margin-top: 5px;">
+            <span style="color: #007bff; font-weight: bold; margin-right: 15px;">● Carbon-12</span>
+            <span style="color: #dc3545; font-weight: bold;">● Carbon-14</span>
+        </div>
+        <p style="font-size: 12px; margin-top: 5px; font-style: italic;">(Hạt nặng hơn sẽ văng ra xa hơn)</p>
+    </div>
+</div>
+
+
+
+
+SOLUTION 1 
+Đáp án đang cập nhật
+PROBLEM 2
+<div>
+    <div>
+            
+        <p>
+            Các đồng vị khác nhau của iốt có thể được phân tích bằng máy quang phổ khối. Như hình bên, các hạt <sup>131</sup>I và <sup>127</sup>I có cùng điện tích \(q\), khối lượng lần lượt là \(m_1\) và \(m_2\), chúng đi vào điện trường với hiệu điện thế \(U\) từ lỗ nhỏ \(S_1\) bên dưới hộp A không vận tốc đầu.
+        </p>
+        <p>
+            Sau khi được gia tốc bởi điện trường, nó rời khỏi lỗ nhỏ \(S_2\) theo phương thẳng đứng vào một từ trường đều có cảm ứng từ \(B\) hướng vuông góc với trang giấy, và cuối cùng chạm vào phim ảnh D.
+        </p>
+
+
+        <div>
+            <ul>
+                <li>
+                    <strong>a.</strong> Đường sức từ hướng vào trong trang giấy.
+                </li>
+                <li>
+                    <strong>b.</strong> Vận tốc của <sup>131</sup>I khi đi vào từ trường từ lỗ nhỏ \(S_2\) có độ lớn là: 
+                    <br>
+                    <span>
+                        \(v = \sqrt{\frac{2qU}{m_1}}\)
+                    </span>
+                </li>
+                <li>
+                    <strong>c.</strong> Khoảng thời gian chênh lệch giữa <sup>131</sup>I và <sup>127</sup>I chuyển động trong từ trường là:
+                    <br>
+                    <span>
+                        \(\Delta t = \frac{2\pi(m_1 - m_2)}{qB}\)
+                    </span>
+                </li>
+                <li>
+                    <strong>d.</strong> Khoảng cách giữa <sup>131</sup>I và <sup>127</sup>I trên phim ảnh là:
+                    <br>
+                    <span>
+                        \(d = \frac{2}{B} \left( \sqrt{\frac{2m_1 U}{q}} - \sqrt{\frac{2m_2 U}{q}} \right)\)
+                    </span>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+<div style="flex: 1; min-width: 300px; display: flex; flex-direction: column; align-items: center; justify-content: flex-start; padding-top: 20px;">
+    
+    <svg width="400" height="300" viewBox="0 0 400 300" style="background-color: #fff; max-width: 100%;">
+        <defs>
+            <marker id="arrowhead" markerWidth="10" markerHeight="7" refX="9" refY="3.5" orient="auto">
+                <polygon points="0 0, 10 3.5, 0 7" fill="#000" />
+            </marker>
+        </defs>
+
+
+        <rect x="290" y="10" width="50" height="40" fill="none" stroke="#000" stroke-width="2.5" />
+        <text x="315" y="38" font-family="Arial" font-weight="bold" font-size="16" text-anchor="middle">A</text>
+
+
+        <line x1="280" y1="50" x2="350" y2="50" stroke="#000" stroke-width="2.5" />
+        <line x1="50" y1="90" x2="350" y2="90" stroke="#000" stroke-width="2.5" />
+
+
+        <line x1="315" y1="48" x2="315" y2="52" stroke="#fff" stroke-width="4" /> <line x1="315" y1="88" x2="315" y2="92" stroke="#fff" stroke-width="4" /> <text x="325" y="65" font-family="Arial" font-size="14" font-weight="bold">S<tspan dy="3" font-size="10">1</tspan></text>
+        <text x="325" y="105" font-family="Arial" font-size="14" font-weight="bold">S<tspan dy="3" font-size="10">2</tspan></text>
+
+
+        <line x1="270" y1="52" x2="270" y2="88" stroke="#000" stroke-width="1.5" />
+        <line x1="270" y1="52" x2="270" y2="60" stroke="#000" stroke-width="1.5" marker-end="url(#arrowhead)" />
+        <line x1="270" y1="88" x2="270" y2="80" stroke="#000" stroke-width="1.5" marker-end="url(#arrowhead)" />
+        <text x="255" y="75" font-family="Arial" font-size="14" font-weight="bold">U</text>
+
+
+        <rect x="50" y="80" width="160" height="12" fill="#fff" stroke="#000" stroke-width="2.5" />
+        <text x="40" y="105" font-family="Arial" font-size="16" font-weight="bold">D</text>
+
+
+        <text x="350" y="250" font-family="Arial" font-size="18" font-weight="bold" fill="#555">B</text>
+
+
+        <line x1="315" y1="50" x2="315" y2="90" stroke="#555" stroke-dasharray="4,4" stroke-width="1.5" />
+
+
+        <path d="M 315 90 A 70 70 0 0 1 175 90" fill="none" stroke="#000" stroke-width="2" stroke-dasharray="6,4" />
+        
+        <path d="M 315 90 A 100 100 0 0 1 115 90" fill="none" stroke="#000" stroke-width="2" stroke-dasharray="6,4" />
+
+
+        <text x="165" y="75" font-family="Arial" font-size="12" font-weight="bold"><sup>127</sup>I</text>
+        <text x="105" y="75" font-family="Arial" font-size="12" font-weight="bold"><sup>131</sup>I</text>
+
+
+        <circle r="4" fill="#666">
+            <animateMotion 
+                path="M 315 50 L 315 90 A 70 70 0 0 1 175 90" 
+                dur="2.5s" 
+                repeatCount="indefinite"
+                keyTimes="0;0.2;1"
+                keyPoints="0;0.1;1" 
+            />
+        </circle>
+
+
+        <circle r="4" fill="#000">
+            <animateMotion 
+                path="M 315 50 L 315 90 A 100 100 0 0 1 115 90" 
+                dur="3s" 
+                repeatCount="indefinite"
+                keyTimes="0;0.16;1" 
+                keyPoints="0;0.08;1"
+            />
+        </circle>
+
+
+    </svg>
+    <p style="font-size: 13px; color: #666; font-style: italic; margin-top: 5px;">
+        Hình minh họa: Quỹ đạo của đồng vị Iốt trong quang phổ kế
+    </p>
+</div>
+
+
+
+
+SOLUTION 2
+Đáp án đang được cập nhật
+PROBLEM 3
+
+
+
+
+SOLUTION 3
+Đáp án đang được cập nhật
+PROBLEM 4
+
+
+SOLUTION 4
+Đáp án đang được cập nhật
