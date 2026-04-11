@@ -1,0 +1,1 @@
+﻿const fs = require('fs'); let c=fs.readFileSync('src/services/authService.ts','utf8'); c=c.replace('changePassword: async (data: any) => {', 'googleLogin: async (credential: string) => { const response = await api.post(\\'/auth/google\\', { credential }); return response.data; },\n    changePassword: async (data: any) => {'); fs.writeFileSync('src/services/authService.ts',c);

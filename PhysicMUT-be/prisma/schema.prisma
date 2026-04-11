@@ -21,6 +21,11 @@ model User {
   role_id       String?
   role          Role?     @relation(fields: [role_id], references: [id])
   
+  department    String?
+  
+  is_active     Boolean   @default(true)
+  last_login    DateTime?
+  
   created_at    DateTime  @default(now())
   updated_at    DateTime  @updatedAt
 }
@@ -30,6 +35,7 @@ model Role {
   name        String   @unique
   description String?
   permissions Json?
+  is_active   Boolean  @default(true)
   users       User[]
   created_at  DateTime @default(now())
   updated_at  DateTime @updatedAt
@@ -37,41 +43,15 @@ model Role {
 
 // Educational Content
 
-model Chapter {
-  id          String   @id @default(uuid())
-  name        String
-  description String?
-  order       Int      @default(0)
-  lessons     Lesson[]
-  created_at  DateTime @default(now())
-  updated_at  DateTime @updatedAt
-}
-
-model Lesson {
-  id          String    @id @default(uuid())
-  name        String
-  chapter_id  String
-  chapter     Chapter   @relation(fields: [chapter_id], references: [id])
-  order       Int       @default(0)
-  
-  // Content relations
-  theories    Theory[]
-  models3d    Model3D[]
-  examples    Example[]
-  exercises   Exercise[]
-  
-  created_at  DateTime @default(now())
-  updated_at  DateTime @updatedAt
-}
-
 model Theory {
   id           String   @id @default(uuid())
-  lesson_id    String
-  lesson       Lesson   @relation(fields: [lesson_id], references: [id])
+  model_type_name String
+  model3d      Model3D  @relation(fields: [model_type_name], references: [model_type_name])
   title        String
   content_html String   // Rich text content
   
-  type         String   @default("General")
+  type         String   @default("General") // Original Type (General, Formula)
+  theory_type_name String? 
   status       String   @default("ACTIVE") // ACTIVE, INACTIVE
   
   created_at   DateTime @default(now())
@@ -79,30 +59,32 @@ model Theory {
 }
 
 model Model3D {
-  id            String   @id @default(uuid())
-  lesson_id     String
-  lesson        Lesson   @relation(fields: [lesson_id], references: [id])
-  name          String
-  description   String?
-  source_url    String   // Path to GLB/GLTF file
-  thumbnail_url String?
+  model_type_name String   @id
+  name            String
+  description     String?
+  source_url      String   // Path to GLB/GLTF file
+  thumbnail_url   String?
   
-  type          String   @default("General")
-  status        String   @default("ACTIVE")
+  status          String   @default("ACTIVE")
   
-  created_at    DateTime @default(now())
-  updated_at    DateTime @updatedAt
+  theories        Theory[]
+  examples        Example[]
+  exercises       Exercise[]
+  
+  created_at      DateTime @default(now())
+  updated_at      DateTime @updatedAt
 }
 
 model Example {
   id           String   @id @default(uuid())
-  lesson_id    String
-  lesson       Lesson   @relation(fields: [lesson_id], references: [id])
+  model_type_name String
+  model3d      Model3D  @relation(fields: [model_type_name], references: [model_type_name])
   title        String
   problem      String   // Problem statement
   solution     String   // Step-by-step solution
   
   type         String   @default("General")
+  example_type_name String?
   status       String   @default("ACTIVE")
   reference    String?
   
@@ -112,17 +94,20 @@ model Example {
 
 model Exercise {
   id             String   @id @default(uuid())
-  lesson_id      String
-  lesson         Lesson   @relation(fields: [lesson_id], references: [id])
+  model_type_name String
+  model3d        Model3D  @relation(fields: [model_type_name], references: [model_type_name])
   question       String
-  options        Json     // Stores multiple choice options: [{id: "A", text: "Option A"}, ...]
-  correct_answer String   // ID of the correct option (e.g., "A")
+  options        Json?     // Stores multiple choice options: [{id: "A", text: "Option A"}, ...]
+  correct_answer String?   // ID of the correct option (e.g., "A")
   level          String   @default("MEDIUM") // EASY, MEDIUM, HARD
   
   type           String   @default("General")
+  exercise_type_name String?
   status         String   @default("ACTIVE")
   reference      String?
+  solution       String?
   
   created_at     DateTime @default(now())
   updated_at     DateTime @updatedAt
 }
+

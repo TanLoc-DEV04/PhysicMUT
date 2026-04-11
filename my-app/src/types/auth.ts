@@ -1,8 +1,19 @@
+export interface RolePermissions {
+  [category: string]: string[];
+}
+
+export interface Role {
+  id?: string;
+  name: string;
+  permissions?: RolePermissions | any;
+  is_active?: boolean;
+}
+
 export interface User {
   id: string;
   email: string;
   name: string;
-  role: 'student' | 'teacher' | 'admin';
+  role: string | Role;
   class?: string;
   avatar?: string;
   createdAt?: string;

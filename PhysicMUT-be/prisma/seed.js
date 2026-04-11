@@ -8,77 +8,155 @@ async function main() {
     console.log('Cleaning up database...');
     await prisma.exercise.deleteMany({});
     await prisma.example.deleteMany({});
-    await prisma.model3D.deleteMany({});
     await prisma.theory.deleteMany({});
-    await prisma.lesson.deleteMany({});
-    await prisma.chapter.deleteMany({});
+    await prisma.model3D.deleteMany({});
 
-    // UPSERT ROLES & USERS (Keep existing logic for roles/users)
+    // UPSERT ROLES & USERS
+    const adminPermissions = {
+      "Dashboard": ["view_dashboard"],
+      "Admin Management": ["view_admin_list", "view_admin_details", "add_new_admin", "edit_admin", "delete_admin"],
+      "Role Management": ["view_role_list", "add_role", "edit_role", "delete_role"],
+      "Theory Management": ["view_theory_list", "add_theory", "edit_theory", "delete_theory"],
+      "Example Management": ["view_example_list", "add_example", "edit_example", "delete_example"],
+      "Exercise Management": ["view_exercise_list", "add_exercise", "edit_exercise", "delete_exercise"],
+      "3D Model Management": ["view_model_list", "add_model", "edit_model", "delete_model"],
+      "User Management": ["view_user_list", "edit_user", "delete_user"]
+    };
+
     const adminRole = await prisma.role.upsert({
         where: { name: 'ADMIN' },
-        update: {},
-        create: { name: 'ADMIN', description: 'System Administrator', permissions: { all: true } }
+        update: { description: 'System Administrator - full access', permissions: adminPermissions, is_active: true },
+        create: { name: 'ADMIN', description: 'System Administrator - full access', permissions: adminPermissions, is_active: true }
     });
-    const teacherRole = await prisma.role.upsert({
-        where: { name: 'TEACHER' },
-        update: {},
-        create: { name: 'TEACHER', description: 'Teacher', permissions: { content: true } }
+    const userRole = await prisma.role.upsert({
+        where: { name: 'USER' },
+        update: { description: 'Regular user - read only, no admin access', permissions: {}, is_active: true },
+        create: { name: 'USER', description: 'Regular user - read only, no admin access', permissions: {}, is_active: true }
     });
-    const studentRole = await prisma.role.upsert({
-        where: { name: 'STUDENT' },
-        update: {},
-        create: { name: 'STUDENT', description: 'Student', permissions: { read: true } }
+    const teacherLeadPermissions = {
+      "Dashboard": ["view_dashboard"],
+      "Theory Management": ["view_theory_list", "add_theory", "edit_theory", "delete_theory"],
+      "Example Management": ["view_example_list", "add_example", "edit_example", "delete_example"],
+      "Exercise Management": ["view_exercise_list", "add_exercise", "edit_exercise", "delete_exercise"],
+    };
+    const teacherLeadRole = await prisma.role.upsert({
+        where: { name: 'TEACHER LEAD' },
+        update: { description: 'Lead Teacher - manages theory, examples and exercises', permissions: teacherLeadPermissions, is_active: true },
+        create: { name: 'TEACHER LEAD', description: 'Lead Teacher - manages theory, examples and exercises', permissions: teacherLeadPermissions, is_active: true }
     });
+    const teacherTheoryPermissions = {
+      "Dashboard": ["view_dashboard"],
+      "Theory Management": ["view_theory_list", "add_theory", "edit_theory", "delete_theory"]
+    };
+    const teacherTheoryRole = await prisma.role.upsert({
+        where: { name: 'TEACHER THEORY' },
+        update: { description: 'Theory Teacher - manages theory content only', permissions: teacherTheoryPermissions, is_active: true },
+        create: { name: 'TEACHER THEORY', description: 'Theory Teacher - manages theory content only', permissions: teacherTheoryPermissions, is_active: true }
+    });
+    const teacherExamplePermissions = {
+      "Dashboard": ["view_dashboard"],
+      "Example Management": ["view_example_list", "add_example", "edit_example", "delete_example"]
+    };
+    const teacherExampleRole = await prisma.role.upsert({
+        where: { name: 'TEACHER EXAMPLE' },
+        update: { description: 'Example Teacher - manages example content only', permissions: teacherExamplePermissions, is_active: true },
+        create: { name: 'TEACHER EXAMPLE', description: 'Example Teacher - manages example content only', permissions: teacherExamplePermissions, is_active: true }
+    });
+    const teacherExercisePermissions = {
+      "Dashboard": ["view_dashboard"],
+      "Exercise Management": ["view_exercise_list", "add_exercise", "edit_exercise", "delete_exercise"]
+    };
+    const teacherExerciseRole = await prisma.role.upsert({
+        where: { name: 'TEACHER EXERCISE' },
+        update: { description: 'Exercise Teacher - manages exercise content only', permissions: teacherExercisePermissions, is_active: true },
+        create: { name: 'TEACHER EXERCISE', description: 'Exercise Teacher - manages exercise content only', permissions: teacherExercisePermissions, is_active: true }
+    });
+    const designer3DPermissions = {
+      "Dashboard": ["view_dashboard"],
+      "3D Model Management": ["view_model_list", "add_model", "edit_model", "delete_model"]
+    };
+    const designer3DRole = await prisma.role.upsert({
+        where: { name: '3D DESIGNER' },
+        update: { description: '3D Designer - manages 3D model content only', permissions: designer3DPermissions, is_active: true },
+        create: { name: '3D DESIGNER', description: '3D Designer - manages 3D model content only', permissions: designer3DPermissions, is_active: true }
+    });
+
+    // Mark old TEACHER and STUDENT roles as inactive (do NOT delete to avoid FK constraint errors)
+    try {
+        await prisma.role.upsert({
+            where: { name: 'TEACHER' },
+            update: { is_active: false, description: '[DEPRECATED] Use TEACHER LEAD / THEORY / EXAMPLE / EXERCISE instead' },
+            create: { name: 'TEACHER', description: '[DEPRECATED]', is_active: false, permissions: {} }
+        });
+        await prisma.role.upsert({
+            where: { name: 'STUDENT' },
+            update: { is_active: false, description: '[DEPRECATED] Use USER instead' },
+            create: { name: 'STUDENT', description: '[DEPRECATED]', is_active: false, permissions: {} }
+        });
+    } catch (e) { console.warn('Could not mark legacy roles inactive:', e.message); }
 
     const adminPwd = '123456';
     await prisma.user.upsert({
         where: { email: 'admin@physicmut.com' },
         update: {},
-        create: { username: 'admin', email: 'admin@physicmut.com', password_hash: adminPwd, full_name: 'Quản trị viên', role: { connect: { id: adminRole.id } } }
+        create: { username: 'admin', email: 'admin@physicmut.com', password_hash: adminPwd, full_name: 'Quản trị viên', department: 'Administration', role: { connect: { id: adminRole.id } } }
     });
-    // ... similarly for teacher/student if needed, skipping for brevity as user implies existing correct setup or just wants content focus.
-    // Actually, let's keep them to be safe.
     await prisma.user.upsert({
         where: { email: 'teacher@physicmut.com' },
-        update: {},
-        create: { username: 'teacher', email: 'teacher@physicmut.com', password_hash: '123456', full_name: 'Giáo viên Vật Lý', role: { connect: { id: teacherRole.id } } }
+        update: { role: { connect: { id: userRole.id } } },
+        create: { username: 'teacher', email: 'teacher@physicmut.com', password_hash: '123456', full_name: 'Giáo viên Vật Lý', role: { connect: { id: userRole.id } } }
     });
     await prisma.user.upsert({
         where: { email: 'student@physicmut.com' },
+        update: { role: { connect: { id: userRole.id } } },
+        create: { username: 'student', email: 'student@physicmut.com', password_hash: '123456', full_name: 'Nguyễn Văn A', role: { connect: { id: userRole.id } } }
+    });
+    // Sample admin users for new roles
+    await prisma.user.upsert({
+        where: { email: 'teacher.lead@physicmut.com' },
         update: {},
-        create: { username: 'student', email: 'student@physicmut.com', password_hash: '123456', full_name: 'Nguyễn Văn A', role: { connect: { id: studentRole.id } } }
+        create: { username: 'teacher_lead', email: 'teacher.lead@physicmut.com', password_hash: '123456', full_name: 'Trưởng nhóm Giáo viên', department: 'Academic', role: { connect: { id: teacherLeadRole.id } } }
+    });
+    await prisma.user.upsert({
+        where: { email: 'designer3d@physicmut.com' },
+        update: {},
+        create: { username: 'designer_3d', email: 'designer3d@physicmut.com', password_hash: '123456', full_name: 'Nhà thiết kế 3D', department: '3D Lab', role: { connect: { id: designer3DRole.id } } }
     });
 
 
     // --- 1. CONTENT CREATION ---
-    console.log('Creating 3 Models Content...');
+    console.log('Creating 3D Model Content...');
 
-    // Helper to create content
-    const createModelContent = async (chapterName, lessonName, theories, modelData, examples, exercises) => {
-        const chapter = await prisma.chapter.create({
+    // Helper to create content — links Theory/Example/Exercise directly to Model3D via model_type_name
+    const createModelContent = async (modelData, theories, examples, exercises) => {
+        const { model_type_name } = modelData;
+
+        // Inject type name into each content item
+        const theoriesWithType = theories.map(t => ({ ...t, theory_type_name: model_type_name }));
+        const examplesWithType = examples.map(e => ({ ...e, example_type_name: model_type_name }));
+        const exercisesWithType = exercises.map(ex => ({ ...ex, exercise_type_name: model_type_name }));
+
+        await prisma.model3D.create({
             data: {
-                name: chapterName,
-                description: `Chương về ${chapterName}`,
-                order: 1,
-                lessons: {
-                    create: [{
-                        name: lessonName,
-                        order: 1,
-                        theories: { create: theories },
-                        models3d: { create: [modelData] }, // 1:1 Model per user request implies 1 main model, but schema allows many. We put 1.
-                        examples: { create: examples },
-                        exercises: { create: exercises }
-                    }]
-                }
+                ...modelData,
+                theories:  { create: theoriesWithType },
+                examples:  { create: examplesWithType },
+                exercises: { create: exercisesWithType },
             }
         });
-        console.log(`Created ${lessonName}`);
+        console.log(`Created Model3D: ${model_type_name}`);
     };
 
     // 1. CYCLOTRON
     await createModelContent(
-        'Điện từ trường',
-        'Máy gia tốc Cyclotron',
+        {
+            model_type_name: 'CYCLOTRON',
+            name: 'Cyclotron',
+            description: 'Mô hình 3D Máy gia tốc Cyclotron',
+            source_url: '',
+            thumbnail_url: '/cyclotron.jpg',
+            status: 'ACTIVE',
+        },
         [{
             title: 'Lý thuyết mô hình Máy gia tốc hạt Cyclotron',
             content_html: `
@@ -180,14 +258,7 @@ async function main() {
             type: 'Theory',
             status: 'ACTIVE'
         }],
-        {
-            name: 'Cyclotron',
-            description: 'Mô hình 3D Máy gia tốc Cyclotron',
-            source_url: '', // Frontend uses `type` mainly, or we can put a dummy path.
-            thumbnail_url: '/cyclotron.jpg',
-            type: 'CYCLOTRON', // IMPORTANT: Matches ModelRegistry case
-            status: 'ACTIVE'
-        },
+
         [{
             title: 'Bài toán Cyclotron (Câu 6)',
             problem: `
@@ -277,7 +348,7 @@ async function main() {
 
 <p><strong>b)</strong> Có một hiệu điện thế xoay chiều đặt vào hai hộp D với tần số thích hợp để hạt được tăng tốc mỗi lần đi qua khe. Quỹ đạo của hạt gần giống đường xoắn ốc. Chính xác thì quỹ đạo ấy có dạng như thế nào?</p>
 
-<p><strong>c)</strong> Tính tần số quay của hạt, cho nhận xét về tần số này. Tần số của điện áp xoay chiều phải bằng bao nhiêu để hạt được tăng tốc mỗi lần qua khe? Trong phần dưới đây, xét trường hợp gia tốc hạt prôtôn có khối lượng $m_p = 1,66 \\cdot 10^{-27} \\text{ kg}$ và điện tích $e = 1,6 \\cdot 10^{-19} \\text{C}$. Điện áp đặt vào các hộp D có tần số $f = 10^{17} \\text{ Hz}$. Vòng cuối cùng của prôtôn trước khi ra khỏi xiclôtrôn có bán kính 0,42 m.</p>
+<p><strong>c)</strong> Tính tần số quay của hạt, cho nhận xét về tần số này. Tần số của điện áp xoay chiều phải bằng bao nhiêu để hạt được tăng tốc mỗi lần qua khe? Trong phần dưới đây, xét trường hợp gia tốc hạt prôtôn có khối lượng $m_p = 1,66 \\cdot 10^{-27} \\text{ kg}$ và điện tích $e = 1,6 \\cdot 10^{-19} \\text{C}$. Điện áp đặt vào các hộp D có tần số $f = 10^{7} \\text{ Hz}$. Vòng cuối cùng của prôtôn trước khi ra khỏi xiclôtrôn có bán kính 0,42 m.</p>
 
 <p><strong>d)</strong> Tính cảm ứng từ B và động năng cuối cùng của prôtôn.</p>
 
@@ -288,7 +359,23 @@ async function main() {
                 level: 'HARD',
                 type: 'Essay',
                 status: 'ACTIVE',
-                reference: 'Đáp án đang được cập nhật'
+                solution: `
+<p><strong>a)</strong> Khi hạt điện tích dương<em>q</em> bay vào từ trường đều <em> B</em> với vận tốc <em> v</em> vuông góc với <em> B</em>, hạt chịu tác dụng của lực Lo - ren - xơ có độ lớn <em> F = | q | vB</em> [1, 2].Lực này luôn vuông góc với véc - tơ vận tốc nên không sinh công, chỉ làm thay đổi hướng chuyển động và đóng vai trò là lực hướng tâm <em> F <sub> ht</sub> = mv <sup> 2</sup> /R</em> [2, 3].Do đó, quỹ đạo của hạt là một đường tròn[3].Bán kính quỹ đạo được xác định từ phương trình <em> F = F <sub> ht</sub></em>, suy ra <em> R = mv / (| q | B)</em> [2, 3].</p>
+
+<p><strong>b)</strong> Bên trong hai hộp chữ D (nơi được che chắn điện trường, chỉ có từ trường), hạt chuyển động theo các quỹ đạo nửa đường tròn [4]. Mỗi khi đi qua khe hở giữa hai hộp, điện trường xoay chiều thực hiện công làm tăng tốc độ của hạt [5, 6]. Vì bán kính <em>R</em> tỉ lệ thuận với vận tốc <em>v</em>, nên sau mỗi lần được gia tốc qua khe, bán kính quỹ đạo của hạt lại lớn hơn [5, 6]. Chính vì vậy, quỹ đạo của hạt là sự ghép nối của các nửa đường tròn có bán kính tăng dần, tạo thành một đường trôn ốc từ tâm mở rộng ra ngoài [5, 6].</p>
+
+<p><strong>c)</strong> Tần số quay của hạt (số vòng quay trong 1 giây) được tính bằng <em>f<sub>p</sub> = v / (2&pi;R)</em> [7]. Thay biểu thức bán kính vào, ta có <em>f<sub>p</sub> = |q|B / (2&pi;m)</em> [6, 8]. <strong>Nhận xét:</strong> Tần số quay của hạt là một hằng số, hoàn toàn không phụ thuộc vào vận tốc hay bán kính quỹ đạo của nó [6, 8]. Để hạt được tăng tốc liên tục mỗi khi đi qua khe, tần số của điện áp xoay chiều phải luôn đồng bộ và bằng với tần số quay của hạt, tức là <em>f = |q|B / (2&pi;m)</em> [6, 9].</p>
+
+<p><strong>d)</strong> <br>
+Từ công thức tần số, cảm ứng từ B là <em>B = 2&pi;m<sub>p</sub>f / e</em> [6, 10]. Thay số ta được <em>B = (2 &cdot; 3,14 &cdot; 1,66&cdot;10<sup>-27</sup> &cdot; 10<sup>7</sup>) / 1,6&cdot;10<sup>-19</sup> &approx; 0,65 T</em> [6, 10]. <br>
+Vận tốc cực đại của prôtôn khi đạt bán kính quỹ đạo ngoài cùng <em>R<sub>max</sub> = 0,42 m</em> là <em>v<sub>max</sub> = 2&pi;fR<sub>max</sub></em> [11]. <br>
+Động năng cuối cùng của prôtôn là <em>W<sub>đ</sub> = 1/2 m<sub>p</sub>v<sub>max</sub><sup>2</sup> = 2&pi;<sup>2</sup>m<sub>p</sub>f<sup>2</sup>R<sub>max</sub><sup>2</sup></em> [10, 11]. <br>
+Thay số ta tính được <em>W<sub>đ</sub> = 2 &cdot; (3,14)<sup>2</sup> &cdot; 1,66&cdot;10<sup>-27</sup> &cdot; (10<sup>7</sup>)<sup>2</sup> &cdot; (0,42)<sup>2</sup> &approx; 5,77&cdot;10<sup>-13</sup> J</em> (tương đương khoảng 3,6 MeV) [10, 11].</p>
+
+<p><strong>e)</strong> Mỗi lần đi qua khe hở, prôtôn được nhận thêm năng lượng <em>&Delta;W<sub>1</sub> = eU</em> [5]. Trong mỗi một vòng quay hoàn chỉnh, hạt đi qua khe 2 lần, do đó năng lượng tăng thêm trong một vòng là <em>&Delta;W = 2eU</em> [5]. <br>
+Thay số, độ tăng năng lượng mỗi vòng là <em>&Delta;W = 2 &cdot; 1,6&cdot;10<sup>-19</sup> &cdot; 20&cdot;10<sup>3</sup> = 6,4&cdot;10<sup>-15</sup> J</em> [5]. <br>
+Số vòng mà prôtôn đã quay trước khi bay ra khỏi xiclôtrôn là <em>N = W<sub>đ</sub> / &Delta;W = (5,77&cdot;10<sup>-13</sup>) / (6,4&cdot;10<sup>-15</sup>) &approx; 90</em> vòng [6, 10].</p>
+                `
             },
             // PROBLEM 3 (Context + 3 Multiple Choice Questions)
             {
@@ -324,7 +411,15 @@ async function main() {
                 level: 'MEDIUM',
                 type: 'Essay',
                 status: 'ACTIVE',
-                reference: 'Đáp án đang được cập nhật'
+                solution: `
+<p><strong>Câu I:</strong> Để hạt được tăng tốc liên tục sau mỗi nửa vòng quay, tần số của nguồn điện xoay chiều đặt vào hai hộp D phải đồng bộ và bằng tần số quay của electron trong từ trường (tần số cyclotron). Lực Lo-ren-xơ đóng vai trò lực hướng tâm: <em>eBv = mv<sup>2</sup>/r &rArr; &omega; = v/r = eB/m</em>. Tần số của nguồn điện là <em>f = &omega; / (2&pi;) = eB / (2&pi;m)</em>. <br><strong>&rArr; Chọn B.</strong></p>
+
+<p><strong>Câu II:</strong> Tốc độ của hạt tỉ lệ thuận với bán kính quỹ đạo. Hạt đạt tốc độ cực đại khi quỹ đạo của nó mở rộng đến bán kính cực đại ngoài cùng là <em>R</em>. Từ hệ thức <em>v = eBr/m</em>, ta suy ra tốc độ cực đại <em>v<sub>max</sub> = eBR/m</em>. <br><strong>&rArr; Chọn C.</strong></p>
+
+<p><strong>Câu III:</strong> Động năng cực đại của hạt khi rời khỏi máy gia tốc là <em>W<sub>đ,max</sub> = 1/2 mv<sub>max</sub><sup>2</sup> = e<sup>2</sup>B<sup>2</sup>R<sup>2</sup> / (2m)</em>. Biểu thức này chỉ phụ thuộc vào <em>R</em>, <em>B</em> và bản chất của hạt (<em>m, e</em>), hoàn toàn không phụ thuộc vào <em>U</em>. Do đó, nếu chỉ tăng <em>U</em>, động năng cực đại của hạt sẽ không thay đổi.</p>
+<p>Mặt khác, mỗi lần đi qua khoảng hở giữa 2 hộp D, hạt nhận được thêm một phần năng lượng bằng công của lực điện trường <em>A = eU</em>. Khi <em>U</em> tăng, năng lượng hạt nhận được trong mỗi vòng quay lớn hơn, dẫn đến tổng số vòng quay cần thiết để tích lũy đến động năng cực đại sẽ giảm đi. Vì chu kì quay <em>T</em> của hạt trong từ trường là một hằng số (không phụ thuộc vận tốc), nên tổng thời gian để hạt đạt động năng cực đại sẽ giảm. <br><strong>&rArr; Chọn D.</strong></p>
+        
+                `
             },
             // PROBLEM 4
             {
@@ -332,11 +427,19 @@ async function main() {
 <p> Hai hạt khác nhau được tăng tốc bằng máy gia tốc cyclotron. Độ lớn cảm ứng từ của từ trường vuông góc với mặt hộp D không đổi, tần số của điện áp xoay chiều có thể điều chỉnh theo tần số chuyển động tròn của hai hạt.</p> <ul> <li>A. Hạt có điện tích lớn hơn có động lượng cuối cùng lớn hơn.</li> <li>B. Hạt có điện tích nhỏ hơn có động lượng cuối cùng lớn hơn.</li> <li>C. Hạt có điện tích lớn hơn có động năng cuối cùng lớn hơn.</li> <li>D. Hạt có điện tích nhỏ hơn có động năng cuối cùng lớn hơn.</li> </ul>
                 `,
                 options: [{ id: "A", text: "A" }, { id: "B", text: "B" }, { id: "C", text: "C" }, { id: "D", text: "D" }], // Simplified options
-                correct_answer: "",
+                correct_answer: "A",
                 level: 'MEDIUM',
                 type: 'MultipleChoice',
                 status: 'ACTIVE',
-                reference: 'Đáp án đang được cập nhật'
+                solution: `
+<p><strong>Giải thích:</strong></p>
+<p>Khi hạt chuyển động trong máy gia tốc cyclotron, lực từ (lực Lo-ren-xơ) đóng vai trò là lực hướng tâm: <em>|q|vB = mv<sup>2</sup>/R</em> [1].</p>
+<p>Động lượng của hạt tại quỹ đạo bán kính <em>R</em> là: <em>p = mv = |q|BR</em>.</p>
+<p>Hai hạt khác nhau được gia tốc trong cùng một máy cyclotron sẽ đạt trạng thái cuối cùng khi bán kính quỹ đạo đạt giá trị cực đại bằng bán kính của hộp D (<em>R = R<sub>max</sub></em>). Do đó, động lượng cuối cùng cực đại của hạt là: <em>p<sub>max</sub> = |q|BR<sub>max</sub></em>.</p>
+<p>Vì cảm ứng từ <em>B</em> và bán kính <em>R<sub>max</sub></em> của máy là không đổi, động lượng cuối cùng tỉ lệ thuận với độ lớn điện tích <em>|q|</em> của hạt. Vậy hạt có điện tích lớn hơn chắc chắn sẽ có động lượng cuối cùng lớn hơn. <strong>&rArr; Phương án A đúng, B sai.</strong></p>
+<p>Đối với động năng cuối cùng của hạt: <em>W<sub>đ,max</sub> = p<sub>max</sub><sup>2</sup> / (2m) = q<sup>2</sup>B<sup>2</sup>R<sub>max</sub><sup>2</sup> / (2m)</em> [2]. Động năng phụ thuộc vào cả điện tích <em>q</em> và khối lượng <em>m</em>. Vì đề bài chỉ cho "hai hạt khác nhau" mà không cung cấp thông tin về tỉ số khối lượng của chúng, ta không thể kết luận hạt nào có động năng lớn hơn. <strong>&rArr; Phương án C và D sai.</strong></p>
+<p><strong>&rArr; Chọn A.</strong></p>
+                `
             },
             // PROBLEM 5
             {
@@ -348,7 +451,16 @@ async function main() {
                 level: 'HARD',
                 type: 'Essay',
                 status: 'ACTIVE',
-                reference: 'Đáp án đang được cập nhật'
+                solution: `
+                <p><strong>a) Sai.</strong> Trong một chu kì quay hoàn chỉnh, quỹ đạo của hạt gồm hai nửa đường tròn nằm trong hai hộp D [1]. Hạt sẽ đi qua khoảng hở giữa hai hộp D hai lần. Do đó, trong mỗi chu kì, proton được tăng tốc hai lần chứ không phải một lần.</p>
+
+<p><strong>b) Sai.</strong> Khi proton chuyển động trong từ trường, lực từ (lực Lo-ren-xơ) đóng vai trò là lực hướng tâm: <em>evB = m(v<sup>2</sup>/r)</em>, suy ra tốc độ góc <em>&omega; = v/r = eB/m</em>. Tần số quay của proton trong từ trường là <em>f = &omega;/(2&pi;) = eB / (2&pi;m)</em>. Để hạt liên tục được tăng tốc, tần số của điện áp xoay chiều phải bằng tần số quay của hạt, tức là <em>f = eB / (2&pi;m)</em> chứ không phải <em>eB/(&pi;m)</em> [2].</p>
+
+<p><strong>c) Đúng.</strong> Vận tốc cực đại của proton đạt được khi hạt chuyển động ở quỹ đạo ngoài cùng có bán kính bằng bán kính của hộp D (<em>r = R</em>). Từ biểu thức lực hướng tâm, ta có vận tốc cực đại <em>v<sub>max</sub> = eBR/m</em> [3]. Động năng cực đại mà proton đạt được là: <em>W<sub>đ,max</sub> = 1/2 mv<sub>max</sub><sup>2</sup> = 1/2 m(eBR/m)<sup>2</sup> = (e<sup>2</sup>B<sup>2</sup>R<sup>2</sup>) / (2m)</em> [3].</p>
+
+<p><strong>d) Đúng.</strong> Mỗi lần đi qua khe hở giữa hai hộp D, proton được điện trường thực hiện công và tăng thêm một lượng năng lượng là <em>&Delta;W = eU</em> [1, 4]. Tổng số lần proton đi qua khe (tương ứng với số nửa vòng quay) để đạt được động năng cực đại là: <em>N = W<sub>đ,max</sub> / &Delta;W = (e<sup>2</sup>B<sup>2</sup>R<sup>2</sup>) / (2m &cdot; eU) = (eB<sup>2</sup>R<sup>2</sup>) / (2mU)</em>. Thời gian proton chuyển động trong mỗi nửa vòng quay là một nửa chu kì: <em>t<sub>1/2</sub> = T/2 = &pi;/&omega; = (&pi;m) / (eB)</em>. Vậy tổng thời gian proton chuyển động trong máy gia tốc (bỏ qua thời gian bay qua khe) là: <em>t = N &cdot; t<sub>1/2</sub> = [(eB<sup>2</sup>R<sup>2</sup>) / (2mU)] &cdot; [(&pi;m) / (eB)] = (&pi;BR<sup>2</sup>) / (2U)</em>.</p>
+        
+                `
             },
             // PROBLEM 6
             {
@@ -360,7 +472,16 @@ async function main() {
                 level: 'HARD',
                 type: 'Essay',
                 status: 'ACTIVE',
-                reference: 'Đáp án đang được cập nhật'
+                solution: `
+                <p><strong>a) Sai.</strong> Năng lượng hạt nhận được để tăng tốc đúng là do công của điện trường cung cấp. Tuy nhiên, động năng cực đại của hạt khi bay ra khỏi máy gia tốc đạt được khi quỹ đạo bằng bán kính hộp D: <em>W<sub>đ,max</sub> = q<sup>2</sup>B<sup>2</sup>R<sup>2</sup> / (2m)</em> [1]. Biểu thức này cho thấy động năng cực đại chỉ phụ thuộc vào bản chất của hạt (<em>q, m</em>) và thông số máy (<em>B, R</em>), hoàn toàn <strong>không phụ thuộc</strong> vào hiệu điện thế <em>U</em> [2].</p>
+
+<p><strong>b) Đúng.</strong> Khi hạt chuyển động trong từ trường, lực Lo-ren-xơ đóng vai trò là lực hướng tâm, ta có chu kì quay của hạt là: <em>T = 2&pi;r/v = 2&pi;m / (qB)</em> [3, 4]. Để quá trình tăng tốc diễn ra liên tục và đồng bộ sau mỗi nửa vòng quay, chu kì của hiệu điện thế xoay chiều đặt vào hai hộp D phải bằng chính chu kì quay của hạt trong từ trường [4].</p>
+
+<p><strong>c) Đúng.</strong> Vận tốc cực đại của hạt đạt được ở quỹ đạo ngoài cùng (khi bán kính quỹ đạo đạt cực đại bằng bán kính <em>R</em> của hộp D). Từ hệ thức lực từ bằng lực hướng tâm: <em>qv<sub>max</sub>B = m(v<sub>max</sub><sup>2</sup>/R)</em>, ta dễ dàng suy ra được tốc độ cực đại <em>v<sub>max</sub> = qBR/m</em> [1, 4, 5].</p>
+
+<p><strong>d) Sai.</strong> Mỗi lần đi qua khe hở giữa hai hộp, điện trường sinh công giúp hạt nhận thêm năng lượng <em>&Delta;W = qU</em>. Tổng số lần hạt qua khe để đạt đến động năng cực đại <em>W<sub>đ,max</sub></em> là <em>N = W<sub>đ,max</sub> / (qU)</em>. Nếu tăng <em>U</em>, số lần qua khe <em>N</em> (tương ứng với số nửa vòng quay cần thiết) sẽ giảm. Vì chu kì quay của mỗi vòng là hằng số không phụ thuộc vận tốc, tổng thời gian hạt chuyển động trong máy sẽ <strong>ngắn lại</strong> chứ không phải dài hơn [2, 6].</p>
+        
+                `
             },
             // PROBLEM 7
             {
@@ -372,7 +493,16 @@ async function main() {
                 level: 'HARD',
                 type: 'Essay',
                 status: 'ACTIVE',
-                reference: 'Đáp án đang được cập nhật'
+                solution: `
+                <p><strong>a) Đúng.</strong> Điện trường tồn tại trong khoảng hở giữa hai hộp D sinh công làm tăng động năng của hạt ($A = qU$), do đó làm thay đổi tốc độ của hạt. Từ trường trong các hộp D vuông góc với vận tốc nên lực Lo-ren-xơ chỉ đóng vai trò làm đổi hướng chuyển động (lực hướng tâm) chứ không sinh công, không làm thay đổi tốc độ.</p>
+
+<p><strong>b) Đúng.</strong> Bán kính quỹ đạo ban đầu tại cực $D_1$ được tính bằng công thức lực hướng tâm bằng lực Lo-ren-xơ: $R_1 = \\frac{mv_1}{qB}$. <br> Thay số: $R_1 = \\frac{3,31 \\cdot 10^{-27} \\cdot 3,2 \\cdot 10^6}{1,6 \\cdot 10^{-19} \\cdot 1,6} = 0,041375 \\text{ m} = 4,1375 \\text{ cm}$.</p>
+
+<p><strong>c) Đúng.</strong> Động năng ban đầu của hạt tại $D_1$: <br> $W_{d1} = \\frac{1}{2}mv_1^2 = \\frac{1}{2} \\cdot 3,31 \\cdot 10^{-27} \\cdot (3,2 \\cdot 10^6)^2 = 16,9472 \\cdot 10^{-15} \\text{ J}$. <br> Công của điện trường thực hiện trong 1 lần hạt bay qua khe hở (1 lần gia tốc) là: <br> $A = qU = 1,6 \\cdot 10^{-19} \\cdot 100 \\cdot 10^3 = 16 \\cdot 10^{-15} \\text{ J}$. <br> Động năng của hạt sau lần tăng tốc thứ nhất (khi sang cực $D_2$): <br> $W_{d2} = W_{d1} + A = 16,9472 \\cdot 10^{-15} + 16 \\cdot 10^{-15} = 32,9472 \\cdot 10^{-15} \\text{ J}$. <br> Bán kính quỹ đạo lúc này: <br> $R_2 = \\frac{mv_2}{qB} = \\frac{\\sqrt{2mW_{d2}}}{qB} = \\frac{\\sqrt{2 \\cdot 3,31 \\cdot 10^{-27} \\cdot 32,9472 \\cdot 10^{-15}}}{1,6 \\cdot 10^{-19} \\cdot 1,6} \\approx 0,05769 \\text{ m} \\approx 5,8 \\text{ cm}$.</p>
+
+<p><strong>d) Sai.</strong> Bán kính cực đại mà cyclotron có thể đạt được là $R_{max} = 50 \\text{ cm} = 0,5 \\text{ m}$. <br> Động năng cực đại của hạt deuterium đạt được khi bay ra khỏi máy: <br> $W_{d,max} = \\frac{q^2 B^2 R_{max}^2}{2m} = \\frac{(1,6 \\cdot 10^{-19} \\cdot 1,6 \\cdot 0,5)^2}{2 \\cdot 3,31 \\cdot 10^{-27}} \\approx 2,4749 \\cdot 10^{-12} \\text{ J} = 2474,9 \\cdot 10^{-15} \\text{ J}$. <br> Tổng năng lượng mà điện trường đã truyền cho hạt để đạt đến động năng cực đại là: <br> $\\Delta W = W_{d,max} - W_{d1} = 2474,9 \\cdot 10^{-15} - 16,9472 \\cdot 10^{-15} = 2457,9528 \\cdot 10^{-15} \\text{ J}$. <br> Số lần hạt được điện trường tăng tốc (số lần bay qua khe): <br> $n = \\frac{\\Delta W}{A} = \\frac{2457,9528 \\cdot 10^{-15}}{16 \\cdot 10^{-15}} \\approx 153,6$ lần. <br> Như vậy hạt chỉ được tăng tốc khoảng 153-154 lần chứ không phải 189 lần.</p>
+        
+                `
             },
             // PROBLEM 8
             {
@@ -384,15 +514,36 @@ async function main() {
                 level: 'HARD',
                 type: 'Essay',
                 status: 'ACTIVE',
-                reference: 'Đáp án đang được cập nhật'
+                solution: `
+                <p><strong>a) Sai.</strong> Trong quá trình chuyển động ở máy cyclotron, proton chịu tác dụng của lực từ (lực Lo-ren-xơ) khi ở bên trong hai hộp D (giúp hạt chuyển động theo quỹ đạo tròn) và chịu tác dụng của lực điện trường khi đi qua khoảng hở giữa hai cạnh thẳng của hai hộp D (để gia tốc làm tăng vận tốc của hạt).</p>
+
+<p><strong>b) Sai.</strong> Theo đoạn văn mô tả và công thức $R = \\frac{mv}{Bq}$, mỗi lần đi qua khoảng hở giữa hai hộp D, proton được điện trường tăng tốc nên vận tốc $v$ tăng. Do $v$ tăng, bán kính quỹ đạo $R$ cũng lớn hơn trước. Quỹ đạo của hạt là một đường xoắn ốc mở rộng dần chứ không phải là quỹ đạo có bán kính không đổi.</p>
+
+<p><strong>c) Đúng.</strong> Từ hệ thức điều kiện đồng bộ $qB = 2\\pi m f_{dd}$, ta tính được độ lớn cảm ứng từ $B$ cần thiết: <br>
+$B = \\frac{2\\pi m f_{dd}}{q} = \\frac{2 \\cdot \\pi \\cdot 1,67 \\cdot 10^{-27} \\cdot 12 \\cdot 10^6}{1,6 \\cdot 10^{-19}} \\approx 0,7869... \\text{ T} \\approx 0,787 \\text{ T}$.</p>
+
+<p><strong>d) Đúng.</strong> Năng lượng proton thu được khi rời khỏi máy chính là động năng cực đại của nó, đạt được khi bán kính quỹ đạo mở rộng bằng bán kính của hộp D ($R_{max} = 53 \\text{ cm} = 0,53 \\text{ m}$). <br>
+Vận tốc cực đại của proton là: $v_{max} = 2\\pi f_{dd} R_{max}$. <br>
+Động năng cực đại: $W_{d} = \\frac{1}{2}mv_{max}^2 = \\frac{1}{2}m(2\\pi f_{dd} R_{max})^2 = 2\\pi^2 m f_{dd}^2 R_{max}^2$. <br>
+Thay số: $W_{d} = 2 \\cdot \\pi^2 \\cdot 1,67 \\cdot 10^{-27} \\cdot (12 \\cdot 10^6)^2 \\cdot (0,53)^2 \\approx 1,333 \\cdot 10^{-12} \\text{ J}$. <br>
+Đổi sang đơn vị eV (với $1 \\text{ eV} = 1,6 \\cdot 10^{-19} \\text{ J} \\Rightarrow 1 \\text{ MeV} = 1,6 \\cdot 10^{-13} \\text{ J}$): <br>
+$W_{d} = \\frac{1,333 \\cdot 10^{-12}}{1,6 \\cdot 10^{-13}} \\approx 8,33 \\text{ MeV} \\approx 8,3 \\text{ MeV}$.</p>
+        
+                `
             }
         ]
     );
 
     // 2. LOUDSPEAKER (Loa điện động)
     await createModelContent(
-        'Điện từ kỹ thuật',
-        'Loa điện động',
+        {
+            model_type_name: 'LOUDSPEAKER',
+            name: 'Loa điện động',
+            description: 'Mô hình 3D Loa điện động',
+            source_url: '',
+            thumbnail_url: '/loadiendong.png',
+            status: 'ACTIVE'
+        },
         [{
             title: 'Lý thuyết mô hình Loa điện động',
             content_html: `
@@ -566,14 +717,7 @@ async function main() {
             type: 'Theory',
             status: 'ACTIVE'
         }],
-        {
-            name: 'Loa điện động',
-            description: 'Mô hình 3D Loa điện động',
-            source_url: '',
-            thumbnail_url: '/loadiendong.png',
-            type: 'LOUDSPEAKER', // Matches ModelRegistry
-            status: 'ACTIVE'
-        },
+
         [{
             title: 'Ví dụ Loa 1',
             problem: `
@@ -592,7 +736,7 @@ async function main() {
 </ul>
             `,
             solution: `
-<Strong>Tóm tắt dữ kiện đề bài:</Strong>
+<strong>Tóm tắt dữ kiện đề bài:</strong>
     <ul>
         <li>Chiều dài dây dẫn: \\( l = 25 \\text{ cm} = 0,25 \\text{ m} \\).</li>
         <li>Cảm ứng từ: \\( B = 0,35 \\text{ T} \\).</li>
@@ -603,7 +747,7 @@ async function main() {
 
     <hr>
 
-    <Strong>Phân tích từng phát biểu:</Strong>
+    <strong>Phân tích từng phát biểu:</strong>
 
     <p><strong>1. Nguyên lí hoạt động của loa điện động dựa trên lực từ tác dụng lên dòng điện trong từ trường.</strong></p>
     <p><strong>Kết luận: ĐÚNG</strong></p>
@@ -694,13 +838,24 @@ async function main() {
                 level: 'MEDIUM',
                 type: 'Essay',
                 status: 'ACTIVE',
-                reference: 'Đáp án đang được cập nhật'
+                solution: `
+<p><strong>a) Sai.</strong> Loa điện động hoạt động dựa trên tác dụng của lực từ lên đoạn dây dẫn mang dòng điện đặt trong từ trường (được gọi là lực từ hay lực Ampere), không phải dựa trên hiện tượng cảm ứng điện từ [1], [2]. Hiện tượng cảm ứng điện từ là nguyên lí hoạt động của micro điện động hoặc máy phát điện.</p>
+
+<p><strong>b) Đúng.</strong> Căn cứ vào nguyên lí hoạt động, khi tín hiệu điện biến thiên với một tần số xác định truyền vào cuộn dây, lực từ tác dụng lên cuộn dây cũng biến thiên cùng tần số đó, làm màng loa dao động và tạo ra sóng âm thanh trong không khí có cùng tần số với dao động điện đầu vào [3].</p>
+
+<p><strong>c) Đúng.</strong> Khi sóng âm truyền trong chất khí (như không khí), các phần tử của môi trường dao động dọc theo phương truyền sóng. Do đó, sóng âm trong không khí luôn luôn là sóng dọc [4], [5].</p>
+
+<p><strong>d) Đúng.</strong> Ta có thể kiểm tra độ lớn của lực từ bằng các bước sau: <br>
+- Cường độ dòng điện chạy qua cuộn dây: $I = \\frac{U}{R} = \\frac{12}{5,8} \\approx 2,07 \\text{ A}$. <br>
+- Tổng chiều dài của 20 vòng dây (với chu vi mỗi vòng là $\\pi d$): $L = N \\cdot \\pi d = 20 \\cdot \\pi \\cdot 0,072 \\approx 4,52 \\text{ m}$. <br>
+- Độ lớn lực từ tác dụng lên cuộn dây (vì từ trường vuông góc với dòng điện): $F = B \\cdot I \\cdot L = 0,075 \\cdot 2,07 \\cdot 4,52 \\approx 0,70 \\text{ N}$.</p>
+        `
             },
             // PROBLEM 2
             {
                 question: `
 <div>
-    <Strong> Quan sát mô hình loa điện động được mô tả như hình dưới. Xét tính đúng/sai các phát biểu sau</Strong>
+    <strong> Quan sát mô hình loa điện động được mô tả như hình dưới. Xét tính đúng/sai các phát biểu sau</strong>
     <ul>
         <li>
             <strong>a.</strong> Khi cho dòng điện không đổi vào hai điểm nối tín hiệu thì loa chỉ phát ra âm với một tần số không đổi.
@@ -774,15 +929,29 @@ async function main() {
                 level: 'HARD',
                 type: 'Essay',
                 status: 'ACTIVE',
-                reference: 'Đáp án đang được cập nhật'
+                solution: `
+<p><strong>a) Sai.</strong> Khi cho dòng điện không đổi (DC) vào hai điểm nối tín hiệu, cuộn dây sẽ sinh ra một từ trường không đổi, dẫn đến lực từ tác dụng lên cuộn dây cũng không đổi. Lực này chỉ làm màng loa dịch chuyển đến một vị trí cố định mới rồi dừng lại chứ không tạo ra dao động liên tục. Vì vậy, loa sẽ không thể phát ra âm thanh [1], [2].</p>
+
+<p><strong>b) Sai.</strong> Sóng âm thanh phát ra từ loa là sóng cơ học, được tạo ra từ sự dao động của các phần tử vật chất trong môi trường (như nén và giãn không khí). Sóng âm chỉ truyền được trong các môi trường rắn, lỏng, khí và hoàn toàn không thể truyền được trong chân không [3], [4].</p>
+
+<p><strong>c) Sai.</strong> Theo cấu tạo của loa điện động, bộ phận nam châm vĩnh cửu được đặt cố định, không di chuyển [2]. Khi có dòng điện xoay chiều chạy qua, chính cuộn dây (được gắn cứng với màng loa) mới là bộ phận chịu tác dụng của lực từ biến thiên và dao động, từ đó kéo theo màng loa dao động để phát ra âm thanh [1], [2].</p>
+
+<p><strong>d) Sai.</strong> Tần số của sóng âm do loa phát ra luôn bằng với tần số của dòng điện (tín hiệu điện) truyền vào cuộn dây [5]. Dựa vào thông số được cung cấp trực tiếp từ đồ thị, tần số của điện áp đầu vào là $f = \\frac{40000}{3} \\text{ Hz}$ (chứ không phải $\\frac{4000}{3} \\text{ Hz}$). Do đó, tần số âm loa phát ra cũng là $\\frac{40000}{3} \\text{ Hz}$, phát biểu đã cho sai giá trị.</p>
+        `
             }
         ]
     );
 
     // 3. MASS SPECTROMETER (Máy quang phổ khối)
     await createModelContent(
-        'Vật lý hạt nhân',
-        'Máy quang phổ khối',
+        {
+            model_type_name: 'MASS_SPECTROMETER',
+            name: 'Máy quang phổ khối',
+            description: 'Mô hình 3D Máy quang phổ khối',
+            source_url: '',
+            thumbnail_url: '/mayQuangphokhoi.png',
+            status: 'ACTIVE'
+        },
         [{
             title: 'Lý thuyết mô hình Máy quang phổ khối',
             content_html: `
@@ -903,14 +1072,7 @@ async function main() {
             type: 'Theory',
             status: 'ACTIVE'
         }],
-        {
-            name: 'Máy quang phổ khối',
-            description: 'Mô hình 3D Máy quang phổ khối',
-            source_url: '',
-            thumbnail_url: '/mayQuangphokhoi.png',
-            type: 'MASS_SPECTROMETER',
-            status: 'ACTIVE'
-        },
+
         [{
             title: 'Bài toán Máy quang phổ khối (Ví dụ)',
             problem: `
@@ -975,7 +1137,7 @@ async function main() {
 <div>
     <p>Các ion dương thoát ra khỏi nguồn ion qua khe\\( S_1 \\) có cùng vận tốc đầu\\( \\vec{v_0} \\) theo phương\\( x \\) được dẫn vào chính giữa hai bản tụ điện phẳng có chiều dài\\( l=5 \\text{cm} \\). Hai bản tụ điện cách nhau\\( d=2 \\text{cms} \\) và có hiệu điện thế\\( U=100 \\text{V} \\). Sau khi ra khỏi tụ điện, các ion đi vào trong một vùng từ trường có\\( \\vec{B} \\) vuông góc với mặt phẳng hình vẽ. Trong vùng từ trường có đặt hai tấm phim đặc biệt\\( P_1, P_2 \\) vuông góc với chùm ion đi ra khỏi tụ điện (Hình).
         <br>
-        Biết:\\( v_0= 105 \\text{m/s} \\);\\( B=0,5 \\text{mT} \\).\\( O_2 \\) cách bản tụ dưới\\( h=1,5 \\text{cm} \\).
+        Biết:\\( v_0= 10^5 \\text{m/s} \\);\\( B=0,5 \\text{mT} \\).\\( O_2 \\) cách bản tụ dưới\\( h=1,5 \\text{cm} \\).
         <br>
         Để thu được các vết ion ứng với khối lượng\\( m_1=10^{-23} \\text{kg} \\) và\\( m_2=1,5.10^{-23} \\text{kg} \\) thì phải đặt hai tấm phim\\( P_1, P_2 \\) cách\\( O_2 \\) một khoảng bao nhiêu?
     </p>
@@ -1000,7 +1162,25 @@ async function main() {
                 level: 'HARD',
                 type: 'Essay',
                 status: 'ACTIVE',
-                reference: 'Đáp án đang được cập nhật'
+                solution:
+                    `
+<p><em>Lưu ý: Mặc định điện tích của các ion dương là điện tích nguyên tố $q = 1,6 \\cdot 10^{-19} \\text{ C}$. </p>
+
+<p><strong>a) Đúng.</strong> Khi ion dương bay vào chính giữa hai bản tụ điện phẳng với vận tốc $\\vec{v_0}$ vuông góc với các đường sức điện (hướng từ bản dương sang bản âm), ion sẽ chịu tác dụng của lực điện $\\vec{F} = q\\vec{E}$ có phương vuông góc với $\\vec{v_0}$. Quỹ đạo chuyển động của ion trong tụ điện hoàn toàn tương tự như quỹ đạo của một vật ném ngang trong trường trọng lực.</p>
+
+<p><strong>b) Sai.</strong> Ta tính góc lệch $\\alpha$ của véctơ vận tốc so với phương ngang khi ion ra khỏi tụ: <br>
+- Thời gian ion chuyển động trong tụ: $t = \\frac{l}{v_0} = \\frac{0,05}{10^5} = 5 \\cdot 10^{-7} \\text{ s}$. <br>
+- Vận tốc theo phương $y$ khi ra khỏi tụ: $v_y = a t = \\frac{qU}{m_1 d} \\cdot t = \\frac{1,6 \\cdot 10^{-19} \\cdot 100}{10^{-23} \\cdot 0,02} \\cdot 5 \\cdot 10^{-7} = 40 \\text{ m/s}$. <br>
+- Góc lệch $\\alpha$ được xác định bởi: $\\tan \\alpha = \\frac{v_y}{v_0} = \\frac{40}{10^5} = 4 \\cdot 10^{-4}$. <br>
+Với $\\tan \\alpha$ rất nhỏ, góc $\\alpha \\approx 0,023^\\circ$, hoàn toàn không thể bằng $60^\\circ$.</p>
+
+<p><strong>c) Sai.</strong> Sau khi ra khỏi điện trường, vận tốc của hạt là $v_1 = \\sqrt{v_0^2 + v_y^2} \\approx 10^5 \\text{ m/s}$. <br>
+Khi vào từ trường, lực Lo-ren-xơ đóng vai trò lực hướng tâm. Bán kính quỹ đạo của ion $m_1$ là: <br>
+$R_1 = \\frac{m_1 v_1}{qB} = \\frac{10^{-23} \\cdot 10^5}{1,6 \\cdot 10^{-19} \\cdot 0,5 \\cdot 10^{-3}} = 12500 \\text{ m}$. <br>
+Giá trị này là rất khổng lồ và khác hoàn toàn so với $28,3 \\text{ cm}$. <em>(Có thể dữ kiện đề bài gốc có sự sai sót về bậc độ lớn của khối lượng $m_1$ hoặc giá trị cảm ứng từ $B$).</em></p>
+
+<p><strong>d) Sai.</strong> Dựa trên các thông số đã cho làm phát sinh một bán kính quỹ đạo $R_1, R_2$ khổng lồ (lên tới hàng kilomet), quỹ đạo của ion gần như là một đường thẳng tuyến tính trong phạm vi của phòng thí nghiệm. Việc tính toán vị trí chạm vào các tấm phim để ra được con số nhỏ như $6,4 \\text{ cm}$ với các dữ kiện hiện tại là vô lý về mặt vật lý lẫn toán học.</p>
+        `
             },
             // PROBLEM 2
             {
@@ -1028,7 +1208,23 @@ async function main() {
                 level: 'MEDIUM',
                 type: 'Essay',
                 status: 'ACTIVE',
-                reference: 'Đáp án đang được cập nhật'
+                solution:
+                    `
+<p><strong>a) Đúng.</strong> Vùng có điện trường và từ trường kết hợp đóng vai trò là "bộ chọn vận tốc". Để ion đi thẳng không bị lệch quỹ đạo, lực điện trường và lực từ (lực Lo-ren-xơ) tác dụng lên ion phải ngược chiều và có độ lớn bằng nhau (cân bằng nhau): $F_d = F_t \\Rightarrow |q|E = |q|vB$.</p>
+
+<p><strong>b) Đúng.</strong> Từ điều kiện cân bằng ở câu a, ta có cường độ điện trường $E = vB$. <br>
+Hiệu điện thế giữa hai bản tụ phẳng là: $U = E \\cdot d = v \\cdot B \\cdot d$. <br>
+Thay số: $U = 1,6 \\cdot 10^5 \\cdot 0,4 \\cdot 5 \\cdot 10^{-3} = 320 \\text{ V}$.</p>
+
+<p><strong>c) Sai.</strong> Khi ion đi vào vùng chỉ có từ trường $B'$ (giả thiết bài toán không cho $B'$ khác $B$ nên lấy $B' = B = 0,4 \\text{ T}$ theo cấu tạo chuẩn của một số máy quang phổ khối đơn giản, hoặc dù $B'$ có giá trị khác thì với dữ kiện hiện tại không thể khẳng định con số $6,4 \\cdot 10^{-27} \\text{ kg}$), lực từ đóng vai trò là lực hướng tâm: <br>
+$|q|vB' = \\frac{mv^2}{r} \\Rightarrow m = \\frac{|q|B'r}{v}$. <br>
+Tính khối lượng với $B' = 0,4 \\text{ T}$: <br>
+$m = \\frac{1,6 \\cdot 10^{-19} \\cdot 0,4 \\cdot 0,2}{1,6 \\cdot 10^5} = 8 \\cdot 10^{-26} \\text{ kg}$. <br>
+Giá trị này khác hoàn toàn so với $6,4 \\cdot 10^{-27} \\text{ kg}$, do đó phát biểu này là sai.</p>
+
+<p><strong>d) Đúng.</strong> Trong buồng phân tích của máy quang phổ khối, ion chuyển động theo quỹ đạo là một nửa đường tròn rồi đập vào tấm phim ảnh. Khoảng cách từ khe vào (điểm bắt đầu của nửa đường tròn) đến vết của ion trên tấm phim chính là đường kính của quỹ đạo: <br>
+$D = 2r = 2 \\cdot 20 \\text{ cm} = 40 \\text{ cm}$.</p>
+        `
             },
             // PROBLEM 3
             {
@@ -1057,7 +1253,16 @@ async function main() {
                 level: 'HARD',
                 type: 'Essay',
                 status: 'ACTIVE',
-                reference: 'Đáp án đang được cập nhật'
+                solution:
+                    `
+<p><strong>a) Đúng.</strong> Trong buồng gia tốc, điện trường sinh công dương $A = qU$ để tăng tốc các ion. Theo định lý biến thiên động năng, công này làm tăng động năng của ion.</p>
+
+<p><strong>b) Đúng.</strong> Áp dụng định lý biến thiên động năng cho ion trong buồng gia tốc: <br> $W_{d,sau} - W_{d,trước} = A \\Rightarrow \\frac{1}{2}mv^2 - \\frac{1}{2}mv_0^2 = qU$. <br> Suy ra: $v^2 = v_0^2 + \\frac{2qU}{m} \\Rightarrow v = \\sqrt{v_0^2 + \\frac{2qU}{m}}$.</p>
+
+<p><strong>c) Đúng.</strong> Trong buồng hãm vận tốc (đóng vai trò là bộ chọn vận tốc), để ion chuyển động thẳng đều thì lực điện và lực từ (lực Lo-ren-xơ) phải cân bằng nhau về độ lớn và ngược chiều: <br> $F_d = F_t \\Rightarrow qE = qvB \\Rightarrow B = \\frac{E}{v}$. <br> Thay biểu thức vận tốc $v$ ở câu b vào, ta được: $B = \\frac{E}{\\sqrt{v_0^2 + \\frac{2qU}{m}}}$.</p>
+
+<p><strong>d) Sai.</strong> Khi ion đi vào buồng phân tách có từ trường $B'$, lực từ đóng vai trò là lực hướng tâm, ta có: <br> $qvB' = m\\frac{v^2}{R} \\Rightarrow R = \\frac{mv}{qB'}$. <br> Từ điều kiện chuyển động thẳng trong buồng hãm vận tốc, ta có $v = \\frac{E}{B}$. Thay vào biểu thức bán kính, ta được: <br> $R = \\frac{m}{qB'} \\cdot \\frac{E}{B} = \\frac{mE}{qBB'}$. <br> Do đó, biểu thức $R = \\frac{1}{B'} \\sqrt{\\frac{mE}{qB}}$ là không chính xác.</p>
+        `
             }
         ]
     );

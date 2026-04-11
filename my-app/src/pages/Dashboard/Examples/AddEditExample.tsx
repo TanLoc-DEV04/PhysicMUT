@@ -5,9 +5,10 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { useEffect } from 'react';
 import RenderFormItem from '../Admin/RenderFormItem';
 import { useQuery } from '@tanstack/react-query';
-import { chapterService } from '../../../services/chapterService';
+import { model3DService } from '../../../services/model3DService';
 import { exampleService } from '../../../services/exampleService';
 import { useExampleMutations } from './useExampleMutations';
+import { use3DModelTypes } from '../3DModels/use3DModelManagement';
 
 const AddEditExample = () => {
   const [form] = Form.useForm();
@@ -16,26 +17,25 @@ const AddEditExample = () => {
   const isEditMode = !!id;
 
   const { createExample, updateExample } = useExampleMutations();
+  const { types: categoryOptions, loadingTypes: loadingCategories } = use3DModelTypes();
 
-  // Fetch Chapters to get Lessons
-  const { data: chapters = [] } = useQuery({
-    queryKey: ['chapters'],
-    queryFn: chapterService.getChapters
+  // Fetch 3D Models
+  const { data: models = [] } = useQuery({
+    queryKey: ['models3d'],
+    queryFn: () => model3DService.getModels3D()
   });
 
-  const lessons = chapters.flatMap((ch: any) => 
-    (ch.lessons || []).map((l: any) => ({
-        label: `${ch.name} - ${l.name}`,
-        value: l.id
-    }))
-  );
+  const modelOptions = (models || []).map((m: any) => ({
+      label: m.name || m.model_type_name,
+      value: m.model_type_name
+  }));
 
   // Fetch Example Details
   const { data: exampleData, isLoading: isLoadingExample } = useQuery({
     queryKey: ['example', id],
     queryFn: async () => {
         const all = await exampleService.getExamples();
-        return all.find((e: any) => String(e.id) === String(id));
+        return (all as any[]).find((e: any) => String(e.id) === String(id));
     },
     enabled: isEditMode,
   });
@@ -78,12 +78,12 @@ const AddEditExample = () => {
         <Form form={form} layout="vertical" onFinish={handleSubmit}>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <RenderFormItem 
-                    label="Lesson" 
-                    name="lesson_id" 
+                    label="3D Model" 
+                    name="model_type_name" 
                     type="select" 
                     required 
-                    options={lessons} 
-                    placeholder="Select Lesson"
+                    options={modelOptions} 
+                    placeholder="Select 3D Model"
                 />
 
                 <RenderFormItem 
@@ -95,13 +95,23 @@ const AddEditExample = () => {
                 />
 
                 <RenderFormItem 
+                    label="Scientific Category" 
+                    name="example_type_name" 
+                    type="select" 
+                    required 
+                    options={categoryOptions.map((t: string) => ({ label: t, value: t }))} 
+                    loading={loadingCategories}
+                    placeholder="Select Scientific Category"
+                />
+
+                <RenderFormItem 
                     label="Type" 
                     name="type" 
                     type="select" 
                     required 
                     options={[
-                        { label: 'Calculation', value: 'Calculation' },
-                        { label: 'Theory Application', value: 'Application' }
+                        { label: 'General', value: 'General' },
+                        { label: 'Formula', value: 'Formula' }
                     ]} 
                     placeholder="Select Type"
                 />

@@ -7,6 +7,7 @@ interface AuthContextType {
   isAuthenticated: boolean;
   login: (user: User) => void;
   logout: () => void;
+  hasPermission: (permission: string) => boolean;
 }
 
 const AuthContext = createContext<AuthContextType | undefined>(undefined);
@@ -18,12 +19,6 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
         if (!storedUser) return null;
         
         const parsedUser = JSON.parse(storedUser);
-        
-        // Normalize role if it's an object (legacy data handling)
-        if (parsedUser && typeof parsedUser.role === 'object') {
-             parsedUser.role = (parsedUser.role as any).name?.toLowerCase() || 'student';
-             // Ideally update localStorage too, but state is enough for runtime safety
-        }
         
         return parsedUser;
     } catch (e) {
@@ -46,8 +41,32 @@ export const AuthProvider = ({ children }: { children: ReactNode }) => {
     setCurrentUser(null);
   };
 
+  const hasPermission = (permission: string) => {
+    if (!currentUser) return false;
+    
+    const roleName = typeof currentUser.role === 'object' ? currentUser.role.name : currentUser.role;
+    // Admins implicitly have all permissions
+    if (roleName?.toLowerCase() === 'admin') return true;
+
+    if (typeof currentUser.role === 'object' && currentUser.role.permissions) {
+      const perms = currentUser.role.permissions;
+      
+      // Legacy seed format fallback
+      if (perms.all === true) return true;
+
+      // Check granular JSON permissions array format
+      for (const group of Object.values(perms)) {
+        if (Array.isArray(group) && group.includes(permission)) {
+          return true;
+        }
+      }
+    }
+    
+    return false;
+  };
+
   return (
-    <AuthContext.Provider value={{ currentUser, isAuthenticated: !!currentUser, login, logout }}>
+    <AuthContext.Provider value={{ currentUser, isAuthenticated: !!currentUser, login, logout, hasPermission }}>
       {children}
     </AuthContext.Provider>
   );

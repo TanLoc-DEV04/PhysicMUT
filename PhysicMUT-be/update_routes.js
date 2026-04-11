@@ -1,0 +1,1 @@
+﻿const fs = require('fs'); let c=fs.readFileSync('src/routes/auth.ts','utf8'); c=c.replace('forgotPassword } from', 'forgotPassword, googleLogin } from'); c += '\nrouter.post(\'/google\', googleLogin);\n'; fs.writeFileSync('src/routes/auth.ts',c);

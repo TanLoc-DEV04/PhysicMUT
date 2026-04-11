@@ -1,11 +1,10 @@
 import { useState, useMemo } from 'react';
+import { Spin, Result, Button, Empty } from 'antd';
 import Card from '../../components/shared/Card';
 import SearchInput from '../../components/shared/SearchInput';
 import MultiFilterSelect from '../../components/shared/MultiFilterSelect';
 import Pagination from '../../components/shared/Pagination';
-import { useChapters } from '../../hooks/useContent';
-// import { models } from '../../data/mockData'; // Removed mock data
-import { Spin, Result, Button } from 'antd'; // Added UI states
+import { useModels3D } from '../../hooks/useContent';
 
 function ModelsListHome() {
   const [searchQuery, setSearchQuery] = useState('');
@@ -13,82 +12,57 @@ function ModelsListHome() {
   const [first, setFirst] = useState(0);
   const [rows, setRows] = useState(8);
 
-  // Fetch real data
-  const { data: chapters, isLoading, error, refetch } = useChapters();
+  // Fetch directly from Model3D table
+  const { data: models3d = [], isLoading, error, refetch } = useModels3D();
 
-  // Process data: Flatten Chapters -> Lessons (treated as Models here)
-  const allModels = useMemo(() => {
-    if (!chapters) return [];
-    
-    return chapters.flatMap(chapter => 
-      (chapter.lessons || [])
-        .filter(lesson => lesson.status !== 'INACTIVE') // Filter inactive lessons
-        .map(lesson => {
-          // Find the first 3D model for this lesson to get thumbnail/desc, or use defaults
-          const model3d = lesson.models3d?.[0];
-          
-          // Optionally check model status too, if model is the primary view
-          // if (model3d && model3d.status === 'INACTIVE') return null; 
+  // Only show ACTIVE models to students
+  const activeModels = useMemo(
+    () => models3d.filter((m: any) => m.status !== 'INACTIVE'),
+    [models3d]
+  );
 
-          return {
-              id: lesson.id,
-              name: lesson.name,
-              // Description priority: Model desc -> Lesson name -> generic
-              description: model3d?.description || `Bài học: ${lesson.name}`,
-              thumbnail: model3d?.thumbnail_url || '/anhmau.png',
-              category: chapter.name, // Use Chapter name as category
-              tags: [], // Tags might be added later to DB, defaulting empty for now
-              views: 0
-          };
-      })
-      .filter(Boolean) as any[] // Remove nulls if any
-    );
-  }, [chapters]);
+  // Extract unique model_type_name values as category options
+  const categories = useMemo(
+    () => [...new Set(activeModels.map((m: any) => m.model_type_name))]
+      .map(c => ({ label: c as string, value: c as string })),
+    [activeModels]
+  );
 
-  // Extract unique categories (Chapter names)
-  const categories = useMemo(() => {
-    if (!chapters) return [];
-    return chapters.map(c => ({ label: c.name, value: c.name }));
-  }, [chapters]);
-
-  // Filter models
+  // Filter models by search + category
   const filteredModels = useMemo(() => {
-    const query = searchQuery.toLowerCase().trim();
-    return allModels.filter((model) => {
-      const matchesSearch =
-        !query ||
-        model.name.toLowerCase().includes(query) ||
-        model.description.toLowerCase().includes(query);
-
-      const matchesCategory = !selectedCategory || model.category === selectedCategory;
-
-      return matchesSearch && matchesCategory;
+    const q = searchQuery.toLowerCase().trim();
+    return activeModels.filter((m: any) => {
+      const matchSearch =
+        !q ||
+        m.name.toLowerCase().includes(q) ||
+        (m.description || '').toLowerCase().includes(q) ||
+        m.model_type_name.toLowerCase().includes(q);
+      const matchCat = !selectedCategory || m.model_type_name === selectedCategory;
+      return matchSearch && matchCat;
     });
-  }, [searchQuery, selectedCategory, allModels]);
+  }, [searchQuery, selectedCategory, activeModels]);
 
   const displayModels = filteredModels.slice(first, first + rows);
 
-  const getModelLink = (id: string) => `/models/${id}`;
-
   if (isLoading) {
-      return (
-          <div className="min-h-screen flex items-center justify-center bg-white">
-              <Spin size="large" tip="Đang tải danh sách bài học..." />
-          </div>
-      );
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-white">
+        <Spin size="large" tip="Đang tải danh sách mô hình..." />
+      </div>
+    );
   }
 
   if (error) {
-      return (
-          <div className="min-h-screen flex items-center justify-center bg-white">
-             <Result
-                status="500"
-                title="Đã có lỗi xảy ra"
-                subTitle="Không thể tải dữ liệu từ máy chủ."
-                extra={<Button type="primary" onClick={() => refetch()}>Thử lại</Button>}
-             />
-          </div>
-      );
+    return (
+      <div className="min-h-screen flex items-center justify-center bg-white">
+        <Result
+          status="500"
+          title="Đã có lỗi xảy ra"
+          subTitle="Không thể tải dữ liệu từ máy chủ."
+          extra={<Button type="primary" onClick={() => refetch()}>Thử lại</Button>}
+        />
+      </div>
+    );
   }
 
   return (
@@ -96,27 +70,24 @@ function ModelsListHome() {
       {/* Search and Filter Section */}
       <div className="bg-[#f8f9fa] rounded-2xl p-8 mb-8 border border-gray-100 shadow-sm">
         <div className="flex flex-col md:flex-row justify-between items-center mb-0 gap-4">
-          <h1 className="text-3xl font-bold text-[#044CC8] whitespace-nowrap">Danh sách Mô hình</h1>
-          
+          <h1 className="text-3xl font-bold text-[#044CC8] whitespace-nowrap">
+            Danh sách Mô hình
+          </h1>
+
           <div className="flex flex-col md:flex-row gap-4 w-full md:w-auto">
-             <div className="w-full md:w-64">
-                <MultiFilterSelect
-                  value={selectedCategory}
-                  onChange={(val) => {
-                    setSelectedCategory(val);
-                    setFirst(0);
-                  }}
-                  options={categories}
-                  placeholder="Tất cả danh mục"
-                />
+            <div className="w-full md:w-64">
+              <MultiFilterSelect
+                value={selectedCategory}
+                onChange={(val) => { setSelectedCategory(val); setFirst(0); }}
+                options={categories}
+                placeholder="Tất cả danh mục"
+              />
             </div>
             <div className="w-full md:w-80">
               <SearchInput
                 value={searchQuery}
-                onChange={(e) => {
-                  setSearchQuery(e.target.value);
-                  setFirst(0);
-                }}
+                onChange={(e) => { setSearchQuery(e.target.value); setFirst(0); }}
+                placeholder="Tìm kiếm mô hình..."
               />
             </div>
           </div>
@@ -124,44 +95,46 @@ function ModelsListHome() {
 
         {/* Model Grid */}
         <div className="mt-8">
+          {displayModels.length > 0 ? (
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6 justify-items-center">
-            {displayModels.length > 0 ? (
-                displayModels.map((model) => (
+              {displayModels.map((model: any) => (
                 <Card
-                    key={model.id}
-                    title={model.name}
-                    description={model.description}
-                    imageUrl={model.thumbnail}
-                    link={getModelLink(model.id)}
-                    category={model.category}
-                    tags={model.tags}
+                  key={model.model_type_name}
+                  title={model.name}
+                  description={model.description || 'Khám phá mô hình vật lý 3D tương tác'}
+                  imageUrl={model.thumbnail_url || '/anhmau.png'}
+                  link={`/models/${model.model_type_name}`}
+                  category={model.model_type_name}
+                  tags={[]}
                 />
-                ))
-            ) : (
-                <div className="col-span-full w-full text-center py-12">
-                <div className="text-6xl text-gray-200 mb-4">
-                    <i className="pi pi-search"></i>
-                </div>
-                <p className="text-gray-500 text-lg">
-                    {searchQuery ? 'Không tìm thấy bài học nào phù hợp' : 'Chưa có bài học nào'}
-                </p>
-                </div>
-            )}
+              ))}
             </div>
+          ) : (
+            <div className="col-span-full w-full text-center py-16">
+              <Empty
+                image={Empty.PRESENTED_IMAGE_SIMPLE}
+                description={
+                  <span className="text-gray-500 text-base">
+                    {searchQuery ? 'Không tìm thấy mô hình nào phù hợp' : 'Chưa có mô hình nào'}
+                  </span>
+                }
+              />
+            </div>
+          )}
         </div>
 
         {/* Pagination */}
-        {filteredModels.length > 0 && (
-            <Pagination
-                current={Math.floor(first / rows) + 1}
-                pageSize={rows}
-                total={filteredModels.length}
-                onChange={(page, pageSize) => {
-                    setFirst((page - 1) * pageSize);
-                    setRows(pageSize);
-                }}
-                pageSizeOptions={['8', '12', '24', '48']}
-            />
+        {filteredModels.length > rows && (
+          <Pagination
+            current={Math.floor(first / rows) + 1}
+            pageSize={rows}
+            total={filteredModels.length}
+            onChange={(page, pageSize) => {
+              setFirst((page - 1) * pageSize);
+              setRows(pageSize);
+            }}
+            pageSizeOptions={['8', '12', '24', '48']}
+          />
         )}
       </div>
     </div>

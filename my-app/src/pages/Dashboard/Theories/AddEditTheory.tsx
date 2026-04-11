@@ -4,9 +4,10 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
 import RenderFormItem from '../Admin/RenderFormItem';
 import { useQuery } from '@tanstack/react-query';
-import { chapterService } from '../../../services/chapterService';
+import { model3DService } from '../../../services/model3DService';
 import { theoryService } from '../../../services/theoryService';
 import { useTheoryMutations } from './useTheoryMutations';
+import { use3DModelTypes } from '../3DModels/use3DModelManagement';
 import MathJaxPreview from '../../../components/shared/MathJaxPreview';
 
 const AddEditTheory = () => {
@@ -17,20 +18,13 @@ const AddEditTheory = () => {
   const isEditMode = !!id;
 
   const { createTheory, updateTheory } = useTheoryMutations();
+  const { types: categoryOptions, loadingTypes: loadingCategories } = use3DModelTypes();
 
-  // Fetch Chapters to get Lessons for dropdown
-  const { data: chapters = [] } = useQuery({
-    queryKey: ['chapters'],
-    queryFn: chapterService.getChapters
+  // Fetch 3D Models to associate with theory
+  const { data: models = [] } = useQuery({
+    queryKey: ['models3d'],
+    queryFn: () => model3DService.getModels3D()
   });
-
-  // Fetch all theories to check for existing lessons
-  const { data: allTheories = [] } = useQuery({
-    queryKey: ['theories'],
-    queryFn: theoryService.getTheories
-  });
-
-  const occupiedLessonIds = allTheories.map((t: any) => t.lesson_id);
 
   // Fetch Theory Details
   const { data: theoryData, isLoading: isLoadingTheory } = useQuery({
@@ -42,13 +36,11 @@ const AddEditTheory = () => {
     enabled: isEditMode,
   });
 
-  // Flatten lessons for selection and filter out occupied ones
-  const lessons = chapters.flatMap((ch: any) => 
-    (ch.lessons || []).map((l: any) => ({
-        label: `${ch.name} - ${l.name}`,
-        value: l.id
-    }))
-  ).filter((l: any) => !occupiedLessonIds.includes(l.value) || (isEditMode && l.value === theoryData?.lesson_id));
+  // Prepare models for selection
+  const modelOptions = (models || []).map((m: any) => ({
+      label: m.name || m.model_type_name,
+      value: m.model_type_name
+  }));
 
   useEffect(() => {
     if (theoryData) {
@@ -91,12 +83,12 @@ const AddEditTheory = () => {
         <Form form={form} layout="vertical" onFinish={handleSubmit}>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
                 <RenderFormItem 
-                    label="Lesson" 
-                    name="lesson_id" 
+                    label="3D Model" 
+                    name="model_type_name" 
                     type="select" 
                     required 
-                    options={lessons} 
-                    placeholder="Select Lesson"
+                    options={modelOptions} 
+                    placeholder="Select 3D Model"
                 />
 
                 <RenderFormItem 
@@ -105,6 +97,16 @@ const AddEditTheory = () => {
                     type="text"
                     required 
                     placeholder="Enter Theory Title"
+                />
+
+                <RenderFormItem 
+                    label="Scientific Category" 
+                    name="theory_type_name" 
+                    type="select" 
+                    required 
+                    options={categoryOptions.map((t: string) => ({ label: t, value: t }))} 
+                    loading={loadingCategories}
+                    placeholder="Select Scientific Category"
                 />
 
                 <RenderFormItem 

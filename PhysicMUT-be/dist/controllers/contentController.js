@@ -3,7 +3,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
 };
 Object.defineProperty(exports, "__esModule", { value: true });
-exports.deleteExercise = exports.updateExercise = exports.createExercise = exports.getExercises = exports.deleteExample = exports.updateExample = exports.createExample = exports.getExamples = exports.deleteModel3D = exports.updateModel3D = exports.createModel3D = exports.getModels3D = exports.deleteTheory = exports.updateTheory = exports.createTheory = exports.getTheories = exports.createLesson = exports.getLessonById = exports.createChapter = exports.getChapters = void 0;
+exports.deleteExercise = exports.updateExerciseStatus = exports.updateExercise = exports.createExercise = exports.getExercises = exports.getExerciseTypes = exports.deleteExample = exports.updateExampleStatus = exports.updateExample = exports.createExample = exports.getExamples = exports.getExampleTypes = exports.deleteModel3D = exports.updateModel3DStatus = exports.updateModel3D = exports.createModel3D = exports.getModels3D = exports.getModel3DTypes = exports.deleteTheory = exports.updateTheoryStatus = exports.updateTheory = exports.createTheory = exports.getTheories = exports.getTheoryTypes = exports.createLesson = exports.getLessonById = exports.createChapter = exports.getChapters = void 0;
 const db_1 = __importDefault(require("../config/db"));
 // --- CHAPTERS ---
 const getChapters = async (req, res) => {
@@ -14,6 +14,7 @@ const getChapters = async (req, res) => {
                     orderBy: { order: 'asc' },
                     include: {
                         models3d: {
+                            where: { status: 'ACTIVE' },
                             select: { thumbnail_url: true, description: true }
                         }
                     }
@@ -52,10 +53,10 @@ const getLessonById = async (req, res) => {
         const lesson = await db_1.default.lesson.findUnique({
             where: { id },
             include: {
-                theories: true,
-                models3d: true,
-                examples: true,
-                exercises: true,
+                theories: { where: { status: 'ACTIVE' } },
+                models3d: { where: { status: 'ACTIVE' } },
+                examples: { where: { status: 'ACTIVE' } },
+                exercises: { where: { status: 'ACTIVE' } },
             },
         });
         if (!lesson) {
@@ -84,9 +85,29 @@ const createLesson = async (req, res) => {
 exports.createLesson = createLesson;
 // --- CONTENT (Theories, Models) ---
 // THEORIES
+const getTheoryTypes = async (req, res) => {
+    try {
+        const types = await db_1.default.theory.findMany({ select: { theory_type_name: true }, distinct: ['theory_type_name'] });
+        res.json(types.map(t => t.theory_type_name).filter(Boolean));
+    }
+    catch (error) {
+        res.status(500).json({ error: 'Failed to fetch theory types' });
+    }
+};
+exports.getTheoryTypes = getTheoryTypes;
 const getTheories = async (req, res) => {
     try {
+        const { type, theory_type_name, search } = req.query;
+        let whereClause = {};
+        if (type && typeof type === 'string')
+            whereClause.type = type;
+        if (theory_type_name && typeof theory_type_name === 'string')
+            whereClause.theory_type_name = theory_type_name;
+        if (search && typeof search === 'string')
+            whereClause.title = { contains: search, mode: 'insensitive' };
         const theories = await db_1.default.theory.findMany({
+            where: whereClause,
+            include: { lesson: true },
             orderBy: { created_at: 'desc' }
         });
         res.json(theories);
@@ -98,10 +119,10 @@ const getTheories = async (req, res) => {
 };
 exports.getTheories = getTheories;
 const createTheory = async (req, res) => {
-    const { lesson_id, title, content_html, type, status } = req.body;
+    const { lesson_id, title, content_html, type, theory_type_name, status } = req.body;
     try {
         const theory = await db_1.default.theory.create({
-            data: { lesson_id, title, content_html, type, status },
+            data: { lesson_id, title, content_html, type, theory_type_name, status },
         });
         res.status(201).json(theory);
     }
@@ -113,7 +134,7 @@ const createTheory = async (req, res) => {
 exports.createTheory = createTheory;
 const updateTheory = async (req, res) => {
     const { id } = req.params;
-    const { title, content_html, type, status } = req.body;
+    const { title, content_html, type, theory_type_name, status } = req.body;
     if (typeof id !== 'string') {
         res.status(400).json({ error: 'Invalid ID' });
         return;
@@ -121,7 +142,7 @@ const updateTheory = async (req, res) => {
     try {
         const theory = await db_1.default.theory.update({
             where: { id },
-            data: { title, content_html, type, status }
+            data: { title, content_html, type, theory_type_name, status }
         });
         res.json(theory);
     }
@@ -131,6 +152,22 @@ const updateTheory = async (req, res) => {
     }
 };
 exports.updateTheory = updateTheory;
+const updateTheoryStatus = async (req, res) => {
+    const { id } = req.params;
+    const { status } = req.body;
+    if (typeof id !== 'string' || !['ACTIVE', 'INACTIVE'].includes(status)) {
+        res.status(400).json({ error: 'Invalid ID or status value' });
+        return;
+    }
+    try {
+        const theory = await db_1.default.theory.update({ where: { id }, data: { status } });
+        res.json(theory);
+    }
+    catch (error) {
+        res.status(500).json({ error: 'Failed to update theory status' });
+    }
+};
+exports.updateTheoryStatus = updateTheoryStatus;
 const deleteTheory = async (req, res) => {
     const { id } = req.params;
     if (typeof id !== 'string') {
@@ -148,9 +185,33 @@ const deleteTheory = async (req, res) => {
 };
 exports.deleteTheory = deleteTheory;
 // MODELS 3D
+const getModel3DTypes = async (req, res) => {
+    try {
+        const types = await db_1.default.model3D.findMany({
+            select: { type: true },
+            distinct: ['type'],
+        });
+        const typeList = types.map(t => t.type).filter(Boolean);
+        res.json(typeList);
+    }
+    catch (error) {
+        console.error('Error fetching model 3d types:', error);
+        res.status(500).json({ error: 'Failed to fetch model 3d types' });
+    }
+};
+exports.getModel3DTypes = getModel3DTypes;
 const getModels3D = async (req, res) => {
     try {
+        const { type, search } = req.query;
+        let whereClause = {};
+        if (type && typeof type === 'string') {
+            whereClause.type = type;
+        }
+        if (search && typeof search === 'string') {
+            whereClause.name = { contains: search, mode: 'insensitive' };
+        }
         const models = await db_1.default.model3D.findMany({
+            where: whereClause,
             orderBy: { created_at: 'desc' }
         });
         res.json(models);
@@ -220,6 +281,22 @@ const updateModel3D = async (req, res) => {
     }
 };
 exports.updateModel3D = updateModel3D;
+const updateModel3DStatus = async (req, res) => {
+    const { id } = req.params;
+    const { status } = req.body;
+    if (typeof id !== 'string' || !['ACTIVE', 'INACTIVE'].includes(status)) {
+        res.status(400).json({ error: 'Invalid ID or status value' });
+        return;
+    }
+    try {
+        const model = await db_1.default.model3D.update({ where: { id }, data: { status } });
+        res.json(model);
+    }
+    catch (error) {
+        res.status(500).json({ error: 'Failed to update model status' });
+    }
+};
+exports.updateModel3DStatus = updateModel3DStatus;
 const deleteModel3D = async (req, res) => {
     const { id } = req.params;
     if (typeof id !== 'string') {
@@ -238,9 +315,29 @@ const deleteModel3D = async (req, res) => {
 };
 exports.deleteModel3D = deleteModel3D;
 // EXAMPLES
+const getExampleTypes = async (req, res) => {
+    try {
+        const types = await db_1.default.example.findMany({ select: { example_type_name: true }, distinct: ['example_type_name'] });
+        res.json(types.map(t => t.example_type_name).filter(Boolean));
+    }
+    catch (error) {
+        res.status(500).json({ error: 'Failed to fetch example types' });
+    }
+};
+exports.getExampleTypes = getExampleTypes;
 const getExamples = async (req, res) => {
     try {
+        const { type, example_type_name, search } = req.query;
+        let whereClause = {};
+        if (type && typeof type === 'string')
+            whereClause.type = type;
+        if (example_type_name && typeof example_type_name === 'string')
+            whereClause.example_type_name = example_type_name;
+        if (search && typeof search === 'string')
+            whereClause.title = { contains: search, mode: 'insensitive' };
         const examples = await db_1.default.example.findMany({
+            where: whereClause,
+            include: { lesson: true },
             orderBy: { created_at: 'desc' }
         });
         res.json(examples);
@@ -252,10 +349,10 @@ const getExamples = async (req, res) => {
 };
 exports.getExamples = getExamples;
 const createExample = async (req, res) => {
-    const { lesson_id, title, problem, solution, type, status, reference } = req.body;
+    const { lesson_id, title, problem, solution, type, example_type_name, status, reference } = req.body;
     try {
         const example = await db_1.default.example.create({
-            data: { lesson_id, title, problem, solution, type, status, reference }
+            data: { lesson_id, title, problem, solution, type, example_type_name, status, reference }
         });
         res.status(201).json(example);
     }
@@ -267,7 +364,7 @@ const createExample = async (req, res) => {
 exports.createExample = createExample;
 const updateExample = async (req, res) => {
     const { id } = req.params;
-    const { title, problem, solution, type, status, reference } = req.body;
+    const { title, problem, solution, type, example_type_name, status, reference } = req.body;
     if (typeof id !== 'string') {
         res.status(400).json({ error: 'Invalid ID' });
         return;
@@ -275,7 +372,7 @@ const updateExample = async (req, res) => {
     try {
         const example = await db_1.default.example.update({
             where: { id },
-            data: { title, problem, solution, type, status, reference }
+            data: { title, problem, solution, type, example_type_name, status, reference }
         });
         res.json(example);
     }
@@ -285,6 +382,22 @@ const updateExample = async (req, res) => {
     }
 };
 exports.updateExample = updateExample;
+const updateExampleStatus = async (req, res) => {
+    const { id } = req.params;
+    const { status } = req.body;
+    if (typeof id !== 'string' || !['ACTIVE', 'INACTIVE'].includes(status)) {
+        res.status(400).json({ error: 'Invalid ID or status value' });
+        return;
+    }
+    try {
+        const example = await db_1.default.example.update({ where: { id }, data: { status } });
+        res.json(example);
+    }
+    catch (error) {
+        res.status(500).json({ error: 'Failed to update example status' });
+    }
+};
+exports.updateExampleStatus = updateExampleStatus;
 const deleteExample = async (req, res) => {
     const { id } = req.params;
     if (typeof id !== 'string') {
@@ -302,9 +415,29 @@ const deleteExample = async (req, res) => {
 };
 exports.deleteExample = deleteExample;
 // EXERCISES
+const getExerciseTypes = async (req, res) => {
+    try {
+        const types = await db_1.default.exercise.findMany({ select: { exercise_type_name: true }, distinct: ['exercise_type_name'] });
+        res.json(types.map(t => t.exercise_type_name).filter(Boolean));
+    }
+    catch (error) {
+        res.status(500).json({ error: 'Failed to fetch exercise types' });
+    }
+};
+exports.getExerciseTypes = getExerciseTypes;
 const getExercises = async (req, res) => {
     try {
+        const { type, exercise_type_name, search } = req.query;
+        let whereClause = {};
+        if (type && typeof type === 'string')
+            whereClause.type = type;
+        if (exercise_type_name && typeof exercise_type_name === 'string')
+            whereClause.exercise_type_name = exercise_type_name;
+        if (search && typeof search === 'string')
+            whereClause.question = { contains: search, mode: 'insensitive' };
         const exercises = await db_1.default.exercise.findMany({
+            where: whereClause,
+            include: { lesson: true },
             orderBy: { created_at: 'desc' }
         });
         res.json(exercises);
@@ -316,7 +449,7 @@ const getExercises = async (req, res) => {
 };
 exports.getExercises = getExercises;
 const createExercise = async (req, res) => {
-    const { lesson_id, question, options, correct_answer, level, type, status, reference } = req.body;
+    const { lesson_id, question, options, correct_answer, level, type, exercise_type_name, status, reference, solution } = req.body;
     try {
         const exercise = await db_1.default.exercise.create({
             data: {
@@ -326,8 +459,10 @@ const createExercise = async (req, res) => {
                 correct_answer,
                 level,
                 type,
+                exercise_type_name,
                 status,
-                reference
+                reference,
+                solution
             }
         });
         res.status(201).json(exercise);
@@ -340,7 +475,7 @@ const createExercise = async (req, res) => {
 exports.createExercise = createExercise;
 const updateExercise = async (req, res) => {
     const { id } = req.params;
-    const { question, options, correct_answer, level, type, status, reference } = req.body;
+    const { question, options, correct_answer, level, type, status, reference, solution } = req.body;
     if (typeof id !== 'string') {
         res.status(400).json({ error: 'Invalid ID' });
         return;
@@ -355,7 +490,8 @@ const updateExercise = async (req, res) => {
                 level,
                 type,
                 status,
-                reference
+                reference,
+                solution
             }
         });
         res.json(exercise);
@@ -366,6 +502,22 @@ const updateExercise = async (req, res) => {
     }
 };
 exports.updateExercise = updateExercise;
+const updateExerciseStatus = async (req, res) => {
+    const { id } = req.params;
+    const { status } = req.body;
+    if (typeof id !== 'string' || !['ACTIVE', 'INACTIVE'].includes(status)) {
+        res.status(400).json({ error: 'Invalid ID or status value' });
+        return;
+    }
+    try {
+        const exercise = await db_1.default.exercise.update({ where: { id }, data: { status } });
+        res.json(exercise);
+    }
+    catch (error) {
+        res.status(500).json({ error: 'Failed to update exercise status' });
+    }
+};
+exports.updateExerciseStatus = updateExerciseStatus;
 const deleteExercise = async (req, res) => {
     const { id } = req.params;
     if (typeof id !== 'string') {

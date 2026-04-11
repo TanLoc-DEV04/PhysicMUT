@@ -1,14 +1,13 @@
 import { List, Card, Typography, Collapse } from 'antd';
 import type { Example as ExampleType } from '../../../hooks/useContent';
-import { useMathJax } from '../../../hooks/useMathJax';
+import MathJaxRenderer from '../../../components/shared/MathJaxRenderer';
 
 export interface ExampleProps {
     examples?: ExampleType[];
 }
 
 function Example({ examples = [] }: ExampleProps) {
-  // Trigger MathJax whenever examples list changes (effectively triggers on mount and updates)
-  useMathJax(JSON.stringify(examples));
+  // No global useMathJax needed here anymore.
 
   if (!examples || examples.length === 0) {
       return <div className="text-gray-500 italic">Chưa có bài tập mẫu.</div>;
@@ -32,7 +31,7 @@ function Example({ examples = [] }: ExampleProps) {
               <List.Item>
                 <div id={`example-${item.id}`} className="scroll-mt-24">
                 <Card title={item.title} className="hover:shadow-md transition-shadow">
-                  <div className="font-semibold mb-2" dangerouslySetInnerHTML={{ __html: item.problem }} />
+                  <MathJaxRenderer className="font-semibold mb-2" html={item.problem} />
                   
                   <Collapse ghost 
                     onChange={() => {
@@ -62,7 +61,7 @@ function Example({ examples = [] }: ExampleProps) {
                                       </div>
                                   </div>
                               ) : (
-                                  <div dangerouslySetInnerHTML={{ __html: item.solution }} />
+                                  <MathJaxRenderer html={item.solution} />
                               )}
                           </div>
                       )

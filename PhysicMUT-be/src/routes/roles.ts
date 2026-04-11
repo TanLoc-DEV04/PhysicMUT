@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { getRoles, getRoleById, createRole, updateRole, deleteRole } from '../controllers/roleController';
+import { getRoles, getAdminRoles, getRoleById, createRole, updateRole, toggleRoleStatus, deleteRole } from '../controllers/roleController';
 
 const router = Router();
 
@@ -52,6 +52,18 @@ const router = Router();
  *                 $ref: '#/components/schemas/Role'
  */
 router.get('/', getRoles);
+
+/**
+ * @openapi
+ * /roles/admin-roles:
+ *   get:
+ *     summary: Get active admin-level roles only (for Add Admin dropdown)
+ *     tags: [Roles]
+ *     responses:
+ *       200:
+ *         description: List of active admin roles (excludes USER, STUDENT)
+ */
+router.get('/admin-roles', getAdminRoles);
 
 /**
  * @openapi
@@ -148,5 +160,33 @@ router.put('/:id', updateRole);
  *         description: Role deleted
  */
 router.delete('/:id', deleteRole);
+
+/**
+ * @openapi
+ * /roles/{id}/status:
+ *   patch:
+ *     summary: Toggle role active/inactive status
+ *     tags: [Roles]
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         required: true
+ *         schema:
+ *           type: string
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             required: [is_active]
+ *             properties:
+ *               is_active:
+ *                 type: boolean
+ *     responses:
+ *       200:
+ *         description: Role status updated
+ */
+router.patch('/:id/status', toggleRoleStatus);
 
 export default router;

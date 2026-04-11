@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { login, register, changePassword, forgotPassword } from '../controllers/authController';
+import { login, register, changePassword, forgotPassword, googleLogin } from '../controllers/authController';
 
 const router = Router();
 
@@ -144,5 +144,8 @@ router.post('/change-password', changePassword);
  *         description: Reset link sent
  */
 router.post('/forgot-password', forgotPassword);
+
+
+router.post('/google', googleLogin);
 
 export default router;

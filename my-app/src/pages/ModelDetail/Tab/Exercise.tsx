@@ -3,7 +3,7 @@ import { CheckCircleOutlined, CloseCircleOutlined, EyeOutlined, EyeInvisibleOutl
 import type { Exercise as ExerciseType } from '../../../hooks/useContent';
 import { useState } from 'react';
 
-import { useMathJax } from '../../../hooks/useMathJax';
+import MathJaxRenderer from '../../../components/shared/MathJaxRenderer';
 
 interface ExerciseProps {
     exercises?: ExerciseType[];
@@ -14,8 +14,7 @@ function Exercise({ exercises = [] }: ExerciseProps) {
   const [results, setResults] = useState<Record<string, boolean | null>>({});
   const [showSolutions, setShowSolutions] = useState<Record<string, boolean>>({}); // Track solution visibility for Essay
 
-  // Trigger MathJax whenever exercises list changes
-  useMathJax(JSON.stringify(exercises));
+  // MathJax is now handled by MathJaxRenderer independently
 
   const handleCheck = (id: string, correctAnswer: string) => {
       const isCorrect = answers[id] === correctAnswer;
@@ -54,7 +53,7 @@ function Exercise({ exercises = [] }: ExerciseProps) {
                     </div>} 
                     className={`hover:shadow-md transition-shadow ${result === true ? 'border-green-500' : result === false ? 'border-red-500' : ''}`}
                 >
-                  <div className="mb-4 text-base" dangerouslySetInnerHTML={{ __html: item.question }} />
+                  <MathJaxRenderer className="mb-4 text-base" html={item.question} />
 
                   {isEssay ? (
                       <div className="space-y-4">
@@ -74,7 +73,8 @@ function Exercise({ exercises = [] }: ExerciseProps) {
                            {isSolutionVisible && (
                                <div className="bg-green-50 p-4 rounded border border-green-200 mt-2">
                                    <div className="font-bold text-green-800 mb-2">Đáp án / Hướng dẫn:</div>
-                                   <div className="text-gray-800 whitespace-pre-wrap">{item.correct_answer}</div>
+                                   {item.correct_answer && <div className="text-gray-800 whitespace-pre-wrap mb-2">{item.correct_answer}</div>}
+                                   {item.solution && <MathJaxRenderer className="text-gray-800" html={item.solution} />}
                                </div>
                            )}
                       </div>
@@ -105,6 +105,12 @@ function Exercise({ exercises = [] }: ExerciseProps) {
                                 {result === true && <span className="text-green-600 flex items-center gap-1"><CheckCircleOutlined /> Chính xác!</span>}
                                 {result === false && <span className="text-red-600 flex items-center gap-1"><CloseCircleOutlined /> Sai rồi, đáp án là {item.correct_answer}</span>}
                           </div>
+                          {result !== undefined && item.solution && (
+                              <div className="bg-blue-50 p-3 rounded border border-blue-200 mt-3 text-sm">
+                                  <div className="font-bold text-blue-800 mb-1">Giải thích chi tiết:</div>
+                                  <MathJaxRenderer className="text-gray-800" html={item.solution} />
+                              </div>
+                          )}
                         </>
                       ) : (
                          <div className="text-gray-500 italic text-sm">

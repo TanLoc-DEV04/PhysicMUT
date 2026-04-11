@@ -1,10 +1,12 @@
 import { useQuery } from '@tanstack/react-query';
 import { theoryService } from '../../../services/theoryService';
+import { message } from 'antd';
+import { useEffect } from 'react';
 
-export const useTheoryManagement = () => {
+export const useTheoryManagement = (model_type_name?: string | null, theory_type_name?: string | null, search?: string) => {
     const { data, isLoading, error, refetch } = useQuery({
-        queryKey: ['theories'],
-        queryFn: theoryService.getTheories,
+        queryKey: ['theories', model_type_name, theory_type_name, search],
+        queryFn: () => theoryService.getTheories(model_type_name, theory_type_name, search),
     });
 
     return { 
@@ -12,5 +14,24 @@ export const useTheoryManagement = () => {
         loading: isLoading, 
         error,
         refetch 
+    };
+};
+
+export const useTheoryCategories = () => {
+    const { data, isLoading, error } = useQuery({
+        queryKey: ['theories', 'categories'],
+        queryFn: theoryService.getTheoryCategories,
+    });
+
+    useEffect(() => {
+        if (error) {
+            console.error(error);
+            message.error('Failed to fetch theory categories');
+        }
+    }, [error]);
+
+    return {
+        categories: data || [],
+        loadingCategories: isLoading,
     };
 };

@@ -1,4 +1,4 @@
-import { Form, Upload, Button, Input, Card, Select } from 'antd';
+import { Form, Upload, Button, Input, Card } from 'antd';
 import { UploadOutlined, ArrowLeftOutlined } from '@ant-design/icons';
 import { useNavigate, useParams } from 'react-router-dom';
 import { useEffect } from 'react';
@@ -10,17 +10,18 @@ import { use3DModelMutations } from './use3DModelMutations';
 const AddEdit3DModel = () => {
   const [form] = Form.useForm();
   const navigate = useNavigate();
-  const { id } = useParams();
-  const isEditMode = !!id;
+  const { typeName } = useParams();
+  const isEditMode = !!typeName;
   
   const { createModel, updateModel } = use3DModelMutations();
 
   // Fetch Model Details
   const { data: modelData, isLoading: isLoadingModel } = useQuery({
-    queryKey: ['model3d', id],
+    queryKey: ['model3d', typeName],
     queryFn: async () => {
-        const all = await model3DService.getModels3D();
-        return all.find((m: any) => String(m.id) === String(id));
+        return await model3DService.getModels3D(null, typeName).then(all => 
+            all.find((m: any) => m.model_type_name === typeName)
+        );
     },
     enabled: isEditMode,
   });
@@ -29,17 +30,16 @@ const AddEdit3DModel = () => {
     if (modelData) {
         form.setFieldsValue({
             ...modelData,
-            category: modelData.type // Mapping type to category if needed, or vice-versa
         });
     }
   }, [modelData, form]);
 
   const handleSubmit = async (values: any) => {
     const formData = new FormData();
+    formData.append('model_type_name', values.model_type_name);
     formData.append('name', values.name);
-    formData.append('type', values.category);
     formData.append('description', values.description || '');
-    formData.append('status', 'ACTIVE'); // Default status
+    formData.append('status', 'ACTIVE'); 
     
     // Handle Thumbnail
     if (values.thumbnail && values.thumbnail.length > 0) {
@@ -49,11 +49,8 @@ const AddEdit3DModel = () => {
         }
     }
 
-    // NOTE: Model File (GLTF) functionality has been removed as per requirement.
-    // The system now uses the 'type' field to map to internal React Components.
-
-    if (isEditMode && id) {
-        updateModel.mutate({ id, data: formData });
+    if (isEditMode && typeName) {
+        updateModel.mutate({ typeName, data: formData });
     } else {
         createModel.mutate(formData);
     }
@@ -81,27 +78,25 @@ const AddEdit3DModel = () => {
       <Card title={isEditMode ? 'View/Edit 3D Model' : 'Add New 3D Model'} className="shadow-md">
         <Form form={form} layout="vertical" onFinish={handleSubmit}>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                <RenderFormItem label="Model Name" name="name" required placeholder="Enter model name" />
+                <RenderFormItem 
+                    label="Model Type Name" 
+                    name="model_type_name" 
+                    required 
+                    placeholder="e.g. CYCLOTRON" 
+                    disabled={isEditMode}
+                />
                 
-                <Form.Item name="category" label="Model Type Name" rules={[{ required: true }]}>
-                    <Select placeholder="Select type">
-                         <Select.Option value="CYCLOTRON">CYCLOTRON</Select.Option>
-                         <Select.Option value="LOUDSPEAKER">LOUDSPEAKER</Select.Option>
-                         <Select.Option value="MASS_SPECTROMETER">MASS_SPECTROMETER</Select.Option>
-                    </Select>
-                </Form.Item>
-
-                {isEditMode && (
-                    <>
-                        <Form.Item name="updated_at" label="Last Update">
-                            <Input disabled />
-                        </Form.Item>
-                    </>
-                )}
+                <RenderFormItem label="Display Name" name="name" required placeholder="Enter model name" />
 
                 <Form.Item name="description" label="Description">
                     <Input.TextArea rows={4} placeholder="Enter description" />
                 </Form.Item>
+
+                {isEditMode && (
+                    <Form.Item name="updated_at" label="Last Update">
+                        <Input disabled />
+                    </Form.Item>
+                )}
             </div>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
@@ -112,7 +107,7 @@ const AddEdit3DModel = () => {
                     getValueFromEvent={normFile}
                 >
                     <Upload 
-                        beforeUpload={() => false} // Prevent auto upload
+                        beforeUpload={() => false} 
                         listType="picture" 
                         maxCount={1}
                         accept="image/*"
@@ -120,8 +115,6 @@ const AddEdit3DModel = () => {
                         <Button icon={<UploadOutlined />}>Select Thumbnail</Button>
                     </Upload>
                 </Form.Item>
-        
-                 {/* Removed Model File Upload */}
             </div>
 
             <div className="flex justify-end mt-4">

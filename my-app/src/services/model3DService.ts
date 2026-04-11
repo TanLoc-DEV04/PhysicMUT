@@ -1,8 +1,15 @@
 import api from './api';
 
 export const model3DService = {
-    getModels3D: async () => {
-        const response = await api.get('/content/models3d');
+    getModels3D: async (model_type_name?: string | null, search?: string) => {
+        const params: any = {};
+        if (model_type_name) params.model_type_name = model_type_name;
+        if (search) params.search = search;
+        const response = await api.get('/content/models3d', { params });
+        return response.data;
+    },
+    getModel3DTypes: async () => {
+        const response = await api.get('/content/models3d/types');
         return response.data;
     },
     // Note: Model3D create/update needs FormData
@@ -12,13 +19,17 @@ export const model3DService = {
         });
         return response.data;
     },
-    updateModel3D: async (id: string, formData: FormData) => {
-        const response = await api.put(`/content/models3d/${id}`, formData, {
+    updateModel3D: async (typeName: string, formData: FormData) => {
+        const response = await api.put(`/content/models3d/${typeName}`, formData, {
              headers: { 'Content-Type': 'multipart/form-data' }
         });
         return response.data;
     },
-    deleteModel3D: async (id: string) => {
-        await api.delete(`/content/models3d/${id}`);
+    deleteModel3D: async (typeName: string) => {
+        await api.delete(`/content/models3d/${typeName}`);
+    },
+    updateStatus: async (typeName: string, status: string) => {
+        const response = await api.patch(`/content/models3d/${typeName}/status`, { status });
+        return response.data;
     }
 };

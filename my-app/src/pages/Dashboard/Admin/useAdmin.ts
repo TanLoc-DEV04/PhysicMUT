@@ -5,7 +5,7 @@ import { userService } from '../../../services/userService';
 export const useAdmin = () => {
   const { data, isLoading, refetch } = useQuery({
     queryKey: ['users'], // We fetch all users, then filter in component or here if needed
-    queryFn: userService.getUsers,
+    queryFn: () => userService.getUsers(),
   });
 
   // Optional: Filter for admins only if that's the intention

@@ -1,19 +1,27 @@
 import { useState } from 'react';
-import { Table, Button, Space, Popconfirm } from 'antd';
+import { Table, Button, Space, Popconfirm, Switch } from 'antd';
 import { PlusOutlined, EyeOutlined, DeleteOutlined } from '@ant-design/icons';
 import { useNavigate } from 'react-router-dom';
-import { useExampleManagement } from './useExampleManagement';
+import { useExampleManagement, useExampleCategories } from './useExampleManagement';
+import { use3DModelTypes } from '../3DModels/use3DModelManagement';
 import { useExampleMutations } from './useExampleMutations';
 import SearchInput from '../../../components/shared/SearchInput';
 import MultiFilterSelect from '../../../components/shared/MultiFilterSelect';
 import Pagination from '../../../components/shared/Pagination';
 
 function ExampleList() {
-  const { data, loading } = useExampleManagement();
-  const { deleteExample } = useExampleMutations();
   const navigate = useNavigate();
   const [searchText, setSearchText] = useState('');
-  const [filterType, setFilterType] = useState<string | null>(null);
+  const [filterCategory, setFilterCategory] = useState<string | null>(null);
+  const { data, loading } = useExampleManagement(filterCategory, null, searchText);
+  const { categories: categoryOptions, loadingCategories } = useExampleCategories();
+  const { types: modelTypes, loadingTypes } = use3DModelTypes();
+  const { deleteExample, updateExampleStatus } = useExampleMutations();
+
+  // Merge: prefer live Model3D types, fall back to cached example categories
+  const mergedOptions = modelTypes.length > 0
+    ? modelTypes.map((t: string) => ({ label: t, value: t }))
+    : categoryOptions.map((t: string) => ({ label: t, value: t }));
 
   // Pagination state
   const [currentPage, setCurrentPage] = useState(1);
@@ -28,25 +36,42 @@ function ExampleList() {
       deleteExample.mutate(id);
   };
 
-
+  const handleStatusChange = (id: string, currentStatus: string) => {
+      const newStatus = currentStatus === 'ACTIVE' ? 'INACTIVE' : 'ACTIVE';
+      updateExampleStatus.mutate({ id, status: newStatus });
+  };
 
   const columns = [
-    { title: 'Example ID', dataIndex: 'id', key: 'id', width: 100 },
+    { title: 'Example ID', dataIndex: 'id', key: 'id', ellipsis: true, width: 80 },
     { title: 'Example Title', dataIndex: 'title', key: 'title' },
-    { title: 'Type', dataIndex: 'type', key: 'type' },
-    { title: 'Reference', dataIndex: 'reference', key: 'reference' },
+    { title: 'Model Category', dataIndex: 'example_type_name', key: 'example_type_name' },
     { 
         title: 'Last Update', 
         dataIndex: 'updated_at', 
         key: 'updated_at',
         render: (date: string) => date ? new Date(date).toLocaleDateString() : 'N/A'
     },
-
     {
       title: 'Action',
       key: 'action',
       render: (_: any, record: any) => (
         <Space size="middle">
+          <Popconfirm
+            title={record.status === 'ACTIVE' ? 'Deactivate this Example?' : 'Activate this Example?'}
+            description={record.status === 'ACTIVE'
+              ? 'Are you sure you want to deactivate this example? It will be hidden from users.'
+              : 'Are you sure you want to activate this example? It will be visible to users.'}
+            onConfirm={() => handleStatusChange(record.id, record.status)}
+            okText="Confirm"
+            cancelText="Cancel"
+          >
+            <Switch
+              checked={record.status === 'ACTIVE'}
+              checkedChildren="Active"
+              unCheckedChildren="Inactive"
+              loading={updateExampleStatus.isPending}
+            />
+          </Popconfirm>
           <Button 
             icon={<EyeOutlined />} 
             onClick={() => navigate(`/dashboard/examples/${record.id}`)}
@@ -92,14 +117,11 @@ function ExampleList() {
         </div>
         <div className="w-1/4">
              <MultiFilterSelect
-                value={filterType}
-                onChange={(val) => setFilterType(val)}
-                options={[
-                    { label: 'Mechanics', value: 'Mechanics' },
-                    { label: 'Electromagnetism', value: 'Electromagnetism' },
-                    { label: 'Optics', value: 'Optics' }
-                ]}
-                placeholder="Filter by Type"
+                value={filterCategory}
+                onChange={(val) => setFilterCategory(val)}
+                options={mergedOptions}
+                loading={loadingTypes || loadingCategories}
+                placeholder="Filter by Model Category"
             />
         </div>
       </div>

@@ -11,6 +11,7 @@ interface MultiFilterSelectProps {
   onChange: (value: string | null) => void;
   placeholder?: string;
   className?: string;
+  loading?: boolean;
   'aria-label'?: string;
 }
 
@@ -20,6 +21,7 @@ function MultiFilterSelect({
   onChange, 
   placeholder = 'Chọn danh mục', 
   className = '',
+  loading = false,
   'aria-label': ariaLabel = 'Filter'
 }: MultiFilterSelectProps) {
   return (
@@ -30,6 +32,7 @@ function MultiFilterSelect({
       options={options}
       placeholder={placeholder}
       allowClear
+      loading={loading}
       className={`w-full ${className}`}
       popupMatchSelectWidth={false}
       aria-label={ariaLabel}

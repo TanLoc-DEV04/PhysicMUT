@@ -1,5 +1,5 @@
 import { Form } from 'antd';
-import { useMathJax } from '../../hooks/useMathJax';
+import MathJaxRenderer from './MathJaxRenderer';
 
 interface MathJaxPreviewProps {
     form: any;
@@ -11,14 +11,10 @@ const MathJaxPreview = ({ form, name, placeholder = "No content to preview" }: M
     // Attempt to watch the value, fallback to getFieldValue if useWatch returns undefined
     const watchedContent = Form.useWatch(name, form);
     const content = watchedContent !== undefined ? watchedContent : form.getFieldValue(name);
-    
-    useMathJax(content);
 
     return (
         <div className="border p-4 rounded bg-white min-h-[300px]">
-            <div 
-                dangerouslySetInnerHTML={{ __html: content || `<p>${placeholder}</p>` }} 
-            />
+            <MathJaxRenderer html={content || `<p>${placeholder}</p>`} />
         </div>
     );
 };

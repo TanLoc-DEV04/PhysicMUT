@@ -5,9 +5,9 @@ import Placeholder from './Placeholder/Placeholder';
 import Model3D from '../../pages/ModelDetail/Model3D';
 
 // Lazy load heavy simulation components
-const CyclotronSim = lazy(() => import('./Cyclotron/CyclotronSimulation'));
-const LoudspeakerSim = lazy(() => import('./Loudspeaker/LoudspeakerSimulation'));
-const MassSpectrometerSim = lazy(() => import('./MassSpectrometry/MassSpectrometerSimulation'));
+const CyclotronSim = lazy(() => import('./Cyclotron/CyclotronGame'));
+const LoudspeakerSim = lazy(() => import('./Loudspeaker/LSGame'));
+const MassSpectrometerSim = lazy(() => import('./MassSpectrometry/MSGame'));
 
 interface ModelRegistryProps {
     modelType?: string; // e.g., 'CYCLOTRON', 'MASS_SPECTROMETER'

@@ -1,0 +1,36 @@
+NHẬT KÝ PHÁT TRIỂN & CÁC LỖI THƯỜNG GẶP (Status Feature)
+=====================================================
+
+Ngày: 13/03/2026
+
+1. Lỗi Xung Đột Port (EADDRINUSE)
+---------------------------------
+- Triệu chứng: Chạy `npm run dev` nhưng server tự đóng ngay lập tức hoặc báo lỗi "Port 3000 is already in use".
+- Nguyên nhân: Có các tiến trình Node.js chạy ngầm (zombie processes) chiếm giữ port 3000 từ các lần chạy trước chưa được tắt sạch.
+- Cách xử lý:
+    + Windows (PowerShell): `Stop-Process -Name "node" -Force`
+    + Hoặc: `netstat -ano | findstr :3000` để tìm PID, sau đó `taskkill /F /PID <số_PID>`
+
+2. Lỗi TypeScript / Lint (Property does not exist on type 'UserSelect')
+----------------------------------------------------------------------
+- Triệu chứng: File `userController.ts` báo đỏ ở các trường `is_active` hoặc `last_login` dù đã sửa schema.
+- Nguyên nhân: Prisma Client chưa được cập nhật (regenerate) hoặc IDE (Language Server) bị cache.
+- Cách xử lý:
+    + Chạy: `npx prisma generate`
+    + Nếu vẫn bị: Restart lại TS Server trên IDE (VS Code: Ctrl+Shift+P -> Restart TS Server).
+
+3. Lỗi EPERM khi Prisma Generate/Migrate
+----------------------------------------
+- Triệu chứng: Lỗi "EPERM: operation not permitted, rename..." khi chạy `npx prisma generate`.
+- Nguyên nhân: Backend server đang chạy và đang khóa file `query_engine-windows.dll.node` của Prisma.
+- Cách xử lý: Tắt backend server hoàn toàn trước khi thực hiện các lệnh liên quan đến Prisma schema.
+
+4. Lỗi Lil-gui Contrast (UI CSS)
+--------------------------------
+- Triệu chứng: Select box trong lil-gui có chữ màu trắng trên nền trắng (khó nhìn).
+- Nguyên nhân: Ghi đè CSS của theme tối chưa triệt để cho element `select`.
+- Cách xử lý: Thêm ghi đè CSS cụ thể cho `select` trong LabController/Loudspeaker:
+    `.lil-gui select { background: #111111 !important; color: #ffffff !important; }`
+
+-----------------------------------------------------
+Ghi chú: Luôn build thử bằng `npm run build` để kiểm tra lỗi kiểu dữ liệu trước khi chạy dev.

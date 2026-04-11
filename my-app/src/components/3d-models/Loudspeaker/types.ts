@@ -36,13 +36,13 @@ export const PART_INFO: Record<string, ComponentMetadata> = {
 };
 
 export const HEARING_RANGES: AudioRange[] = [
-    { min: 0, max: 20, name: "Voi", icon: "🐘", description: "Nghe được hạ âm dưới 20Hz." },
-    { min: 20, max: 20000, name: "Con người", icon: "🧍", description: "Ngưỡng nghe tiêu chuẩn." },
-    { min: 67, max: 45000, name: "Chó", icon: "🐕", description: "Nhạy cảm với âm thanh tần số cao." },
-    { min: 45, max: 64000, name: "Mèo", icon: "🐈", description: "Thính hơn chó ở dải cao." },
-    { min: 1000, max: 100000, name: "Cá heo", icon: "🐬", description: "Sử dụng siêu âm để định vị." },
-    { min: 1000, max: 160000, name: "Dơi", icon: "🦇", description: "Phát siêu âm để săn mồi." },
-    { min: 1000, max: 300000, name: "Bướm đêm", icon: "🦋", description: "Nghe siêu âm cực cao để tránh dơi." }
+    { min: 0,    max: 20,     name: "Voi",       icon: "🐘", description: "Nghe được hạ âm dưới 20Hz." },
+    { min: 20,   max: 20000,  name: "Con người",  icon: "🧍", description: "Ngưỡng nghe tiêu chuẩn." },
+    { min: 67,   max: 45000,  name: "Chó",        icon: "🐕", description: "Nhạy cảm với âm thanh tần số cao." },
+    { min: 45,   max: 64000,  name: "Mèo",        icon: "🐈", description: "Thính hơn chó ở dải cao." },
+    { min: 1000, max: 100000, name: "Cá heo",     icon: "🐬", description: "Sử dụng siêu âm để định vị." },
+    { min: 1000, max: 160000, name: "Dơi",        icon: "🦇", description: "Phát siêu âm để săn mồi." },
+    { min: 1000, max: 300000, name: "Bướm đêm",   icon: "🦋", description: "Nghe siêu âm cực cao để tránh dơi." }
 ];
 
 export interface NotePreset {
@@ -53,18 +53,18 @@ export interface NotePreset {
 }
 
 export const NOTE_PRESETS: NotePreset[] = [
-    { note: "C-1", frequency: 8.18, description: "Nốt đàn organ thấp nhất (Hạ âm)", audioFile: undefined },
-    { note: "C0", frequency: 16.35, description: "Nốt thấp nhất của tuba/grand piano (Khó nghe)", audioFile: undefined },
-    { note: "C1", frequency: 32.70, description: "Nốt thấp nhất trên đàn piano 88 nốt", audioFile: "assets/loudspeaker/Audio_Frequency_tone,_C1,_32.70hz.ogg" },
-    { note: "C2", frequency: 65.41, description: "Nốt thấp nhất của cello", audioFile: "assets/loudspeaker/Audio_frequency_tone,_C2,_65.41hz.ogg" },
-    { note: "C3", frequency: 130.81, description: "Nốt thấp nhất của viola, mandola", audioFile: "assets/loudspeaker/Audio_frequency_tone,_C3,_130.81hz.ogg" },
-    { note: "C4", frequency: 261.63, description: "Nốt đô trung (Middle C)", audioFile: "assets/loudspeaker/Audio_Frequency_tone,_Middle_C,_C4,_261.63hz.ogg" },
-    { note: "C5", frequency: 523.25, description: "Nốt đô ở giữa khóa treble", audioFile: "assets/loudspeaker/Audio_Frequency_tone,_C5,_523.25hz.ogg" },
-    { note: "C6", frequency: 1046.50, description: "Nốt cao nhất giọng nữ (Soprano)", audioFile: "assets/loudspeaker/Audio_Frequency_tone,_C6,_1046.50hz.ogg" },
-    { note: "C7", frequency: 2093.00, description: "Nốt cao nhất của sáo", audioFile: "assets/loudspeaker/Audio_Frequency_tone,_C7,_2093hz.ogg" },
-    { note: "C8", frequency: 4186.00, description: "Nốt cao nhất trên đàn piano 88 nốt", audioFile: "assets/loudspeaker/Audio_frequency_tone,_C8,_4186hz.ogg" },
-    { note: "C9", frequency: 8372.00, description: "Tần số rất cao, chói tai", audioFile: "assets/loudspeaker/Audio_frequency_tone,_C9,_8372hz.ogg" },
-    { note: "C10", frequency: 16744.00, description: "Tiếng rít của TV CRT (Gần siêu âm)", audioFile: "assets/loudspeaker/Audio_frequency_tone,_C10,_16744hz.ogg" }
+    { note: "C-1",  frequency: 8.18,    description: "Nốt đàn organ thấp nhất (Hạ âm)", audioFile: undefined },
+    { note: "C0",   frequency: 16.35,   description: "Nốt thấp nhất của tuba/grand piano (Khó nghe)", audioFile: undefined },
+    { note: "C1",   frequency: 32.70,   description: "Nốt thấp nhất trên đàn piano 88 nốt", audioFile: "assets/loudspeaker/Audio_Frequency_tone,_C1,_32.70hz.ogg" },
+    { note: "C2",   frequency: 65.41,   description: "Nốt thấp nhất của cello", audioFile: "assets/loudspeaker/Audio_frequency_tone,_C2,_65.41hz.ogg" },
+    { note: "C3",   frequency: 130.81,  description: "Nốt thấp nhất của viola, mandola", audioFile: "assets/loudspeaker/Audio_frequency_tone,_C3,_130.81hz.ogg" },
+    { note: "C4",   frequency: 261.63,  description: "Nốt đô trung (Middle C)", audioFile: "assets/loudspeaker/Audio_Frequency_tone,_Middle_C,_C4,_261.63hz.ogg" },
+    { note: "C5",   frequency: 523.25,  description: "Nốt đô ở giữa khóa treble", audioFile: "assets/loudspeaker/Audio_Frequency_tone,_C5,_523.25hz.ogg" },
+    { note: "C6",   frequency: 1046.50, description: "Nốt cao nhất giọng nữ (Soprano)", audioFile: "assets/loudspeaker/Audio_Frequency_tone,_C6,_1046.50hz.ogg" },
+    { note: "C7",   frequency: 2093.00, description: "Nốt cao nhất của sáo", audioFile: "assets/loudspeaker/Audio_Frequency_tone,_C7,_2093hz.ogg" },
+    { note: "C8",   frequency: 4186.00, description: "Nốt cao nhất trên đàn piano 88 nốt", audioFile: "assets/loudspeaker/Audio_frequency_tone,_C8,_4186hz.ogg" },
+    { note: "C9",   frequency: 8372.00, description: "Tần số rất cao, chói tai", audioFile: "assets/loudspeaker/Audio_frequency_tone,_C9,_8372hz.ogg" },
+    { note: "C10",  frequency: 16744.00,description: "Tiếng rít của TV CRT (Gần siêu âm)", audioFile: "assets/loudspeaker/Audio_frequency_tone,_C10,_16744hz.ogg" }
 ];
 
 export interface MediumProps {
@@ -76,7 +76,50 @@ export interface MediumProps {
 }
 
 export const MEDIUMS: Record<string, MediumProps> = {
-    'Air': { name: 'Không khí (Air)', speed: 1.0, damping: 0.99, color: 0x88ccff, canPropagate: true },
-    'Water': { name: 'Nước (Water)', speed: 4.0, damping: 0.995, color: 0x0044ff, canPropagate: true },
-    'Vacuum': { name: 'Chân không (Vacuum)', speed: 0, damping: 0, color: 0x000000, canPropagate: false }
+    'Air':    { name: 'Không khí (Air)',     speed: 1.0, damping: 0.99,  color: 0x88ccff, canPropagate: true  },
+    'Water':  { name: 'Nước (Water)',        speed: 4.0, damping: 0.995, color: 0x0044ff, canPropagate: true  },
+    'Vacuum': { name: 'Chân không (Vacuum)', speed: 0,   damping: 0,     color: 0x000000, canPropagate: false },
 };
+
+// ── Game Types ────────────────────────────────────────────────────────────────
+export type LSGameMode  = 'free' | 'mission1' | 'mission2' | 'mission3';
+export type LSBadgeId   = 'AUDIO_MECHANIC' | 'BIO_ACOUSTICS' | 'VOID_EXPLORER';
+
+export interface LSBadge {
+    id:          LSBadgeId;
+    name:        string;
+    emoji:       string;
+    description: string;
+}
+
+export const LS_BADGES: Record<LSBadgeId, LSBadge> = {
+    AUDIO_MECHANIC: {
+        id: 'AUDIO_MECHANIC',
+        name: 'Thợ máy Âm thanh',
+        emoji: '🔧',
+        description: 'Cung cấp đủ dòng điện để tạo lực từ 0.175 N',
+    },
+    BIO_ACOUSTICS: {
+        id: 'BIO_ACOUSTICS',
+        name: 'Kỹ sư Sinh âm học',
+        emoji: '🎶',
+        description: 'Phát siêu âm >20 kHz để đánh thức chó bảo vệ',
+    },
+    VOID_EXPLORER: {
+        id: 'VOID_EXPLORER',
+        name: 'Nhà thám hiểm Chân không',
+        emoji: '🌌',
+        description: 'Khám phá sóng âm không truyền được trong chân không',
+    },
+};
+
+export interface LSGameState {
+    mode:         LSGameMode;
+    badges:       Set<LSBadgeId>;
+    streakCount:  number;
+    lastPlayDate: string;
+    // runtime
+    currentFMax:  number;   // N — updated each frame
+    currentFreq:  number;   // Hz
+    isVacuum:     boolean;
+}

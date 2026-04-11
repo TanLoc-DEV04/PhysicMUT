@@ -1,0 +1,1 @@
+const fs = require('fs'); let c=fs.readFileSync('src/App.tsx','utf8'); c = c.replace(/<Route path=.register. element=\{[\s\S]*?} \/>/, '<Route path=\'register\' element={<RegisterPage />} />'); fs.writeFileSync('src/App.tsx', c);

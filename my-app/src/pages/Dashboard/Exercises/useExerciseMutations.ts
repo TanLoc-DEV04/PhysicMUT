@@ -46,9 +46,10 @@ export const useExerciseMutations = () => {
     });
 
     const updateExerciseStatus = useMutation({
-        mutationFn: ({ id, status }: { id: string; status: string }) => exerciseService.updateExercise(id, { status }),
-        onSuccess: () => {
-            message.success('Exercise status updated');
+        mutationFn: ({ id, status }: { id: string; status: string }) => exerciseService.updateStatus(id, status),
+        onSuccess: (_data, variables) => {
+            const msg = variables.status === 'ACTIVE' ? 'Exercise activated successfully' : 'Exercise deactivated successfully';
+            message.success(msg);
             queryClient.invalidateQueries({ queryKey: ['exercises'] });
         },
         onError: (error: any) => {

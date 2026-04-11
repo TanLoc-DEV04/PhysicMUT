@@ -46,9 +46,10 @@ export const useTheoryMutations = () => {
     });
 
     const updateTheoryStatus = useMutation({
-        mutationFn: ({ id, status }: { id: string; status: string }) => theoryService.updateTheory(id, { status }),
-        onSuccess: () => {
-            message.success('Theory status updated');
+        mutationFn: ({ id, status }: { id: string; status: string }) => theoryService.updateStatus(id, status),
+        onSuccess: (_data, variables) => {
+            const msg = variables.status === 'ACTIVE' ? 'Theory activated successfully' : 'Theory deactivated successfully';
+            message.success(msg);
             queryClient.invalidateQueries({ queryKey: ['theories'] });
         },
         onError: (error: any) => {

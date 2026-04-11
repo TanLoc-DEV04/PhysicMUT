@@ -138,6 +138,7 @@ router.post('/lessons', contentController_1.createLesson);
  *             schema:
  *               $ref: '#/components/schemas/Theory'
  */
+router.get('/theories/types', contentController_1.getTheoryTypes);
 router.get('/theories', contentController_1.getTheories);
 router.post('/theories', contentController_1.createTheory);
 /**
@@ -178,6 +179,7 @@ router.post('/theories', contentController_1.createTheory);
  *         description: Theory deleted
  */
 router.put('/theories/:id', contentController_1.updateTheory);
+router.patch('/theories/:id/status', contentController_1.updateTheoryStatus);
 router.delete('/theories/:id', contentController_1.deleteTheory);
 // --- Model 3D ---
 /**
@@ -219,6 +221,7 @@ router.delete('/theories/:id', contentController_1.deleteTheory);
  *       201:
  *         description: Model created
  */
+router.get('/models3d/types', contentController_1.getModel3DTypes);
 router.get('/models3d', contentController_1.getModels3D);
 router.post('/models3d', upload_1.default.fields([{ name: 'source', maxCount: 1 }, { name: 'thumbnail', maxCount: 1 }]), contentController_1.createModel3D);
 /**
@@ -260,6 +263,7 @@ router.post('/models3d', upload_1.default.fields([{ name: 'source', maxCount: 1 
  *         description: Model deleted
  */
 router.put('/models3d/:id', upload_1.default.fields([{ name: 'source', maxCount: 1 }, { name: 'thumbnail', maxCount: 1 }]), contentController_1.updateModel3D);
+router.patch('/models3d/:id/status', contentController_1.updateModel3DStatus);
 router.delete('/models3d/:id', contentController_1.deleteModel3D);
 // --- Examples ---
 /**
@@ -299,6 +303,7 @@ router.delete('/models3d/:id', contentController_1.deleteModel3D);
  *       201:
  *         description: Example created
  */
+router.get('/examples/types', contentController_1.getExampleTypes);
 router.get('/examples', contentController_1.getExamples);
 router.post('/examples', contentController_1.createExample);
 /**
@@ -341,6 +346,7 @@ router.post('/examples', contentController_1.createExample);
  *         description: Example deleted
  */
 router.put('/examples/:id', contentController_1.updateExample);
+router.patch('/examples/:id/status', contentController_1.updateExampleStatus);
 router.delete('/examples/:id', contentController_1.deleteExample);
 // --- Exercises ---
 /**
@@ -380,6 +386,7 @@ router.delete('/examples/:id', contentController_1.deleteExample);
  *       201:
  *         description: Exercise created
  */
+router.get('/exercises/types', contentController_1.getExerciseTypes);
 router.get('/exercises', contentController_1.getExercises);
 router.post('/exercises', contentController_1.createExercise);
 /**
@@ -422,6 +429,7 @@ router.post('/exercises', contentController_1.createExercise);
  *         description: Exercise deleted
  */
 router.put('/exercises/:id', contentController_1.updateExercise);
+router.patch('/exercises/:id/status', contentController_1.updateExerciseStatus);
 router.delete('/exercises/:id', contentController_1.deleteExercise);
 exports.default = router;
 //# sourceMappingURL=content.js.map

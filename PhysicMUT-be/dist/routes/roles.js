@@ -53,6 +53,17 @@ const router = (0, express_1.Router)();
 router.get('/', roleController_1.getRoles);
 /**
  * @openapi
+ * /roles/admin-roles:
+ *   get:
+ *     summary: Get active admin-level roles only (for Add Admin dropdown)
+ *     tags: [Roles]
+ *     responses:
+ *       200:
+ *         description: List of active admin roles (excludes USER, STUDENT)
+ */
+router.get('/admin-roles', roleController_1.getAdminRoles);
+/**
+ * @openapi
  * /roles/{id}:
  *   get:
  *     summary: Get role by ID
@@ -143,5 +154,32 @@ router.put('/:id', roleController_1.updateRole);
  *         description: Role deleted
  */
 router.delete('/:id', roleController_1.deleteRole);
+/**
+ * @openapi
+ * /roles/{id}/status:
+ *   patch:
+ *     summary: Toggle role active/inactive status
+ *     tags: [Roles]
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         required: true
+ *         schema:
+ *           type: string
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             required: [is_active]
+ *             properties:
+ *               is_active:
+ *                 type: boolean
+ *     responses:
+ *       200:
+ *         description: Role status updated
+ */
+router.patch('/:id/status', roleController_1.toggleRoleStatus);
 exports.default = router;
 //# sourceMappingURL=roles.js.map

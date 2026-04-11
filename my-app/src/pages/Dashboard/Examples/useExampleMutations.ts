@@ -46,9 +46,10 @@ export const useExampleMutations = () => {
     });
 
     const updateExampleStatus = useMutation({
-        mutationFn: ({ id, status }: { id: string; status: string }) => exampleService.updateExample(id, { status }),
-        onSuccess: () => {
-            message.success('Example status updated');
+        mutationFn: ({ id, status }: { id: string; status: string }) => exampleService.updateStatus(id, status),
+        onSuccess: (_data, variables) => {
+            const msg = variables.status === 'ACTIVE' ? 'Example activated successfully' : 'Example deactivated successfully';
+            message.success(msg);
             queryClient.invalidateQueries({ queryKey: ['examples'] });
         },
         onError: (error: any) => {

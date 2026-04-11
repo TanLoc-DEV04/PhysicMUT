@@ -140,5 +140,6 @@ router.post('/change-password', authController_1.changePassword);
  *         description: Reset link sent
  */
 router.post('/forgot-password', authController_1.forgotPassword);
+router.post('/google', authController_1.googleLogin);
 exports.default = router;
 //# sourceMappingURL=auth.js.map

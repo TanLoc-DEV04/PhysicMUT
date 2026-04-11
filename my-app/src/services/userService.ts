@@ -1,8 +1,8 @@
 import api from './api';
 
 export const userService = {
-    getUsers: async () => {
-        const response = await api.get('/users');
+    getUsers: async (params?: { roleId?: string; search?: string }) => {
+        const response = await api.get('/users', { params });
         return response.data;
     },
     getUserById: async (id: string) => {
@@ -19,5 +19,9 @@ export const userService = {
     },
     deleteUser: async (id: string) => {
         await api.delete(`/users/${id}`);
+    },
+    updateUserStatus: async (id: string, is_active: boolean) => {
+        const response = await api.patch(`/users/${id}/status`, { is_active });
+        return response.data;
     }
 };

@@ -45,9 +45,23 @@ export const useUserMutations = () => {
         }
     });
 
+    const updateUserStatus = useMutation({
+        mutationFn: ({ id, is_active }: { id: string; is_active: boolean }) => userService.updateUserStatus(id, is_active),
+        onSuccess: (_data, variables) => {
+            const msg = variables.is_active ? 'User account activated successfully' : 'User account deactivated successfully';
+            message.success(msg);
+            queryClient.invalidateQueries({ queryKey: ['users'] });
+        },
+        onError: (error: any) => {
+            message.error('Failed to update user status');
+            console.error(error);
+        }
+    });
+
     return {
         createUser,
         updateUser,
-        deleteUser
+        deleteUser,
+        updateUserStatus
     };
 };

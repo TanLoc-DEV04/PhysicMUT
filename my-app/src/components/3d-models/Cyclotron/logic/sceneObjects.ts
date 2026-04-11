@@ -151,9 +151,6 @@ export function createElectromagnet(position: THREE.Vector3, _poleType: "N" | "S
   return group;
 }
 
-// =====================================================
-// 3.1) VACUUM CHAMBER
-// =====================================================
 export function createVacuumChamber() {
   const height = 3.8; // Fits between poles at +/- 1.9
   const radius = 2.9;
@@ -170,7 +167,7 @@ export function createVacuumChamber() {
   const material = new THREE.MeshPhongMaterial({
     color: 0xffffff,
     transparent: true,
-    opacity: 0.5,
+    opacity: 0.3,
     side: THREE.DoubleSide,
     depthWrite: false, // Good for transparent objects
   });
@@ -180,77 +177,229 @@ export function createVacuumChamber() {
 }
 
 // =====================================================
-// 4) OSCILLATOR BOX AND CONNECTIONS
+// 3.2) DEE ENCLOSURE (Inner shell with slot)
+// =====================================================
+export function createDeeEnclosure() {
+  const radius = 2.65; // Slightly larger than Dees (2.5)
+  const height = 0.32; // Slightly taller than Dees (0.3)
+  const windowWidth = Math.PI / 12; // ~15 degree gap
+  const thetaStart = windowWidth / 2; // Center gap at angle 0
+  const thetaLength = 2 * Math.PI - windowWidth;
+
+  const geometry = new THREE.CylinderGeometry(
+    radius, radius, height,
+    64, 1, true,
+    thetaStart, thetaLength
+  );
+
+  const material = new THREE.MeshPhysicalMaterial({
+    color: 0x8899a6,
+    metalness: 0.9,
+    roughness: 0.2,
+    clearcoat: 1.0,
+    transparent: true,
+    opacity: 0.4,
+    side: THREE.DoubleSide,
+    depthWrite: false
+  });
+
+  const enclosure = new THREE.Mesh(geometry, material);
+  return enclosure;
+}
+
+// =====================================================
+// 4) OSCILLATOR (LC CIRCUIT)
 // =====================================================
 export function createOscillator() {
   const group = new THREE.Group();
 
-  // Main oscillator box
-  const oscGeo = new THREE.BoxGeometry(1.0, 0.6, 0.8);
-  const oscMat = new THREE.MeshPhongMaterial({
-    color: 0x888888,
-    shininess: 50,
+  // 1. Oscillator Base / Platform
+  const baseGeo = new THREE.BoxGeometry(1.2, 0.1, 1.2);
+  const baseMat = new THREE.MeshPhongMaterial({ color: 0x333333 });
+  const base = new THREE.Mesh(baseGeo, baseMat);
+  base.position.y = -0.05;
+  group.add(base);
+
+  // 2. CAPACITOR (C) - Two parallel plates
+  const capGroup = new THREE.Group();
+  const plateGeo = new THREE.BoxGeometry(0.5, 0.4, 0.05);
+  const capMat   = new THREE.MeshPhongMaterial({ 
+    color: 0x88ccff, 
+    emissive: 0x0088ff, 
+    emissiveIntensity: 0,
+    transparent: true,
+    opacity: 0.9
   });
-  const oscillator = new THREE.Mesh(oscGeo, oscMat);
+  
+  const plate1 = new THREE.Mesh(plateGeo, capMat);
+  plate1.position.z = -0.1;
+  const plate2 = new THREE.Mesh(plateGeo, capMat);
+  plate2.position.z = 0.1;
+  
+  capGroup.add(plate1, plate2);
+  capGroup.position.set(-0.35, 0.25, 0);
+  capGroup.name = "capacitorPart";
+  group.add(capGroup);
 
-  // Control panel
-  const panelGeo = new THREE.BoxGeometry(0.8, 0.4, 0.02);
-  const panelMat = new THREE.MeshPhongMaterial({ color: 0x222222 });
-  const panel = new THREE.Mesh(panelGeo, panelMat);
-  panel.position.z = 0.41;
-
-  // LED indicators
-  for (let i = 0; i < 3; i++) {
-    const ledGeo = new THREE.SphereGeometry(0.03, 8, 8);
-    const ledMat = new THREE.MeshPhongMaterial({
-      color: i === 0 ? 0x00ff00 : i === 1 ? 0xff0000 : 0x0000ff,
-      emissive: i === 0 ? 0x002200 : i === 1 ? 0x220000 : 0x000022,
-    });
-    const led = new THREE.Mesh(ledGeo, ledMat);
-    led.position.set(-0.2 + i * 0.2, 0.1, 0.42);
-    group.add(led);
+  // 3. INDUCTOR (L) - Helical Coil
+  class HelixCurve extends THREE.Curve<THREE.Vector3> {
+    radius: number;
+    height: number;
+    turns: number;
+    constructor(radius: number, height: number, turns: number) {
+      super();
+      this.radius = radius;
+      this.height = height;
+      this.turns = turns;
+    }
+    getPoint(t: number, optionalTarget = new THREE.Vector3()) {
+      const angle = t * Math.PI * 2 * this.turns;
+      const x = this.radius * Math.cos(angle);
+      const z = this.radius * Math.sin(angle);
+      const y = t * this.height - this.height / 2;
+      return optionalTarget.set(x, y, z);
+    }
   }
 
-  group.add(oscillator, panel);
+  const helixPath = new HelixCurve(0.15, 0.6, 6);
+  const inductorGeo = new THREE.TubeGeometry(helixPath, 64, 0.02, 8, false);
+  const inductorMat = new THREE.MeshPhongMaterial({ 
+    color: 0xffaa44, 
+    emissive: 0xff4400, 
+    emissiveIntensity: 0 
+  });
+  const inductor = new THREE.Mesh(inductorGeo, inductorMat);
+  inductor.rotation.z = Math.PI / 2;
+  inductor.position.set(0.35, 0.25, 0);
+  inductor.name = "inductorPart";
+  group.add(inductor);
 
-  // Connection points (terminals) on the oscillator box
-  const termLeft = new THREE.Mesh(
-    new THREE.BoxGeometry(0.2, 0.2, 0.2),
-    new THREE.MeshPhongMaterial({ color: 0x000000 })
-  );
-  termLeft.position.set(-0.3, 0, -0.4); // Left side
+  // 4. ELECTRON PARTICLES (Points)
+  const numParticles = 40;
+  const electronPoints: THREE.Vector3[] = [];
+  
+  for (let i = 0; i < numParticles; i++) {
+    // Initial dummy positions, will be updated in animation loop
+    electronPoints.push(new THREE.Vector3(0, 0, 0));
+  }
+  
+  const electronGeo = new THREE.BufferGeometry().setFromPoints(electronPoints);
+  const electronMat = new THREE.PointsMaterial({
+    color: 0x00ffff,
+    size: 0.06,
+    transparent: true,
+    opacity: 0.8,
+    blending: THREE.AdditiveBlending,
+    depthWrite: false
+  });
+  
+  const electronSystem = new THREE.Points(electronGeo, electronMat);
+  electronSystem.name = "electronParticles";
+  group.add(electronSystem);
 
-  const termRight = new THREE.Mesh(
-    new THREE.BoxGeometry(0.2, 0.2, 0.2),
-    new THREE.MeshPhongMaterial({ color: 0x000000 })
-  );
-  termRight.position.set(0.3, 0, -0.4); // Right side
+  // 5. ENCLOSURE (Transparent Grey Box)
+  const boxGeo = new THREE.BoxGeometry(1.4, 0.7, 1.4);
+  const boxMat = new THREE.MeshPhongMaterial({
+    color: 0x888888,
+    transparent: true,
+    opacity: 1.0,
+    shininess: 100
+  });
+  const enclosure = new THREE.Mesh(boxGeo, boxMat);
+  enclosure.position.set(0, 0.25, 0); // Center around components
+  group.add(enclosure);
 
-  group.add(termLeft, termRight, oscillator, panel);
+  // 5.1 POWER BUTTON & LED
+  const btnGeo = new THREE.CylinderGeometry(0.08, 0.08, 0.04, 16);
+  const btnMat = new THREE.MeshPhongMaterial({ color: 0x333333 }); 
+  const powerBtn = new THREE.Mesh(btnGeo, btnMat);
+  powerBtn.name = "lcPowerButton";
+  powerBtn.rotation.x = Math.PI / 2;
+  powerBtn.position.set(0, 0.2, 0.7); // On the front face of the box
+  group.add(powerBtn);
 
-  // Vector math for precise connection
-  const rodLength = 1.7; // Slightly overlapping
-  const rodGeometry = new THREE.CylinderGeometry(0.04, 0.04, rodLength, 8);
-  rodGeometry.rotateX(Math.PI / 2); // Verify alignment
+  const ledGeo = new THREE.SphereGeometry(0.03, 8, 8);
+  const ledMat = new THREE.MeshPhongMaterial({ color: 0x440000 }); // Dim red initially
+  const statusLed = new THREE.Mesh(ledGeo, ledMat);
+  statusLed.name = "lcStatusLed";
+  statusLed.position.set(0.15, 0.2, 0.7); 
+  group.add(statusLed);
 
-  const rodLeft = new THREE.Mesh(
-    rodGeometry,
-    new THREE.MeshPhongMaterial({ color: 0x000000 })
-  );
-  rodLeft.position.set(-0.3, 0, -1.25);
+  const labelCanvas = document.createElement('canvas');
+  labelCanvas.width = 128; labelCanvas.height = 64;
+  const lctx = labelCanvas.getContext('2d')!;
+  lctx.fillStyle = "#ffffff"; lctx.font = "bold 40px Arial";
+  lctx.textAlign = "center"; lctx.fillText("POWER", 64, 45);
+  const labelTex = new THREE.CanvasTexture(labelCanvas);
+  const labelMat = new THREE.MeshBasicMaterial({ map: labelTex, transparent: true });
+  const labelMesh = new THREE.Mesh(new THREE.PlaneGeometry(0.3, 0.15), labelMat);
+  labelMesh.position.set(0, 0.4, 0.71);
+  group.add(labelMesh);
 
-  const rodRight = new THREE.Mesh(
-    rodGeometry,
-    new THREE.MeshPhongMaterial({ color: 0x000000 })
-  );
-  rodRight.position.set(0.3, 0, -1.25);
+  // 6. INTERNAL WIRING
+  const wireMat = new THREE.MeshPhongMaterial({ color: 0x111111 });
+  const wireGeo = new THREE.CylinderGeometry(0.015, 0.015, 1.0);
+  
+  const wireTop = new THREE.Mesh(wireGeo, wireMat);
+  wireTop.rotation.z = Math.PI / 2;
+  wireTop.position.y = 0.45;
+  group.add(wireTop);
 
-  group.add(rodLeft, rodRight);
+  const wireBot = new THREE.Mesh(wireGeo, wireMat);
+  wireBot.rotation.z = Math.PI / 2;
+  wireBot.position.y = 0.05;
+  group.add(wireBot);
 
-  // Position the whole group on Z axis
-  group.position.set(0, 0, 4.5);
-  group.rotation.y = 0; // Terminals (Z-) face the Dees (at Z=0)
+  // 7. Z-SHAPED CONNECTION RODS TO DEES
+  const zWireMat = new THREE.MeshPhongMaterial({ color: 0x222222, shininess: 80 });
+  const jointGeo = new THREE.SphereGeometry(0.04, 8, 8);
+  
+  function createZPath(side: number) {
+    const sideGroup = new THREE.Group();
+    const x = side * 0.3;
+    
+    // Segment 1: Horizontal from Oscillator (local z=0) to z=1.5 (local z=-3.0)
+    const seg1Len = 1.5; 
+    const seg1Geo = new THREE.CylinderGeometry(0.02, 0.02, seg1Len);
+    const seg1 = new THREE.Mesh(seg1Geo, zWireMat);
+    seg1.rotation.x = Math.PI / 2;
+    seg1.position.set(x, 0.25, -seg1Len/2);
+    sideGroup.add(seg1);
 
+    // Elbow 1
+    const elbow1 = new THREE.Mesh(jointGeo, zWireMat);
+    elbow1.position.set(x, 0.25, -seg1Len);
+    sideGroup.add(elbow1);
+
+    // Segment 2: Vertical Riser (from local y=0.25 to local y=2.1)
+    const riserHeight = 1.85; 
+    const seg2Geo = new THREE.CylinderGeometry(0.02, 0.02, riserHeight);
+    const seg2 = new THREE.Mesh(seg2Geo, zWireMat);
+    seg2.position.set(x, 0.25 + riserHeight/2, -seg1Len);
+    sideGroup.add(seg2);
+
+    // Elbow 2
+    const elbow2 = new THREE.Mesh(jointGeo, zWireMat);
+    elbow2.position.set(x, 2.1, -seg1Len);
+    sideGroup.add(elbow2);
+
+    // Segment 3: Horizontal into Dees (from local z=-3.0 to local z=-4.5)
+    const seg3Len = 0.6; 
+    const seg3Geo = new THREE.CylinderGeometry(0.02, 0.02, seg3Len);
+    const seg3 = new THREE.Mesh(seg3Geo, zWireMat);
+    seg3.rotation.x = Math.PI / 2;
+    seg3.position.set(x, 2.1, -seg1Len - seg3Len/2);
+    sideGroup.add(seg3);
+
+    return sideGroup;
+  }
+
+  group.add(createZPath(-1)); 
+  group.add(createZPath(1));  
+
+  // Position the whole group level with the bottom magnet (y=-2.2)
+  group.position.set(0, -2.1, 4.5);
+  
   return group;
 }
 
@@ -260,30 +409,39 @@ export function createOscillator() {
 export function createTarget() {
   const group = new THREE.Group();
 
-  // Target Plate
-  const plateGeo = new THREE.BoxGeometry(0.1, 0.5, 0.5);
-  const plateMat = new THREE.MeshPhongMaterial({
-    color: 0xcccccc,
+  // Target Holder / Housing
+  const holderGeo = new THREE.BoxGeometry(0.3, 0.4, 0.4);
+  const holderMat = new THREE.MeshStandardMaterial({
+    color: 0x333333,
+    metalness: 0.8,
     transparent: true,
-    opacity: 0.5,
-    depthWrite: false,
+    opacity: 0.2,
+    roughness: 0.2
   });
-  const plate = new THREE.Mesh(plateGeo, plateMat);
+  const holder = new THREE.Mesh(holderGeo, holderMat);
+  holder.position.x = -0.1;
+  group.add(holder);
 
-  // Target Center (Bullseye)
-  const ringGeo = new THREE.RingGeometry(0.05, 0.15, 16);
-  const ringMat = new THREE.MeshBasicMaterial({
-    color: 0xff0000,
-    side: THREE.DoubleSide,
+  // Target core (Bia vật liệu - radioactive warning color)
+  const targetGeo = new THREE.BoxGeometry(0.1, 0.3, 0.3);
+  const targetMat = new THREE.MeshStandardMaterial({
+    color: 0xffaa00,
+    emissive: 0x442200,
   });
-  const ring = new THREE.Mesh(ringGeo, ringMat);
-  ring.rotation.y = Math.PI / 2;
-  ring.position.x = -0.06;
+  const target = new THREE.Mesh(targetGeo, targetMat);
+  target.position.x = -0.18; // Face toward the cyclotron
+  group.add(target);
 
-  group.add(plate, ring);
+  // Square extraction aperture (Khe hình vuông)
+  const frameGeo = new THREE.RingGeometry(0.12, 0.18, 4); // Square-ish frame
+  const frameMat = new THREE.MeshBasicMaterial({ color: 0x000000, side: THREE.DoubleSide});
+  const frame = new THREE.Mesh(frameGeo, frameMat);
+  frame.rotation.y = Math.PI / 2;
+  frame.rotation.z = Math.PI / 4; // Square alignment
+  frame.position.x = -0.251;
+  group.add(frame);
 
-  const radius = 2.9; // Slightly outside maxRadius
-
-  group.position.set(radius, 0, 0); // Place on X axis
+  const radius = 2.9; 
+  group.position.set(radius, 0, 0); 
   return group;
 }

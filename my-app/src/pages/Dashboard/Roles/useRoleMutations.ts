@@ -10,12 +10,12 @@ export const useRoleMutations = () => {
     const createRole = useMutation({
         mutationFn: roleService.createRole,
         onSuccess: () => {
-            message.success('Role created successfully');
+            message.success('Create role successfully');
             queryClient.invalidateQueries({ queryKey: ['roles'] });
             navigate('/dashboard/roles');
         },
         onError: (error: any) => {
-            message.error('Failed to create role');
+            message.error(error?.response?.data?.error || 'Failed to create role');
             console.error(error);
         }
     });
@@ -23,12 +23,12 @@ export const useRoleMutations = () => {
     const updateRole = useMutation({
         mutationFn: ({ id, data }: { id: string; data: any }) => roleService.updateRole(id, data),
         onSuccess: () => {
-            message.success('Role updated successfully');
+            message.success('Update role successfully');
             queryClient.invalidateQueries({ queryKey: ['roles'] });
             navigate('/dashboard/roles');
         },
         onError: (error: any) => {
-            message.error('Failed to update role');
+            message.error(error?.response?.data?.error || 'Failed to update role');
             console.error(error);
         }
     });
@@ -36,11 +36,25 @@ export const useRoleMutations = () => {
     const deleteRole = useMutation({
         mutationFn: roleService.deleteRole,
         onSuccess: () => {
-            message.success('Role deleted successfully');
+            message.success('Delete role successfully');
             queryClient.invalidateQueries({ queryKey: ['roles'] });
         },
         onError: (error: any) => {
-            message.error('Failed to delete role');
+            // Show backend error message (e.g. role is in use)
+            message.error(error?.response?.data?.error || 'Failed to delete role');
+            console.error(error);
+        }
+    });
+
+    const toggleRoleStatus = useMutation({
+        mutationFn: ({ id, is_active }: { id: string; is_active: boolean }) =>
+            roleService.toggleRoleStatus(id, is_active),
+        onSuccess: (_, variables) => {
+            message.success(variables.is_active ? 'Role has been activated' : 'Role has been deactivated');
+            queryClient.invalidateQueries({ queryKey: ['roles'] });
+        },
+        onError: (error: any) => {
+            message.error(error?.response?.data?.error || 'Failed to update role status');
             console.error(error);
         }
     });
@@ -48,6 +62,7 @@ export const useRoleMutations = () => {
     return {
         createRole,
         updateRole,
-        deleteRole
+        deleteRole,
+        toggleRoleStatus,
     };
 };

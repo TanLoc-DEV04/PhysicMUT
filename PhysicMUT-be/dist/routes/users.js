@@ -122,6 +122,33 @@ router.get('/:id', userController_1.getUserById);
 router.put('/:id', userController_1.updateUser);
 /**
  * @openapi
+ * /users/{id}/status:
+ *   patch:
+ *     summary: Toggle user active/inactive status
+ *     tags: [Users]
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         required: true
+ *         schema:
+ *           type: string
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             required: [is_active]
+ *             properties:
+ *               is_active:
+ *                 type: boolean
+ *     responses:
+ *       200:
+ *         description: User status updated
+ */
+router.patch('/:id/status', userController_1.updateUserStatus);
+/**
+ * @openapi
  * /users/{id}:
  *   delete:
  *     summary: Delete user

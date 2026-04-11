@@ -1,4 +1,4 @@
-import { Form, Input, Button, Checkbox, Card, Row, Col } from 'antd';
+import { Form, Input, Button, Checkbox, Card, Row, Col, Switch } from 'antd';
 import { useNavigate, useParams } from 'react-router-dom';
 import { useEffect } from 'react';
 import { useQuery } from '@tanstack/react-query';
@@ -23,14 +23,58 @@ const permissionGroups = [
     ],
   },
   {
+    title: 'Role Management',
+    options: [
+      { label: 'View Role List', value: 'view_role_list' },
+      { label: 'Add New Role', value: 'add_role' },
+      { label: 'Edit Role', value: 'edit_role' },
+      { label: 'Delete Role', value: 'delete_role' },
+    ],
+  },
+  {
+    title: 'Theory Management',
+    options: [
+      { label: 'View Theory List', value: 'view_theory_list' },
+      { label: 'Add New Theory', value: 'add_theory' },
+      { label: 'Edit Theory', value: 'edit_theory' },
+      { label: 'Delete Theory', value: 'delete_theory' },
+    ],
+  },
+  {
+    title: 'Example Management',
+    options: [
+      { label: 'View Example List', value: 'view_example_list' },
+      { label: 'Add New Example', value: 'add_example' },
+      { label: 'Edit Example', value: 'edit_example' },
+      { label: 'Delete Example', value: 'delete_example' },
+    ],
+  },
+  {
+    title: 'Exercise Management',
+    options: [
+      { label: 'View Exercise List', value: 'view_exercise_list' },
+      { label: 'Add New Exercise', value: 'add_exercise' },
+      { label: 'Edit Exercise', value: 'edit_exercise' },
+      { label: 'Delete Exercise', value: 'delete_exercise' },
+    ],
+  },
+  {
       title: '3D Model Management',
       options: [
-          { label: 'View List', value: 'view_model_list' },
-          { label: 'Add Model', value: 'add_model' },
-          { label: 'Edit Model', value: 'edit_model' },
-          { label: 'Delete Model', value: 'delete_model' },
+          { label: 'View 3D Model List', value: 'view_model_list' },
+          { label: 'Add New 3D Model', value: 'add_model' },
+          { label: 'Edit 3D Model', value: 'edit_model' },
+          { label: 'Delete 3D Model', value: 'delete_model' },
       ]
-  }
+  },
+  {
+    title: 'User Management',
+    options: [
+      { label: 'View User List', value: 'view_user_list' },
+      { label: 'Edit User', value: 'edit_user' },
+      { label: 'Delete User', value: 'delete_user' },
+    ],
+  },
 ];
 
 function AddRole() {
@@ -50,7 +94,10 @@ function AddRole() {
 
   useEffect(() => {
     if (roleData) {
-      form.setFieldsValue(roleData);
+      form.setFieldsValue({
+        ...roleData,
+        is_active: roleData.is_active !== false, // default to true
+      });
     }
   }, [roleData, form]);
 
@@ -67,15 +114,24 @@ function AddRole() {
   return (
     <div className="p-4">
       <h2 className="text-2xl font-bold mb-4">{isEditMode ? 'Edit Role' : 'Add New Role'}</h2>
-      <Form form={form} layout="vertical" onFinish={onFinish}>
+      <Form form={form} layout="vertical" onFinish={onFinish} initialValues={{ is_active: true }}>
         <Card className="mb-4">
             <Row gutter={24}>
                 <Col span={12}>
                     <Form.Item name="name" label="Role Name" rules={[{ required: true, message: 'Please enter role name' }]}>
-                        <Input placeholder="e.g. Teacher" />
+                        <Input placeholder="Example: TEACHER THEORY" />
                     </Form.Item>
                 </Col>
-
+                <Col span={8}>
+                    <Form.Item name="description" label="Description">
+                        <Input placeholder="Description of this role" />
+                    </Form.Item>
+                </Col>
+                <Col span={4}>
+                    <Form.Item name="is_active" label="Status" valuePropName="checked">
+                        <Switch checkedChildren="Active" unCheckedChildren="Inactive" />
+                    </Form.Item>
+                </Col>
             </Row>
         </Card>
 
@@ -97,7 +153,7 @@ function AddRole() {
 
         <Form.Item>
           <Button type="primary" htmlType="submit" loading={loading} className="mr-2">
-            {isEditMode ? 'Update Role' : 'Save Role'}
+            {isEditMode ? 'Update Role' : 'Add New Role'}
           </Button>
           <Button onClick={() => navigate('/dashboard/roles')}>
             Cancel

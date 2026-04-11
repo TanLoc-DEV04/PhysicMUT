@@ -21,7 +21,7 @@ export const use3DModelMutations = () => {
     });
 
     const updateModel = useMutation({
-        mutationFn: ({ id, data }: { id: string; data: any }) => model3DService.updateModel3D(id, data),
+        mutationFn: ({ typeName, data }: { typeName: string; data: any }) => model3DService.updateModel3D(typeName, data),
         onSuccess: () => {
             message.success('Model updated successfully');
             queryClient.invalidateQueries({ queryKey: ['models3d'] });
@@ -46,17 +46,10 @@ export const use3DModelMutations = () => {
     });
 
     const updateModelStatus = useMutation({
-        mutationFn: ({ id, status }: { id: string; status: string }) => {
-             // For status update, we might need a workaround if main update requires FormData
-             // But if passing plain object works for partial updates or if we use a specific endpoint
-             // Assuming updateModel3D checks if data is FormData or JSON
-             // If service forces Content-Type multipart/form-data for all updates, we need to wrap status in FormData
-             const formData = new FormData();
-             formData.append('status', status);
-             return model3DService.updateModel3D(id, formData);
-        },
-        onSuccess: () => {
-            message.success('Model status updated');
+        mutationFn: ({ typeName, status }: { typeName: string; status: string }) => model3DService.updateStatus(typeName, status),
+        onSuccess: (_data, variables) => {
+            const msg = variables.status === 'ACTIVE' ? 'Model activated successfully' : 'Model deactivated successfully';
+            message.success(msg);
             queryClient.invalidateQueries({ queryKey: ['models3d'] });
         },
         onError: (error: any) => {

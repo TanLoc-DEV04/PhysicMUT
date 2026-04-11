@@ -1,19 +1,20 @@
 import { useState } from 'react';
-import { Table, Button, Space, Avatar, Popconfirm } from 'antd';
+import { Table, Button, Space, Avatar, Popconfirm, Switch } from 'antd';
 import { PlusOutlined, EyeOutlined, DeleteOutlined, CodeSandboxOutlined } from '@ant-design/icons';
 import { useNavigate } from 'react-router-dom';
-import { use3DModelManagement } from './use3DModelManagement';
+import { use3DModelManagement, use3DModelTypes } from './use3DModelManagement';
 import { use3DModelMutations } from './use3DModelMutations';
 import SearchInput from '../../../components/shared/SearchInput';
 import MultiFilterSelect from '../../../components/shared/MultiFilterSelect';
 import Pagination from '../../../components/shared/Pagination';
 
 function ModelList() {
-  const { data, loading } = use3DModelManagement();
-  const { deleteModel } = use3DModelMutations();
   const navigate = useNavigate();
   const [searchText, setSearchText] = useState('');
   const [filterCategory, setFilterCategory] = useState<string | null>(null);
+  const { data, loading } = use3DModelManagement(filterCategory, searchText);
+  const { types, loadingTypes } = use3DModelTypes();
+  const { deleteModel, updateModelStatus } = use3DModelMutations();
 
   // Pagination state
   const [currentPage, setCurrentPage] = useState(1);
@@ -26,39 +27,70 @@ function ModelList() {
       setPageSize(size);
   };
 
-  const handleDelete = (id: string) => {
-      deleteModel.mutate(id);
+  const handleDelete = (typeName: string) => {
+      deleteModel.mutate(typeName);
+  };
+
+  const handleStatusChange = (typeName: string, currentStatus: string) => {
+      const newStatus = currentStatus === 'ACTIVE' ? 'INACTIVE' : 'ACTIVE';
+      updateModelStatus.mutate({ typeName, status: newStatus });
   };
 
   const columns = [
-    { title: 'Model ID', dataIndex: 'id', key: 'id' },
+    { title: 'Type Name', dataIndex: 'model_type_name', key: 'model_type_name' },
     { 
         title: 'Thumbnail', 
         dataIndex: 'thumbnail_url', 
         key: 'thumbnail_url',
         render: (src: string) => {
-            const imageUrl = src ? (src.startsWith('http') ? src : `http://localhost:3000/${src}`) : '/anhmau.png';
+            const API_URL = import.meta.env.VITE_API_URL || "http://localhost:3000";
+            const imageUrl = src ? (src.startsWith('http') ? src : `${API_URL}/${src.replace(/^\//,'')}`) : '/anhmau.png';
             return <Avatar shape="square" size={64} src={imageUrl} icon={<CodeSandboxOutlined />} />;
         }
     },
     { title: 'Model Name', dataIndex: 'name', key: 'name' },
-    { title: 'Model Type Name', dataIndex: 'type', key: 'type' },
+    // {
+    //     title: 'Status',
+    //     dataIndex: 'status',
+    //     key: 'status',
+    //     render: (status: string) => (
+    //         <Tag color={status === 'ACTIVE' ? 'green' : 'red'}>
+    //             {status === 'ACTIVE' ? 'Active' : 'Inactive'}
+    //         </Tag>
+    //     )
+    // },
 
     {
       title: 'Actions',
       key: 'action',
       render: (_: any, record: any) => (
         <Space size="middle">
+          <Popconfirm
+            title={record.status === 'ACTIVE' ? 'Deactivate this Model?' : 'Activate this Model?'}
+            description={record.status === 'ACTIVE'
+              ? 'Are you sure you want to deactivate this model? It will be hidden from users.'
+              : 'Are you sure you want to activate this model? It will be visible to users.'}
+            onConfirm={() => handleStatusChange(record.model_type_name, record.status)}
+            okText="Confirm"
+            cancelText="Cancel"
+          >
+            <Switch
+              checked={record.status === 'ACTIVE'}
+              checkedChildren="Active"
+              unCheckedChildren="Inactive"
+              loading={updateModelStatus.isPending}
+            />
+          </Popconfirm>
           <Button 
             icon={<EyeOutlined />} 
-            onClick={() => navigate(`/dashboard/3d-models/${record.id}`)}
+            onClick={() => navigate(`/dashboard/3d-models/${record.model_type_name}`)}
           >
             View
           </Button>
           <Popconfirm
             title="Delete this Model?"
             description="Are you sure to delete this model?"
-            onConfirm={() => handleDelete(record.id)}
+            onConfirm={() => handleDelete(record.model_type_name)}
             okText="Yes"
             cancelText="No"
           >
@@ -96,11 +128,8 @@ function ModelList() {
              <MultiFilterSelect
                 value={filterCategory}
                 onChange={(val) => setFilterCategory(val)}
-                options={[
-                    { label: 'Mechanics', value: 'Mechanics' },
-                    { label: 'Electromagnetism', value: 'Electromagnetism' },
-                    { label: 'Optics', value: 'Optics' }
-                ]}
+                options={types.map((type: string) => ({ label: type, value: type }))}
+                loading={loadingTypes}
                 placeholder="Filter by Type"
             />
         </div>
@@ -110,7 +139,7 @@ function ModelList() {
         columns={columns} 
         dataSource={data} 
         loading={loading} 
-        rowKey="id" 
+        rowKey="model_type_name" 
         pagination={false}
       />
 

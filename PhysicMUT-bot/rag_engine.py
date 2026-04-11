@@ -8,7 +8,7 @@ import shutil
 
 # Define paths
 DATA_DIR = "./data"
-CHROMA_PATH = "./chroma_db"
+CHROMA_PATH = "./chroma_sgk_db"
 
 def load_pdf(file_path: str):
     """Loads a PDF file and returns a list of documents."""
@@ -22,8 +22,8 @@ def load_pdf(file_path: str):
 def chunk_text(documents):
     """Chunks documents into smaller pieces."""
     text_splitter = RecursiveCharacterTextSplitter(
-        chunk_size=1000,
-        chunk_overlap=100,
+        chunk_size=1200,
+        chunk_overlap=200,
         length_function=len,
         is_separator_regex=False,
     )
@@ -32,7 +32,7 @@ def chunk_text(documents):
 
 def get_vectorstore():
     """Returns the ChromaDB vector store."""
-    embedding_function = SentenceTransformerEmbeddings(model_name="all-MiniLM-L6-v2")
+    embedding_function = OpenAIEmbeddings(model="text-embedding-3-small")
     
     vectorstore = Chroma(
         persist_directory=CHROMA_PATH,
@@ -49,7 +49,7 @@ def create_vectorstore(file_path: str):
     documents = load_pdf(file_path)
     chunks = chunk_text(documents)
     
-    embedding_function = SentenceTransformerEmbeddings(model_name="all-MiniLM-L6-v2")
+    embedding_function = OpenAIEmbeddings(model="text-embedding-3-small")
     
     vectorstore = Chroma.from_documents(
         documents=chunks,
@@ -58,9 +58,25 @@ def create_vectorstore(file_path: str):
     )
     return vectorstore
 
-def query_rag(query: str, k: int = 3):
+def query_rag(query: str, k: int = 4):
     """Queries the RAG engine for relevant context."""
     vectorstore = get_vectorstore()
+    results = vectorstore.similarity_search(query, k=k)
+    return results
+
+def get_design_vectorstore():
+    """Returns the ChromaDB vector store for design and pedagogical guidelines."""
+    embedding_function = OpenAIEmbeddings(model="text-embedding-3-small")
+    
+    vectorstore = Chroma(
+        persist_directory="./chroma_design_db",
+        embedding_function=embedding_function
+    )
+    return vectorstore
+
+def query_design_rag(query: str, k: int = 2):
+    """Queries the specific design/pedagogy RAG engine for presentation guidelines."""
+    vectorstore = get_design_vectorstore()
     results = vectorstore.similarity_search(query, k=k)
     return results
 

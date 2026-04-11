@@ -1,5 +1,5 @@
 import { Router } from 'express';
-import { getUsers, getUserById, updateUser, deleteUser, createUser } from '../controllers/userController';
+import { getUsers, getUserById, updateUser, deleteUser, createUser, updateUserStatus } from '../controllers/userController';
 
 const router = Router();
 
@@ -124,6 +124,34 @@ router.get('/:id', getUserById);
  *               $ref: '#/components/schemas/User'
  */
 router.put('/:id', updateUser);
+
+/**
+ * @openapi
+ * /users/{id}/status:
+ *   patch:
+ *     summary: Toggle user active/inactive status
+ *     tags: [Users]
+ *     parameters:
+ *       - in: path
+ *         name: id
+ *         required: true
+ *         schema:
+ *           type: string
+ *     requestBody:
+ *       required: true
+ *       content:
+ *         application/json:
+ *           schema:
+ *             type: object
+ *             required: [is_active]
+ *             properties:
+ *               is_active:
+ *                 type: boolean
+ *     responses:
+ *       200:
+ *         description: User status updated
+ */
+router.patch('/:id/status', updateUserStatus);
 
 /**
  * @openapi
