@@ -28,8 +28,8 @@ import {
   EyeOutlined,
   BarChartOutlined,
 } from "@ant-design/icons";
-import { updateParticlePhysics } from "./logic/cyclotronPhysics";
-import { updateFlameEffect, cleanupFlames } from "./logic/flameLogic";
+import { updateParticlePhysics } from "./../../../core/cyclotron/cyclotronPhysics";
+import { updateFlameEffect, cleanupFlames } from "./../../../core/cyclotron/flameLogic";
 import { handleSpacePress, type MissionCallbacks } from "./logic/missionLogic";
 
 // ─── Colour / skin maps ───────────────────────────────────────────────────────

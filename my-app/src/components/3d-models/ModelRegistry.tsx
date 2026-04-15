@@ -2,7 +2,7 @@
 import React, { Suspense, lazy } from 'react';
 import { Spin } from 'antd';
 import Placeholder from './Placeholder/Placeholder';
-import Model3D from '../../pages/ModelDetail/Model3D';
+import Model3D from '../../pages/(public)/ModelDetail/Model3D';
 
 // Lazy load heavy simulation components
 const CyclotronSim = lazy(() => import('./Cyclotron/CyclotronGame'));

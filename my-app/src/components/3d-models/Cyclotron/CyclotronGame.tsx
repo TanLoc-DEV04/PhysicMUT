@@ -5,7 +5,7 @@ import {
     createInitialGameState,
     persistGameState,
     MISSION1_REQUIRED_HITS,
-} from './logic/gameState';
+} from './../../../core/cyclotron/gameState';
 import {
     startAutoSync,
     stopAutoSync,
