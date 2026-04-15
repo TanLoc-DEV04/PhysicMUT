@@ -1,5 +1,5 @@
-import api from "./api";
-import type { AuthResponse } from "./api";
+import api from "./api.service";
+import type { AuthResponse } from "./api.service";
 
 export const authService = {
   login: async (username: string, password: string): Promise<AuthResponse> => {

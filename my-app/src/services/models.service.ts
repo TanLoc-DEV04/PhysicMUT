@@ -1,4 +1,4 @@
-import api from './api';
+import api from './api.service';
 
 export const model3DService = {
     getModels3D: async (model_type_name?: string | null, search?: string) => {

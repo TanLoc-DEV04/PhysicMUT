@@ -2,7 +2,7 @@ import { Button } from 'antd';
 import { useNavigate } from 'react-router-dom';
 import { CaretRightOutlined } from '@ant-design/icons';
 
-  import { useAuth } from '../../../../contexts/AuthContext';
+  import { useAuth } from '../../../contexts/AuthContext';
 
   function Home() {
     const navigate = useNavigate();

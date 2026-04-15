@@ -1,5 +1,5 @@
 import { useQuery } from '@tanstack/react-query';
-import { roleService } from '../../../../../services/role.service';
+import { roleService } from '../../../../services/role.service';
 
 export const useRole = () => {
   const { data, isLoading, error, refetch } = useQuery({

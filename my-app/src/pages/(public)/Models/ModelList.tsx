@@ -1,10 +1,10 @@
 import { useState, useMemo } from 'react';
-import Card from '../../../../components/shared/Card';
-import SearchInput from '../../../../components/shared/SearchInput';
-import MultiFilterSelect from '../../../../components/shared/MultiFilterSelect';
-import Pagination from '../../../../components/shared/Pagination';
-import { models } from '../../../../data/mockData';
-import type { Model } from '../../../../types/model';
+import Card from '../../../components/shared/Card';
+import SearchInput from '../../../components/shared/SearchInput';
+import MultiFilterSelect from '../../../components/shared/MultiFilterSelect';
+import Pagination from '../../../components/shared/Pagination';
+import { models } from '../../../data/mockData';
+import type { Model } from '../../../types/model';
 
 function ModelList() {
   const [searchQuery, setSearchQuery] = useState('');

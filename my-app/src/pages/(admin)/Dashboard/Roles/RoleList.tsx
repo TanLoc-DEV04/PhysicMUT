@@ -4,8 +4,8 @@ import { PlusOutlined, EyeOutlined, DeleteOutlined } from "@ant-design/icons";
 import { useNavigate } from "react-router-dom";
 import { useRole } from "./useRole";
 import { useRoleMutations } from "./useRoleMutations";
-import SearchInput from '../../../../../components/shared/SearchInput';
-import Pagination from '../../../../../components/shared/Pagination';
+import SearchInput from '../../../../components/shared/SearchInput';
+import Pagination from '../../../../components/shared/Pagination';
 
 function RoleList() {
   const { data, loading } = useRole();

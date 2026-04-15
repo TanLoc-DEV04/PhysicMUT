@@ -1,5 +1,5 @@
 import { useMutation, useQueryClient } from '@tanstack/react-query';
-import { exampleService } from '../../../../../services/example.service';
+import { exampleService } from '../../../../services/example.service';
 import { message } from 'antd';
 import { useNavigate } from 'react-router-dom';
 

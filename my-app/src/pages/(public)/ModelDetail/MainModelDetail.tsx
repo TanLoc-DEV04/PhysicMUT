@@ -11,14 +11,14 @@ import {
   FormOutlined
 } from '@ant-design/icons';
 import type { MenuProps } from 'antd';
-import ModelRegistry from '../../../../components/3d-models/ModelRegistry';
-import { HologramScene } from '../../../../components/physicmut-bot/HologramScene';
-import ChatInterface from '../../../../components/physicmut-bot/ChatInterface';
-import type { AvatarState } from '../../../../components/physicmut-bot/HoloAvatar';
+import ModelRegistry from '../../../components/3d-models/ModelRegistry';
+import { HologramScene } from './components/physicmut-bot/HologramScene';
+import ChatInterface from './components/physicmut-bot/ChatInterface';
+import type { AvatarState } from './components/physicmut-bot/HoloAvatar';
 import Theory from './Theory';
 import ExampleExerciseTab from './ExampleExerciseTab';
 import { useParams } from 'react-router-dom';
-import { useModel3DByTypeName } from '../../../../hooks/useContent';
+import { useModel3DByTypeName } from '../../../hooks/useContent';
 
 const { Content, Sider } = Layout;
 

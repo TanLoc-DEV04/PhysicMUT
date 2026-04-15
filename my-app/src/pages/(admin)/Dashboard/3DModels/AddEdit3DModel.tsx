@@ -2,9 +2,9 @@ import { Form, Upload, Button, Input, Card } from 'antd';
 import { UploadOutlined, ArrowLeftOutlined } from '@ant-design/icons';
 import { useNavigate, useParams } from 'react-router-dom';
 import { useEffect } from 'react';
-import RenderFormItem from '../../../Admin/RenderFormItem';
+import RenderFormItem from '../Admin/RenderFormItem';
 import { useQuery } from '@tanstack/react-query';
-import { model3DService } from '../../../../../services/models.service';
+import { model3DService } from '../../../../services/models.service';
 import { use3DModelMutations } from './use3DModelMutations';
 
 const AddEdit3DModel = () => {

@@ -1,9 +1,9 @@
 import { Outlet } from 'react-router-dom';
 import { Layout, theme } from 'antd';
-import MenuSidebar from '../../../../components/layout/Menu';
-import HeaderCommon from '../../../../components/layout/Header';
+import MenuSidebar from '../../../components/layout/Menu';
+import HeaderCommon from '../../../components/layout/Header';
 
-import DashboardBreadcrumb from '../../../../components/layout/DashboardBreadcrumb';
+import DashboardBreadcrumb from '../../../components/layout/DashboardBreadcrumb';
 
 const { Content } = Layout;
 

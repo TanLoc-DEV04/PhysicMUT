@@ -4,8 +4,8 @@ import { PlusOutlined, DeleteOutlined, EyeOutlined } from '@ant-design/icons';
 import { useAdmin } from './useAdmin';
 import { useUpdateAndAddAdmin } from './useUpdateAndAddAdmin';
 import AddAdminModal from './AddAdminModal';
-import SearchInput from '../../../../../components/shared/SearchInput';
-import { userService } from '../../../../../services/user.service';
+import SearchInput from '../../../../components/shared/SearchInput';
+import { userService } from '../../../../services/user.service';
 import { useMutation, useQueryClient } from '@tanstack/react-query';
 
 

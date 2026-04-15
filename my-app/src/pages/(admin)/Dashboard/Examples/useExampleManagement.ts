@@ -1,5 +1,5 @@
 import { useQuery } from '@tanstack/react-query';
-import { exampleService } from '../../../../../services/example.service';
+import { exampleService } from '../../../../services/example.service';
 import { message } from 'antd';
 import { useEffect } from 'react';
 

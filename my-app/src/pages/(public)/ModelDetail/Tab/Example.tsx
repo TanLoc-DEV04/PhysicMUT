@@ -1,6 +1,6 @@
 import { List, Card, Typography, Collapse } from 'antd';
-import type { Example as ExampleType } from '../../../../../hooks/useContent';
-import MathJaxRenderer from '../../../../../components/shared/MathJaxRenderer';
+import type { Example as ExampleType } from '../../../../hooks/useContent';
+import MathJaxRenderer from '../../../../components/shared/MathJaxRenderer';
 
 export interface ExampleProps {
     examples?: ExampleType[];

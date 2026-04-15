@@ -1,14 +1,14 @@
 import { Form, Button, Input, Card, Tabs } from 'antd';
-import MathJaxPreview from '../../../../../components/shared/MathJaxPreview';
+import MathJaxPreview from '../../../../components/shared/MathJaxPreview';
 import { ArrowLeftOutlined } from '@ant-design/icons';
 import { useNavigate, useParams } from 'react-router-dom';
 import { useEffect } from 'react';
-import RenderFormItem from '../../../Admin/RenderFormItem';
+import RenderFormItem from '../Admin/RenderFormItem';
 import { useQuery } from '@tanstack/react-query';
-import { model3DService } from '../../../../../services/models.service';
-import { exampleService } from '../../../../../services/example.service';
+import { model3DService } from '../../../../services/models.service';
+import { exampleService } from '../../../../services/example.service';
 import { useExampleMutations } from './useExampleMutations';
-import { use3DModelTypes } from '../../../3DModels/use3DModelManagement';
+import { use3DModelTypes } from '../3DModels/use3DModelManagement';
 
 const AddEditExample = () => {
   const [form] = Form.useForm();

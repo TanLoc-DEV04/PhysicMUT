@@ -3,11 +3,11 @@ import { Table, Button, Space, Popconfirm, Switch } from 'antd';
 import { PlusOutlined, EyeOutlined, DeleteOutlined } from '@ant-design/icons';
 import { useNavigate } from 'react-router-dom';
 import { useExerciseManagement, useExerciseCategories } from './useExerciseManagement';
-import { use3DModelTypes } from '../../../3DModels/use3DModelManagement';
+import { use3DModelTypes } from '../3DModels/use3DModelManagement';
 import { useExerciseMutations } from './useExerciseMutations';
-import SearchInput from '../../../../../components/shared/SearchInput';
-import MultiFilterSelect from '../../../../../components/shared/MultiFilterSelect';
-import Pagination from '../../../../../components/shared/Pagination';
+import SearchInput from '../../../../components/shared/SearchInput';
+import MultiFilterSelect from '../../../../components/shared/MultiFilterSelect';
+import Pagination from '../../../../components/shared/Pagination';
 
 // Exercise type is always one of these two values
 const EXERCISE_TYPE_OPTIONS = [

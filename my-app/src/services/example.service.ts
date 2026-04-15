@@ -1,4 +1,4 @@
-import api from './api';
+import api from './api.service';
 
 export const exampleService = {
     getExamples: async (model_type_name?: string | null, example_type_name?: string | null, search?: string) => {

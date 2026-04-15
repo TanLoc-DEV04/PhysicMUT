@@ -4,10 +4,10 @@ import { DeleteOutlined, EyeOutlined } from '@ant-design/icons';
 import { useNavigate } from 'react-router-dom';
 import { useUsers, useRoles } from './useUsers';
 import { useUserMutations } from './useUserMutations';
-import SearchInput from '../../../../../components/shared/SearchInput';
-import Pagination from '../../../../../components/shared/Pagination';
-import MultiFilterSelect from '../../../../../components/shared/MultiFilterSelect';
-import Breadcrumb from '../../../../../components/shared/Breadcrumb';
+import SearchInput from '../../../../components/shared/SearchInput';
+import Pagination from '../../../../components/shared/Pagination';
+import MultiFilterSelect from '../../../../components/shared/MultiFilterSelect';
+import Breadcrumb from '../../../../components/shared/Breadcrumb';
 
 function UserList() {
   const [searchText, setSearchText] = useState('');

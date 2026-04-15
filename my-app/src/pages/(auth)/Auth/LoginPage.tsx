@@ -1,8 +1,8 @@
 import { Form, Input, Button, Checkbox, message } from "antd";
 import { UserOutlined, LockOutlined } from "@ant-design/icons";
 import { useNavigate, Link } from "react-router-dom";
-import { authService } from '../../../../services/auth.service';
-import { useAuth } from '../../../../contexts/AuthContext';
+import { authService } from '../../../services/auth.service';
+import { useAuth } from '../../../contexts/AuthContext';
 import { GoogleLogin } from "@react-oauth/google";
 
 function LoginPage() {

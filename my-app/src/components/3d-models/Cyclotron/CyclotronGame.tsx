@@ -1,11 +1,11 @@
 import React, { useCallback, useEffect, useRef, useState } from 'react';
 import CyclotronSimulation from './CyclotronSimulation';
-import { BADGES, type GameMode, type GameState, type BadgeId } from './logic/cyclotronConstants';
+import { BADGES, type GameMode, type GameState, type BadgeId } from '../../../core/cyclotron/cyclotronConstants';
 import {
     createInitialGameState,
     persistGameState,
     MISSION1_REQUIRED_HITS,
-} from './../../../core/cyclotron/gameState';
+} from '../../../core/cyclotron/gameState';
 import {
     startAutoSync,
     stopAutoSync,
@@ -136,7 +136,7 @@ const CyclotronGame: React.FC = () => {
             pushToast('Sai nhịp! Chuỗi bị cắt!', 'error');
         },
         onBadgeEarned: (_id, name, emoji) => {
-            setGameState(s => {
+            setGameState((s: any) => {
                 const ns = { ...s, badges: new Set(s.badges) };
                 ns.badges.add(_id as BadgeId);
                 persistGameState(ns);
@@ -147,7 +147,7 @@ const CyclotronGame: React.FC = () => {
         },
         onMission1Unlocked: () => {
             pushToast('Auto-Sync mở khoá! Tần số cộng hưởng tự động!', 'info');
-            setGameState(s => {
+            setGameState((s: any) => {
                 const ns = { ...s, autoSyncEnabled: true };
                 gameStateRef.current = ns;
                 startAutoSync(ns, simCallbacks.current);
@@ -204,13 +204,13 @@ const CyclotronGame: React.FC = () => {
 
     // ── Cosmetics ──────────────────────────────────────────────────────────────
     const setColour = (c: GameState['particleColor']) =>
-        setGameState(s => {
+        setGameState((s: any) => {
             const ns = { ...s, particleColor: c };
             persistGameState(ns); gameStateRef.current = ns; return ns;
         });
 
     const setSkin = (sk: GameState['cosmeticSkin']) =>
-        setGameState(s => {
+        setGameState((s: any) => {
             const ns = { ...s, cosmeticSkin: sk };
             persistGameState(ns); gameStateRef.current = ns; return ns;
         });
@@ -399,7 +399,7 @@ const CyclotronGame: React.FC = () => {
                         <h3><TrophyOutlined style={{ color: '#f59e0b', marginRight: 6 }} /> Huy Hiệu</h3>
                         <button onClick={() => setShowBadgeDrawer(false)}><CloseOutlined /></button>
                     </div>
-                    {Object.values(BADGES).map(b => (
+                    {Object.values(BADGES).map((b: any) => (
                         <div key={b.id} className={`cg-badge-row ${hasBadge(b.id) ? 'cg-badge-earned' : 'cg-badge-locked'}`}>
                             <span className="cg-badge-emoji">{b.emoji}</span>
                             <div><strong>{b.name}</strong><p>{b.description}</p></div>
@@ -437,7 +437,7 @@ const CyclotronGame: React.FC = () => {
                     </div>
                     <div className="cg-cosmetic-section">
                         <h4>Vỏ máy</h4>
-                        {SKIN_OPTIONS.map(s => (
+                        {SKIN_OPTIONS.map((s: any) => (
                             <button
                                 key={s.value}
                                 className={`cg-skin-btn ${gameState.cosmeticSkin === s.value ? 'cg-skin-active' : ''}`}

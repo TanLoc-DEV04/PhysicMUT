@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
-import { authService } from '../../../../services/auth.service';
-import { useAuth } from '../../../../contexts/AuthContext';
+import { authService } from '../../../services/auth.service';
+import { useAuth } from '../../../contexts/AuthContext';
 import { message } from "antd";
 import { GoogleLogin } from "@react-oauth/google";
 

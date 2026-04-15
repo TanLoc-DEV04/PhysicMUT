@@ -17,7 +17,7 @@ import {
   type OscillatorState,
   type GameState,
   type GameMode,
-} from "./logic/cyclotronConstants";
+} from "../../../core/cyclotron/cyclotronConstants";
 import { renderToString } from "react-dom/server";
 import {
   PlayCircleOutlined,
@@ -28,8 +28,8 @@ import {
   EyeOutlined,
   BarChartOutlined,
 } from "@ant-design/icons";
-import { updateParticlePhysics } from "./../../../core/cyclotron/cyclotronPhysics";
-import { updateFlameEffect, cleanupFlames } from "./../../../core/cyclotron/flameLogic";
+import { updateParticlePhysics } from "../../../core/cyclotron/cyclotronPhysics";
+import { updateFlameEffect, cleanupFlames } from "../../../core/cyclotron/flameLogic";
 import { handleSpacePress, type MissionCallbacks } from "./logic/missionLogic";
 
 // ─── Colour / skin maps ───────────────────────────────────────────────────────

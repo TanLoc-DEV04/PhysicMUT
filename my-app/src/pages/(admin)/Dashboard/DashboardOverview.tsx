@@ -18,7 +18,7 @@ import {
 } from 'recharts';
 // @ts-ignore
 import { animate, createScope, createSpring, stagger } from 'animejs';
-import api from '../../../../services/api';
+import api from '../../../services/api.service';
 
 // ── Palette ──────────────────────────────────────────────────────────────────
 const BLUE = {

@@ -1,6 +1,6 @@
-import type { SimulationState, SimulationParams, GameState } from './cyclotronConstants';
-import { MISSION1_REQUIRED_HITS, TARGET_ENERGY_MEV, TARGET_TOLERANCE_MEV } from './gameState';
-import { awardBadge } from './gameState';
+import type { SimulationState, SimulationParams, GameState } from '../../../../core/cyclotron/cyclotronConstants';
+import { MISSION1_REQUIRED_HITS, TARGET_ENERGY_MEV, TARGET_TOLERANCE_MEV } from '../../../../core/cyclotron/gameState';
+import { awardBadge } from '../../../../core/cyclotron/gameState';
 
 // ─── Callbacks interface ─────────────────────────────────────────────────────
 export interface MissionCallbacks {

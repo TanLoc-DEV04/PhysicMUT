@@ -1,6 +1,6 @@
 import { Modal, Form, Upload, Button, message } from 'antd';
 import { UploadOutlined } from '@ant-design/icons';
-import RenderFormItem from '../../../Admin/RenderFormItem'; // Reuse shared component
+import RenderFormItem from '../Admin/RenderFormItem'; // Reuse shared component
 
 interface Add3DModelModalProps {
   visible: boolean;

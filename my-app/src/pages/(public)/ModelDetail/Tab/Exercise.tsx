@@ -1,9 +1,9 @@
 import { List, Card, Button, Typography, Tag, Radio, Input } from 'antd'; // Added Input
 import { CheckCircleOutlined, CloseCircleOutlined, EyeOutlined, EyeInvisibleOutlined } from '@ant-design/icons'; // Added Eye icons
-import type { Exercise as ExerciseType } from '../../../../../hooks/useContent';
+import type { Exercise as ExerciseType } from '../../../../hooks/useContent';
 import { useState } from 'react';
 
-import MathJaxRenderer from '../../../../../components/shared/MathJaxRenderer';
+import MathJaxRenderer from '../../../../components/shared/MathJaxRenderer';
 
 interface ExerciseProps {
     exercises?: ExerciseType[];

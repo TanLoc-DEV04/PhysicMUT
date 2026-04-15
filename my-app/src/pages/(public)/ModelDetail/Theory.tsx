@@ -2,11 +2,11 @@ import { useState } from 'react';
 import { Card, Button, Typography, Dropdown, Spin, message, Divider } from 'antd';
 import type { MenuProps } from 'antd';
 import { EyeOutlined, EyeInvisibleOutlined, RobotOutlined } from '@ant-design/icons';
-import MathJaxRenderer from '../../../../components/shared/MathJaxRenderer';
-import SlideViewer from '../../../../components/ai-generate/SlideViewer';
-import type { SlideData } from '../../../../components/ai-generate/SlideViewer';
-import QuizViewer from '../../../../components/ai-generate/QuizViewer';
-import type { QuizData } from '../../../../components/ai-generate/QuizViewer';
+import MathJaxRenderer from '../../../components/shared/MathJaxRenderer';
+import SlideViewer from './components/ai-generate/SlideViewer';
+import type { SlideData } from './components/ai-generate/SlideViewer';
+import QuizViewer from './components/ai-generate/QuizViewer';
+import type { QuizData } from './components/ai-generate/QuizViewer';
 
 const { Paragraph, Title } = Typography;
 

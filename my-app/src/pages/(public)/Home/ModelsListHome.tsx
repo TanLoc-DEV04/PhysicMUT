@@ -1,10 +1,10 @@
 import { useState, useMemo } from 'react';
 import { Spin, Result, Button, Empty } from 'antd';
-import Card from '../../../../components/shared/Card';
-import SearchInput from '../../../../components/shared/SearchInput';
-import MultiFilterSelect from '../../../../components/shared/MultiFilterSelect';
-import Pagination from '../../../../components/shared/Pagination';
-import { useModels3D } from '../../../../hooks/useContent';
+import Card from '../../../components/shared/Card';
+import SearchInput from '../../../components/shared/SearchInput';
+import MultiFilterSelect from '../../../components/shared/MultiFilterSelect';
+import Pagination from '../../../components/shared/Pagination';
+import { useModels3D } from '../../../hooks/useContent';
 
 function ModelsListHome() {
   const [searchQuery, setSearchQuery] = useState('');

@@ -1,4 +1,4 @@
-import api from './api';
+import api from './api.service';
 
 export const exerciseService = {
     getExercises: async (model_type_name?: string | null, exercise_type_name?: string | null, type?: string | null, search?: string) => {

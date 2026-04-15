@@ -1,6 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
-import { userService } from '../../../../../services/user.service';
-// import { User } from '../../../../../services/api'; 
+import { userService } from '../../../../services/user.service';
+// import { User } from '../../../../services/api.service'; 
 
 export const useAdmin = () => {
   const { data, isLoading, refetch } = useQuery({

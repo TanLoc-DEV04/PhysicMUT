@@ -1,5 +1,5 @@
 import { Form, Button, Input, Card, Space, Tabs } from "antd";
-import MathJaxPreview from '../../../../../components/shared/MathJaxPreview';
+import MathJaxPreview from '../../../../components/shared/MathJaxPreview';
 import {
   ArrowLeftOutlined,
   MinusCircleOutlined,
@@ -7,12 +7,12 @@ import {
 } from "@ant-design/icons";
 import { useNavigate, useParams } from "react-router-dom";
 import { useEffect } from "react";
-import RenderFormItem from '../../../Admin/RenderFormItem';
+import RenderFormItem from '../Admin/RenderFormItem';
 import { useQuery } from "@tanstack/react-query";
-import { model3DService } from '../../../../../services/models.service';
-import { exerciseService } from '../../../../../services/exercise.service';
+import { model3DService } from '../../../../services/models.service';
+import { exerciseService } from '../../../../services/exercise.service';
 import { useExerciseMutations } from "./useExerciseMutations";
-import { use3DModelTypes } from '../../../3DModels/use3DModelManagement';
+import { use3DModelTypes } from '../3DModels/use3DModelManagement';
 
 const AddEditExercise = () => {
   const [form] = Form.useForm();

@@ -3,11 +3,11 @@ import { Table, Button, Space, Popconfirm, Switch } from 'antd';
 import { PlusOutlined, EyeOutlined, DeleteOutlined } from '@ant-design/icons';
 import { useNavigate } from 'react-router-dom';
 import { useExampleManagement, useExampleCategories } from './useExampleManagement';
-import { use3DModelTypes } from '../../../3DModels/use3DModelManagement';
+import { use3DModelTypes } from '../3DModels/use3DModelManagement';
 import { useExampleMutations } from './useExampleMutations';
-import SearchInput from '../../../../../components/shared/SearchInput';
-import MultiFilterSelect from '../../../../../components/shared/MultiFilterSelect';
-import Pagination from '../../../../../components/shared/Pagination';
+import SearchInput from '../../../../components/shared/SearchInput';
+import MultiFilterSelect from '../../../../components/shared/MultiFilterSelect';
+import Pagination from '../../../../components/shared/Pagination';
 
 function ExampleList() {
   const navigate = useNavigate();

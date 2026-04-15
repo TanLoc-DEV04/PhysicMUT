@@ -1,4 +1,4 @@
-import api from './api';
+import api from './api.service';
 
 export const theoryService = {
     getTheories: async (model_type_name?: string | null, theory_type_name?: string | null, search?: string) => {

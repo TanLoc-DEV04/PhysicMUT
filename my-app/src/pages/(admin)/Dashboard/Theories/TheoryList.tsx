@@ -3,11 +3,11 @@ import { Table, Button, Space, Popconfirm, Switch } from 'antd';
 import { PlusOutlined, EyeOutlined, DeleteOutlined } from '@ant-design/icons';
 import { useNavigate } from 'react-router-dom';
 import { useTheoryManagement, useTheoryCategories } from './useTheoryManagement';
-import { use3DModelTypes } from '../../../3DModels/use3DModelManagement';
+import { use3DModelTypes } from '../3DModels/use3DModelManagement';
 import { useTheoryMutations } from './useTheoryMutations';
-import SearchInput from '../../../../../components/shared/SearchInput';
-import MultiFilterSelect from '../../../../../components/shared/MultiFilterSelect';
-import Pagination from '../../../../../components/shared/Pagination';
+import SearchInput from '../../../../components/shared/SearchInput';
+import MultiFilterSelect from '../../../../components/shared/MultiFilterSelect';
+import Pagination from '../../../../components/shared/Pagination';
 
 function TheoryList() {
   const [searchText, setSearchText] = useState('');

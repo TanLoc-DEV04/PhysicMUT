@@ -4,9 +4,9 @@ import { PlusOutlined, EyeOutlined, DeleteOutlined, CodeSandboxOutlined } from '
 import { useNavigate } from 'react-router-dom';
 import { use3DModelManagement, use3DModelTypes } from './use3DModelManagement';
 import { use3DModelMutations } from './use3DModelMutations';
-import SearchInput from '../../../../../components/shared/SearchInput';
-import MultiFilterSelect from '../../../../../components/shared/MultiFilterSelect';
-import Pagination from '../../../../../components/shared/Pagination';
+import SearchInput from '../../../../components/shared/SearchInput';
+import MultiFilterSelect from '../../../../components/shared/MultiFilterSelect';
+import Pagination from '../../../../components/shared/Pagination';
 
 function ModelList() {
   const navigate = useNavigate();

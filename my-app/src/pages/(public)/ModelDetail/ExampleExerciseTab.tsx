@@ -2,7 +2,7 @@ import { Tabs } from 'antd';
 import type { TabsProps } from 'antd';
 import Example from './Tab/Example';
 import Exercise from './Tab/Exercise';
-import type { Example as ExampleType, Exercise as ExerciseType } from '../../../../hooks/useContent';
+import type { Example as ExampleType, Exercise as ExerciseType } from '../../../hooks/useContent';
 
 interface Props {
     examples?: ExampleType[];

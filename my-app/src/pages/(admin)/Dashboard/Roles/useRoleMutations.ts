@@ -1,5 +1,5 @@
 import { useMutation, useQueryClient } from '@tanstack/react-query';
-import { roleService } from '../../../../../services/role.service';
+import { roleService } from '../../../../services/role.service';
 import { message } from 'antd';
 import { useNavigate } from 'react-router-dom';
 
