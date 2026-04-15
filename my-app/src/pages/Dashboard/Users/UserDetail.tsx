@@ -2,7 +2,7 @@ import { useParams, useNavigate } from 'react-router-dom';
 import { Card, Descriptions, Button, Avatar, Tag, Divider, Result, Spin } from 'antd';
 import { ArrowLeftOutlined, UserOutlined } from '@ant-design/icons';
 import { useQuery } from '@tanstack/react-query';
-import { userService } from '../../../services/userService';
+import { userService } from '../../../services/user.service';
 
 const UserDetail = () => {
   const { id } = useParams();

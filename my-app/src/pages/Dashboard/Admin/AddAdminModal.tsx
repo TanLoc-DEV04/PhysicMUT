@@ -2,7 +2,7 @@ import { Modal, Form, Input, Select, Switch } from 'antd';
 import { useEffect } from 'react';
 import { useUpdateAndAddAdmin } from './useUpdateAndAddAdmin';
 import { useQuery } from '@tanstack/react-query';
-import { roleService } from '../../../services/roleService';
+import { roleService } from '../../../services/role.service';
 
 interface AddAdminModalProps {
   visible: boolean;

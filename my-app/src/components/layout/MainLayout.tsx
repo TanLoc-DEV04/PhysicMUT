@@ -1,7 +1,7 @@
 import type { ReactNode } from 'react';
 import Header from './Header';
 import Footer from './Footer';
-import Breadcrumb from './Breadcrumb';
+import Breadcrumb from '../shared/Breadcrumb';
 
 interface MainLayoutProps {
   children: ReactNode;

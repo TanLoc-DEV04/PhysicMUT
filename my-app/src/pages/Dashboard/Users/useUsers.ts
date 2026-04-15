@@ -1,6 +1,6 @@
 import { useQuery } from '@tanstack/react-query';
-import { userService } from '../../../services/userService';
-import { roleService } from '../../../services/roleService';
+import { userService } from '../../../services/user.service';
+import { roleService } from '../../../services/role.service';
 import { useEffect } from 'react';
 import { message } from 'antd';
 

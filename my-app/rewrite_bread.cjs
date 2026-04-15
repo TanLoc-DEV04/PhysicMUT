@@ -1,5 +1,10 @@
-import { Breadcrumb as AntBreadcrumb } from 'antd';
+﻿const fs = require("fs");
+const path = "src/components/shared/Breadcrumb.tsx";
+if (fs.existsSync(path)) fs.unlinkSync(path);
+
+const correct = `import { Breadcrumb as AntBreadcrumb } from 'antd';
 import { useLocation, Link } from 'react-router-dom';
+import React from 'react';
 
 export interface BreadcrumbItem {
   title: string;
@@ -31,7 +36,7 @@ function Breadcrumb({ items, className = '' }: BreadcrumbProps) {
     return (
       <AntBreadcrumb
         items={breadcrumbItems}
-        className={`mb-4 ${className}`}
+        className={\`mb-4 \${className}\`}
         aria-label="Breadcrumb"
       />
     );
@@ -46,7 +51,7 @@ function Breadcrumb({ items, className = '' }: BreadcrumbProps) {
       key: 'home',
     },
     ...pathnames.map((value, index) => {
-      const url = `/${pathnames.slice(0, index + 1).join('/')}`;
+      const url = \`/\${pathnames.slice(0, index + 1).join('/')}\`;
       const name = breadcrumbNameMap[value.toLowerCase()] || decodeURIComponent(value);
       const isLast = index === pathnames.length - 1;
 
@@ -58,7 +63,7 @@ function Breadcrumb({ items, className = '' }: BreadcrumbProps) {
   ];
 
   return (
-    <div className={`bg-gray-100 py-3 px-6 border-b border-gray-200 ${className}`}>
+    <div className={\`bg-gray-100 py-3 px-6 border-b border-gray-200 \${className}\`}>
       <div className="container mx-auto">
         <AntBreadcrumb items={breadcrumbItems} aria-label="Breadcrumb" separator={<i className="pi pi-angle-right text-gray-400 text-xs mx-1"></i>} />
       </div>
@@ -67,3 +72,5 @@ function Breadcrumb({ items, className = '' }: BreadcrumbProps) {
 }
 
 export default Breadcrumb;
+`;
+fs.writeFileSync(path, correct, "utf8");

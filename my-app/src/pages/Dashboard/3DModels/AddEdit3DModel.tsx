@@ -4,7 +4,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { useEffect } from 'react';
 import RenderFormItem from '../Admin/RenderFormItem';
 import { useQuery } from '@tanstack/react-query';
-import { model3DService } from '../../../services/model3DService';
+import { model3DService } from '../../../services/models.service';
 import { use3DModelMutations } from './use3DModelMutations';
 
 const AddEdit3DModel = () => {

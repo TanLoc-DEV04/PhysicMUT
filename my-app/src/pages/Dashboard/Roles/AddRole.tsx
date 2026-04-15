@@ -2,7 +2,7 @@ import { Form, Input, Button, Checkbox, Card, Row, Col, Switch } from 'antd';
 import { useNavigate, useParams } from 'react-router-dom';
 import { useEffect } from 'react';
 import { useQuery } from '@tanstack/react-query';
-import { roleService } from '../../../services/roleService';
+import { roleService } from '../../../services/role.service';
 import { useRoleMutations } from './useRoleMutations';
 
 const permissionGroups = [

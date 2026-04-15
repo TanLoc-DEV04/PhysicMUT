@@ -3,8 +3,8 @@ import { Form, Button, Input, Card, Select } from 'antd';
 import { ArrowLeftOutlined } from '@ant-design/icons';
 import { useNavigate, useParams, useSearchParams } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
-import { userService } from '../../../services/userService';
-import { roleService } from '../../../services/roleService';
+import { userService } from '../../../services/user.service';
+import { roleService } from '../../../services/role.service';
 import { useUserMutations } from './useUserMutations';
 
 const AddEditUser = () => {

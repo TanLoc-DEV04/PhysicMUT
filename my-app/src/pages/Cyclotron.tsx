@@ -1,5 +1,5 @@
 import { useEffect, useRef, useState } from 'react';
-import { Cyclotron3DService } from '../services/Cyclotron3DService';
+import { Cyclotron3DService } from '../services/cyclotron3d.service';
 
 function Cyclotron() {
   const containerRef = useRef<HTMLDivElement>(null);

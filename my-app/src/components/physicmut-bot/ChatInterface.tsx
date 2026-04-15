@@ -1,5 +1,5 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { sendMessage } from '../../services/chatbotService';
+import { sendMessage } from '../../services/chatbot.service';
 
 // Import AvatarState type if possible, or redefine it here to avoid circular dependency issues if strict
 type AvatarState = 'IDLE' | 'THINKING' | 'EXPLAINING' | 'ERROR';

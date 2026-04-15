@@ -1,5 +1,5 @@
 import { useMutation, useQueryClient } from '@tanstack/react-query';
-import { theoryService } from '../../../services/theoryService';
+import { theoryService } from '../../../services/theory.service';
 import { message } from 'antd';
 import { useNavigate } from 'react-router-dom';
 

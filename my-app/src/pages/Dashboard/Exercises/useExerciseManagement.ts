@@ -1,5 +1,5 @@
 import { useQuery } from '@tanstack/react-query';
-import { exerciseService } from '../../../services/exerciseService';
+import { exerciseService } from '../../../services/exercise.service';
 import { message } from 'antd';
 import { useEffect } from 'react';
 
