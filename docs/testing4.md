@@ -11,18 +11,18 @@
 ## 3. Kết quả Đo lường (Metrics)
 *Dữ liệu được trích xuất từ báo cáo tự động `lighthouse-report.json` chạy trực tiếp trên Localhost*
 
-- **Performance Score (Điểm hiệu suất tổng thể):** **47 / 100** (Cần cải thiện)
-- **FCP (First Contentful Paint):** **37.6 s** (Thời gian xuất hiện pixel chữ/hình ảnh đầu tiên)
-- **LCP (Largest Contentful Paint):** **71.9 s** (Thời gian render khối nội dung lớn nhất, chủ yếu là 3D Canvas)
-- **TBT (Total Blocking Time):** **350 ms** (Tổng thời gian luồng chính bị khóa không cho người dùng tương tác)
+- **Performance Score (Điểm hiệu suất tổng thể):** **27 / 100** (Cần cải thiện khẩn cấp)
+- **FCP (First Contentful Paint):** **37.5 s** (Thời gian xuất hiện pixel chữ/hình ảnh đầu tiên)
+- **LCP (Largest Contentful Paint):** **79.5 s** (Thời gian render khối nội dung lớn nhất, chủ yếu là 3D Canvas)
+- **TBT (Total Blocking Time):** **2400 ms** (Tổng thời gian luồng chính bị khóa không cho người dùng tương tác)
 - **CLS (Cumulative Layout Shift):** **0** (Tuyệt vời - Không bị giật/nhảy giao diện khi tải)
 
 ## 4. Phân tích Nguyên nhân (Diagnose)
-- **Điểm số 47 (Mức Vàng/Đỏ):** Điều này hoàn toàn có thể hiểu được ở chế độ Development (chưa Build Production) vì file JavaScript (React, Three.js) chưa được Minify, chưa phân mảnh (Code Splitting).
+- **Điểm số 27 (Mức Đỏ rực):** Điều này hoàn toàn có thể hiểu được ở chế độ Development (chưa Build Production) vì file JavaScript (React, Three.js) chưa được Minify, chưa phân mảnh (Code Splitting).
 - **FCP và LCP rất cao (37-71 giây):** 
   - Máy quét Lighthouse đang bóp băng thông mạng (Network Throttling) và CPU. Việc tải thư viện đồ họa 3D khổng lồ (Three.js, React Three Fiber) cùng toàn bộ mã nguồn chưa nén khiến quá trình tải bị đình trệ.
   - Các tệp tài nguyên tĩnh (Hình ảnh, texture) có thể chưa được tối ưu kích thước.
-- **TBT thấp (350ms):** Điểm sáng lớn nhất! Dù thời gian tải lâu, nhưng mã nguồn React được viết rất tối ưu, thuật toán mô phỏng hạt không gây vòng lặp vô hạn làm treo luồng Main Thread (Luồng chính).
+- **TBT khá cao (2400ms):** Việc khởi tạo các hình học (Geometry) và vật liệu (Material) phức tạp của Cyclotron, kết hợp với hàng nghìn hạt (Particle) đã làm Main Thread bị treo hơn 2 giây. Khắc phục bằng cách dùng `useMemo` caching cho Geometry/Material.
 - **CLS = 0:** Giao diện được thiết kế bộ khung (Skeleton/Layout) rất vững chắc, không bị xô lệch gây khó chịu khi thẻ Canvas 3D bất ngờ xuất hiện.
 
 ## 5. Đề xuất Tối ưu hóa (Optimization Plan)
