@@ -1,7 +1,7 @@
 from fastapi import FastAPI, UploadFile, File, HTTPException, Request
 from fastapi.responses import JSONResponse
 from pydantic import BaseModel
-from typing import List, Optional, Dict, Any
+from typing import List, Optional, Dict, Any, Annotated
 from fastapi.middleware.cors import CORSMiddleware
 from slowapi import Limiter, _rate_limit_exceeded_handler
 from slowapi.util import get_remote_address
@@ -92,7 +92,7 @@ class ChatResponse(BaseModel):
     message: str
     tool_call: Optional[Dict[str, Any]] = None
 
-@app.post("/chat", response_model=ChatResponse)
+@app.post("/chat", response_model=ChatResponse, responses={400: {"description": "Bad Request"}, 500: {"description": "Internal Server Error"}})
 @limiter.limit("20/minute")  # Giới hạn 20 câu hỏi/phút/IP — chống spam AI
 async def chat(request: ChatRequest, http_request: Request):
     try:
@@ -214,7 +214,7 @@ class GenerateRequest(BaseModel):
     type: str  # "slide" or "quiz"
     num_questions: Optional[int] = 5
 
-@app.post("/generate")
+@app.post("/generate", responses={400: {"description": "Bad Request"}, 500: {"description": "Internal Server Error"}})
 async def generate_content(request: GenerateRequest):
     try:
         llm = ChatOllama(
@@ -267,10 +267,11 @@ async def generate_content(request: GenerateRequest):
         print(f"Error generating content: {e}")
         raise HTTPException(status_code=500, detail=str(e))
 
-@app.post("/upload-pdf")
-async def upload_pdf(file: UploadFile = File(...)):
+@app.post("/upload-pdf", responses={500: {"description": "Internal Server Error"}})
+def upload_pdf(file: Annotated[UploadFile, File(...)]):
     try:
-        file_location = f"data/{file.filename}"
+        safe_filename = os.path.basename(file.filename)
+        file_location = os.path.join("data", safe_filename)
         os.makedirs("data", exist_ok=True)
         with open(file_location, "wb+") as file_object:
             shutil.copyfileobj(file.file, file_object)
@@ -284,4 +285,4 @@ async def upload_pdf(file: UploadFile = File(...)):
 
 if __name__ == "__main__":
     import uvicorn
-    uvicorn.run(app, host="0.0.0.0", port=8000)
+    uvicorn.run(app, host=os.getenv("HOST", "127.0.0.1"), port=8000)
