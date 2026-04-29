@@ -59,3 +59,35 @@ npx lighthouse http://localhost:5173/models/CYCLOTRON --view
 # Hoặc xuất ra file JSON để phân tích dữ liệu (như Thầy đã làm)
 npx lighthouse http://localhost:5173/models/CYCLOTRON --output=json --output-path=./lighthouse-report.json --chrome-flags="--headless"
 ```
+
+## 7. Bí quyết cải thiện Performance từ 29 lên 90+
+
+Nhìn vào bảng phân tích Lighthouse mà bạn vừa gửi, lỗi lớn nhất không phải do code dở, mà là do bạn đang **Test trên môi trường Development (`npm run dev`)**. Ở môi trường này, code nặng tới 14.4MB vì chưa được nén (Minify). Để đạt điểm 90+, bạn bắt buộc phải làm theo các bước sau:
+
+### Bước 7.1: Phải Build ra bản Production (Tăng ngay 30-40 điểm)
+Lighthouse phàn nàn rằng bạn đang lãng phí 4.5MB vì chưa Minify code và 6.8MB Unused JS. Bạn hãy tắt `npm run dev` và chạy 2 lệnh sau để tạo bản Production đã được tối ưu hóa, nén Gzip và bẻ nhỏ (Code Splitting):
+```bash
+npm run build
+npm run preview
+```
+Lúc này, hãy dùng Lighthouse quét vào cổng mạng nội bộ của lệnh `preview` (thường là `http://localhost:4173/models/CYCLOTRON`). Điểm sẽ tăng vọt ngay lập tức.
+
+### Bước 7.2: Áp dụng Lazy Loading & Suspense cho Three.js (Tránh chặn FCP)
+Hiện tại `CyclotronGame`, `Three.js` và `Recharts` đang tải ngay cùng một lúc làm đứng trang (TBT lên tới 1490ms).
+- Thay vì import thường: `import CyclotronGame from './CyclotronGame'`
+- Hãy dùng React Lazy: `const CyclotronGame = React.lazy(() => import('./CyclotronGame'))`
+- Bọc nó trong thẻ `<Suspense fallback={<LoadingSpinner/>}>`. Lúc này FCP sẽ dưới 1 giây vì Spinner hiện ra ngay lập tức, trong khi 3D models tải ngầm phía sau.
+
+### Bước 7.3: Xử lý MathJax CDN chặn Render (Render-blocking)
+Thư viện `tex-svg.js` tải từ JSDelivr tốn tới 603KB và đang làm chậm quá trình dựng trang. 
+- Mở file `index.html`.
+- Sửa thẻ `<script src=".../tex-svg.js"></script>` bằng cách thêm thuộc tính `defer`: 
+  `<script defer src=".../tex-svg.js"></script>`. Điều này bắt trình duyệt hiển thị giao diện UI trước, rồi mới nạp MathJax sau.
+
+### Bước 7.4: Dùng `useMemo` caching cho 3D Geometry/Material
+React Three Fiber re-render liên tục. Nếu bạn khai báo `<boxGeometry />` hoặc `<meshStandardMaterial />` bên trong component mà không bọc `useMemo`, CPU sẽ bị quá tải (thể hiện qua lỗi "Forced reflow"). Hãy cache lại chúng:
+```tsx
+const memoizedMaterial = useMemo(() => new THREE.MeshStandardMaterial({ color: 'red' }), [])
+```
+
+Chỉ cần làm đúng 4 bước trên, đặc biệt là **Bước 1 và 2**, báo cáo của bạn chắc chắn sẽ "xanh mướt" (90+ điểm)!
