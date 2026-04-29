@@ -3,3 +3,5 @@
 docs/*
 .env
 *.env
+my-app/playwright-report/
+my-app/test-results/

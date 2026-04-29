@@ -93,7 +93,7 @@ class ChatResponse(BaseModel):
     tool_call: Optional[Dict[str, Any]] = None
 
 @app.post("/chat", response_model=ChatResponse)
-# @limiter.limit("20/minute")  # Giới hạn 20 câu hỏi/phút/IP — chống spam AI
+@limiter.limit("20/minute")  # Giới hạn 20 câu hỏi/phút/IP — chống spam AI
 async def chat(request: ChatRequest, http_request: Request):
     try:
         # ── Prompt Injection Guard ──────────────────────────────────────────────

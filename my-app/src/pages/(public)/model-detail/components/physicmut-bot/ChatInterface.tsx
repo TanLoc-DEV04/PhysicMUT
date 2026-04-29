@@ -183,8 +183,16 @@ export default function ChatInterface({
     <div
       className={isMobile && !isOpen ? "pop-anim" : ""}
       style={containerStyle}
+      role="button"
+      tabIndex={0}
       onClick={() => {
         if (isMobile && !isOpen) setIsOpen(true);
+      }}
+      onKeyDown={(e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          if (isMobile && !isOpen) setIsOpen(true);
+        }
       }}
       onTouchStart={() => {
         if (isMobile && !isOpen) setIsPressed(true);
@@ -200,8 +208,16 @@ export default function ChatInterface({
       {/* Header bar: only show if desktop OR (mobile and open) */}
       {(!isMobile || isOpen) && (
         <div
+          role="button"
+          tabIndex={0}
           onClick={() => {
             if (!isMobile || isOpen) setIsOpen(!isOpen);
+          }}
+          onKeyDown={(e) => {
+            if (e.key === 'Enter' || e.key === ' ') {
+              e.preventDefault();
+              if (!isMobile || isOpen) setIsOpen(!isOpen);
+            }
           }}
           style={{
             backgroundColor: "#0f6cbf",
