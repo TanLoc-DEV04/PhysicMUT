@@ -180,19 +180,18 @@ export default function ChatInterface({
       };
 
   return (
-    <div
+    <button
       className={isMobile && !isOpen ? "pop-anim" : ""}
-      style={containerStyle}
-      role="button"
-      tabIndex={0}
+      style={{
+        ...containerStyle,
+        border: "none",
+        outline: "none",
+        padding: 0,
+        textAlign: "left",
+        background: "none"
+      }}
       onClick={() => {
         if (isMobile && !isOpen) setIsOpen(true);
-      }}
-      onKeyDown={(e) => {
-        if (e.key === 'Enter' || e.key === ' ') {
-          e.preventDefault();
-          if (isMobile && !isOpen) setIsOpen(true);
-        }
       }}
       onTouchStart={() => {
         if (isMobile && !isOpen) setIsPressed(true);
@@ -207,17 +206,9 @@ export default function ChatInterface({
     >
       {/* Header bar: only show if desktop OR (mobile and open) */}
       {(!isMobile || isOpen) && (
-        <div
-          role="button"
-          tabIndex={0}
+        <button
           onClick={() => {
             if (!isMobile || isOpen) setIsOpen(!isOpen);
-          }}
-          onKeyDown={(e) => {
-            if (e.key === 'Enter' || e.key === ' ') {
-              e.preventDefault();
-              if (!isMobile || isOpen) setIsOpen(!isOpen);
-            }
           }}
           style={{
             backgroundColor: "#0f6cbf",
@@ -231,11 +222,14 @@ export default function ChatInterface({
             justifyContent: "space-between",
             alignItems: "center",
             flexShrink: 0,
+            border: "none",
+            width: "100%",
+            textAlign: "left"
           }}
         >
           <span>PhysicsMUT Assistant</span>
           <span>{isOpen ? "−" : "+"}</span>
-        </div>
+        </button>
       )}
 
       {/* Floating Button Icon: only show if mobile and closed */}
@@ -334,6 +328,6 @@ export default function ChatInterface({
           </div>
         </>
       )}
-    </div>
+    </button>
   );
 }
