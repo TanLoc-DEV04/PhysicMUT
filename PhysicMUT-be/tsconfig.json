@@ -40,5 +40,7 @@
   },
   "ts-node": {
     "transpileOnly": true
-  }
+  },
+  "include": ["src/**/*"],
+  "exclude": ["__tests__", "tests", "node_modules", "dist"]
 }
