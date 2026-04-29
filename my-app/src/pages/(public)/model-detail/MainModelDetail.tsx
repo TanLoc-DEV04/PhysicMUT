@@ -154,10 +154,12 @@ function MainModelDetail() {
   // Use the first ACTIVE theory
   const theoryData = (model.theories || []).find((t: any) => t.status !== 'INACTIVE') || null;
 
-  // Strip HTML tags to get plain-text description for Microdata
-  const plainDescription = theoryData?.content_html
-    ? theoryData.content_html.replace(/<[^>]+>/g, ' ').replace(/\s+/g, ' ').trim().slice(0, 300)
-    : (model.description || '');
+  // Strip HTML tags to get plain-text description for Microdata using DOMParser
+  let plainDescription = model.description || '';
+  if (theoryData?.content_html) {
+    const doc = new DOMParser().parseFromString(theoryData.content_html, 'text/html');
+    plainDescription = (doc.body.textContent || '').replace(/\s+/g, ' ').trim().slice(0, 300);
+  }
 
   return (
     <Layout className="min-h-screen bg-gray-50 flex flex-col items-center">
@@ -167,7 +169,7 @@ function MainModelDetail() {
           className="flex-1 w-full max-w-[1000px] shadow-sm p-6 overflow-hidden md:min-w-0"
         >
           {/* ── Microdata: schema.org/Article bao phủ toàn bộ nội dung của bài học ── */}
-          <article itemScope itemType="http://schema.org/Article">
+          <article itemScope itemType="https://schema.org/Article">
 
             {/* SEO header: tên mô hình + tác giả */}
             <header className="mb-6">
@@ -182,7 +184,7 @@ function MainModelDetail() {
                 className="sr-only"
                 itemProp="author"
                 itemScope
-                itemType="http://schema.org/Organization"
+                itemType="https://schema.org/Organization"
               >
                 <span itemProp="name">Phòng Thí nghiệm PhysicMUT</span>
               </div>

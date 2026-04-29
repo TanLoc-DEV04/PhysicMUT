@@ -47,6 +47,6 @@ export default function () {
     } catch (e) {}
   }
 
-  // Nghỉ 2-4 giây giữa các lần hỏi để giống với con người đang đọc câu trả lời
-  sleep(Math.random() * 2 + 2);
+  // Nghỉ 3 giây giữa các lần hỏi để giống với con người đang đọc câu trả lời
+  sleep(3);
 }

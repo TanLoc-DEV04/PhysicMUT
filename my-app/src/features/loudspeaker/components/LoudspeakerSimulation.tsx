@@ -151,10 +151,16 @@ export default function LoudspeakerSimulation({
     const particlePos = new Float32Array(PARTICLE_COUNT * 3);
     const particleBase = new Float32Array(PARTICLE_COUNT * 3);
 
+    const secureRandom = () => {
+      const arr = new Uint32Array(1);
+      window.crypto.getRandomValues(arr);
+      return arr[0] / (0xffffffff + 1);
+    };
+
     for (let i = 0; i < PARTICLE_COUNT; i++) {
-      const x = (Math.random() - 0.5) * 40;
-      const y = (Math.random() - 0.5) * 40;
-      const z = Math.random() * 50;
+      const x = (secureRandom() - 0.5) * 40;
+      const y = (secureRandom() - 0.5) * 40;
+      const z = secureRandom() * 50;
       particlePos[i * 3] = particleBase[i * 3] = x;
       particlePos[i * 3 + 1] = particleBase[i * 3 + 1] = y;
       particlePos[i * 3 + 2] = particleBase[i * 3 + 2] = z;

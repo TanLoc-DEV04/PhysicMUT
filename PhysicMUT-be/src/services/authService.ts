@@ -2,6 +2,7 @@ import prisma from '../config/db';
 import bcrypt from 'bcrypt';
 import jwt from 'jsonwebtoken';
 import { OAuth2Client } from 'google-auth-library';
+import crypto from 'crypto';
 
 const client = new OAuth2Client(process.env.GOOGLE_CLIENT_ID || 'dummy');
 const JWT_SECRET = process.env.JWT_SECRET || 'fallback-secret-key';
@@ -105,7 +106,7 @@ export const googleLogin = async (credential: string) => {
         }
 
         const salt = await bcrypt.genSalt(10);
-        const randomPassword = await bcrypt.hash(Math.random().toString(36).slice(-10), salt);
+        const randomPassword = await bcrypt.hash(crypto.randomBytes(8).toString('hex'), salt);
 
         const baseUsername = email.split('@')[0];
         let username = baseUsername;

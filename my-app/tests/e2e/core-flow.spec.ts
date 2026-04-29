@@ -18,7 +18,7 @@ test.describe('Luồng người dùng cốt lõi (Core User Flows)', () => {
     // BƯỚC 2: KIỂM TRA TRANG CHỦ (HOME)
     // --------------------------------------------------------
     // Đảm bảo URL đã chuyển hướng thành công
-    await expect(page).toHaveURL(/.*\/models/);
+    await expect(page).toHaveURL(/\/models/);
 
     // Kiểm tra UI đã load xong (Tìm một thẻ mô hình làm mốc)
     // Ví dụ text 'Cyclotron'
@@ -36,7 +36,7 @@ test.describe('Luồng người dùng cốt lõi (Core User Flows)', () => {
     // --------------------------------------------------------
     // BƯỚC 4: KIỂM TRA TRANG CHI TIẾT (MODEL DETAIL)
     // --------------------------------------------------------
-    await expect(page).toHaveURL(/.*\/cyclotron/i);
+    await expect(page).toHaveURL(/\/cyclotron/i);
 
     // KIỂM TRA QUAN TRỌNG NHẤT: Thẻ <canvas> chứa 3D phải xuất hiện
     const threeCanvas = page.locator('canvas').first();
