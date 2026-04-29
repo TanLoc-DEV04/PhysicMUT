@@ -3,7 +3,7 @@ import { useNavigate, useParams } from 'react-router-dom';
 import { useEffect } from 'react';
 import { useQuery } from '@tanstack/react-query';
 import { roleService } from '../../../../services/role.service';
-import { useRoleMutations } from './useRoleMutations';
+import { useRoleMutations } from './hooks/useRoleMutations';
 
 const permissionGroups = [
   {

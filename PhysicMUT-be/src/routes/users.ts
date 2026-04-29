@@ -1,5 +1,7 @@
 import { Router } from 'express';
 import { getUsers, getUserById, updateUser, deleteUser, createUser, updateUserStatus } from '../controllers/userController';
+import { validateRequest } from '../middlewares/validateRequest';
+import { getUsersSchema, createUserSchema, userIdSchema, updateUserSchema, updateUserStatusSchema } from '../validators/user.validator';
 
 const router = Router();
 
@@ -26,7 +28,7 @@ const router = Router();
  *               items:
  *                 $ref: '#/components/schemas/User'
  */
-router.get('/', getUsers);
+router.get('/', validateRequest(getUsersSchema), getUsers);
 
 /**
  * @openapi
@@ -64,7 +66,7 @@ router.get('/', getUsers);
  *             schema:
  *               $ref: '#/components/schemas/User'
  */
-router.post('/', createUser);
+router.post('/', validateRequest(createUserSchema), createUser);
 
 /**
  * @openapi
@@ -89,7 +91,7 @@ router.post('/', createUser);
  *       404:
  *         description: User not found
  */
-router.get('/:id', getUserById);
+router.get('/:id', validateRequest(userIdSchema), getUserById);
 
 /**
  * @openapi
@@ -123,7 +125,7 @@ router.get('/:id', getUserById);
  *             schema:
  *               $ref: '#/components/schemas/User'
  */
-router.put('/:id', updateUser);
+router.put('/:id', validateRequest(updateUserSchema), updateUser);
 
 /**
  * @openapi
@@ -151,7 +153,7 @@ router.put('/:id', updateUser);
  *       200:
  *         description: User status updated
  */
-router.patch('/:id/status', updateUserStatus);
+router.patch('/:id/status', validateRequest(updateUserStatusSchema), updateUserStatus);
 
 /**
  * @openapi
@@ -169,6 +171,6 @@ router.patch('/:id/status', updateUserStatus);
  *       204:
  *         description: User deleted successfully
  */
-router.delete('/:id', deleteUser);
+router.delete('/:id', validateRequest(userIdSchema), deleteUser);
 
 export default router;

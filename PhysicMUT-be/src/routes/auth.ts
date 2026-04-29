@@ -1,5 +1,7 @@
 import { Router } from 'express';
 import { login, register, changePassword, forgotPassword, googleLogin } from '../controllers/authController';
+import { validateRequest } from '../middlewares/validateRequest';
+import { loginSchema, registerSchema, changePasswordSchema, forgotPasswordSchema, googleLoginSchema } from '../validators/auth.validator';
 
 const router = Router();
 
@@ -47,7 +49,7 @@ const router = Router();
  *       401:
  *         description: Invalid credentials
  */
-router.post('/login', login);
+router.post('/login', validateRequest(loginSchema), login);
 
 /**
  * @openapi
@@ -89,7 +91,7 @@ router.post('/login', login);
  *       400:
  *         description: Username or email already exists
  */
-router.post('/register', register);
+router.post('/register', validateRequest(registerSchema), register);
 
 /**
  * @openapi
@@ -120,7 +122,7 @@ router.post('/register', register);
  *       401:
  *         description: Incorrect old password
  */
-router.post('/change-password', changePassword);
+router.post('/change-password', validateRequest(changePasswordSchema), changePassword);
 
 /**
  * @openapi
@@ -143,9 +145,9 @@ router.post('/change-password', changePassword);
  *       200:
  *         description: Reset link sent
  */
-router.post('/forgot-password', forgotPassword);
+router.post('/forgot-password', validateRequest(forgotPasswordSchema), forgotPassword);
 
 
-router.post('/google', googleLogin);
+router.post('/google', validateRequest(googleLoginSchema), googleLogin);
 
 export default router;

@@ -5,7 +5,7 @@ import { useNavigate, useParams, useSearchParams } from 'react-router-dom';
 import { useQuery } from '@tanstack/react-query';
 import { userService } from '../../../../services/user.service';
 import { roleService } from '../../../../services/role.service';
-import { useUserMutations } from './useUserMutations';
+import { useUserMutations } from './hooks/useUserMutations';
 
 const AddEditUser = () => {
     const [form] = Form.useForm();

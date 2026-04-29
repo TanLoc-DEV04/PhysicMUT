@@ -9,34 +9,34 @@ import { AuthProvider } from "./contexts/AuthContext";
 import PrivateRoute from "./components/shared/PrivateRoute";
 import MainLayout from "./components/layout/MainLayout";
 
-// import ModelList from './pages/(public)/Models/ModelList'; // Keep original for reference or remove if fully replaced
-import ExampleList from "./pages/(public)/Examples/ExampleList";
-import ExerciseList from "./pages/(public)/Exercises/ExerciseList";
-import Home from "./pages/(public)/Home/Home";
-import ModelsListHome from "./pages/(public)/Home/ModelsListHome";
-import MainModelDetail from "./pages/(public)/ModelDetail/MainModelDetail";
+// import ModelList from './pages/(public)/models/ModelList'; // Keep original for reference or remove if fully replaced
+import ExampleList from "./pages/(public)/examples/ExampleList";
+import ExerciseList from "./pages/(public)/exercises/ExerciseList";
+import Home from "./pages/(public)/home/Home";
+import ModelsListHome from "./pages/(public)/home/ModelsListHome";
+import MainModelDetail from "./pages/(public)/model-detail/MainModelDetail";
 import "./App.css";
 
-import AdminManagementList from "./pages/(admin)/Dashboard/Admin/AdminManagementList";
-import RoleList from "./pages/(admin)/Dashboard/Roles/RoleList";
-import AddRole from "./pages/(admin)/Dashboard/Roles/AddRole";
-import ThreeDModelList from "./pages/(admin)/Dashboard/3DModels/3DModelList";
-import AddEdit3DModel from "./pages/(admin)/Dashboard/3DModels/AddEdit3DModel";
-import UserList from "./pages/(admin)/Dashboard/Users/UserList";
-import UserDetail from "./pages/(admin)/Dashboard/Users/UserDetail";
-import TheoryList from "./pages/(admin)/Dashboard/Theories/TheoryList";
-import AddEditTheory from "./pages/(admin)/Dashboard/Theories/AddEditTheory";
-import ExampleManagementList from "./pages/(admin)/Dashboard/Examples/ExampleList";
-import AddEditExample from "./pages/(admin)/Dashboard/Examples/AddEditExample";
-import ExerciseManagementList from "./pages/(admin)/Dashboard/Exercises/ExerciseList";
-import AddEditExercise from "./pages/(admin)/Dashboard/Exercises/AddEditExercise";
+import AdminManagementList from "./pages/(admin)/Dashboard/admin/AdminManagementList";
+import RoleList from "./pages/(admin)/Dashboard/roles/RoleList";
+import AddRole from "./pages/(admin)/Dashboard/roles/AddRole";
+import ThreeDModelList from "./pages/(admin)/Dashboard/3d-models/3DModelList";
+import AddEdit3DModel from "./pages/(admin)/Dashboard/3d-models/AddEdit3DModel";
+import UserList from "./pages/(admin)/Dashboard/users/UserList";
+import UserDetail from "./pages/(admin)/Dashboard/users/UserDetail";
+import TheoryList from "./pages/(admin)/Dashboard/theories/TheoryList";
+import AddEditTheory from "./pages/(admin)/Dashboard/theories/AddEditTheory";
+import ExampleManagementList from "./pages/(admin)/Dashboard/examples/ExampleList";
+import AddEditExample from "./pages/(admin)/Dashboard/examples/AddEditExample";
+import ExerciseManagementList from "./pages/(admin)/Dashboard/exercises/ExerciseList";
+import AddEditExercise from "./pages/(admin)/Dashboard/exercises/AddEditExercise";
 import MainDashboard from "./pages/(admin)/Dashboard/MainDashboard";
 import DashboardOverview from "./pages/(admin)/Dashboard/DashboardOverview";
-import LoginPage from "./pages/(auth)/Auth/LoginPage";
-import ForgotPage from "./pages/(auth)/Auth/ForgotPage";
-import OtpPage from "./pages/(auth)/Auth/OtpPage";
-import ResetPage from "./pages/(auth)/Auth/ResetPage";
-import RegisterPage from "./pages/(auth)/Auth/RegisterPage";
+import LoginPage from "./pages/(auth)/auth/LoginPage";
+import ForgotPage from "./pages/(auth)/auth/ForgotPage";
+import OtpPage from "./pages/(auth)/auth/OtpPage";
+import ResetPage from "./pages/(auth)/auth/ResetPage";
+import RegisterPage from "./pages/(auth)/auth/RegisterPage";
 
 function App() {
   return (

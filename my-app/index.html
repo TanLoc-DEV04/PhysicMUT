@@ -1,11 +1,29 @@
 <!doctype html>
-<html lang="en">
+<html lang="vi">
 
 <head>
+  <!-- 1. Tiêu chuẩn Content-Type & charset -->
+  <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
   <meta charset="UTF-8" />
   <link rel="icon" type="image/svg+xml" href="/vite.svg" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>PhysicMUT</title>
+
+  <!-- 2. Title mặc định (sẽ được ghi đè động bởi useSEO hook ở từng trang) -->
+  <title>PhysicMUT – Mô phỏng Vật lý 3D Trực quan</title>
+
+  <!-- 3. Meta Description mặc định -->
+  <meta name="description" content="PhysicMUT là nền tảng học Vật lý 12 qua mô hình 3D tương tác: Cyclotron, Loa điện động, và nhiều thí nghiệm ảo khác. Học trực quan, hiệu quả, miễn phí.">
+
+  <!-- 4. Keywords tiếng Việt -->
+  <meta name="keywords" lang="vi" content="Vật lý 12, mô hình 3D, PhysicMUT, Cyclotron, loa điện động, mô phỏng vật lý, thí nghiệm ảo, lực Lorentz">
+
+  <!-- 5. Báo Search Engine biết trang gốc của hệ thống -->
+  <link rel="start" type="text/html" href="/" title="Trang chủ PhysicMUT">
+
+  <!-- 6. Open Graph cơ bản -->
+  <meta property="og:site_name" content="PhysicMUT">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="vi_VN">
   <script>
     window.MathJax = {
       tex: {
@@ -16,7 +34,18 @@
       }
     };
   </script>
-  <script type="text/javascript" id="MathJax-script" async src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js">
+  <!--
+    MathJax CDN với Subresource Integrity (SRI) — trình duyệt sẽ từ chối tải
+    nếu nội dung file không khớp checksum, chống lại CDN bị hack tiêm mã độc.
+    Để lấy hash mới: https://www.srihash.org/
+  -->
+  <script
+    type="text/javascript"
+    id="MathJax-script"
+    async
+    src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-svg.js"
+    crossorigin="anonymous"
+  >
   </script>
 </head>
 

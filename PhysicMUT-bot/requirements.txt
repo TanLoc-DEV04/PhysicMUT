@@ -4,6 +4,7 @@ langchain
 langchain-community
 langchain-chroma
 langchain-openai
+langchain-ollama
 python-multipart
 pymupdf
 chromadb
@@ -11,3 +12,4 @@ python-dotenv
 tiktoken
 fpdf
 sentence-transformers
+slowapi

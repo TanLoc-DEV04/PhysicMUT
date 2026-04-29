@@ -1,16 +1,44 @@
 "use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || (function () {
+    var ownKeys = function(o) {
+        ownKeys = Object.getOwnPropertyNames || function (o) {
+            var ar = [];
+            for (var k in o) if (Object.prototype.hasOwnProperty.call(o, k)) ar[ar.length] = k;
+            return ar;
+        };
+        return ownKeys(o);
+    };
+    return function (mod) {
+        if (mod && mod.__esModule) return mod;
+        var result = {};
+        if (mod != null) for (var k = ownKeys(mod), i = 0; i < k.length; i++) if (k[i] !== "default") __createBinding(result, mod, k[i]);
+        __setModuleDefault(result, mod);
+        return result;
+    };
+})();
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.deleteRole = exports.toggleRoleStatus = exports.updateRole = exports.createRole = exports.getRoleById = exports.getAdminRoles = exports.getRoles = void 0;
-const db_1 = __importDefault(require("../config/db"));
-// Non-admin role names (cannot be assigned to admin users)
-const NON_ADMIN_ROLES = ['USER', 'STUDENT']; // STUDENT kept for legacy
+const roleService = __importStar(require("../services/roleService"));
 // Get all roles
 const getRoles = async (req, res) => {
     try {
-        const roles = await db_1.default.role.findMany({ orderBy: { name: 'asc' } });
+        const roles = await roleService.getRoles();
         res.json(roles);
     }
     catch (error) {
@@ -18,16 +46,10 @@ const getRoles = async (req, res) => {
     }
 };
 exports.getRoles = getRoles;
-// Get only admin-level active roles (for Add Admin dropdown)
+// Get only admin-level active roles
 const getAdminRoles = async (req, res) => {
     try {
-        const roles = await db_1.default.role.findMany({
-            where: {
-                is_active: true,
-                NOT: { name: { in: NON_ADMIN_ROLES } }
-            },
-            orderBy: { name: 'asc' }
-        });
+        const roles = await roleService.getAdminRoles();
         res.json(roles);
     }
     catch (error) {
@@ -37,13 +59,8 @@ const getAdminRoles = async (req, res) => {
 exports.getAdminRoles = getAdminRoles;
 // Get role by ID
 const getRoleById = async (req, res) => {
-    const { id } = req.params;
-    if (typeof id !== 'string') {
-        res.status(400).json({ error: 'Invalid ID' });
-        return;
-    }
     try {
-        const role = await db_1.default.role.findUnique({ where: { id } });
+        const role = await roleService.getRoleById(req.params.id);
         if (!role) {
             res.status(404).json({ error: 'Role not found' });
             return;
@@ -57,20 +74,8 @@ const getRoleById = async (req, res) => {
 exports.getRoleById = getRoleById;
 // Create Role
 const createRole = async (req, res) => {
-    const { name, description, permissions, is_active } = req.body;
-    if (!name) {
-        res.status(400).json({ error: 'Role name is required' });
-        return;
-    }
     try {
-        const role = await db_1.default.role.create({
-            data: {
-                name,
-                description,
-                permissions,
-                is_active: is_active !== undefined ? is_active : true
-            }
-        });
+        const role = await roleService.createRole(req.body);
         res.status(201).json(role);
     }
     catch (error) {
@@ -80,20 +85,8 @@ const createRole = async (req, res) => {
 exports.createRole = createRole;
 // Update Role
 const updateRole = async (req, res) => {
-    const { id } = req.params;
-    const { name, description, permissions, is_active } = req.body;
-    if (typeof id !== 'string') {
-        res.status(400).json({ error: 'Invalid ID' });
-        return;
-    }
     try {
-        const updateData = { name, description, permissions };
-        if (is_active !== undefined)
-            updateData.is_active = is_active;
-        const role = await db_1.default.role.update({
-            where: { id },
-            data: updateData
-        });
+        const role = await roleService.updateRole(req.params.id, req.body);
         res.json(role);
     }
     catch (error) {
@@ -103,21 +96,8 @@ const updateRole = async (req, res) => {
 exports.updateRole = updateRole;
 // Toggle Role active status
 const toggleRoleStatus = async (req, res) => {
-    const { id } = req.params;
-    const { is_active } = req.body;
-    if (typeof id !== 'string') {
-        res.status(400).json({ error: 'Invalid ID' });
-        return;
-    }
-    if (typeof is_active !== 'boolean') {
-        res.status(400).json({ error: 'is_active must be a boolean' });
-        return;
-    }
     try {
-        const role = await db_1.default.role.update({
-            where: { id },
-            data: { is_active }
-        });
+        const role = await roleService.toggleRoleStatus(req.params.id, req.body.is_active);
         res.json(role);
     }
     catch (error) {
@@ -125,26 +105,17 @@ const toggleRoleStatus = async (req, res) => {
     }
 };
 exports.toggleRoleStatus = toggleRoleStatus;
-// Delete Role (with guard: cannot delete if users are assigned)
+// Delete Role
 const deleteRole = async (req, res) => {
-    const { id } = req.params;
-    if (typeof id !== 'string') {
-        res.status(400).json({ error: 'Invalid ID' });
-        return;
-    }
     try {
-        // Check if role is assigned to any users
-        const usersWithRole = await db_1.default.user.count({ where: { role_id: id } });
-        if (usersWithRole > 0) {
-            res.status(400).json({
-                error: `Không thể xóa role này vì đang có ${usersWithRole} tài khoản đang sử dụng. Vui lòng chuyển các tài khoản đó sang role khác trước.`
-            });
-            return;
-        }
-        await db_1.default.role.delete({ where: { id } });
+        await roleService.deleteRole(req.params.id);
         res.status(204).send();
     }
     catch (error) {
+        if (error.message && error.message.includes('Không thể xóa role')) {
+            res.status(400).json({ error: error.message });
+            return;
+        }
         res.status(500).json({ error: 'Failed to delete role' });
     }
 };

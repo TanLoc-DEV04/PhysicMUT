@@ -2,6 +2,8 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = require("express");
 const userController_1 = require("../controllers/userController");
+const validateRequest_1 = require("../middlewares/validateRequest");
+const user_validator_1 = require("../validators/user.validator");
 const router = (0, express_1.Router)();
 /**
  * @openapi
@@ -25,7 +27,7 @@ const router = (0, express_1.Router)();
  *               items:
  *                 $ref: '#/components/schemas/User'
  */
-router.get('/', userController_1.getUsers);
+router.get('/', (0, validateRequest_1.validateRequest)(user_validator_1.getUsersSchema), userController_1.getUsers);
 /**
  * @openapi
  * /users:
@@ -62,7 +64,7 @@ router.get('/', userController_1.getUsers);
  *             schema:
  *               $ref: '#/components/schemas/User'
  */
-router.post('/', userController_1.createUser);
+router.post('/', (0, validateRequest_1.validateRequest)(user_validator_1.createUserSchema), userController_1.createUser);
 /**
  * @openapi
  * /users/{id}:
@@ -86,7 +88,7 @@ router.post('/', userController_1.createUser);
  *       404:
  *         description: User not found
  */
-router.get('/:id', userController_1.getUserById);
+router.get('/:id', (0, validateRequest_1.validateRequest)(user_validator_1.userIdSchema), userController_1.getUserById);
 /**
  * @openapi
  * /users/{id}:
@@ -119,7 +121,7 @@ router.get('/:id', userController_1.getUserById);
  *             schema:
  *               $ref: '#/components/schemas/User'
  */
-router.put('/:id', userController_1.updateUser);
+router.put('/:id', (0, validateRequest_1.validateRequest)(user_validator_1.updateUserSchema), userController_1.updateUser);
 /**
  * @openapi
  * /users/{id}/status:
@@ -146,7 +148,7 @@ router.put('/:id', userController_1.updateUser);
  *       200:
  *         description: User status updated
  */
-router.patch('/:id/status', userController_1.updateUserStatus);
+router.patch('/:id/status', (0, validateRequest_1.validateRequest)(user_validator_1.updateUserStatusSchema), userController_1.updateUserStatus);
 /**
  * @openapi
  * /users/{id}:
@@ -163,6 +165,6 @@ router.patch('/:id/status', userController_1.updateUserStatus);
  *       204:
  *         description: User deleted successfully
  */
-router.delete('/:id', userController_1.deleteUser);
+router.delete('/:id', (0, validateRequest_1.validateRequest)(user_validator_1.userIdSchema), userController_1.deleteUser);
 exports.default = router;
 //# sourceMappingURL=users.js.map

@@ -2,12 +2,12 @@ import { Form, Button, Input, Card, Tabs } from 'antd';
 import { ArrowLeftOutlined } from '@ant-design/icons';
 import { useNavigate, useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
-import RenderFormItem from '../Admin/RenderFormItem';
+import RenderFormItem from '../admin/RenderFormItem';
 import { useQuery } from '@tanstack/react-query';
 import { model3DService } from '../../../../services/models.service';
 import { theoryService } from '../../../../services/theory.service';
-import { useTheoryMutations } from './useTheoryMutations';
-import { use3DModelTypes } from '../3DModels/use3DModelManagement';
+import { useTheoryMutations } from './hooks/useTheoryMutations';
+import { use3DModelTypes } from '../3d-models/hooks/use3DModelManagement';
 import MathJaxPreview from '../../../../components/shared/MathJaxPreview';
 
 const AddEditTheory = () => {

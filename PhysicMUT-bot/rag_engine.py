@@ -2,8 +2,8 @@ import os
 from langchain_community.document_loaders import PyMuPDFLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_chroma import Chroma
-from langchain_openai import OpenAIEmbeddings
-from langchain_community.embeddings import SentenceTransformerEmbeddings
+# from langchain_openai import OpenAIEmbeddings
+from langchain_huggingface import HuggingFaceEmbeddings
 import shutil
 
 # Define paths
@@ -32,7 +32,7 @@ def chunk_text(documents):
 
 def get_vectorstore():
     """Returns the ChromaDB vector store."""
-    embedding_function = OpenAIEmbeddings(model="text-embedding-3-small")
+    embedding_function = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
     
     vectorstore = Chroma(
         persist_directory=CHROMA_PATH,
@@ -49,7 +49,7 @@ def create_vectorstore(file_path: str):
     documents = load_pdf(file_path)
     chunks = chunk_text(documents)
     
-    embedding_function = OpenAIEmbeddings(model="text-embedding-3-small")
+    embedding_function = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
     
     vectorstore = Chroma.from_documents(
         documents=chunks,
@@ -66,7 +66,7 @@ def query_rag(query: str, k: int = 4):
 
 def get_design_vectorstore():
     """Returns the ChromaDB vector store for design and pedagogical guidelines."""
-    embedding_function = OpenAIEmbeddings(model="text-embedding-3-small")
+    embedding_function = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
     
     vectorstore = Chroma(
         persist_directory="./chroma_design_db",

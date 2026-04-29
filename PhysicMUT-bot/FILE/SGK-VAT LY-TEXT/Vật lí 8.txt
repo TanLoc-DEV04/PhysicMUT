@@ -1,0 +1,4322 @@
+
+--- Trang 1 (Vật lí 8.pdf) ---
+BỘ GIÁO DỤC VÀ ĐAO TẠO
+
+
+--- Trang 2 (Vật lí 8.pdf) ---
+BỘ GIÁO DỤC VÀ ĐÀO TẠO
+
+VŨ QUANG (Tổng chủ biên)
+BÙI GIA THỊNH (Chủ biên)
+DƯƠNG TIẾN KHANG - VŨ TRỌNG RÝ - TRỊNH THỊ HẢI YẾN
+
+VẬT LÍ 8
+
+(Tái bản lân thứ mười bốn )
+
+NHÀ XUẤT BẢN GIÁO DỤC VIỆT NAM
+
+--- Trang 3 (Vật lí 8.pdf) ---
+CÁC KÍ HIỆU DÙNG TRONG SÁCH
+
+# Thu thập thông tin (quan sát tự nhiên, thí nghiệm, tiến hành
+thí nghiệm, vận dụng vốn kinh nghiệm, thông báo của giáo viên...).
+
+Xử lí thông tin (so sánh, phân tích, khái quát hoá, nêu dự đoán
+
+(giả thuyết), tiến hành thí nghiệm kiểm tra, rút ra kết luận...).
+
+Vận dụng.
+Câu hỏi.
+E _' câu hỏi, bài tập khó.
+
+Chịu trách nhiệm xuất bản : Chủ tịch Hội đồng Thành viên NGUYỄN ĐỨC THÁI
+Tổng Giám đốc HOÀNG LÊ BÁCH
+Chịu trách nhiệm nội dung : Tổng biên tập PHAN XUÂN THÀNH
+
+Biên tập lân đâu :`VŨ THỊ THANH MAI - PHẠM THỊ NGỌC THẮNG
+Biên tập tái bản :` ĐỖ THỊ BÍCH LIÊN
+Biên tập mĩ thuật : PHAM NGỌC TỚI
+Trình bày bìa: TẠ THANH TÙNG
+Sửa bản in :` ĐỖ THỊ BÍCH LIÊN
+Chế bản :` CÔNG TY CỔ PHẦN MĨ THUẬT VÀ TRUYỂN THÔNG
+
+Bản quyền thuộc Nhà xuất bản Giáo dục Việt Nam - Bộ Giáo dục và Đào tạo
+
+VẬT LÍ 8
+Mã số : 2H805T8
+
+In....... cuốn, (QÐ....) khổ 17 x 24 cm.
+Đơn vị in : „ địa chỉ
+Cơ sở in địa chỉ ..
+Số ĐKXB: 02-2018/CXBIPH/331-932/GD.
+
+Số QDXB: ..../QÐ - GD ngày .... tháng ..... năm 201
+In xong và nộp lưu chiều tháng .... năm 201
+
+Mã số ISBN : 978-604-0-00101-6
+
+
+--- Trang 4 (Vật lí 8.pdf) ---
+CHƯƠNG I CƠ HỌC
+
+Vừa to vừa nặng hơn kim,
+
+Thế mà tàu nổi, kim chìm ! Tại sao ?
+
+I8 Chuyển động là gì, đứng yên là gì ?
+
+I Thế nào là chuyền động đều, chuyền động không đều ?
+
+I§ Lực có quan hệ với vận tốc như thế nào ?
+
+li Quán tính là gì ?
+
+I Áp suất là gì ? Áp suất gây ra bởi chất rắn, chất lỏng, áp suất
+khí quyền có gì khác nhau ?
+
+8 Lực đầy Ác-si-mét là gì ? Khi nào thì vật nồi, khi nào thì vật chìm ?
+
+8 Công cơ học là gì ?
+
+I Công suất đặc trưng cho tính chất nào của việc thực hiện công ?
+
+I Cơ năng, động năng, thế năng là gì ?
+
+I# Thế nào là bảo toàn và chuyền hoá cơ năng ?
+
+—']
+
+--- Trang 5 (Vật lí 8.pdf) ---
+Bài 1
+CHUYỂN ĐỘNG CƠ HỌC
+
+Mặt Trời mọc đàng Đông, lặn đàng Tây (H.1.1). Như vậy có phải là Mặt Trời
+chuyển động còn Trái Đất đứng yên không ? Bài này sẽ giúp các em trả lời
+câu hỏi trên.
+
+... =>.
+..” =
+“ `
+`
+4...
+Hình 1.1
+
+I- LÀM THẾ NÀO ĐỂ BIẾT MỘT VẬT CHUYỂN ĐỘNG HAY ĐỨNG YÊN ?
+
+Làm thế nào để nhận biết một ôtô trên đường, một chiếc thuyền trên
+sông, một đám mây trên trời... đang chuyển động hay đứng yên ?
+
+I Các em có thể tìm ra nhiều cách khác nhau để nhận biết các vật trên
+chuyển động hay đứng yên.
+
+Trong Vật lí học, để nhận biết một vật chuyển động hay đứng yên người ta
+dựa vào vị trí của vật đó so với vật khác được chọn làm mốc (vật mốc).
+
+Có thể chọn bất kì một vật nào làm vật mốc. Thường người ta chọn Trái Đất
+và những vật gán với Trái Đất như nhà cửa, cây cối, cột cây số... làm vật mốc.
+Trong những bài sau, nếu không nói tới vật mốc thì ta hiểu ngâm vật mốc là
+Trái Đất hoặc những vật gắn với Trái Đất.
+
+Khi vị trí của vật so với vật mốc thay đối theo thời gian thì vật chuyến động
+so với vật mốc. Chuyền động này gọi là chuyển động cơ học (gọi tắt là
+chuyền động).
+
+LÊ QNỤ
+
+--- Trang 6 (Vật lí 8.pdf) ---
+l Hãy tìm ví dụ về chuyển động cơ học, trong đó chỉ rõ vật được chọn
+làm mốc.
+
+Khi nào một vật được coi là đứng yên ? Hãy tìm ví dụ về vật đứng yên,
+trong đó chỉ rõ vật được chọn làm mốc.
+
+Hình 1.2
+
+II - TÍNH TƯƠNG ĐỐI CỦA CHUYỂN ĐỘNG VÀ ĐỨNG YÊN
+I Hành khách ngồi trên một toa tàu đang rời khỏi nhà ga (H.1.2).
+© So với nhà ga thì hành khách chuyển động hay đứng yên ? Tại sao ?
+
+So với toa tàu thì hành khách chuyển động hay đứng yên ? Tại sao ?
+
+Hay dựa vào các câu trả lời trên để tìm từ thích hợp cho các chỗ trống
+của câu nhận xét sau đây :
+
+Một vật có thể là chuyền động ....(1).... nhưng lại là ....(2).... đối với vật khác.
+
+Hay tìm ví dụ để minh hoạ cho nhận xét trên.
+
+M Tù những ví dụ trên ta thấy một vật được coi là chuyển động hay
+đứng yên phụ thuộc vào việc chọn vật làm mốc. Ta nói : Chuyển động hay
+đứng yên có tính tương đối.
+
+Hày trả lời câu hỏi nêu ra ở đâu bài.
+
+—'Ì
+
+--- Trang 7 (Vật lí 8.pdf) ---
+II - MỘT SỐ CHUYỂN ĐỘNG THƯỜNG GẶP
+
+Đường mà vật chuyền động vạch ra
+gọi là quy đạo của chuyển động. Tuỳ
+theo hình dạng của quỹ đạo, người ta
+phân biệt chuyển động thẳng và
+chuyển động cong. Chuyển động tròn
+là một chuyển động cong đặc biệt
+(H.1.3a, b, c).
+
+b) Chuyển động cong của quả bóng bàn. €) Chuyển động tròn
+Hình 1.3 của đầu kim đông
+
+Hay tìm thêm ví dụ về chuyển động thẳng, chuyển động cong, chuyển
+động tròn thường gặp trong đời sống.
+
+Y IV - VẬN DỤNG
+
+Mỗi vật trong hình 1.4 chuyển động so với vật nào, đứng yên so với vật nào ?
+
+Có người nói : "Khi khoảng cách từ vật tới vật mốc không thay đổi thì vật
+đứng yên so với vật mốc". Theo em, nói như thế có phải lúc nào cũng đúng
+không ? Hãy tìm ví dụ minh hoạ cho lập luận của mình.
+
+Hình 1.4
+
+--- Trang 8 (Vật lí 8.pdf) ---
++ Sự thay đổi vị trí của một vật theo thời gian so với vật khác gọi là
+chuyển động cơ học.
+
+$ Chuyển động và đứng yên có tính tương đối tuỳ thuộc vào vật được
+chọn làm mốc. Người ta thường chọn những vật gắn với Trái Đất làm
+vật mốc.
+
+$ Các dạng chuyển động cơ học thường gặp là chuyển động thẳng,
+chuyển động cong.
+
+Có thể em chưa biết
+
+Trong các em, có thể có nhiều người cho rằng chuyển động của đầu van
+xe đạp là đơn giản vì đó chỉ là chuyển động tròn xung quanh trục bánh xe. Thực
+ra không đơn giản như vậy, vì đầu van xe đạp vừa chuyển động tròn xung
+quanh trục bánh xe, vừa cùng với xe đạp chuyển động thẳng trên đường. Do
+đó, đối với người đứng bên đường thì chuyển động của đầu van xe đạp khá
+phức tạp và có dạng như hình 1.5. Như vậy, việc chọn vật nào làm mốc không
+những quyết định tính chất đứng yên hay chuyển động của một vật mà còn
+quyết định nhiều tính chất khác nữa của chuyển động, chẳng hạn như hình
+dạng của đường đi như trong trường hợp van xe đạp nêu trên.
+
+Quy đạo chuyển động của đâu van xe đạp. Hình 1.5
+
+--- Trang 9 (Vật lí 8.pdf) ---
+Ở bài 1, ta đã biết cách làm thế nào để
+nhận biết được một vật chuyển động hay
+đứng yên, còn trong bài này ta sẽ tìm
+hiểu xem làm thế nào để nhận biết sự
+nhanh hay chậm của chuyển động.
+
+Hình 2.1
+
+I - VẬN TỐC LÀ GÌ ?
+I8 Bảng 2.1 ghi kết quả cuộc chạy 60m trong tiết thể dục của một nhóm học sinh.
+
+Bảng 2.1
+[6t | | 2 | 3 |+ | s |
+
+sTr Họ vàtên |Quãng đường| Thời gian | Xếp | Quãng đường
+học sinh chạy s(m) | chạy t(s) |hạng |chạy trong 1 giây
+
+L1 |NgwAn | 6ø | 1 || = —.
+
+C2 |mmam | [sẽ [| —- —
+
+Lê Văn Cao
+Đào Việt Hùng
+RA: mm Brrimnana
+
+e E8 Làm thế nào dẻ biết ai chạy nhanh, ai chạy chậm ? Hay ghi kết quả
+xếp hạng của từng học sinh vào cột 4.
+
+Hay tính quang đường mỗi học sinh chạy được trong 1 giây và ghi kết
+quả vào cột 5.
+
+Trong trường hợp này, quãng đường chạy được trong 1 giây gọi là vận tốc.
+€9 @ó thể dùng từ tốc độ thay cho vận tốc.
+
+KÃ—
+
+--- Trang 10 (Vật lí 8.pdf) ---
+Dựa vào bảng kết quả xếp hạng, hay cho biết độ lớn của vận tốc biểu thị
+tính chất nào của chuyền động và tìm từ thích hợp cho các chỗ trống của
+kết luận sau đây.
+
+Độ lớn của vận tốc cho biết sự ....(1)...., ....(2)... của chuyển động.
+Độ lớn của vận tốc được tính bàng ....(3).... trong một ....(4).... thời gian.
+
+I - CÔNG THỨC TÍNH VẬN TỐC
+Vận tốc được tính bàng công thức
+
+s
+M E. „ trong đó : v là vận tốc,
+
+s là quảng đường đi được,
+t là thời gian để đi hết quang đường đó.
+
+II - ĐƠN VỊ VẬN TỐC
+I Đơn vị vận tốc phụ thuộc vào đơn vị độ dài và đơn vị thời gian.
+Tìm đơn vị vận tốc thích hợp cho các chỗ trống ở bảng 2.2.
+
+Bảng 2.2
+
+ mmwu@ám [n | nó] mm | m [| mm,
+—Pmwmmgm | s | mu | h | s | +.
+
+_ Pmmme jJw |. |. | - | -'
+
+Đơn vị hợp pháp của vận tốc là mmét trên giây (m/)
+và kilômét trên giờ (km/h) : 1km/h ® 0,28m/s.
+
+X7
+Độ lớn của vận tốc được đo bàng dụng cụ gọi là KM \ ®m _ 2 sào
+tốc kế (còn gọi là đồng hồ vận tốc) (H.2.2). >fQ) ME Y S"
+
+vy a) Vận tốc của một ôtô là 36km/h ; của
+một người đi xe đạp là 10,8km/h ; của một tàu
+hoả là 10m/s. Điều đó cho biết gì ?
+
+b) Trong ba chuyển động trên, chuyển động Hình 2.2
+nào nhanh nhất, chậm nhất ? Tốc kế của xe máy.
+
+—°l
+
+
+--- Trang 11 (Vật lí 8.pdf) ---
+Một đoàn tàu trong thời gian 1,5h đi được quảng đường dài 81km. Tính
+vận tốc của tàu ra km/h, m/s và so sánh số đo vận tốc của tàu tính bàng các
+đơn vị trên.
+
+Một người đi xe đạp trong 40 phút với vận tốc là 12km/h. Hỏi quảng
+đường đi được là bao nhiêu km ?
+
+Một người đi bộ với vận tốc 4km/h. Tìm khoảng cách từ nhà đến nơi làm
+việc, biết thời gian cân để người đó đi từ nhà đến nơi làm việc là 30 phút.
+
+$ Độ lớn của vận tốc cho biết mức độ nhanh hay chậm của chuyển
+động và dược xác định bằng độ dài quãng đường đi được trong một
+đơn vị thời gian.
+$ Công thức tính vận tốc :
+v= ~Ề_ trong đó : s là độ dài quãng đường đi được,
+t † là thời gian để đi hết quãng đường đó.
+e Đơn vị vận tốc phụ thuộc vào đơn vị độ dài và đơn vị thời gian.
+L Đơn vị hợp pháp của vận tốc là m/s và kmih.
+
+Có thể em chưa biết
+
+® Trong hàng hải, người ta thường dùng "nút" làm đơn vị đo vận tốc. Nút là vận tốc
+của một chuyển động mỗi giờ đi được 1 hải lí. Biết độ dài của 1 hải lí là 1,852km ta
+dê dàng tính được nút ra km/h và m4 : 1 nút = 1,852km/h = 0,514m/s.
+
+Các tàu thuỷ có lắp cánh ngầm lướt trên sóng rất nhanh nhưng cũng không
+mấy tàu vượt qua được vận tốc 30 nút.
+
+® Vận tốc ánh sáng là 300 000km/s. Trong vũ trụ, khoảng cách giữa các thiên
+thể rất lớn, vì vậy trong thiên văn người ta hay biểu thị những khoảng cách đó
+bằng "năm ánh sáng". Năm ánh sáng là quãng đường ánh sáng truyền đi trong
+thời gian một năm.
+
+Một năm ánh sáng ứng với khoảng cách bằng :
+
+3.105.365.24.3 600 = 9,4608.1012km.
+
+Trong thiên văn, người ta lấy tròn một năm ánh sáng bằng 10!Êm (10 triệu tỉ mét).
+Thế mà khoảng cách từ Trái Đất tới ngôi sao gần nhất cũng lên tới 4,3 năm
+ánh sáng !
+
+LÍ
+
+--- Trang 12 (Vật lí 8.pdf) ---
+lš Bài 3
+CHUYỂN ĐỘNG ĐỀU - CHUYỂN ĐỘNG KHÔNG ĐỀU
+
+I- ĐỊNH NGHĨA
+
+I Chuyển động đều là chuyển động mà vận tốc có độ lớn không thay đối theo
+thời gian.
+
+Chuyển động không đều là chuyển động mà vận tốc có độ lớn thay đổi theo
+thời gian.
+
+
+--- Trang 13 (Vật lí 8.pdf) ---
+EEÑ Thả một bánh xe lăn trên máng nghiêng AD và máng ngang DF (H.3.1).
+Theo dõi chuyển động của trục bánh xe và ghi quảng đường trục bánh xe đi
+được sau những khoảng thời gian 3 giây liên tiếp, ta được kết quả ở bảng 3.1 :
+
+Bảng 3.1
+
+—. nnnn
+pH gQNNWNNN] | À 0 | o1: | 025 0,3 0,3
+sen) j Ệ } j l
+
+kEkes 2>
+t(S : l ) :
+
+Trên quảng đường nào chuyển động của trục bánh xe là chuyển động đều,
+chuyển động không đều ?
+
+Trong các chuyển động sau đây, chuyển động nào là đều, không đều ?
+a) Chuyển động của đầu cánh quạt máy khi quạt đang chạy ồn định.
+
+b) Chuyển động của ôtô khi khởi hành.
+
+c) Chuyển động của xe đạp khi xuống dốc.
+
+đ) Chuyền động của tàu hoả khi vào ga.
+
+II - VẬN TỐC TRUNG BÌNH CỦA CHUYỂN ĐỘNG KHÔNG ĐỀU
+
+Trên các quảng dường AB, BC, CD, trung bình mỗi giây trục bánh xe lăn
+được bao nhiêu mét thì ta nói vận tốc trung bình của trục bánh xe trên mỗi
+quảng đường đó là bấy nhiêu mét trên giây.
+
+e©® Hay tính độ lớn của vận tốc trung bình của trục bánh xe trên mỗi quảng
+đường từ A đến D. Trục bánh xe chuyển động nhanh lên hay chậm đi ?
+
+` III - VẬN DỤNG
+[E8 Chuyền động của ôtô chạy từ Hà Nội đến Hải Phòng là chuyền động đều
+
+hay không đều ? Tại sao ? Khi nói ôtô chạy từ Hà Nội tới Hải Phòng với vận
+tốc 50km/h là nói tới vận tốc nào ?
+
+—
+
+--- Trang 14 (Vật lí 8.pdf) ---
+Một người đi xe đạp xuống một cái dốc dài 120m hết 30s. Khi hết dốc,
+xe lăn tiếp một quang đường nàm ngang dài 60m trong 24s rồi dùng lại. Tính
+vận tốc trung bình của xe trên quảng đường dốc, trên quãng đường nằm
+ngang và trên cả hai quảng đường.
+
+K88 Một đoàn tàu chuyển động trong 5 giờ với vận tốc trung bình 30km/h.
+Tính quang đường đoàn tàu đi được.
+
+Xác định vận tốc trung bình của em khi chạy cự li 60m trong tiết thể dục
+ra m/s và km/h.
+
+$ Chuyển động đều là chuyển động mà vận tốc có độ lớn không thay
+đổi theo thời gian.
+
+$ Chuyển động không đều là chuyển động mà vận tốc có độ lớn thay
+đổi theo thời gian.
+
++ Vận tốc trung bình của một chuyển động không đều trên một quãng
+
+đường "" tính bằng công thức :
+Là" — Š , trong đó : s là quãng đường đi được,
+L † là thời gian để đi hết quãng đường đó.
+
+—°]
+
+--- Trang 15 (Vật lí 8.pdf) ---
+Có thể em chưa biết Một số vận tốc trung bình
+
+Ôtô du lịch :
+15m/s (54km/h)
+
+Người đi bộ : 1,5m/s (5,4km/h) _==a#f
+
+Máy bay dân dụng phản lực: 200m/s (720km/h)
+
+: Vận tốc âm thanh trong Vận tốc ánh sáng trong không khí :
+Người đi xe đạp : 4m/s (14,4km/h) Mẫu THẾ. s2 Ự THẾ MU Q HINH
+
+14
+
+--- Trang 16 (Vật lí 8.pdf) ---
+Bài 4
+BIỂU DIỄN LỤC
+
+Một đầu tàu kéo các toa với một lực có cường độ là 106N chạy theo hướng
+
+Bác - Nam. Làm thế nào để biểu diễn được lực kéo trên ?
+
+I- ÔN LẠI KHÁI NIỆM LỰC
+
+Ở lớp 6 chúng ta đa biết, lực có thể làm biến
+đạng, thay đổi chuyển động (nghĩa là thay đổi
+vận tốc) của vật.
+
+Hay mô tả thí nghiệm trong hình 4.1, hiện
+
+tượng trong hình 4.2 và nêu tác dụng của lực
+trong từng trường hợp.
+
+II - BIỂU DIỄN LỰC
+
+I1. Lục là một đại lượng vectơ
+
+Ngay từ lớp 6 ta đã biết một lực không những
+có độ lớn mà còn có phương và chiều. Một đại
+lượng vừa có độ lớn, vừa có phương và chiều là
+một đại lượng vectơ.
+
+I2. Cách biểu diễn và kí hiệu vectơ lực
+
+a) Để biểu diễn vectơ lực người ta dùng một
+mũi tên có :
+
+- Gốc là điểm mà lực tác dụng lên vật (gọi là
+điểm đặt của lực).
+
+- Phương và chiều là phương và chiều của lực.
+
+- Độ dài biểu diễn cường độ (độ lớn) của lực
+theo một tỉ xích cho trước.
+
+b) Vectơ lực được kí hiệu bằng chữ F có mũi
+tên ở trên : E, Cường độ của lực được kí hiệu
+bàng chữ F không có mũi tên ở trên : F.
+
+—°]
+
+--- Trang 17 (Vật lí 8.pdf) ---
+Ví dụ : Một lực 15N tác dụng lên xe lăn A F=18N
+
+B. Các yếu tố của lực này được biếu diễn YWE ...:
+và kí hiệu như sau (H.4.3) : z 5N
+
+- Điểm đặt A. Hình 4.3
+
+- Phương nằm ngang, chiều từ trái
+sang phải.
+
+- Cường độ F = 15N.
+
+Fị
+Ậ B
+II - VẬN DỤNG I"WF- ;
+4) b) š
+
+RE Biều diễn những lực sau dây :
+- Trọng lực của một vật có khối lượng
+5kg (ti xích 0,5cm ứng với 10N).
+
+- Lực kéo 15000N theo phương nằm
+ngang, chiều từ trái sang phải (ti xích
+
+1cm ứng với 5 000N). X (xy là phương nằm ngang) y
+Diễn tả bằng lời các yếu tố của các Q9
+lực vẽ ở hình 4.4. Hình 4.4
+
+Lực là một đại lượng vectơ được biểu diễn bằng một mũi tên
+có : + Gốc là điểm đặt của lực.
+
++ Phương, chiều trùng với phương, chiều của lực.
+
++ Độ dài biểu thị cường độ của lực theo tỉ xích cho trước.
+
+La
+
+--- Trang 18 (Vật lí 8.pdf) ---
+Bài 5
+SỰ CÂN BẰNG LỰC - QUÁN TÍNH
+
+Ở lóp 6 ta đã biết một vật dang đứng yên
+chịu tác dụng của hai lục cân bằng sẽ
+tiếp tục đứng yên (H.5.1). Vậy, một vật
+đang chuyển động chịu tác dụng của hai
+lực cân bằng sẽ thế nào ?
+
+I - HAI LỰC CÂN BẰNG
+1. Hai lực cân bằng là gì ?
+
+8 Trong hình 5.2 quyển sách đặt trên
+bàn, quả câu treo trên dây, quả bóng đặt
+trên mặt đất đều đứng yên vì chịu tác
+dụng của các lực cân bàng.
+
+® Hay kể tên và biểu diễn các lực
+tác dụng lên quyển sách, quả câu, quả
+bóng có trọng lượng lần lượt là 3N ;
+0,5N ; 5N, bàng các vectơ lực. Nhận
+xét về điểm đặt, cường độ, phương,
+chiều của hai lực cân bàng.
+
+2. Tác dụng của hai lực cân bằng lên một
+vật đang chuyền động
+
+ma) Dự đoán. Ta da biết lực là nguyên
+nhân làm thay đổi chuyền động. Khi các
+
+Hình 5.2
+
+lực tác dụng lên vật không cân bàng nhau thì chuyển động của vật bị thay đổi
+(chuyển động nhanh lên, chuyển động chậm lại, chuyển động theo hướng
+khác). Vậy khi các lực tác dụng lên vật cân bàng nhau thì chuyển động của
+
+Vật sẽ ra sao ?
+
+Ta có thể dự đoán : Khi đó chuyển động của vật sẽ không thay đổi, nghĩa
+
+là vật sẽ chuyển động thảng đều.
+
+—_"I
+
+--- Trang 19 (Vật lí 8.pdf) ---
+M b) Thí nghiệm kiếm tra
+
+Muốn biết dự đoán trên có đúng không phải làm thí nghiệm kiểm tra. Nhà
+bác học người Anh A-tút (Atwood (1746 - 1807)) là người đầu tiên đả tìm ra
+cách làm thí nghiệm để kiểm tra dự đoán trên.
+
+Hai quả cân A và B giống hệt nhau được treo vào một sợi dây vắt qua một
+ròng rọc cố định (H.5.3a). Một thước đặt ở bên dùng để đo quảng đường
+chuyển động của A.
+
+Hình 5.3
+® Hay quan sát thí nghiệm để trả lời các câu hỏi sau :
+
+Tại sao quả cân A ban đâu đứng yên ?
+
+Đặt thêm một vật nặng A' lên quả cân A (H.5.3b). Tại sao quả cân A cùng
+với A' sẽ chuyển động nhanh dân ?
+
+Khi quả cân A chuyển động qua lỗ K thì vật nặng A' bị giữ lại (H.5.3c, d).
+Lúc này quả cân A còn chịu tác dụng của những lực nào ?
+
+18
+
+--- Trang 20 (Vật lí 8.pdf) ---
+EE Hay do quảng đường di được của quả cân A sau mỗi khoảng thời gian
+2 giây, ghi vào bảng 5.1 và tính vận tốc của A.
+
+Bảng 5.1
+
+® Từ thí nghiệm trên ta thấy rằng một vật
+đang chuyền động mà chịu tác dụng của
+hai lục cân bằng thì sẽ tiếp tục chuyển
+động thảng đều.
+
+II- QUÁN TÍNH
+
+M 1. Nhận xét. Ôtô, tàu hoả, xe máy khi
+bát đầu chuyển động không đạt ngay
+vận tốc lớn mà phải tăng dân ; khi đang
+chuyển động, nếu phanh (thắng) gấp
+cũng không dừng lại ngay mà còn trượt
+tiếp một đoạn.
+
+Khi chịu lực tác dụng, mọi vật đều không
+thể thay đồi vận tốc đột ngột được vì mọi
+vật đều có quán tính.
+
+Y 2. Vận dụng
+
+Búp bê đang đứng yên trên xe. Bất
+chợt đẩy xe chuyển động về phía trước
+(H.5.4). Hỏi búp bê sẽ ngã về phía nào ?
+Tại sao ?
+
+Đầy cho xe và búp bê cùng chuyền
+động rồi bất chợt dừng xe lại. Hỏi búp bê
+sẽ ngã về phía nào ? Tại sao ?
+
+
+--- Trang 21 (Vật lí 8.pdf) ---
+Hay dùng khái niệm quán tính đề giải thích các hiện tượng sau đây :
+
+a) Khi ôtô đột ngột rẻ phải, hành khách trên xe bị nghiêng về bên trái.
+
+b) Khi nhảy từ bậc cao xuống, chân ta bị gập lại.
+
+c) Bút tắc mực, ta vầy mạnh, bút lại có thể viết tiếp được.
+
+đ) Khi cán búa lỏng, có thể làm chặt lại bàng cách gõ mạnh đuôi cán xuống đất.
+
+e) Đặt một cốc nước lên tờ giấy mỏng. Giật nhanh tờ giấy ra khỏi đáy cốc thì
+cốc vẫn đứng yên.
+
+© Hai lực cân bằng là hai lực cùng đặt lên một vật, có cường độ bằng
+nhau, phương nằm trên cùng một đường thẳng, chiều ngược nhau.
+$ Dưới tác dụng của các lực cân bằng, một vật đang đứng yên sẽ tiếp tục
+đứng yên ; đang chuyển động sẽ tiếp tục chuyển động thẳng đều.
+Chuyển động này được gọi là chuyển động theo quán tính.
+$ Khi có lực tác dụng, mọi vật không thể thay đổi vận tốc đột ngột được
+vì có quán tính.
+
+Có thể em chưa biết
+
+Dưới tác dụng của trọng lực, con người và mọi sinh vật khác trên Trái Đất đều
+chuyển động theo Trái Đất. Ở gần xích đạo vận tốc của chuyển động này là
+khoảng 465m/s (khoảng 1 674km/h). Hãy tưởng tượng nếu đột nhiên không còn
+lực hút của Trái Đất thì con người và mọi sinh vật khác sẽ như thế nào 2? Khi đó,
+do quán tính con người và mọi sinh vật ở vùng xích đạo sẽ bị văng ra khỏi
+Trái Đất và chuyển động thẳng đều với vận tốc 1 674km/h, nghĩa là bằng vận tốc
+của một máy bay phản lực chiến đấu. Tất nhiên, đây chỉ là tưởng tượng thôi I
+
+:ao
+
+--- Trang 22 (Vật lí 8.pdf) ---
+Bài 6
+LỰC MA SÁT
+
+Sự khác nhau cơ bản giữa trục bánh xe bò ngày xưa và trục bánh xe đạp, trục
+bánh xe ôtô bây giờ là ở chỗ trục bánh xe bò không có ổ bi còn trục bánh xe
+đạp, bánh xe ôtô thì có ổ bi. Thế mà con người đã phải mất hàng chục thế kỉ
+mới tạo nên được sự khác nhau đó.
+
+Bài này giúp các em phần nào hiểu được ý nghĩa của việc phát mình ra ổ bi.
+
+I- KHI NÀO CÓ LỰC MA SÁT ?
+
+1. Lực ma sát trượt
+
+Khi bánh xe đạp đang quay, nếu bóp nhẹ phanh thì vành bánh chuyển
+động chậm lại. Lực sinh ra do má phanh ép sát lên vành bánh, ngăn cản
+chuyển động của vành được gọi là lực ma sát trượt. Nếu bóp phanh mạnh
+thì bánh xe ngừng quay và trượt trên mặt đường, khi đó có lực ma sát trượt
+giữa bánh xe và mặt đường.
+
+© Hay tìm ví dụ về lực ma sát trượt trong đời sống và ki thuật.
+
+2. Lực ma sát lăn
+
+Khi ta búng hòn bi trên mặt sàn, hòn bi lăn chậm dân rồi dùng lại.
+Lực do mặt bàn tác dụng lên hòn bi, ngăn cản chuyển động lăn của hòn
+bi là lực ma sát lăn.
+
+e® Hãy tìm thêm ví dụ về lực ma sát lăn trong đời sống và ki thuật.
+
+Trong các trường hợp vẽ ở hình 6.1, trường hợp nào có lực ma sát trượt,
+trường hợp nào có lực ma sát lăn ?
+
+Từ hai trường hợp trên em có nhận xét gì về cường độ của lực ma sát trượt
+và lực ma sát lăn.
+
+
+--- Trang 23 (Vật lí 8.pdf) ---
+3. Lực ma sát nghỉ
+
+Móc lực kế vào một
+vật nặng đặt trên mặt
+bàn rồi kéo từ từ lực kế
+theo phương nàm ngang
+(H.6.2). Đọc số chỉ của
+lực kế khi vật nặng còn
+chưa chuyền động.
+
+e BBổi Tại sao trong thí
+nghiệm trên, mặc dù có
+lực kéo tác dụng lên vật
+nặng nhưng vật vẫn
+đúng yên ?
+
+® Lục cân bàng với lực kéo ở thí nghiệm trên được gọi là ực ma sát nghỉ.
+
+Hãy tìm ví dụ về lực ma sát nghi trong đời sống và ki thuật.
+
+II- LỰC MA SÁT TRONG ĐỜI SỐNG VÀ KĨ THUẬT
+
+1. Lực ma sát có thể có hại
+
+|Có| Hay nêu tác hại của lực ma sát và các biện pháp làm giảm lực ma sát
+trong các trường hợp vẽ ở hình 6.3.
+
+Đẩy thùng đồ
+
+Khó quá |
+
+Hình 6.3
+
+
+--- Trang 24 (Vật lí 8.pdf) ---
+2. Lực ma sát có thể có ích
+
+Hay quan sát các trường hợp vẽ ở hình 6.4 và tưởng tượng xem nếu
+không có lực ma sát thì sẽ xảy ra hiện tượng gì ? Hay tìm cách làm tăng lực
+ma sát trong những trường hợp này.
+
+Viết bảng Bulông (vít và ốc)
+-emaxe EimmkÐn
+Đánh diêm à
+q) b)
+Ôtô phanh gấp
+
+©) Hình 6.4
+
+Y II - VẬN DỤNG
+Hây giải thích các hiện tượng sau và cho biết trong các hiện tượng này
+ma sát có ích hay có hại :
+a) Khi đi trên sàn đá hoa mới lau dễ bị ngã.
+b) Ôtô đi vào chỗ bùn lây, có khi bánh quay tít mà xe không tiến lên được.
+€) Giày đi mãi đế bị mòn.
+đ) Phải bôi nhựa thông vào dây cung ở cân kéo nhị (đàn cò).
+Ổ bi có tác dụng gì ? Tại sao việc phát minh ra ồ bi lại có ý nghĩa quan
+trọng đến sự phát triển của khoa học và công nghệ ?
+23 ]
+
+--- Trang 25 (Vật lí 8.pdf) ---
+$ Lực ma sát trượt sinh ra khi một vật trượt trên bề mặt của vật khác.
+
+© Lực ma sát lăn sinh ra khi một vật lăn trên bề mặt của vật khác.
+
++ Lực ma sát nghỉ giữ cho vật không trượt khi vật bị tác dụng của
+lực khác.
+
++ Lực ma sát có thể có hại hoặc có ích.
+
+Có thể em chưa biết
+
+e Ma sát có ý nghĩa quan trọng trong thực tế. Nó có thể có hại nhưng cũng có
+thể có ích. Do đó, ta cần biết cách làm giảm cũng như làm tăng ma sát.
+Nhờ dầu mỡ bôi trơn, ma sát trượt giảm từ 8 đến 10 lần. Tuy nhiên trong nhiều
+trường hợp lực ma sát vẫn còn lớn và cần có giải pháp giảm lực này. Để giảm
+ma sát người ta phát minh ra các ổ trục, ổ bi lăn, chúng có tác dụng giảm ma sát
+từ 20 đến 30 lần.
+
+e Hãy thử hình dung bỗng nhiên ma sát biến mất thì hiện tượng gì sẽ xảy ra ? Ta
+không đứng vững, cũng không ngồi vững được. Sách vở, đồ đạc rất khó nằm
+yên trên bàn. Ta không cầm nổi vật gì trên tay vì mọi cái đều trơn tuột. Đinh rời
+khỏi tường. Sợi không kết thành vải. Người và động vật không đi lại được. Xe
+không chạy được. Vật nào đang chuyên động thì sẽ chuyền động mãi không
+dừng được...
+
+l
+
+--- Trang 26 (Vật lí 8.pdf) ---
+Tại sao máy kéo nặng nề lại chạy được bình
+thường trên nền đất mềm (H.7.14), còn ôtô
+nhẹ hơn nhiều lại có thể bị lún bánh và sa lây
+trên chính quảng đường này (H.7.1b) ?
+
+I- ÁP LỰC LÀ GÌ
+
+M Người và tủ (H.7.2), bàn ghế, máy móc,...
+luôn tác dụng lên nền nhà những lực ép có
+phương vuông góc với mặt sàn. Những lực này
+gọi là áp lực.
+
+Áp lực là lục ép có phương vuông góc với mặt
+bị ép.
+
+® Trong số các lực được ghi ở dưới hình 7.3a
+
+và b, thì lực nào là áp lực ? Hình Z2
+
+- Lực của máy kéo tác dụng lên mặt đường. - Lực của ngón tay tác dụng
+- Lục của máy kéo tác dụng lên khúc gỗ. lên đâu định.
+- Lực của mũi đinh tác dụng
+
+Hình 73 lên gỗ.
+so ]
+
+--- Trang 27 (Vật lí 8.pdf) ---
+II- ÁP SUẤT
+
+1. Tác dụng của áp lực phụ thuộc vào những yếu tố nào ?
+
+Để trả lời cho câu hỏi đặt ra ở đầu bài cần phải tìm hiểu xem tác dụng của
+áp lực phụ thuộc vào những yếu tố nào ?
+
+© Hay dựa vào thí nghiệm ở hình 7.4 cho biết tác dụng của áp lực phụ
+thuộc vào những yếu tố nào bàng cách so sánh các áp lực, diện tích bị ép và
+độ lún của khối kim loại xuống bột hoặc cát mịn của trường hợp (1) với
+trường hợp (2), của trường hợp (1) với trường hợp (3)
+
+Tìm các dấu "=", ">", "<" thích hợp cho các ô trống của bảng 7.1.
+
+Bảng 7.1 Bảng so sánh
+
+bmmaug6 | Đam@
+hạ
+
+® Kết luận
+
+Chọn từ thích hợp cho các chỗ trống của kết luận dưới đây :
+Tác dụng của áp lục càng lón khi áp lực .... (1).... và diện tích bị ép .... (2)....
+
+I2. Công thức tính áp suất
+Để xác định tác dụng của áp lực lên mặt bị ép, người ta đưa ra khái niệm
+áp suất. Áp suất được tính bằng độ lớn của áp lực trên một đơn vị điện tích
+bị ớ.
+là
+=—. trong đó : p là áp suất, F là áp lực tác đ lên
+S = Ti j ép có diện tích là S. bào
+
+Nếu đơn vị lực là niufơn (N), đơn vị diện tích là mớ vuông (m2) thì đơn vị của áp suất
+
+là niutơn trên mớứ vuông (Ñ/m?), còn gọi là paxœn, kí hiệu là Pa : 1Pa = 1N/m2.
+26
+
+--- Trang 28 (Vật lí 8.pdf) ---
+Y II- VẬN DỤNG
+
+Dựa vào nguyên tắc nào để làm tăng, giảm áp suất ? Nêu những ví dụ
+về việc làm tăng, giảm áp suất trong thực tế.
+
+Một xe tăng có trọng lượng 340 000N. Tính áp suất của xe tăng lên mặt
+đường nàm ngang, biết rằng diện tích tiếp xúc của các bản xích với đất là
+1,5m2. Hay so sánh áp suất đó với áp suất của một ôtô nặng 20 000N có diện
+tích các bánh xe tiếp xúc với mặt đất nằm ngang là 250cm2. Dựa vào kết quả
+tính toán ở trên, hay trả lời câu hỏi đã đặt ra ở phân mở bài.
+
++ Áp lực là lực ép có phương vuông góc với mặt bị ép.
+& Áp suất được tính bằng công thức
+F
+P=E—
+
+: S
++ Đơn vị của áp suất là paxcan (Pa) : 1Pa = 1N/m2.
+
+Có thể em chưa biết
+
+e Áp suất ánh sáng là áp suất mà ánh sáng tác
+dụng lên vật được rọi sáng. Áp suất này rất bé, cỡ
+một phần triệu Pa. Năm 1899, nhà vật lí Lê-bê-đép
+(người Nga) lần đầu tiên đã đo được áp suất ánh
+sáng bằng thí nghiệm rất tinh vi. Chính áp suất của
+ánh sáng mặt trời đã làm cho đuôi sao chổi bao giờ
+cũng hướng từ phía Mặt Trời ra. Hình 7.5 là ảnh
+chụp sao chổi Ha-lơ Bốp ngày 6 tháng 4 năm 1997
+trên bầu trời Pa-ri. Trong ảnh này, Mặt Trời nằm ở
+phía nào ?
+
+e Bảng 7.2. Một số áp suất
+
+Áp suất ở tâm Mặt Trời
+Áp suất ở tâm Trái Đất
+Áp suất lớn nhất tạo được trong phòng thí nghiệm
+Pa
+a
+4
+
+Áp suất dưới đáy biển ở chỗ sâu nhất 1,1.108
+Áp suất của không khí trong lốp ôtô 4.105 Pa
+
+Áp suất khí quyển ở mức mặt biển 1.105 P
+Áp suất bình thường của máu 1,6.107 Pa
+
+27
+
+—”I
+
+
+--- Trang 29 (Vật lí 8.pdf) ---
+Bài 8
+ÁP SUẤT CHẤT LỎNG - BÌNH THÔNG NHAU
+
+Tại sao khi lặn sâu, người thợ lặn phải mặc bộ
+áo lặn chịu được áp suất lớn (H.8.1) ?
+
+I- SỰ TỒN TẠI CỦA ÁP SUẤT TRONG LÒNG
+CHẤT LỎNG
+
+Ta đã biết, khi đặt vật rán lên mặt bàn (H.8.2),
+vật rắn sẽ tác dụng lên mặt bàn một áp suất
+theo phương của trọng lực. Còn khi đổ một
+chất lỏng vào trong bình thì chất lòng có gây
+áp suất lên bình không, nếu có thì áp suất này
+có giống áp suất của chất rắn không ?
+
+Hình 8.1
+I1. Thí nghiệm 1
+
+Một bình hình trụ có đáy C và các lỗ A, B ở thành bình được bịt bàng một màng
+cao su mỏng (H.8.3a).
+
+Hay quan sát hiện tượng xảy ra khi ta đổ nước vào bình.
+
+G Các màng cao su bị biến dạng (H.8.3b) chứng tỏ điều gì ?
+
+Gó phải chất lỏng chỉ tác dụng áp suất lên bình theo một phương như
+chất rán không ?
+
+P lø
+Hình 8.2 4)
+
+2z
+
+--- Trang 30 (Vật lí 8.pdf) ---
+2. Thí nghiệm 2
+Lấy một bình trụ thuỷ tinh có đĩa D tách rời dùng làm đáy. Muốn D đậy kín
+đáy ống ta phải dùng tay kéo dây buộc đia D lên (H.8.4a).
+
+® Khi nhãn bình vào sâu trong nước rồi buông tay kéo sợi dây ra, đĩa D
+vẫn không rời khỏi đáy kể cả khi quay bình theo các phương khác nhau
+(H.8.4b). Thí nghiệm này chứng tỏ điều gì ?
+
+q) D Hình 8.4
+
+®3. Kết luận
+Dựa vào các thí nghiệm trên, hãy chọn từ thích
+hợp cho các chỗ trống trong kết luận sau đây :
+
+Chất lóng không chỉ gây ra áp suất lên ....(1).... bình,
+mà lên cả ....(2).... bình và các vật ở ....(3).... chất lỏng.
+
+® II - CÔNG THÚC TÍNH ÁP SUẤT CHẤT LỎNG
+
+Giả sử có một khối chất lỏng hình trụ, diện tích đáy là
+S, chiều cao là h (H.8.5). Hay dựa vào công thức tính áp
+suất em đã học ở bài trước để chứng minh công thức
+
+p=d.h, trong đó : p là áp suất ở đáy cột chất lỏng,
+đd là trọng lượng riêng của chất lỏng,
+h là chiều cao của cột chất lỏng.
+p tính bằng Pa, d tính bàng N/m3, h tính bàng m.
+
+Công thức này cũng áp dụng cho một điểm bất kì trong lòng chất lỏng, chiều cao
+của cột chất lỏng cũng là độ sáu của điểm đó so với mặt thoáng.
+29 ]
+
+--- Trang 31 (Vật lí 8.pdf) ---
+Suy ra :
+
+Trong một chất lỏng đứng yên, áp suất tại những điểm trên cùng một mặt
+phảng nàm ngang (có cùng độ sâu h) có độ lớn như nhau. Đây là một đặc
+điểm quan trọng của áp suất chất lỏng được ứng dụng nhiều trong khoa
+học và đời sống.
+
+® 1II - BÌNH THÔNG NHAU
+
+" Đổ nước vào một bình có hai nhánh thông nhau (bình thông nhau).
+Hay dựa vào công thức tính áp suất chất lỏng và đặc điểm của áp suất chất
+lỏng nêu ở trên đề so sánh áp suất pạ, pạ và dự đoán xem khi nước trong bình
+đã đứng yên thì các mực nước sẽ ở trạng thái nào trong ba trạng thái vẽ ở
+hình 8.6a, b, c.
+
+Làm thí nghiệm kiểm tra, rồi tìm từ thích hợp cho chỗ trống trong kết luận
+
+c) Hình 8.6
+
+dưới đây :
+® Kết luận : Trong bình thông nhau chứa cùng một chất lóng đứng yên, các
+mực chất lỏng ở các nhánh luôn luôn ớ........ độ cao.
+
+Y IV - MÁY THỦY LỰC
+
+Máy thủy lực có cấu tạo gồm hai xilanh, một
+nhỏ, một to, được nối thông với nhau. Trong
+hai xilanh có chứa đầy chất lỏng, thường là
+dầu. Hai xilanh được đậy kín bằng hai pít-tông
+(H.8.7).
+
+Khi tác dụng một lực f lên pit-tông nhỏ có
+diện tích s, lực này gây áp suất
+p = f⁄s lên chất lỏng. Áp suất này được chất
+lỏng truyền nguyên vẹn tới pít-tông lớn có
+diện tích S và gây nên lực nâng F lên pít-tông này :
+
+:ạo
+
+
+--- Trang 32 (Vật lí 8.pdf) ---
+Như vậy, diện tích S lớn hơn diện tích s bao nhiêu lần thì lực F sẽ lớn hơn
+lực f bấy nhiêu lần. Nhờ đó mà ta có thể dùng tay nâng cả một chiếc ôtô.
+Người ta còn sử dụng máy thủy lực để nén các vật.
+Y V - VẬN DỤNG
+Hày trả lời câu hỏi ở đầu bài.
+Một thùng cao 1,2m dựng đây nước.
+Tính áp suất của nước lên đáy thùng và
+lên một điểm ở cách đáy thùng 0,4m.
+Trong hai ấm vẽ ở hình 8.8, ấm nào
+đựng được nhiều nước hơn ?
+Hình 8.9 vẽ một bình kín có gắn
+thiết bị dùng để biết mục chất lỏng chứa
+trong nó. Bình A được làm bàng vật liệu
+không trong suốt. Thiết bị B được làm
+bàng vật liệu trong suốt. Hay giải thích
+hoạt động của thiết bị này.
+Người ta dùng một lực 1000 N để
+nâng một vật nặng 50000 N bàng một máy thủy lực. Hỏi điện tích của
+pít-tông lớn và pít-tông nhỏ của máy thủy lực này có đặc điểm gì ?
+
+Hình 8.8
+R
+
+B
+
+Hình 8.9 R
+
+$ Chất lỏng gây áp suất theo mọi phương lên đáy bình, thành bình và
+các vật ở trong lòng nó.
+
+© Công thức tính áp suất chất lỏng : p = d.h, trong đó h là độ sâu tính
+từ điểm tính áp suất tới mặt thoáng chất lỏng, d là trọng lượng riêng
+của chất lỏng.
+
+$ Trong bình thông nhau chứa cùng một chất lỏng đứng yên, các mặt
+thoáng của chất lỏng ở các nhánh khác nhau đều ở cùng một độ cao.
+
+& Trong máy thủy lực, nhờ chất lỏng có thể truyền nguyên vẹn độ tăng
+áp suất, nên ta luôn có : T= trong đó f là lực tác dụng lên
+
+L pít-tông có tiết diện s, F là lực Šc dụng lên pít-tông có tiết diện S.
+
+— ]
+
+--- Trang 33 (Vật lí 8.pdf) ---
+Bài 9
+ÁP SUẤT KHÍ QUYỂN
+
+Khi lộn ngược một cốc
+nước đây được đậy kín
+bằng một tờ giấy không
+thấm nước (H.9.1) thì
+nước có chảy ra ngoài
+không ? Vì sao ?
+
+I - SỰ TỒN TẠI CỦA ÁP SUẤT KHÍ QUYỀN
+
+8 Trái Đất được bao bọc bởi một lớp không khí dày
+tới hàng ngàn kilômet, gọi là khí quyền. Con người
+và mọi sinh vật khác trên mặt đất đều đang sống
+“dưới đáy” của “đại dương không khí” khổng lồ này.
+Vì không khí cũng có trọng lượng nên Trái Đất và
+mọi vật trên Trái Đất đều chịu áp suất của lớp
+không khí bao quanh Trái Đất. Áp suất này được
+gọi là áp suất khí quyến.
+
+Có vô số hiện tượng chứng tỏ sự tồn tại của áp suất
+khí quyền và áp suất này tác dụng theo mọi phương.
+Sau đây là một vài ví dụ :
+
+® 1. Thí nghiệm 1
+
+Hút bớt không khí trong một vỏ hộp đựng sửa bàng
+giấy, ta thấy vỏ hộp bị bẹp theo nhiều phía (H.9.2).
+Hay giải thích tại sao ?
+
+® 2. Thi nghiệm 2. Cám một ống thuỷ tỉnh ngập
+trong nước, rồi lấy ngón tay bịt kín đầu phía trên
+và kéo ống ra khỏi nước (H.9.3).
+
+Nước có chảy ra khỏi ống hay không ? Tại sao ?
+Nếu bỏ ngón tay bịt đâu trên của ống ra thì xảy
+ra hiện tượng gì ? Giải thích tại sao ?
+
+(32
+
+Hình 9.3
+
+--- Trang 34 (Vật lí 8.pdf) ---
+® 3. Thí nghiệm 3
+
+Năm 1654, Ghê-rích
+(1602 - 1678), Thị trưởng
+thành phố  Mác-đơ-buốc
+của Đúc đã làm thí
+nghiệm sau (H.9.4):
+
+Ông lấy hai bán câu bàng
+đồng rồng, đường kính
+khoảng 30cm, mép được
+mài nhản, úp chặt vào
+nhau sao cho không khí
+không lọt vào được. Sau đó ông dùng máy bơm
+rút không khí bên trong quả câu ra ngoài qua
+một van gắn vào một bán cầu rồi đóng khoá
+van lại. Người ta phải dùng hai đàn ngựa
+mỗi đàn tám con mà cũng không kéo được
+hai bán cầu rời ra.
+
+Eổ Hay giải thích tại sao ?
+
+II - ĐỘ LỚN CỦA ÁP SUẤT KHÍ QUYỂN
+
+I 1. Thí nghiệm Tô-ri-xe-li*
+
+Nhà bác học Tô-ri-xe-li (1608 - 1647) người
+I-ta-li-a là người đầu tiên đo được độ lớn của
+áp suất khí quyền.
+
+Ông lấy một ống thuỷ tinh dài khoảng 1m, một
+đầu kín, đổ đầy thuỷ ngân vào. Lấy ngón tay
+bịt miệng ống rồi quay ngược ống xuống. Sau
+đó, nhúng chìm miệng ống vào một chậu đựng
+thuỷ ngân rồi bỏ ngón tay bịt miệng ống ra.
+Ông nhận thấy thuỷ ngân trong ống tụt xuống,
+còn lại khoảng 76cm tính từ mặt thoáng của
+thuỷ ngân trong chậu (H.9.5). Hình 9.5
+
+€9 Vì thí nghiệm này phải dùng thuỷ ngân là chất độc hại nên không thể tiến hành trong lóp được.
+33
+
+--- Trang 35 (Vật lí 8.pdf) ---
+® 2. Độ lớn của áp suất khí quyền
+Hay tính độ lớn của áp suất khí quyền bằng cách trả lời các câu hỏi sau :
+
+Các áp suất tác dụng lên A (ở ngoài ống) và lên B (ở trong ống) có bằng
+nhau không ? Tại sao ?
+
+Áp suất tác dụng lên A là áp suất nào ? Áp suất tác dụng lên B là áp
+suất nào ?
+
+Hãy tính áp suất tại B, biết trọng lượng riêng của thuỷ ngân (Hg) là
+136 000N/m. Từ đó suy ra độ lớn của áp suất khí quyển.
+
+Chú ý : Vì áp suất khí quyền bằng áp suất gây ra bởi cột thuỷ ngân trong thí
+nghiệm Tô-ri-xe-li, nên người ta còn dùng chiều cao của cột thuỷ ngân này
+để diễn tả độ lớn của áp suất khí quyển. Ví dụ, áp suất khí quyển ở bãi biển
+Sầm Sơn vào khoảng 76cmHg (760mmHg).
+
+Y III - VẬN DỤNG
+Giải thích hiện tượng nêu ra ở đầu bài.
+Nêu ví dụ chứng tỏ sự tồn tại của áp suất khí quyển.
+
+Nói áp suất khí quyển bàng 76cmHg có nghĩa là thế nào ? Tính áp suất này
+ra N/mZ.
+
+[BH Trong thí nghiệm của Tô-ri-xe-li, giả sử không dùng thuỷ ngân mà dùng
+nước thì cột nước trong ống cao bao nhiêu ? Ống Tô-ri-xe-li phải dài ít nhất
+là bao nhiêu ?
+
+IC12b Tại sao không thể tính trực tiếp áp suất khí quyền bàng công thức p = d.h ?
+
++ Trái Đất và mọi vật trên Trái Đất đều chịu tác dụng của áp suất
+khí quyển theo mọi phương.
+
+@ Áp suất khí quyển bằng áp suất của cột thuỷ ngân trong ống
+Tô-ri-xe-li, do đó người ta thường dùng mmHg làm đơn vị đo áp suất
+khí quyển.
+
+L
+
+
+--- Trang 36 (Vật lí 8.pdf) ---
+Có thể em chưa biết
+Bảng 9.1
+
+se Càng lên cao không khí càng loãng
+Sản ng XI VD niruẩn ràng . | Độ cao so với | Áp suất khí
+nên áp suất khí quyền càng giảm. Với biệt biển tr | quyến (mnimilg)
+
+những độ cao không lớn lắm thì cứ
+
+lên cao 12m, áp suất khí quyển
+lại giảm khoảng 1mmHg. Bảng 9.1 là 250
+ví dụ về mối liên hệ giữa độ cao và áp
+suất khí quyển. Dựa vào mối liên hệ 400
+giữa độ cao và áp suất khí quyển,
+người ta chế tạo ra một loại dụng cụ
+đo áp suất khí quyển để suy ra chiều 1 000
+cao gọi là "cao kế". Cao kế được 2000
+dùng khi leo núi, trong máy bay, 3000
+trong các khí cầu...
+
+Bảng 9.2
+e Áp suất khí quyển tại một nơi
+thay đổi theo thời gian và những Thời điểm | Áp suất (.105Pa)
+thay đổi này. ảnh hưởng tới thời tiết 07 giờ 1,0081
+của nơi đó.
+Các trạm khí tượng được trang bị các 10 giờ 1,0014
+máy tự động ghi áp suất của khí 13 giờ 1,0042
+quyển sau những khoảng thời gian
+xác định. Bảng 9.2 là các số liệu do 16 giờ 1,0043
+
+trạm khí tượng Láng (Hà Nội) ghi
+được vào ngày 22 - 6 - 2003.
+
+19 giờ 1,0024
+22 giờ 1,0051
+
+35 J
+
+--- Trang 37 (Vật lí 8.pdf) ---
+Bài 10
+LỰC ĐẨY ÁC-SI-MÉT
+
+Khi kéo nước từ dưới giếng lên, ta thấy gàu nước khi còn ngập
+đưới nước nhẹ hơn khi đã lên khỏi mặt nước (H.10.1). Tại sao ?
+
+I- TÁC DỤNG CỦA CHẤT LỎNG LÊN VẬT NHÚNG CHÌM
+TRONG NÓ
+
+Hình 10.1
+
+b) Hình 10.2
+Treo một vật nặng vào lực kế, lực kế chỉ giá trị P (H.10.2a). Nhúng vật nặng
+chìm trong nước, lực kế chỉ giá trị P (H.10.2b). Pị < P chứng tỏ điều gì ?
+[C2| Hay chọn từ thích hợp cho chỗ trống trong kết luận sau :
+
+® Kết luận : Một vật nhúng trong chất lóng bị chất lỏng tác dụng một lực
+đầy hướng từ ........
+
+Lục đầy của chất lỏng lên một vật nhúng trong nó do nhà bác học Ác-si-mét
+(287 - 212 trước Công nguyên) người Hi Lạp phát hiện ra đầu tiên, nên được
+gọi là lực đẩy Ác-si-mét.
+
+(39
+
+--- Trang 38 (Vật lí 8.pdf) ---
+II - ĐỘ LỚN CỦA LỰC ĐẨY ÁC-SI-MÉT
+
+N1. Dự đoán
+
+Truyền thuyết kể rằng, một hôm Ác-si-mét đang nằm trong bồn tắm đây nước
+chợt phát hiện ra rằng ông nhấn chìm người trong nước càng nhiều thì lực
+đầy do nước tác dụng lên ông càng mạnh, nghĩa là thể tích phân nước bị ông
+chiếm chỗ càng lớn thì lực đẩy của nước càng mạnh. Dựa trên nhận xét này,
+Ác-si-mét dự đoán là độ lớn của lực đầy lên vật nhúng trong chất lỏng bằng
+trọng lượng của phần chất lỏng bị vật chiếm chỏ.
+
+® 2. Thí nghiệm kiềm tra
+Bàng nhiều thí nghiệm khác nhau người ta đả khảng định được dự đoán
+trên là đúng. Sau đây là một trong những thí nghiệm này (H.10.3a, b, c).
+
+đ) Treo cốc A chưa đụng b) Nhúng vật nặng vào c) Đồ nước từ cốc B vào
+nước và vật nặng vào lục bình tràn đụng đây nước, cốc A. Lục kế chỉ giá trị P).
+kế. Lục kế chỉ giá trị P . nuóc từ bình tràn chảy vào
+
+cốc B. Lực kế chỉ giá trị Ps. Hình 10.3
+
+© Hay chứng minh ràng thí nghiệm ở hình 10.3 chứng tỏ dự đoán về độ
+
+lớn của lực đầy Ác-si-mét nêu trên là đúng.
+37 ]
+
+--- Trang 39 (Vật lí 8.pdf) ---
+3. Công thức tính độ lớn của lực đầy
+Ác-si-mét
+
+Nếu gọi V là thể tích của phần chất lỏng bị vật
+chiếm chỗ và d là trọng lượng riêng của chất
+lỏng, thì độ lớn của lực đẩy Ác-si-mét được
+tính bằng công thức :
+
+E„ = d.V
+
+'Y II - VẬN DỤNG
+Hãy giải thích hiện tượng nêu ra ở đầu bài.
+
+Một thỏi nhôm và một thỏi thép có thể tích
+bàng nhau cùng được nhúng chìm trong nước.
+Thỏi nào chịu lực đẩy Ác-si-mét lớn hơn ?
+
+Hai thỏi đồng có thể tích bàng nhau, một
+thỏi được nhúng chìm vào nước, một thỏi
+được nhúng chìm vào dầu. Thỏi nào chịu lực
+đầy Ác-si-mét lớn hơn ?
+
+C7 b Hay nêu phương án thí nghiệm dùng
+cân vẽ ở hình 10.4 thay cho lực kế để kiểm
+tra dự đoán về độ lớn của lực đầy Ác-si-mét.
+
+Hình 10.4
+
+$ Một vật nhúng vào chất lỏng bị chất lỏng đẩy thẳng đứng từ dưới lên
+với lực có độ lớn bằng trọng lượng của phần chất lỏng mà vật chiếm
+
+chỗ. Lực này gọi là lực đẩy Ác-si-mét.
++ Công thức tính lực đẩy Ác-si-mét
+
+Fa = d.V, trong đó : d là trọng lượng riêng của chất lỏng,
+
+V là thể tích phần chất lỏng bị vật chiếm chỗ.
+
+:3
+
+
+--- Trang 40 (Vật lí 8.pdf) ---
+Có thể em chưa biết
+
+® Phần ghi nhớ được đóng khung ở trên không chỉ
+được áp dụng đối với chất lỏng mà còn được áp
+dụng cả đối với chất khí. Điều này giải thích tại sao
+những quả bóng hoặc khí cầu được bơm một loại khí
+nhẹ hơn không khí có thể bay lên được (H.10.5).
+
+e Truyền thuyết về Ác-si-mét
+
+Nhà vua Hê-rôn xứ Si-ra-cuýt (306 - 215 trước Côn
+nguyên) giao vàng cho một người thợ kim hoàn để
+làm cho nhà vua một cái vương miện đặc. Nhà vua
+nghi người thợ đã ăn bớt vàng nên giao cho Äc-si-mét
+kiểm tra xem người thợ có pha bạc vào vàng để làm
+vương miện không.
+
+Ác-si-mét ngày đêm lo lắng, suy nghĩ làm thế nào để
+thực hiện được việc nhà vua giao.
+
+Một hôm, trong khi đang nằm trong bồn tắm đầy
+nước, ông chợt phát hiện ra rằng khi nhấn chìm người
+trong nước càng nhiều thì lực đấy ông lên càng mạnh.
+Từ đó, ông thấy được cách giải quyết bài toán về
+chiếc vương miện của nhà vua. Ông nhảy khỏi bồn
+tắm và cứ thế trần truồng chạy ra đường, vừa chạy
+vừa kêu : "Ơ rê ca ! Ơ rê ca !" (Tìm ra rồi ! Tìm ra rồi !).
+Hình 10.7 minh hoạ cách dùng lực đẩy Ác-si-mét để
+chứng minh chiếc vương miện của nhà vua không
+làm bằng vàng nguyên chất mà có pha bạc (bạc có
+khối lượng riêng chỉ bằng khoảng 50% khối lượng
+riêng của vàng). Các em hãy thử giải thích tại sao ?
+
+Hình 10.6
+
+Hình 10.7
+
+39
+
+--- Trang 41 (Vật lí 8.pdf) ---
+lý Bài 11
+THỤC HÀNH : NGHIỆM LẠI LỰC ĐẨY ÁC-SI-MÉT
+
+I- CHUẨN BỊ
+
+Cho mỗi nhóm học sinh :
+
+- Một lực kế 0 — 2,5N.
+
+- Một vật nặng bằng nhôm có
+thể tích khoảng 50cm3,
+
+- Một bình chia độ.
+
+- Một giá đỡ.
+
+- Kẻ sẵn các bảng ghi kết quả
+VàO VỞ.
+
+I - NỘI DUNG THỰC HÀNH
+1. Đo lực đầy Ác-si-mét
+
+a) Đo trọng lượng P của vật
+khi vật đặt trong không khí
+Lý - lâu l
+b) Đo lục F tác dụng vào lực kế
+khi vật chìm trong nước
+(H.11.2).
+
+BH xác định dộ lớn lực đây
+Ác-si-mét bàng công thức :
+Tu. gương
+
+Đo ba lần, lấy kết quả ghi vào
+báo cáo.
+
+Hình 11.1
+
+'2o
+
+--- Trang 42 (Vật lí 8.pdf) ---
+2. Đo trọng lượng của phần nước có thể tích
+bằng thể tích của vật
+
+a) Đo thể tích của vật nặng, cũng chính là thể
+tích của phân chất lỏng bị vật chiếm chỗ.
+
+- Đánh dấu mục nước trong bình trước khi
+nhúng vật vào (H.11.3) - vạch 1 (VỊ).
+
+- Đánh dấu mực nước trong bình sau khi nhúng
+vật chìm trong nước (H.11.4) - vạch 2 (V2).
+
+EE Thẻ tích (V) của vật được tính như thế nào ?
+ÿ= L]-ULI
+
+b) Đo trọng lượng của chất lỏng có thể tích
+bàng thể tích của vật.
+
+- Dùng lực kế đo trọng lượng của bình nước khi
+nước ở mức Ì :
+
+- Đồ thêm nước vào bình đến mức 2. Đo trọng
+lượng của bình nước khi nước ở mức 2 :
+
+Pạ=......
+
+Trọng lượng của phân nước bị vật chiếm
+chỗ được tính bàng cách nào ?
+
+Pq =1 -
+Đo ba lần, lấy kết quả ghi vào báo cáo.
+
+3. So sánh kết quả đo P và FA. Nhận xét và rút
+ra kết luận
+
+—”]
+
+--- Trang 43 (Vật lí 8.pdf) ---
+II - MẪU BÁO CÁO THỰC HÀNH
+
+Nghiệm lại lực đấy Ác-si-mét
+HD và ttn hÚc BÌNH 12202722 iu va LỐP ) ca...
+1. Trả lời câu hỏi
+
+Viết công thúc tính lục đẩy Muốn kiểm chứng độ lớn của
+Ác-si-mét. Nêu tên và đơn vị của các lực đẩy Ác-s-mét cân phải do
+đại lượng có mặt trong công thức. những đại lượng nào ?
+
+Ác-si-mét tác dụng lên vật khi vật
+
+được nhúng chìm trong nước (N)
+
+Kết quả trung bình EA =————————— =...
+3
+3. Kết quả đo trọng lượng của phần nước có thể tích bằng thể tích của vật
+
+Bảng 11.2
+
+Lân đo| Trọng _M Pạ | Trọng _w P; | Trọng lượng phân nước bị vật
+GưẲ“ờmm chỗ : ¬ = Pạ — Pạ ®)
+[is]
+
+Lá
+
+--- Trang 44 (Vật lí 8.pdf) ---
+Bài 12
+SỰ NỔI
+
+Đố nhau :
+
+An - Tại sao khi được thả vào nước thì hòn bi
+gỗ nổi, còn hòn bi sát lại chìm ?
+
+Bình - Vì hòn bi gỗ nhẹ hơn.
+
+An - Thế tại sao con tàu bàng thép nặng hơn
+hòn bi thép lại nổi còn hòn bì thép thì chìm ?
+
+Bình - ?!
+
+/⁄
+
+I- ĐIỀU KIỆN ĐỂ VẬT NỔI, VẬT CHÌM
+¡| Một vật ở trong lòng chất lỏng chịu tác dụng của những lực nào,
+phương và chiều của chúng có giống nhau không ?
+e©e Có thể xảy ra ba trường hợp sau đây đối với trọng lượng P của vật và
+độ lớn F. của lực đẩy Ác-si-mét :
+
+a)FA<P b)FA=P €) Tạ >P
+
+Hay vẽ các vectơ lực tương ứng với ba trường hợp trên hình 12.1a, b, c và chọn
+cụm từ thích hợp trong số các cụm từ sau đây cho các chỏ trống ở các câu phía
+đưới hình 12.1 :
+
+(1) Chuyển động lên trên (nối lên mặt thoáng).
+(2) Chuyển động xuống dưới (chìm xuống đáy bình).
+(3) Đúng yên (lơ lửng trong chất lỏng).
+
+
+--- Trang 45 (Vật lí 8.pdf) ---
+II - ĐỘ LỚN CỦA LỰC ĐẨY ÁC-SI-MÉT KHI VẬT NỔI TRÊN MẶT THOÁNG
+CỦA CHẤT LỎNG
+
+m E8] Tại sao miếng gỗ thả vào nước
+lại nổi ?
+
+Khi miếng gỗ nổi trên mặt nước,
+trọng lượng P của nó và lực đẩy Ác-si-mét
+có bàng nhau không ? Tại sao ?
+
+Độ lớn của lực đẩy Ác-si-mét được
+tính bàng biểu thức : F„ = d.V, trong đó
+đ là trọng lượng riêng của chất lỏng, còn
+V là gì ? Trong các câu trả lời sau đây,
+câu nào là không đúng ?
+
+A. V là thể tích của phân nước bị miếng
+gỏ chiếm chỗ.
+
+B. V là thể tích của cả miếng gõ.
+
+€. V là thể tích của phần miếng gỏ chìm
+trong nước.
+
+D. V là thể tích được gạch chéo trong
+hình 12.2.
+
+Y II - VẬN DỤNG
+
+Biết P = dự.V (trong đó dự là trọng lượng riêng của chất làm vật, V là thể
+tích của vật) và FA = d/.V (trong đó d; là trọng lượng riêng của chất lỏng), hãy
+chứng minh ràng nếu vật là một khối đặc nhúng ngập vào trong chất lỏng thì :
+- Vật sẽ chìm xuống khi : dụ, > dị.
+
+- Vật sẽ lơ lửng trong chất lỏng khi : dụ = dị.
+
+- Vật sẽ nồi lên mặt chất lỏng khi : d„, < dị.
+
+Hay giúp Bình trả lời An trong phân mở bài, biết rằng con tàu không phải
+là một khối thép đặc mà có nhiều khoảng rồng.
+
+Thả một hòn bi thép vào thủy ngân thì bi nổi hay chìm ? Tại sao ?
+
+L4
+
+--- Trang 46 (Vật lí 8.pdf) ---
+RE Hai vật M và N có cùng thể tích được nhúng ngập trong nước. Vật M chìm
+xuống đáy bình còn vật N lơ lửng trong chất lỏng. Gọi Pụ, LÊN là trọng lượng
+và lực đẩy Ác-si-mét tác dụng lên vật M ; PN; PA là trọng lượng và lực đầy
+
+Ác-si-mét tác dụng lên vật N. Hay chọn dấu "=" ; "<" ; ">" thích hợp cho các
+Ô trống :
+
+EẠ,, LÍ Eá,b
+
+FAv, LÌ Pụ.
+
+BẠ,v-| PÑ:
+
+Pụ LÌ Pụ.
+
+$ Nếu ta thả một vật ở trong lòng chất lỏng thì
++ Vật chìm xuống khi lực đẩy Ác-si-mét Fa nhỏ hơn trọng lượng P :
+
+FA<P
++ Vật nổi lên khi : FA>P
++ Vật lơ lừng trong chất lỏng khi : FA=P
+
+e Khi vật nổi trên mặt chất lỏng thì lực đẩy Ác-si-mét :
+Fa = d.V, trong đó V là thể tích của phần vật chìm trong chất
+lỏng, (không phải là thể tích của vật), d là trọng lượng riêng của
+chất lỏng.
+
+Có thể em chưa biết
+
+Tàu ngầm là loại tàu có thể chạy ngầm
+dưới mặt nước. Phần đáy tàu có nhiều
+ngăn, có thể dùng máy bơm để bơm
+nước vào hoặc đây nước ra. Nhờ đó,
+người ta có thể làm thay đổi trọng lượng
+riêng của tàu để cho tàu lặn xuống,
+lơ lửng trong nước hoặc nổi lên trên mặt
+nước (H.12.3).
+
+Hình 12.3
+
+46 j
+
+--- Trang 47 (Vật lí 8.pdf) ---
+Bài 13
+CÔNG CƠ HỌC
+
+Trong đời sống hàng ngày, người ta quan niệm rằng người nông đân cấy lúa,
+người thợ xây nhà, em học sinh ngồi học, con bò đang kéo xe... đều đang thực
+hiện công. Nhưng không phải công trong các trường hợp này đều là "công cơ
+học". Vậy công cơ học là gì ?
+
+I- KHI NÀO CÓ CÔNG CƠ HỌC ?
+EM 1. Nhận xét
+
+- Con bò đang kéo một chiếc xe đi trên
+đường. Trong trường hợp này, người ta
+nói lực kéo của con bò đã thực hiện một
+công cơ học (H.13.1).
+
+- Người lực sĩ củ tạ đỡ quả tạ ở tư thế
+đứng thẳng. Mặc dù lực sĩ rất mệt nhọc,
+tốn nhiều sức lực, nhưng trong trường
+hợp này người ta nói lực sĩ không thực
+hiện công cơ học (H.13.2).
+
+© Từ các trường hợp quan sát ở
+trên, em có thể cho biết khi nào thì có
+công cơ học ?
+
+Hình 13.2
+
+®2. Kết luận
+
+Tìm từ thích hợp cho các chỗ trống của kết luận sau :
+- Chỉ có công cơ học khi có ....(1).... tác dụng vào vật và làm cho vật .... (2)...
+
+- Công cơ học là công của lực (khi một vật tác dụng lực và lực này sinh công
+thì ta có thể nói công đó là công của vật).
+
+- Công cơ học thường được gọi tắt là công.
+
+L
+
+--- Trang 48 (Vật lí 8.pdf) ---
+Y 3. Vận dụng
+
+E Trong những trường hợp dưới đây, trường
+hợp nào có công cơ học ?
+
+a) Người thợ mỏ đang đẩy cho xe goòng chở
+than chuyển động.
+
+b) Một học sinh đang ngồi học bài.
+
+c) Máy xúc đất đang làm việc.
+
+đ) Người lực sĩ đang nâng quả tạ từ thấp lên cao.
+Trong các trường hợp dưới đây, lực nào
+thực hiện công cơ học ?
+
+a) Đâu tàu hoả đang kéo các toa tàu chuyền động.
+b) Quả bưởi rơi từ trên cây xuống.
+
+€) Người công nhân dùng hệ thống ròng rọc
+kéo vật nặng lên cao (H.13.3).
+
+Hình 13.3
+II - CÔNG THÚC TÍNH CÔNG
+
+I 1. Công thức tính công cơ học
+
+Nếu có một lực F tác dụng vào vật, làm vật
+dịch chuyển một quảng đường s theo hướng
+của lực thì công của lực F được tính bằng công
+thức sau
+
+A =E.s, trong đó : A là công của lực F,
+F là lực tác dụng vào vật,
+s là quãng đường vật dịch chuyền.
+
+Khi lực F = 1N và s = 1m thì A = 1N.1m = 1Nm.
+Đơn vị công là jun, kí hiệu là J (1J = 1Nm).
+
+Chú ý : - Nếu vật chuyển dời không theo phương của lực thì công được tính
+bàng một công thức khác sẽ học ở lớp trên.
+
+- Nếu vật chuyển đời theo phương vuông góc với phương của lực thì công của
+
+lực đó bàng không.
+—”]
+
+--- Trang 49 (Vật lí 8.pdf) ---
+Y 2. Vận dụng
+
+Đầu tàu hoả kéo toa xe với lực F=5 000N làm toa xe đi được 1 000m.
+Tính công của lực kéo của đầu tàu.
+
+Một quả dừa có khối lượng 2kg rơi từ trên cây cách mặt đất 6m. Tính
+công của trọng lực.
+
+E4: Tại sao không có công cơ học của trọng lực trong trường hợp hòn bi
+chuyền động trên mặt sàn nằm ngang ?
+
++ Thuật ngữ công cơ học chỉ dùng trong trường hợp có lực tác dụng
+vào vật làm vật chuyển dời.
+
+se Công cơ học phụ thuộc hai yếu tố : Lực tác dụng vào vật và quãng
+đường vật dịch chuyển.
+
+$ Công thức tính công cơ học khi lực F làm vật dịch chuyển một quãng
+đường s theo hướng của lực : A = F.s.
+
+L_ Đơn vị công là jun, (kí hiệu là .J). 1J = 1N.1m = 1Nm.
+
+Có thể em chưa biết
+
+Công của trái tim
+
+Bằng các phép đo và phép tính người ta xác định được công của trái tim. Trung
+bình, mỗi giây trái tim của người bình thường thực hiện một công khoảng 0,12J
+để bơm khoảng 90cm máu nuôi cơ thể.
+
+Các em đừng vội nghĩ công của trái tim là quá bé nhỏ ! Vì trái tim phải làm việc
+liên tục không ngừng nên trong một ngày, trung bình nó thực hiện một công lên
+tới 10 368J để bơm 7 776 lít máu nuôi cơ thể. Nếu một người chỉ sống có
+70 năm thôi thì trái tim người đó đã thực hiện một công không dưới 260 000 000/J
+để bơm khoảng 200 000 000 lít máu nuôi cơ thể.
+
+Nếu biết với công 260 000 000. người ta có thể nâng một chiếc xe ôtô 2,5 tấn
+lên cao 10 000m (10km), thì các em sẽ thấy trái tim của chúng ta “vất vả" biết
+chừng nào I
+
+II
+
+--- Trang 50 (Vật lí 8.pdf) ---
+Bài 14
+ĐỊNH LUẬT VỀ CÔNG
+
+Ở lóp 6 các em đa biết, muốn đưa một vật nặng lên cao, người ta có thể kéo
+trực tiếp hoặc sử dụng máy cơ đơn giản. Sử dụng máy cơ có thể cho ta lợi về
+lực, nhưng liệu có thể cho ta lợi về công không ? Bài này sẽ giúp các em trả lời
+câu hỏi trên.
+
+I1- THÍ NGHIỆM
+
+~ Móc lực kế vào quả nặng G rồi kéo từ từ theo phương thảng đứng (sao cho số
+chỉ của lực kế không thay đổi) lên một đoạn sạ (H.14.1a). Lực nâng F của tay
+có độ lớn bàng trọng lượng P của quả nặng. Đọc số chỉ của lực kế (F4) và độ
+đài quãng đường đi được (sạ) của lực kế rồi ghi kết quả thí nghiệm vào bảng 14.1.
+- Dùng ròng rọc động để kéo quả nặng G lên cùng một đoạn sị (H.14.1b) một
+cách từ từ sao cho số chỉ của lực kế không thay đối. Lực nâng của tay bàng
+số chỉ của lực kế. Đọc số chỉ của lực kế (F;) và độ dài quảng đường đi được
+(sz) của lực kế rồi ghi kết quả thí nghiệm vào bảng 14.1.
+
+Hình 141 4)
+
+--- Trang 51 (Vật lí 8.pdf) ---
+Bảng 14.1
+
+Các đại lượng cân xác định Kéo trực tiếp Dùng ròng rọc động
+
+Hay so sánh hai lực F và Ea.
+
+kÉA Hay so sánh hai quảng đường đi được sỊ, Sa.
+Hày so sánh công của lực F (A = F.s) và công của lực F2 (Az = Fa.S2).
+
+Dựa vào các câu trả lời trên, hay chọn từ thích hợp cho các chỗ trống của
+kết luận sau : Dùng ròng rọc động được lợi hai lân về ....(1).... thì lại thiệt
+hai lân về ....(2).... nghĩa là không được lợi gì về ....(3)....
+
+® II - ĐỊNH LUẬT VỀ GÔNG
+
+Kết luận trên không những chỉ đúng cho ròng rọc động mà còn đúng cho mọi
+máy cơ đơn giản khác. Do đó, ta có kết luận tổng quát sau đây gọi là định
+luật về công :
+
+Không một máy cơ đơn giản nào cho ta lợi về công, Được lợi bao nhiêu lân
+về lực thì lại thiệt bấy nhiêu lân về đường đi và ngược lại.
+
+Y II - VẬN DỤNG
+
+Kéo đều hai thùng hàng, mỏi thùng nặng 500N lên sàn ôtô cách mặt đất
+1m bàng tấm ván đặt nghiêng (ma sát không đáng kể).
+
+Kéo thùng thứ nhất, dùng tấm ván dài 4m.
+
+Kéo thùng thứ hai, dùng tấm ván dài 2m.
+
+:5o
+
+--- Trang 52 (Vật lí 8.pdf) ---
+Hỏi :
+
+a) Trong trường hợp nào người ta kéo với lực nhỏ hơn và nhỏ hơn bao nhiêu lần ?
+b) Trường hợp nào thì tốn nhiều công hơn ?
+
+c) Tính công của lực kéo thùng hàng theo mặt phảng nghiêng lên sàn ôtô.
+
+Để đưa một vật có trọng lượng P = 420N lên cao theo phương thẳng
+đứng bằng ròng rọc động, theo hình 13.3, người công nhân phải kéo đầu dây
+đi một đoạn là 8m. Bỏ qua ma sát.
+
+a) Tính lực kéo và độ cao đưa vật lên.
+
+b) Tính công nâng vật lên.
+
++ Định luật về công : Không một máy cơ đơn giản nào cho ta lợi về
+công. Được lợi bao nhiêu lần về lực thì thiệt bấy nhiêu lần về đường
+đi và ngược lại.
+
+Có thể em chưa biết
+
+Trong thực tế, ở các máy cơ đơn giản bao giờ cũng có ma sát. Vì vậy, công mà
+ta phải tốn (As) để nâng vật lên bao giờ cũng lớn hơn công (A+) dùng để nâng
+vật khi không có ma sát, đó là vì phải tốn một phần công để thắng ma sát.
+Công Aa là công toàn phần. Công A+ là công có ích. Tỉ số LĐI, gọi là hiệu suất
+của máy, kí hiệu là H : Aa
+
+AI
+
+H= — 100%.
+
+A2
+
+Vì Aa luôn lớn hơn A+ nên hiệu suất luôn nhỏ hơn 100%.
+
+—_ ']
+
+--- Trang 53 (Vật lí 8.pdf) ---
+Bài 15
+CÔNG SUẤT
+
+I- AI LÀM VIỆC KHOẺ HƠN ?
+
+I Trong xây dụng, để đưa vật liệu lên
+cao người ta thường dùng dây kéo vắt
+qua ròng rọc cố định như hình 15.1.
+Anh An và anh Dũng dùng hệ thống này
+đưa gạch lên tâng hai, cao 4m, mỗi viên
+gạch đều nặng 16N.
+
+Mỗi lân anh An kéo được 10 viên gạch
+mất 50 giây. Còn anh Dũng mỏi lân kéo
+được 15 viên gạch mất 60 giây.
+
+eEGlrinh công thực hiện được của anh
+An và anh Dũng.
+
+Trong các phương án sau đây, có thể
+chọn những phương án nào để biết ai là
+người làm việc khoẻ hơn ?
+
+a) So sánh công thực hiện được của hai
+người, ai thực hiện được công lớn hơn thì
+người đó làm việc khoẻ hơn. Hình 15.1
+b) So sánh thời gian kéo gạch lên cao của
+
+hai người, ai làm mất ít thời gian hơn thì
+
+người đó làm việc khoẻ hơn.
+
+c) So sánh thời gian của hai người đề thực hiện được cùng một công, ai làm
+việc mất ít thời gian hơn (thực hiện công nhanh hơn) thì người đó làm việc
+khoẻ hơn.
+
+đ) So sánh công của hai người thực hiện được trong cùng một thời gian, ai
+thục hiện được công lớn hơn thì người đó làm việc khoẻ hơn.
+
+Từ kết quả của C2, hay tìm từ thích hợp cho các chỗ trống của
+kết luận sau : Anh ....(1).... làm việc khoẻ hơn, vì ....(2)....
+
+ï 52
+
+--- Trang 54 (Vật lí 8.pdf) ---
+II - CÔNG SUẤT
+
+Trong Vật lí học, để biết người nào hay máy nào thực hiện công nhanh hơn (làm
+việc khoẻ hơn) người ta dùng khái niệm công suất. Công suất được xác định
+bàng công thực hiện được trong một đơn vị thời gian.
+
+Nếu trong thời gian t, công thực hiện được là A thì công suất là :
+
+A
+ø=—
+t
+
+I II - ĐƠN VỊ CÔNG SUẤT
+
+Nếu công A là 1U, thời gian t là 1s, thì công suất là
+
+1Ù
+LIER = 1J⁄s (jun trên giây).
+§
+
+Đơn vị công suất J⁄s được gọi là oát, kí hiệu là W.
+
+1W = 11⁄5.
+1kW (kilôoát) = 1 000W.
+1MW (mêgaoát) = 1 000kkW = 1 000 000W.
+
+Y IV - VẬN DỤNG
+
+Tính công suất của anh An và anh Dũng trong ví dụ ở đầu bài học.
+
+Để cày một sào đất, người ta dùng trâu cày thì mất 2 giờ, nhưng nếu
+dùng máy cày Bông Sen thì chỉ mất 20 phút. Hỏi trâu hay máy cày có công
+suất lớn hơn và lớn hơn bao nhiêu lần ?
+
+[Có l Một con ngựa kéo một cái xe đi đều với vận tốc 9km/h. Lực kéo của
+ngựa là 200N.
+
+a) Tính công suất của ngựa.
+b) Chúng minh ràng 2= F.v.
+
+53 j
+
+--- Trang 55 (Vật lí 8.pdf) ---
+$ Công suất được xác định bằng công thực hiện được trong một đơn
+
+vị thời gian.
+: ^
+
+$ Công thức tính công suất 2= “TY: vong đó : AB công thực hiện
+được, t là thời gian thực hiện công đó.
+
+$ Đơn vị công suất là oát, kí hiệu là W.
+
+1W = 1/s (jun trên giây).
+
+1kW (kilôoát) = 1 000W.
+
+1MW (mêgaoát) = 1 000 000W.
+
+L_
+
+Có thể em chưa biết
+
+e Để đo công suất, ngoài oát, người ta còn dùng đơn vị khác nữa là mã lực
+(sức ngựa). Mã lực là đơn vị cũ để đo công suất, trước đây rất thông dụng,
+nay ít dùng. Một mã lực Pháp (kí hiệu CV) xấp xỉ bằng 736W, còn một mã lực
+Anh (kí hiệu là HP) xấp xỉ bằng 746W.
+
+e Công suất của tên lửa đẩy con tàu vũ trụ Phương Đông chở nhà du hành vũ
+trụ đầu tiên của Trái Đất Ga-ga-rin, công dân Liên Xô (trước đây) là 15 000MW.
+e Công suất của con người khi lao động chân tay trong những điều kiện bình
+thường trung bình vào khoảng từ 70 đến 80W. Khi đi bộ, công suất trung bình
+của người là 300W. Khi chạy thi 100m, công suất của vận động viên có thể
+lên tới 730W.
+
+® Nước ta có nhiều nhà máy thuỷ điện. Trong đó, một số nhà máy thủy điện
+có công suất lớn như là thuỷ điện Hoà Bình công suất 1920MWV, nhà máy thuỷ
+điện Sơn La công suất 2400MW.
+
+--- Trang 56 (Vật lí 8.pdf) ---
+Bài 16
+CƠ NĂNG
+
+Hàng ngày, ta thường nghe nói đến từ "năng lượng". Ví dụ, nhà máy thuỷ điện
+Hoà Bình đã biến năng lượng của dòng nước thành năng lượng điện. Con
+người muốn hoạt động phải có năng lượng. Vậy năng lượng là gì ? Nó tồn tại
+dưới dạng nào ?
+
+Trong bài này, chúng ta sẽ tìm hiểu dạng năng lượng đơn giản nhất là cơ năng.
+
+I- CƠ NĂNG
+
+ - Khi một vật có khả năng thực hiện công cơ học, ta nói vật đó có cơ năng.
+
+- Vật có khả năng thực hiện công cơ học càng lớn thì cơ năng của vật càng
+lớn. Cơ năng cũng được do bàng đơn vị jun.
+
+II - THẾ NĂNG
+
+1. Thế năng trọng trường
+
+I Quả nặng A đứng yên trên mặt đất
+(H.16.1a), không có khả năng sinh công.
+
+e BH Nếu dua quả nặng lên một độ cao
+nào đó (H.16.1b) thì nó có cơ năng
+không ? Tại sao ?
+
+Cơ năng của vật trong trường hợp này
+được gọi là thế năng.
+
+Vật ở vị trí càng cao so với mặt đất thì công
+mà vật có khả năng thục hiện được càng
+lớn, nghĩa là thế năng của vật càng lón.
+Thế năng được xác định bởi độ cao của vật
+so với mặt đất gọi là thế năng trọng
+trường. Khi vật nằm trên mặt đất thì
+thế năng trọng trường của vật bằng
+không.
+
+b)
+
+Hình 16.1
+
+55 Ú
+
+--- Trang 57 (Vật lí 8.pdf) ---
+Chú ý : - Ta có thể không lấy mặt đất, mà lấy một vị trí khác làm mốc để
+tính độ cao. Vậy thế năng trọng trường phụ thuộc vào mốc tính độ cao.
+
+- Thế năng trọng trường của vật còn phụ thuộc vào khối lượng của nó. Vật
+có khối lượng càng lớn thì thế năng càng lớn.
+
+2. Thế năng đàn hồi
+
+8 Có một lò xo được làm bàng
+
+băng thép uốn thành vòng tròn
+(H.16.2a). Lò xo bị nén lại nhờ \
+buộc sợi dây, phía trên đặt một _ .._g "
+miếng gỗ (H.16.2b).
+q) b)
+© Lúc này lò xo có cơ năng.
+Bàng cách nào để biết được lò xo có Hình 16.2
+
+cơ năng ?
+
+Cơ năng của lò xo trong trường hợp này cũng được gọi là thế năng. Lò xo càng
+bị nén nhiều thì công do lò xo sinh ra càng lớn, nghĩa là thế năng của lò xo
+càng lớn. Vì thế năng này phụ thuộc vào độ biến dạng đàn hồi, nên được gọi
+là thế năng đàn hồi.
+
+II - ĐỘNG NĂNG
+1. Khi nào vật có động năng ?
+Thí nghiệm 1 2)
+
+1
+I Cho quả câu A bàng thép lăn từ vị A Ù
+trí (1) trên máng nghiêng xuống
+đập vào miếng gỗ B (H.16.3).
+©® Hiện tượng sẽ xảy ra như
+thế nào ?
+e [8 Chúng minh ràng quả cầu A
+đang chuyển động có khả năng
+thực hiện công.
+
+Hình 16.3
+
+© Từ kết quả thí nghiệm hảy tìm từ thích hợp cho chỏ trống của kết
+luận : Một vật chuyển động có khả năng ........ tức là có cơ năng.
+Cơ năng của vật do chuyển động mà có được gọi là động năng.
+
+59
+
+--- Trang 58 (Vật lí 8.pdf) ---
+2. Động năng của vật phụ thuộc những yếu tố nào ?
+
+Thí nghiệm 2
+
+I Cho quả câu A lăn trên máng nghiêng từ vị trí (2) cao hơn vị trí (1)
+(H.16.3) tới đập vào miếng gỗ B.
+
+© Độ lớn vận tốc của quả cầu lúc đập vào miếng gỗ B thay đồi thế
+nào so với thí nghiệm 1 ? So sánh công của quả câu A thực hiện lúc này
+với lúc trước. Từ đó suy ra động năng của quả cầu A phụ thuộc thế nào vào
+vận tốc của nó ?
+
+Thí nghiệm 3
+
+8 Thay quả câu A bàng quả câu A' có khối lượng lớn hơn và cho lăn trên
+máng nghiêng từ vị trí (2), đập vào miếng gỗ B.
+
+© E4 Hiện tượng xảy ra có gì khác so với thí nghiệm 2 ? So sánh công thực
+hiện được của hai quả câu A và A'. Từ đó suy ra động năng của quả cầu còn
+phụ thuộc thế nào vào khối lượng của nó.
+
+©® Các thí nghiệm trên cho thấy động năng phụ thuộc những yếu tố gì và phụ
+thuộc thế nào ?
+
+Chú ý : Động năng và thế năng là hai dạng của cơ năng. Một vật có thể vừa có
+động năng vừa có thế năng. Cơ năng của vật lúc đó bàng tổng động năng và
+thế năng của nó.
+
+Y IV - VẬN DỤNG
+
+Nêu ví dụ vật có cả động năng và thế năng.
+Cơ năng của từng vật ở hình 16.4a, b, c thuộc dạng cơ năng nào ?
+
+a) Chiếc cung đã b) Nước chảy từ €) Nước bị ngăn
+được giương. trên cao xuống. trên đập cao.
+Hình 16.4
+
+57 j
+
+--- Trang 59 (Vật lí 8.pdf) ---
++ Khi vật có khả năng sinh công, ta nói vật có cơ năng.
+
+năng trọng trường của vật càng lớn.
+đàn hồi.
+
+lớn.
++ Động năng và thế năng là hai dạng của cơ năng.
+
+L_
+
++$ Cơ năng của vật phụ thuộc vào độ cao của vật so với mặt đất, hoặc
+so với một vị trí khác được chọn làm mốc để tính độ cao, gọi là thế
+năng trọng trường. Vật có khối lượng càng lớn và ở càng cao thì thế
+
++ Cơ năng của vật phụ thuộc vào độ biến dạng của vật gọi là thế năng
+
+e Cơ năng của vật do chuyển động mà có gọi là động năng. Vật có
+khối lượng càng lớn và chuyển động càng nhanh thì động năng càng
+
+Cơ năng của một vật bằng tổng thế năng và động năng của nó.
+
+Có thể em chưa biết
+
+Độ lớn của một số giá trị động năng
+
+- Động năng của Trái Đất chuyển động quanh Mặt Trời :
+- Động năng của vệ tinh quay trên quỹ đạo :
+
+- Động năng của cầu thủ bóng đá đang chạy :
+
+- Động năng của con ong đang bay :
+
+- Động năng của con sên đang bò :
+
+(Chú ý : Các độ lớn ghi ở trên chỉ gần đúng).
+
+I6
+
+2,7.1033/.
+3.109/.
+
+4 500.
+0,002.
+0,0000001..
+
+
+--- Trang 60 (Vật lí 8.pdf) ---
+Bài 17
+SỰ CHUYỂN HOÁ VÀ BẢO TOÀN GƠ NĂNG
+
+Trong tự nhiên cũng như trong kĩ thuật, ta thường quan sát thấy sự chuyển
+hoá cơ năng từ dạng này sang dạng khác : Động năng chuyển hoá thành thế
+năng và ngược lại thế năng chuyển hoá thành động năng. Dưới đây ta sẽ khảo
+
+sát cụ thể sự chuyển hoá này.
+
+I- SỰ CHUYỂN HOÁ CỦA CÁC DẠNG CƠ NĂNG
+
+Thí nghiệm 1 : Quả bóng rơi
+
+Hình 17.1 ghi lại vị trí của quả bóng đang rơi sau những
+khoảng thời gian bằng nhau.
+
+e BH bộ cao và vận tốc của quả bóng thay đồi thế nào trong
+thời gian quả bóng rơi ?
+
+Tìm từ thích hợp cho các chỏ trống của câu trả lời sau :
+Trong thời gian quả bóng rơi, độ cao của quả bóng ....(1)....
+dân, vận tốc của quả bóng .....(2).... dân.
+
+e Thế năng và động năng của quả bóng thay đổi thế nào ?
+Tìm từ thích hợp cho các chỗ trống của câu trả lời sau :
+
+Thế năng của quả bóng ....(1).... dân, còn động năng
+của nó ;4„:(2):s:
+
+® Khi quả bóng chạm mặt đất, nó nảy lên. Trong thời
+gian nảy lên, độ cao và vận tốc của quả bóng thay đổi thế nào
+? Thế năng và động năng của nó thay đổi thế nào ?
+
+Tìm từ thích hợp cho các chỏ trống của câu trả lời sau :
+Trong thời gian nảy lên, độ cao của quả bóng ....(1).... dân,
+vận tốc của nó ....(2).... đân. Như vậy thế năng của quả bóng
+...(3).... dân, động năng của nó ....(4)).... dần.
+
+© Ở những vị trí nào (A hay B) quả bóng có thế năng,
+động năng lớn nhất ; có thế năng, động năng nhỏ nhất ?
+Tìm từ thích hợp cho các chỗ trống của các câu trả lời sau :
+
+Hình 17.1
+
+597
+
+--- Trang 61 (Vật lí 8.pdf) ---
+Quả bóng có thế năng lớn nhất khi ở vị trí ....(1).... và có thế năng nhỏ nhất
+Ki ö0xi tri.) ««.
+Quả bóng có động năng lón nhất khi ở vị trí ....(3).... và động năng nhỏ nhất
+khi ở vị trí ....(4)....
+
+Thí nghiệm 2 : Con lắc dao động
+
+I Kéo con lác lệch khỏi vị trí cân bằng tới
+vị trí A rồi thả tay ra. Quan sát chuyển
+động của con lác (H.17.2). Con lắc có độ
+cao lớn nhất ở A và €, thấp nhất ở vị trí
+cân bàng B. Ta lấy vị trí cân bàng B làm
+mốc để tính các độ cao.
+
+KS] Vận tốc của con lắc tăng hay giảm
+a) Con lắc đi từ A xuống B.
+b) Con lác đi từ B lên C.
+
+©® €ó sự chuyển hoá từ dạng cơ năng
+nào sang dạng cơ năng nào khi :
+
+a) Con lắc đi từ A xuống B ? Hình 17.2
+b) Con lác đi từ B lên C ?
+
+e Ở những vị trí nào con lắc có thế
+năng lớn nhất, có động năng lớn nhất ?
+
+L) Ở những vị trí nào con lác có
+động năng nhỏ nhất, có thế năng nhỏ
+nhất ? Các giá trị nhỏ nhất này bàng
+bao nhiêu ?
+
+® Kết luận
+- Trong chuyển động của con lắc đã có sự chuyển hoá liên tục các dạng cơ
+năng : Thế năng chuyền hoá thành động năng và động năng chuyển hoá
+thành thế năng.
+- Khi con lắc ở vị trí thấp nhất (vị trí cân bàng), thế năng đã chuyển hoá hoàn
+toàn thành động năng ; khi con lắc ở vị trí cao nhất, động năng đã chuyển
+hoá hoàn toàn thành thế năng.
+
+60
+
+--- Trang 62 (Vật lí 8.pdf) ---
+II - BẢO TOÀN CƠ NĂNG
+I Những thí nghiệm định lượng chính xác đã chứng tỏ :
+
+Trong quá trình cơ học, động năng và thế năng có thế chuyến hoá lẫn
+nhau, nhưng cơ năng thì không đối. Người ta nói cơ năng được bảo toàn.
+
+Chú ý : Khi mô tả các thí nghiệm vẽ ở hình 17.1 và 17.2 chúng ta đã bỏ qua
+ma sát. Thực ra, do có ma sát nên quả bóng sau khi chạm đất không thể nảy
+trở lại độ cao ban đầu, cũng như con lắc sau khi đã được thả ra ở vị trí A
+không thể quay trở lại đúng vị trí này. Điều đó có nghĩa là, nếu kể đến
+ma sát, thì cơ năng của vật không bảo toàn. Một phần cơ năng đã chuyển hoá
+thành một dạng năng lượng khác mà chúng ta sẽ học trong các bài sau.
+
+Y III - VẬN DỤNG
+
+Hãy chỉ ra sự chuyển hoá từ dạng cơ năng này sang dạng cơ năng khác
+trong các trường hợp sau :
+
+a) Mũi tên được bán đi từ chiếc cung.
+
+b) Nước từ trên đập cao chảy xuống.
+
+c) Ném một vật lên cao theo phương thảng đứng.
+
+e Động năng có thể chuyển hoá thành thế năng, ngược lại
+thế năng có thể chuyển hoá thành động năng.
+
+$ Trong quá trình cơ học, động năng và thế năng có thể chuyển
+hoá lẫn nhau, nhưng cơ năng được bảo toàn.
+
+ó thể em chưa biết
+
+Các nguồn nước ở trên cao có thế năng rất lớn. Thế năng này có thể chuyển
+hoá thành động năng làm quay các máy phát
+điện. Hiện nay, người ta mới sử dụng được
+chưa tới 10% nguồn năng lượng dự trữ không
+lồ này. Gió có động năng rất lớn, là nguồn
+năng lượng sạch và rẻ tiền. Nếu con người
+tận dụng được Ï hết động năng của gió thì gió
+có thể cung cấp cho con người năng lượng
+còn lớn hơn năng lượng do nước cung cấp.
+Từ xưa, người ta đã biết sử dụng động năng
+của gió để chạy các cối xay, gọi là cối xay Hình 17.3
+
+gió. Đập thuỷ điện Hoà Bình.
+
+—']
+
+
+--- Trang 63 (Vật lí 8.pdf) ---
+Bài 18
+CÂU HỎI VÀ BÀI TẬP TỔNG KẾT GHƯƠNG I : CƠ HỌC
+
+A - ÔN TẬP
+
+¬
+
+. Chuyển động cơ học là gì ? Cho
+hai ví dụ.
+
+2. Nêu một ví dụ chứng tỏ một vật
+có thể chuyền động so với vật
+này, nhưng lại đứng yên so với
+vật khác.
+
+©
+
+. Độ lón của vận tốc đặc trưng cho
+tính chất nào của chuyển động ?
+Công thức tính vận tốc ? Đơn vị
+vận tốc ?
+
+4. Chuyển động không đều là gì ?
+Viết công thức tính vận tốc trung
+bình của chuyển động không đều.
+
+5. Lực có tác dụng như thế nào đối
+với vận tốc ? Nêu ví dụ minh hoa.
+
+6. Nêu các yếu tố của lực và cách
+biểu điển lực bàng vectơ.
+
+7. Thế nào là hai lực cân bàng ? Một
+vật chịu tác dụng của các lực cân
+bằng sẽ thế nào khi :
+
+I
+
+a) Vật đang đứng yên ?
+b) Vật đang chuyển động ?
+
+8. Lực ma sát xuất hiện khi nào ?
+Nêu hai ví dụ về lực ma sát.
+
+9. Nêu hai ví dụ chứng tỏ vật có
+quán tính.
+
+10. Tác dụng của áp lục phụ thuộc
+những yếu tố nào ? Công thức
+tính áp suất. Đơn vị áp suất.
+
+11. Một vật nhúng chìm trong chất
+lỏng chịu tác dụng của một lực
+đẩy có phương, chiều và độ lớn
+như thế nào ?
+
+12. Điều kiện để một vật chìm xuống,
+nổi lên, lơ lửng trong chất lỏng.
+
+13. Trong khoa học thì thuật ngữ
+công cơ học chỉ dùng trong trường
+hợp nào ?
+
+14. Viết biểu thức tính công cơ học.
+Giải thích rõ từng đại lượng trong
+biểu thức tính công. Đơn vị công.
+
+--- Trang 64 (Vật lí 8.pdf) ---
+15. Phát biểu định luật về công.
+
+16. Công suất cho ta biết điều gì ?
+
+17. Thế nào là sự bảo toàn cơ năng ?
+Nêu ba ví dụ về sự chuyển hoá từ
+dạng cơ năng này sang dạng cơ
+năng khác.
+
+B - VẬN DỤNG
+
+I - Khoanh tròn chữ cái đứng trước
+phương án trả lời mà em cho
+là đúng
+
+1. Hai lực được gọi là cân bàng khi
+A. cùng phương, cùng chiều,
+cùng độ lớn.
+
+B. cùng phương, ngược chiều,
+cùng độ lớn.
+
+€C. cùng phương, cùng độ lớn,
+cùng đặt lên một vật.
+
+D. cùng đặt lên một vật, cùng độ
+lớn, phương nằm trên cùng một
+đường thẳng, chiều ngược nhau.
+
+2. Xe ôtô đang chuyền động đột ngột
+dừng lại. Hành khách trong xe bị
+A. ngả người về phía sau.
+
+B. nghiêng người sang phía trái.
+€. nghiêng người sang phía phải.
+
+D. xô người về phía trước.
+
+3. Một đoàn môtô chuyển động cùng
+chiều, cùng vận tốc đi ngang qua
+một ôtô đỏ bên đường. Ý kiến
+nhận xét nào sau đây là đúng ?
+A. Các môtô chuyền động đối
+với nhau.
+
+B. Các môtô đúng yên đối
+với nhau.
+
+€. Các môtô đứng yên đối với ôtô.
+D. Các môtô và ôtô cùng chuyển
+động đối với mặt đường.
+
+4. Hai thỏi hình trụ, một bằng nhôm,
+một bàng đồng khi được treo vào
+hai đầu cân đòn thì đòn cân
+cân bàng (H.18.1). Khi nhúng
+ngập cả hai vào nước thì đòn cân
+sẽ thế nào ?
+
+A. Nghiêng về bên phải.
+
+B. Nghiêng về bên trái.
+
+€. Vẫn cân bàng.
+
+D. Chưa đủ dữ kiện đề trả lời.
+
+| ñ
+Nhôm Đồng
+Hình 18.1
+
+630
+
+--- Trang 65 (Vật lí 8.pdf) ---
+5. Để chuyển một vật nặng lên cao,
+người ta dùng nhiều cách. Liệu có
+cách nào cho ta lợi về công ? Câu
+trả lời nào đúng ?
+
+A. Dùng ròng rọc động.
+
+B. Dùng ròng rọc cố định.
+
+€. Dùng mặt phảng nghiêng.
+
+D. Không có cách nào cho ta lợi về
+công.
+
+6. Một vật được ném lên cao theo
+phương thảng đứng. Khi nào
+vật vừa có thế năng, vừa có
+động năng ?
+
+A. Chi khi vật đang đi lên.
+B. Chi khi vật đang rơi xuống.
+€. Chỉ khi vật lên tới điểm cao nhất.
+
+D. Cả khi vật đang đi lên và đang
+Tơi Xuống.
+
+I - Trả lời câu hỏi
+
+. Ngồi trong xe ôtô đang chạy, ta
+thấy hai hàng cây bên đường
+chuyển động theo chiều ngược
+lại. Giải thích hiện tượng này.
+
+{s2
+
+li
+
+G&
+
+œŒI\
+
+[S
+
+. Vì sao khi mở nắp chai bị vặn
+
+chặt, người ta phải lót tay bằng
+vải hay cao su ?
+
+. Các hành khách đang ngồi trên xe
+
+ôtô bỏng thấy mình bị nghiêng
+người sang phía trái. Hỏi lúc đó
+xe đang được lái sang phía nào ?
+
+. Tìm một ví dụ chứng tỏ tác dụng
+
+của áp suất phụ thuộc vào độ lớn
+của áp lực và diện tích bị ép.
+
+, Khi vật nổi trên mặt chất lỏng thì
+
+lực đầy Ác-si-mét được tính như
+thế nào ?
+
+. Trong những trường hợp dưới đây
+
+trường hợp nào có công cơ học ?
+a) Cậu bé trèo cây.
+
+b) Em học sinh ngồi học bài.
+
+€) Nước ép lên thành bình đựng.
+
+đ) Nước chảy xuống từ đập chán
+nước.
+
+--- Trang 66 (Vật lí 8.pdf) ---
+II - Bài tập
+
+1. Một người đi xe đạp xuống một
+cái đốc dài 100m hết 25s.
+Xuống hết đốc, xe lăn tiếp đoạn
+đường dài 50m trong 20s rồi
+mới dùng hản. Tính vận tốc
+trung bình của người đi xe trên
+mỗi đoạn đường và trên cả
+quảng đường.
+
+2. Một người có khối lượng 45kg.
+Diện tích tiếp xúc với mặt đất của
+mỗi bàn chân là 150cm2. Tính áp
+suất người đó tác dụng lên mặt
+đất khi :
+
+a) Đúng cả hai chân.
+b) Co một chân.
+
+3. M và N là hai vật giống hệt nhau
+được thả vào hai chất lỏng khác
+nhau có trọng lượng riêng là dị
+và da (H.18.2).
+
+a) So sánh lực đẩy Ác-si-mét tác
+dụng lên M và N.
+
+b) Trọng lượng riêng của chất lỏng
+nào lớn hơn ?
+
+4. Hay tính công mà em thực hiện
+được khi đi đều từ tâng một lên
+tầng hai của ngôi trường em (em
+tự cho các dữ kiện cần thiết).
+
+5. Một lực sĩ củ tạ nâng quả tạ khối
+lượng 125kg lên cao 70cm trong
+thời gian 0,3 giây. Trong trường
+hợp này lực sĩ đã hoạt động với
+công suất là bao nhiêu ?
+
+Hình 18.2
+
+65 Ê
+
+--- Trang 67 (Vật lí 8.pdf) ---
+€ - TRÒ CHƠI Ô CHỮ
+
+Hàng ngang
+
+Ni
+
+. Tên loại vũ khí cổ hoạt động dựa
+
+trên hiện tượng thế năng chuyển
+hoá thành động năng.
+
+. Đặc điểm vận tốc của vật khi vật
+
+chịu tác dụng của lực cân bằng.
+
+Hai từ dùng để biểu đạt tính chất :
+Động năng và thế năng không tự
+sinh ra hoặc mất đi mà chỉ chuyển
+hoá từ dạng này sang dạng kia.
+
+Đại lượng đặc trưng cho khả năng
+sinh công trong 1 giây.
+
+. Tên của lục do chất lỏng tác
+
+dụng lên vật khi nhúng vào
+trong chất lỏng.
+
+. Chuyển động và đứng yên có tính
+
+chất này.
+
+Áp suất tại các điểm nằm trên
+cùng một mặt phẳng nằm ngang
+của chất lỏng có tính chất này.
+
+IS
+
+. Tên gọi chuyển động của con lắc
+
+đồng hồ.
+
+. Tên gọi hai lực cùng điểm đặt,
+
+cùng phương, ngược chiều, cùng
+độ lớn.
+
+Hàng đọc
+
+Hãy xác định nội dung của từ ở
+hàng dọc màu xanh (H.18.3).
+
+Hình 18.3
+
+--- Trang 68 (Vật lí 8.pdf) ---
+I Các chất được cấu tạo như thế nào ?
+
+I Nhiệt năng là gì ? Có mấy cách truyền nhiệt năng ?
+
+I Nhiệt lượng là gì ? Xác định nhiệt lượng như thế nào ?
+
+I Một trong những định luật tổng quát của tự nhiên là định
+
+luật nào ?
+67 ]
+
+--- Trang 69 (Vật lí 8.pdf) ---
+Bài 19
+CÁC CHẤT ĐƯỢC CẤU TẠO NHƯ THẾ NÀO ?
+
+Đồ 50cm3 rượu vào 50cm3 nước ta
+không thu được 100cm hỗn hợp rượu
+và nước, mà chỉ thu được khoảng
+95cm3 !
+
+Vậy khoảng 5cm3 hỗn hợp còn lại đã
+biến đi đâu (H.19.1) ?
+
+M I- CÁC CHẤT CÓ ĐƯỢC CẤU TẠO
+TỪ CÁC HẠT RIÊNG BIỆT KHÔNG ?
+
+Các chất nhìn có vẻ như liền một khối,
+nhưng có thực chúng liền một khối
+hay không ?
+
+Cách đây trên hai nghìn năm, người ta
+đã nghĩ rằng vật chất không liền một
+khối mà được cấu tạo từ các hạt riêng
+biệt rất nhỏ, mát thường không thể
+nhìn thấy được. Tuy nhiên, người ta
+không làm cách nào chứng minh được
+ý nghĩ của mình là đúng.
+
+Mài đến đâu thế ki XX, con người mới
+chứng minh được bàng thí nghiệm sự
+tồn tại của các hạt riêng biệt cấu tạo
+nên mọi vật mà người ta gọi là
+nguyên tứ và phân tứ.
+
+Nguyên tử là hạt chất nhỏ nhất, còn
+phân tử là một nhóm các nguyên tử
+kết hợp lại. Vì nguyên tử và phân tử
+đều vô cùng nhỏ bé nên các chất nhìn
+có vẻ như liền một khối.
+
+lo
+
+100 Ũ 1
+” ”
+“ “
+Hình 19.1
+
+Hình 19.2. Kính hiển vi hiện đại.
+
+--- Trang 70 (Vật lí 8.pdf) ---
+Ngày nay, các kính
+hiển vi hiện đại
+(H.192) đả chụp
+được ảnh của nguyên
+tủ, phân tử một số
+chất và không ai còn
+nghi ngờ về sự tồn tại
+của những hạt này
+Œ19.3):
+
+II - GIỮA CÁC PHÂN
+TỬ CÓ KHOẢNG
+CÁCH HAY KHÔNG ?
+
+Hình 19.3. Ảnh chụp các nguyên tử silic qua kính
+hiển vì hiện đại.
+
+® 1. Thí nghiệm mô hình
+
+Chúng ta tìm cách giải đáp câu hỏi nêu ra ở đầu bài bàng cách dùng một thí
+nghiệm tương tự như thí nghiệm trộn rượu với nước, được gọi là thí nghiệm
+mô hình.
+
+Hãy lấy 50cm cát đổ vào 50cm ngô rồi lắc nhẹ xem có được 100cm
+hỗn hợp ngô và cát không ? Hãy giải thích tại sao ?
+
+® 2. Giữa các nguyên tử, phân tử có khoảng cách
+
+Hãy cố gắng dùng cách giải thích sự hụt thể tích trong thí nghiệm trộn
+cát vào ngô để giải thích sự hụt thể tích trong thí nghiệm trộn rượu với nước.
+Chi khi nào không giải thích được mới đọc đoạn sau đây :
+
+Giữa các hạt ngô có khoảng cách nên khi đồ cát vào ngô, các hạt cát đã xen
+vào những khoảng cách này làm cho thể tích của hỗn hợp nhỏ hơn tổng thể
+tích của ngô và cát.
+
+Giữa các phân tử nước cũng như giữa các phân tử rượu đều có khoảng cách.
+Khi trộn rượu với nước, các phân tử rượu đả xen vào khoảng cách giữa các
+phân tử nước và ngược lại. Vì thế mà thể tích của hỗn hợp rượu và nước giảm.
+Các ảnh chụp nguyên tủ, phân tử qua kính hiển vi hiện đại cũng cho thấy giữa
+
+chúng có khoảng cách (H.19.3).
+69 ]
+
+--- Trang 71 (Vật lí 8.pdf) ---
+` II - VẬN DỤNG
+
+Hay vận dụng những điều đã học ở trên để giải thích các hiện tượng sau đây.
+Thả một cục đường vào một cốc nước rồi khuấy lên, đường tan và nước
+CÓ Vị ngọt.
+
+lối Quả bóng cao su hoặc quả bóng bay bơm căng, dù có buộc thật chặt cũng
+cứ ngày một xẹp dần.
+
+Cá muốn sống được phải có không khí, nhưng ta thấy cá vẫn sống
+được trong nước.
+
+© Các chất được cấu tạo từ các hạt riêng biệt gọi là nguyên tử, phân tử.
++$ Giữa các nguyên tử, phân tử có khoảng cách.
+
+Có thể em chưa biết
+e Khối lượng của Trái Đất lớn hơn khối lượng của quả cam bao nhiêu lần thì
+khối lượng của quả cam lớn hơn khối lượng của phân tử hiđrô bấy nhiêu lần.
+e Nếu xếp một trăm triệu phân tử nước nối liền nhau thành một hàng thì cũng
+chưa dài đến 2cm.
+® Nếu tưởng tượng mỗi vật đều lớn lên gấp một triệu lần, nghĩa là một con muỗi
+sẽ trở thành một con vật khổng lồ dài tới 10km thì kích thước của mỗi phân tử
+vẫn chưa lớn bằng một dấu chấm (.).
+
+(ứo
+
+--- Trang 72 (Vật lí 8.pdf) ---
+Bài 20
+NGUYÊN TỦ, PHÂN TỬ CHUYỂN ĐỘNG HAY ĐỨNG YÊN ?
+
+Hay tưởng tượng giữa sân bóng đá có
+một quả bóng khổng lô và rất nhiều
+học sinh từ mọi phía chạy đến xô đẩy
+quả bóng. Vì những xô đẩy này không
+cân bằng nên quả bóng lúc bay lên,
+khi rơi xuống, lúc bật sang trái, khi lăn
+sang phải... (H.20. 1).
+
+Trò chơi này trỏng như chẳng có liên
+quan gì đến nguyên tử, phân tủ, thế mà
+lại có thể giúp chúng ta hiểu một trong
+những tính chất quan trọng nhất của
+nguyên tử, phân tử sẽ học trong bài
+này.
+
+Hình 20.1
+
+I- THÍ NGHIỆM BƠ-RAO
+
+I Năm 1827 nhà bác học Brao-nơ (người Anh), khi quan sát các hạt phấn hoa
+trong nước bàng kính hiển vi đã phát hiện thấy chúng chuyến động không
+ngừng về mọi phía (H.20.2). Ò thời kì đó, lí thuyết về vật chất được cấu tạo
+từ các nguyên tủ, phân tử chưa ra đời nên ông không làm sao giải thích được
+chuyển động kì lạ này.
+
+II - CÁC NGUYÊN TỦ, PHÂN TỬ CHUYỂN ĐỘNG KHÔNG NGỪNG
+
+® Các em hay thủ giải thích chuyển động của các hạt phấn hoa trong thí
+nghiệm của Brao-nơ bàng cách dùng sự tương tự giữa chuyển động của các
+hạt phấn hoa với chuyền động của quả bóng mô tả ở phần mở bài. Sau đây
+là các câu hỏi gợi ý :
+
+Quả bóng tương tự với hạt nào trong thí nghiệm của Brao-nơ ?
+
+Các học sinh tương tự với những hạt nào trong thí nghiệm của Brao-nơ ?
+
+—_]
+
+--- Trang 73 (Vật lí 8.pdf) ---
+Tại sao các phân tử nước có thể làm cho các
+hạt phấn hoa chuyển động ?
+
+Nếu các em không trả lời được thì cũng dùng
+buồn vì phải hơn năm mươi năm sau thí nghiệm
+của Brao-nơ, các nhà khoa học mới bước đầu tìm
+ra nguyên nhân của chuyển động này, và mài
+tới năm 1905, nhà vật lí An-be Anh-xtanh
+(người Đúc) mới giải thích được đây đủ và
+chính xác thí nghiệm của Brao-nơ.
+
+Nguyên nhân gây ra chuyền động của các hạt
+phấn hoa trong thí nghiệm của Brao-nơ là do
+các phân tử nước không đứng yên mà chuyển
+động hỗn độn không ngùng. Trong khi chuyển
+động các phân tử nước va chạm vào các hạt phấn
+hoa từ nhiều phía (H.20.3), các va chạm này
+không cân bàng nhau làm cho các hạt phấn hoa
+chuyền động hỗn độn không ngừng.
+
+ HI - CHUYỂN ĐỘNG PHÂN TỬ VÀ NHIỆT ĐỘ
+
+Trong thí nghiệm của Brao-nơ nếu ta càng tăng
+nhiệt độ của nước thì chuyển động của các hạt
+phấn hoa càng nhanh, chứng tỏ các phân tử nước
+chuyển động càng nhanh và va đập vào các hạt
+phấn hoa càng mạnh. Nhiều thí nghiệm khác
+cũng chứng tỏ : Nhiệt độ càng cao, các nguyên
+tử, phân tử chuyền động càng nhanh. Vì chuyền
+động của các nguyên tử, phân tử liên quan chặt
+chẽ với nhiệt độ nên chuyền động này được gọi là
+chuyến động nhiệt.
+
+Y IV - VẬN DỤNG
+
+FÁ
+An-be Anh-xtanh
+(1879 - 1955)
+
+Hình 20.2. Chuyển động
+của hạt phấn hoa trong
+thí nghiệm của Brao-nơ.
+
+.—
+s Phân tử nước
+
+Hình 20.3. Sự va chạm
+của các phân tử nước vào
+hạt phấn hoa.
+
+Đổ nhẹ nước vào một bình đựng dung dịch đồng sunfat màu xanh
+(H.20.4). Vì nước nhẹ hơn nên nổi ở trên tạo thành một mặt phân cách giữa
+hai chất lỏng. Sau một thời gian, mặt phân cách này mờ dần rồi mất hản.
+Trong bình chỉ còn một chất lỏng đồng nhất màu xanh nhạt. Nước và đồng
+
+sunfat đả hoà lẳn vào nhau.
+
+z2
+
+--- Trang 74 (Vật lí 8.pdf) ---
+Hiện tượng này gọi là
+hiện tượng khuếch tán.
+Hay dùng những hiểu
+biết của mình về nguyên
+tủ, phân tử để giải thích
+hiện tượng trên.
+
+Tại sao trong nước
+hồ, ao, sông, biển lại có
+không khí mặc dù
+không khí nhẹ hơn nước
+rất nhiều ?
+
+Hình 20.4
+
+S8 Hiện tượng khuếch tán có xảy ra nhanh hơn khi tăng nhiệt độ không ?
+
+Tại sao ?
+
+Bỏ vài hạt thuốc tím vào một cốc đựng nước lạnh và một cốc đựng nước
+
+nóng. Quan sát hiện tượng xảy ra và giải thích.
+
+$ Các nguyên tử, phân tử chuyển động không ngừng.
+$ Nhiệt độ của vật càng cao thì các nguyên tử, phân tử cấu tạo nên vật
+chuyển động càng nhanh.
+
+Có thể em chưa biết
+
+® Ở nhiệt độ 09C các phân tử hiđrô chuyển động với vận tốc trung bình
+khoảng 1 700m/s, nghĩa là khoảng 6 120km/h, nhanh gấp hơn năm lần các
+
+máy bay phản lực hiện đại.
+
+e Các phân tử khí chuyển động trong phòng với vận tốc trung bình từ
+100m/s đến 2 000m/s. Tại sao khi mở lọ nước hoa ở đầu lớp thì phải vài giây
+sau ở cuối lớp mới ngửi thấy mùi nước hoa ? Đó là vì, các phân tử nước hoa
+không chuyển động thẳng từ đầu lớp đến cuối lớp, mà chuyển động dích dắc
+từng đoạn rất ngắn do bị va chạm vào các phân tử không khí, giống như
+một người đi trong đám đông, hết chạm phải người này lại va phải người kia.
+
+73 |
+
+--- Trang 75 (Vật lí 8.pdf) ---
+Bài 21
+NHIỆT NĂNG
+
+Trong thí nghiệm về thả quả bóng
+rơi (H.21.1), mỗi lần quả bóng nảy
+lên, độ cao của nó lại giảm đán.
+Cuối cùng không nảy lên được nữa.
+Trong hiện tượng này rõ ràng là cơ
+năng đã giảm dần. Vậy cơ năng đã
+biến mất hay đã chuyển thành một
+dạng năng lượng khác ?
+
+NI - NHIỆT NĂNG
+
+Các phân tử cấu tạo nên vật chuyển
+động không ngừng, do đó chúng có
+động năng. Tổng động năng của các
+phân tử cấu tạo nên vật gọi là nhiệt
+năng của vật.
+
+Nhiệt năng có quan hệ chặt chẽ với
+nhiệt độ. Nhiệt độ của vật càng cao
+thì các phân tử cấu tạo nên vật
+chuyến động càng nhanh và nhiệt
+năng của vật càng lớn.
+
+Hình 21.1
+
+® II - CÁC CÁCH LÀM THAY ĐỔI NHIỆT NĂNG
+
+Các em hãy thảo luận xem làm thế nào để thay đổi nhiệt năng của một vật,
+ví dụ làm thế nào để tăng nhiệt năng của một miếng đồng ?
+
+Các em có thể tìm ra nhiều cách khác nhau, nhưng có thể quy về hai cách sau đây :
+1. Thực hiện công. Khi ta thực hiện công lên miếng đồng, thì nhiệt năng của
+miếng đồng tăng và nó nóng lên.
+
+Các em hay nghi ra một thí nghiệm đơn giản để chứng tỏ khi thực hiện
+công lên miếng đồng, miếng đồng sẽ nóng lên.
+
+L“
+
+--- Trang 76 (Vật lí 8.pdf) ---
+2. Truyền nhiệt. Mặc dù không thực hiện công, nhưng ta cũng có thể làm cho
+nhiệt năng của miếng đồng tăng. Ví dụ, cho miếng đồng tiếp xúc với những
+vật có nhiệt độ cao hơn nó, khi đó miếng đồng sẽ nóng lên, nhiệt năng của
+nó tăng, còn vật có nhiệt độ cao hơn thì lạnh đi, nhiệt năng của nó giảm. Vật
+có nhiệt độ cao đã truyền cho miếng đồng một phân nhiệt năng của nó.
+Cách làm thay đổi nhiệt năng mà không cần thực hiện công gọi là
+truyền nhiệt.
+
+Các em hay nghi ra một thí nghiệm đơn giản để minh hoạ việc làm tăng
+nhiệt năng của một vật bàng cách truyền nhiệt.
+
+II - NHIỆT LƯỢNG
+
+Phân nhiệt năng mà vật nhận thêm được hay mất bót đi trong quá trình
+truyền nhiệt được gọi là nhiệt lượng. Nhiệt lượng được kí hiệu bàng chữ Q.
+Đơn vị của nhiệt lượng là jun (J).
+
+Y IV - VẬN DỤNG
+
+Nung nóng một miếng đồng rồi thả vào một cốc nước lạnh. Hỏi nhiệt
+năng của miếng đồng và của nước thay đổi như thế nào ? Đây là sự thực hiện
+công hay truyền nhiệt ?
+
+Xoa hai bàn tay vào nhau ta thấy tay nóng lên. Trong hiện tượng này đả
+có sự chuyển hoá năng lượng từ dạng nào sang dạng nào ? Đây là sự thực
+hiện công hay truyền nhiệt ?
+
+Hay dùng những kiến thức đã học trong bài để giải thích hiện tượng nêu
+ra ở đầu bài.
+
+$ Nhiệt năng của một vật là tổng động năng của các phân tử cấu tạo
+nên vật.
+
++ Nhiệt năng của một vật có thể thay đổi bằng hai cách : Thực hiện
+công hoặc truyền nhiệt.
+
+$ Nhiệt lượng là phần nhiệt năng mà vật nhận thêm được hay mất bớt đi
+trong quá trình truyền nhiệt. Đơn vị của nhiệt năng và nhiệt lượng là
+
+L jun (J.
+
+75 |
+
+--- Trang 77 (Vật lí 8.pdf) ---
+Có thể em chưa biết
+
+Lô-mô-nô-xốp
+(1711 - 1765)
+
+Jun (1818 - 1889)
+
+Ạ z9
+
+e Phải mất nhiều thế kỉ, con người mới trả lời
+được câu hỏi về bản chất của nhiệt là gì ?
+Vào đầu thế kỉ XVIII, người ta cho rằng nhiệt là
+một chất đặc biệt gọi là "chất nhiệt". Đó là một
+chất lỏng vô hình, không có trọng lượng,
+thấm sâu vào mọi vật và có thể truyền dễ dàng
+từ vật này sang vật khác. Thuyết chất nhiệt có
+thể giải thích được một số hiện tượng nhiệt trong
+đó có sự truyền nhiệt, nhưng không giải thích
+được nhiều hiện tượng nhiệt khác trong đó có
+hiện tượng thay đổi nhiệt năng bằng cách
+thực hiện công.
+
+° Đồng thời với thuyết chất nhiệt còn có thuyết
+cho rằng bản chất của nhiệt là do chuyển động
+của các hạt vật chất. Trong số những người
+ủng hộ thuyết này có các nhà vật lí nổi tiếng như
+Niu-tơn (người Anh), Ma-ri-ốt (người Pháp),
+Lô-mô-nô-xốp (người Nga), Jun (người Anh).
+Tuy nhiên cũng phải chờ đến đầu thế kỉ XIX, khi
+thuyết về vật chất được cấu tạo từ các nguyên tử,
+phân tử ra đời người ta mới công nhận bản chất
+của nhiệt là do chuyển động của các hạt vật chất
+cấu tạo nên vật.
+
+--- Trang 78 (Vật lí 8.pdf) ---
+Bài 22
+DẪN NHIỆT
+
+Trong sự truyền nhiệt, nhiệt năng được truyền từ phần này sang phân khác
+của một vật, từ vật này sang vật khác. Sự truyền nhiệt này được thục hiện
+
+bàng những cách nào ?
+
+I - SỰ DẪN NHIỆT
+
+I 1. Thí nghiệm
+
+Trong thí nghiệm ở hình 22.1 các đinh
+a, b, c, d, e được gắn bàng sáp vào thanh
+đồng AB.
+
+Dùng đèn cồn đun nóng đầu A của thanh
+đồng. Quan sát và mô tả hiện tượng xảy ra.
+
+® 2. Trả lời câu hỏi
+Các định rơi xuống chứng tỏ điều gì ?
+
+Các đinh rơi xuống trước, sau theo
+thứ tự nào ?
+Hay dựa vào thứ tự rơi xuống của các
+đinh để mô tả sự truyền nhiệt năng trong
+thanh đồng AB.
+
+Sự truyền nhiệt năng như trong thí
+nghiệm trên gọi là sự đân nhiệt.
+
+I II - TÍNH DẪN NHIỆT CỦA CÁC CHẤT
+
+Hay dựa vào các thí nghiệm sau đây để
+rút ra nhận xét về tính dẫn nhiệt của các
+chất rắn, lỏng, khí.
+
+Thí nghiệm 1. Dùng đèn cồn đun nóng
+đồng thời các thanh đồng, nhôm,
+thuỷ tỉnh có đinh gán bàng sáp ở đâu
+(H.22.2).
+
+Hình 22.2
+
+77]
+
+--- Trang 79 (Vật lí 8.pdf) ---
+8i Các dinh gán ở đâu các thanh có rơi
+xuống đồng thời không ? Hiện tượng này
+chứng tỏ điều gì ?
+
+Hay dựa vào thí nghiệm trên để so
+sánh tính dản nhiệt của đồng, nhôm,
+thuỷ tinh. Chất nào dẫn nhiệt tốt nhất,
+chất nào dẫn nhiệt kém nhất ? Tù đó có
+thể rút ra kết luận gì ?
+
+Thí nghiệm 2. Dùng đèn cồn đun nóng
+miệng một ống nghiệm trong có dựng
+nước, dưới đáy có một cục sáp (H.22.3).
+
+Khi nước ở phần trên của ống nghiệm
+bát đầu sôi thì cục sáp ở đáy ống nghiệm
+có bị nóng chảy không ? Tù thí nghiệm
+này có thể rút ra nhận xét gì về tính dân
+nhiệt của chất lỏng ?
+
+Thí nghiệm 3. Dùng đèn cồn đun nóng
+đáy một ống nghiệm trong có không khí,
+ở nút có gắn một cục sáp (H.22.4).
+
+Khi đáy ống nghiệm đã nóng thì Hình 22.4
+miếng sáp gắn ở nút ống nghiệm có bị
+
+nóng chảy không ? Từ thí nghiệm này có
+
+thể rút ra nhận xét gì về tính dẫn nhiệt
+
+của chất khí ?
+
+' II - VẬN DỤNG
+
+Tìm ba ví dụ về hiện tượng dẫn nhiệt.
+
+Tại sao nồi, xoong thường làm bàng kim loại, còn bát đĩa thường làm
+bàng sứ ?
+
+Tại sao về mùa đông mặc nhiều áo mỏng ấm hơn mặc một áo dày ?
+Về mùa nào chim thường hay đứng xù lông ? Tại sao ?
+
+Tại sao trong những ngày rét sờ vào kim loại ta thấy lạnh, còn trong
+những ngày nắng nóng sờ vào kim loại ta lại thấy nóng ?
+
+{z2
+
+--- Trang 80 (Vật lí 8.pdf) ---
+$ Nhiệt năng có thể truyền từ phần này sang phần khác của một
+vật, từ vật này sang vật khác bằng hình thức dẫn nhiệt.
+
++ Chất rắn dẫn nhiệt tốt. Trong chất rắn, kim loại dẫn nhiệt tốt nhất.
+
+$ Chất lỏng và chất khí dẫn nhiệt kém.
+
+Có thể em chưa biết
+
+ø Bản chất của sự dẫn nhiệt là sự truyền động năng của Các hạt vật chất khi
+chúng va chạm vào nhau. Hãy thử dùng kiến thức trên để giải thích sự dẫn
+nhiệt trong thí nghiệm ở hình 22.1.
+
+e Nếu coi khả năng dẫn nhiệt của không khí là 1 thì khả năng dẫn nhiệt của
+một số chất có giá trị như bảng 22.1.
+
+Bảng 22.1
+
+E¬—-..".—"
+
+Thuỷ tinh
+Đất
+
+e Nếu có ai nói là tóc đốt không cháy, thì chắc các em không tin. Nhưng các
+em thử làm thí nghiệm sau.
+
+Lấy một sợi tóc cuốn chặt quanh một que sắt dài rồi dùng diêm đốt, tóc không
+cháy, chỉ có que sắt nóng lên thôi. Nếu cuốn tóc quanh một thanh thuỷ tinh
+hoặc gỗ thì khi đốt, tóc sẽ cháy ngay. Hãy giải thích tại sao ?
+
+79 |
+
+--- Trang 81 (Vật lí 8.pdf) ---
+Bài 23
+ĐỐI LƯU - BỨC XẠ NHIỆT
+
+I- ĐỐI LƯU
+
+Trong thí nghiệm về sự dẫn nhiệt của
+nước, nếu ta không gán miếng sáp ở đáy
+ống nghiệm mà để miếng sáp ở miệng
+ống nghiệm và đun nóng đáy ống
+nghiệm (H.23.1), thì chỉ trong một thời
+gian ngắn sáp đã nóng chảy. Trong
+trường hợp này nước đã truyền nhiệt
+bằng cách nào ?
+
+I1. Thí nghiệm
+
+Đặt một gói nhỏ đựng các hạt thuốc tím
+vào đáy của một cốc thuỷ tinh đựng nước
+rồi dùng đèn cồn đun nóng cốc nước ở
+phía có đặt thuốc tím (H.23.2).
+
+Quan sát hiện tượng xảy ra.
+®2. Trả lời câu hỏi
+
+Nước màu tím di chuyển thành dòng
+từ dưới lên rồi từ trên xuống hay di
+chuyển hỏn độn theo mọi phương ?
+
+Tại sao lớp nước ở dưới được đun
+nóng lại đi lên phía trên, còn lớp nước
+lạnh ở phía trên lại đi xuống dưới ? (Hãy
+nhớ lại điều kiện để vật nổi lên, chìm
+xuống đả học trong phần Cơ học).
+
+Tại sao biết được nước trong cốc đã
+nóng lên ?
+
+Sự truyền nhiệt năng nhờ tạo thành các
+dòng như trong thí nghiệm trên gọi là
+sự đối lưu. Sự đối lưu cũng xảy ra
+trong chất khí.
+
+'ao
+
+Hình 23.1
+
+--- Trang 82 (Vật lí 8.pdf) ---
+Y 3. Vận dụng
+
+EE Trong thí nghiệm ở hình 23.3, khi đốt nến
+và hương ta thấy dòng khói hương đi từ trên
+xuống vòng qua khe hở giữa miếng bìa ngăn và
+đáy cốc rồi đi lên phía ngọn nến. Hay giải thích
+hiện tượng trên.
+
+Tại sao muốn đun nóng chất lỏng và chất
+khí phải đun từ phía dưới ?
+
+Trong chân không và trong chất rắn có
+xảy ra đối lưu không ? Tại sao ?
+
+I - BỨC XẠ NHIỆT
+
+Ngoài lớp khí quyển bao quanh Trái Đất,
+khoảng không gian còn lại giữa Trái Đất và
+Mặt Trời là khoảng chân không. Trong khoảng
+chân không này không có sự dẫn nhiệt và đối
+lưu. Vậy năng lượng của Mặt Trời đã truyền
+xuống Trái Đất bàng cách nào ?
+
+1. Thí nghiệm
+
+- Một bình câu đã phủ muội đèn, trên nút có
+gắn một ống thuỷ tinh, trong ống thuỷ tinh
+có giọt nước màu. Bình được đặt gần một
+nguồn nhiệt như ngọn lửa đèn cồn (H.23.4).
+Quan sát và mô tả hiện tượng xảy ra với giọt
+nước màu.
+
+- Lấy miếng gỗ chắn giữa nguồn nhiệt và bình
+cầu (H.23.5). Quan sát và mô tả hiện tượng
+Xảy ra với giọt nước màu.
+
+®2. Trả lời câu hỏi
+
+Giọt nước màu dịch chuyển về đâu B
+chứng tỏ điều gì ?
+
+Giọt nước màu dịch chuyển trở lại đầu A
+chứng tỏ điều gì ? Miếng gỗ đã có tác dụng gì ?
+
+Hình 23.3
+
+Hình 23.5
+
+—]
+
+--- Trang 83 (Vật lí 8.pdf) ---
+Sự truyền nhiệt từ nguồn nhiệt tới bình có phải là dẫn nhiệt và đối lưu
+không ? Tại sao ?
+
+Trong thí nghiệm trên, nhiệt đã được truyền bằng các £a nhiệt đi thảng. Hình
+thức truyền nhiệt này gọi là bức xạ nhiệt. Bức xạ nhiệt có thể xảy ra ngay cả
+trong chân không.
+
+I8 Thí nghiệm cho thấy khả năng hấp thụ tia nhiệt của một vật phụ thuộc vào
+tính chất của bề mặt. Vật có bề mặt càng xù xì và màu càng sắm thì hấp thụ
+tia nhiệt càng nhiều.
+
+Y III - VẬN DỤNG Tại sao về mùa hè ta thường mặc áo
+
+Tại sao trong thí nghiệm màu trắng mà không mặc áo màu đen ?
+
+ở hình 23.4 bình chứa không Hay chọn từ thích hợp cho các ô trống ở
+khí lại được phủ muội đèn ? bảng 23.1.
+
+Ï— 23.1
+Me | Tag [ TÔ [@mnng
+
+GD =
+nhiệt chủ bi ln
+
++$ Đối lưu là sự truyền nhiệt bằng các dòng chất lỏng hoặc chất khí, đó là
+hình thức truyền nhiệt chủ yếu của chất lỏng và chất khí.
+
++ Bức xạ nhiệt là sự truyền nhiệt bằng các tia nhiệt đi thẳng. Bức xạ
+nhiệt có thể xảy ra cả ở trong chân không.
+
+Có thể em chua biết
+
+e Phích (bình thuỷ) là một bình thuỷ tinh hai
+lớp. Giữa hai lớp thuỷ tinh này là chân không để
+ngăn cản sự dẫn nhiệt. Hai mặt đối diện của hai
+lớp thuỷ tinh được tráng bạc để phản xạ các tia
+nhiệt trở lại nước đựng trong phích. Phích được
+đậy nút thật kín để ngăn cản sự truyền nhiệt
+bằng đối lưu ra bên ngoài. Nhờ đó mà phích giữ
+được nước nóng lâu dài (H.23.6).
+
+e Đèn kéo quân quay được là nhờ dòng đối lưu
+của không khí. Hình 23.6
+
+:22
+
+Nút kín để
+ngăn sự đối lưu
+
+Mật phản xạ
+bức xạ nhiệt
+
+Lớp chân không
+ngăn sự dẫn nhiệt
+
+--- Trang 84 (Vật lí 8.pdf) ---
+Bài 24
+CÔNG THỨC TÍNH NHIỆT LƯỢNG
+
+Không có dụng cụ nào đo trục tiếp được công. Để xác định công của một lực,
+người ta phải dùng lục kế đo độ lón của lục và đùng thước đo quảng đường
+địch chuyển, từ đó tính công.
+
+Tương tự như thế, không có dụng cụ nào có thể đo trục tiếp nhiệt lượng. Vậy,
+muốn xác định nhiệt lượng người ta phải làm thế nào ?
+
+I- NHIỆT LƯỢNG MỘT VẬT THU VÀO ĐỂ NÓNG LÊN PHỤ THUỘC NHỮNG
+YẾU TỐ NÀO ?
+
+8 Nhiệt lượng một vật cân thu vào để làm vật
+nóng lên phụ thuộc ba yếu tố sau đây :
+
+- Khối lượng của vật,
+- Độ tăng nhiệt độ của vật,
+- Chất cấu tạo nên vật.
+
+Để kiểm tra xem nhiệt lượng vật cân thu vào để
+nóng lên có phụ thuộc ba yếu tố trên không,
+người ta phải làm thế nào ? (Để trả lời câu hỏi
+này hãy nhớ lại những trường hợp tương tự
+đã học ở các lớp dưới).
+
+® 1. Quan hệ giữa nhiệt lượng vật cần thu vào
+để nóng lên và khối lượng của vật
+
+Để kiểm tra mối quan hệ giữa nhiệt lượng vật
+cần thu vào để nóng lên và khối lượng của vật,
+người ta làm thí nghiệm vẽ ở hình 24.1.
+Dùng đèn cồn lân lượt đun hai khối lượng
+nước khác nhau, 50g và 100g, dựng trong
+hai cốc thuỷ tinh giống nhau, để nước ở trong
+các cốc đều nóng lên thêm 209C.
+
+Kết quả thí nghiệm được ghi ở bảng 24.1.
+
+
+--- Trang 85 (Vật lí 8.pdf) ---
+Bảng 24.1
+
+Khối Độ tăng | Thời gian | So sánh So sánh
+ọng | nhiệt độ đun | khối lượng| nhiệt lượng
+
+mị =L]m¿ Q¡=L Q;
+
+Trong thí nghiệm trên, yếu tố nào ở hai cốc được giữ giống nhau, yếu tố
+nào được thay đổi ? Tại sao phải làm như thế ? Hay tìm số thích hợp cho các
+ô trống ở hai cột cuối bảng 24.1. Biết nhiệt lượng ngọn lửa đèn cồn truyền
+cho nước tỉ lệ với thời gian đun.
+
+Từ thí nghiệm trên có thể kết luận gì về
+mối quan hệ giữa nhiệt lượng vật cần thu vào
+
+đề nóng lên và khối lượng của vật ? q)
+1
+
+2. Quan hệ giữa nhiệt lượng vật cần thu vào đề
+
+nóng lên và độ tăng nhiệt độ
+
+'Y Các em hay thảo luận trong nhóm về cách =$
+
+làm thí nghiệm để kiểm tra mối quan hệ
+
+giữa nhiệt lượng vật cần thu vào để nóng lên
+
+và độ tăng nhiệt độ. Trong khi thảo luận cân cÁ -
+
+lưu ý những vấn đề sau đây :
+
+Trong thí nghiệm này phải giữ không đổi Ỉ k
+những yếu tố nào ? Muốn vậy phải làm "m
+
+thế nào ?
+Sổ Trong thí nghiệm này phải thay đồi yếu tố
+nào ? Muốn vậy phải làm thế nào ? _m
+
+Sau đây là bảng kết quả thí nghiệm làm với
+
+hai cốc, mỗi cốc dựng 50g nước, được lân
+
+lượt đun nóng bàng đèn cồn trong 5 phút, 10 =—=—=é
+phút (H.24.2). Hay tìm số thích hợp cho các
+
+ô trống ở hai cột cuối bảng 24.2. Hình 24.2
+
+L2
+
+--- Trang 86 (Vật lí 8.pdf) ---
+Bảng 24.2
+
+So sánh
+Khối | Độtăng | Thời gian tăng So sánh
+m= Mượng | nhiệtđộ | đun | ngg;ệp [nhiệt
+
+ch : Atfi= LIAt2| Q.=LE1;
+
+Từ thí nghiệm trên có thể rút ra kết
+
+luận gì về mối quan hệ giữa nhiệt lượng Ì
+vật thu vào để nóng lên và độ tăng TT 5
+nhiệt độ ?
+
+3. Quan hệ giữa nhiệt lượng vật cần thu CÀ ¬
+vào đề nóng lên với chất làm vật
+
+Để kiểm tra sự phụ thuộc của nhiệt lượng
+
+vật cân thu vào để nóng lên với chất làm `
+vật người ta làm thí nghiệm sau đây :
+Dùng đèn cồn đun nóng 50g nước và 50g
+bột băng phiến cùng nóng thêm lên 209C
+(H.24.3). Kết quả thí nghiệm được ghi ở
+bảng 24.3. Hay tìm dấu thích hợp (=; >; <) ñ ¬
+cho ô trống ở cột cuối của bảng.
+
+Hình 24.3
+
+°————:—
+{
+Ũ
+
+Báng 24.3
+
+Khối Độ tăng Thời gian So sánh
+5š... 1` K
+—=
+
+Ỉ 50 1 2
+
+Gốc 2 | Băng phiến bị At2= 20°C | tạ= 4 phút
+
+FEä Trong thí nghiệm này những yếu tố nào thay đồi, không thay đổi ?
+Nhiệt lượng vật cân thu vào đề nóng lên có phụ thuộc chất làm vật không ?
+
+86 [
+
+--- Trang 87 (Vật lí 8.pdf) ---
+II - CÔNG THÚC TÍNH NHIỆT LƯỢNG
+Nhiệt lượng vật thu vào được tính theo công thức
+
+Q =m.c.At
+
+trong đó : Q là nhiệt lượng vật thu vào, tính ra J,
+m là khối lượng của vật, tính ra kg,
+At = tạ - tị là độ tăng nhiệt độ, tính ra 9C hoặc K*,
+c là đại lượng đặc trưng cho chất làm vật gọi là
+nhiệt dụng riêng, tính ra J/kg.K.
+
+Nhiệt dung riêng của một chất cho biết nhiệt lượng cân truyền cho 1kg chất
+đó để nhiệt độ tăng thêm 19C (1K). Ví dụ, nhiệt dung riêng của nước là
+4 200J/kg.K có nghĩa là muốn làm cho 1kg nước nóng thêm lên 19C cân
+truyền cho nước một nhiệt lượng 4 200. Bảng 24.4 cho biết nhiệt dung riêng
+của một số chất.
+
+Bảng 24.4
+
+Nhiệt dung riêng
+(J/kg.©)
+ Đấ | — s00 —~
+
+800
+380
+130
+
+880 Chì
+
+Y III - VẬN DỤNG
+
+Muốn xác định nhiệt lượng vật thu vào cân tra bảng để biết độ lớn của đại
+lượng nào và đo độ lớn của những đại lượng nào, bàng những dụng cụ nào ?
+Tính nhiệt lượng cần truyền cho 5kg đồng để tăng nhiệt độ từ 209C lên 509C.
+Một ấm đun nước bàng nhôm có khối lượng 0,5kg chứa 2 lít nước ở
+259C. Muốn dun sôi ấm nước này cân một nhiệt lượng bàng bao nhiêu ?
+
+* K là đơn vị nhiệt độ trong thang nhiệt độ Ken-vin : Độ lớn của một độ chia trong thang nhiệt
+độ Ken-vin bàng độ lớn của một độ chia trong thang nhiệt độ Xen-xi-út.
+
+lo
+
+--- Trang 88 (Vật lí 8.pdf) ---
+(J/kg.K).
+
+cho 1kg chất đó tăng thêm 19C.
+
+$ Nhiệt lượng vật cần thu vào để nóng lên phụ thuộc khối lượng, độ
+tăng nhiệt độ của vật và nhiệt dung riêng của chất làm vật.
+
+© Công thức tính nhiệt lượng vật thu vào Q = m.c.At, trong đó :
+Q là nhiệt lượng (J), m là khối lượng của vật (kg), At là độ tăng nhiệt
+độ của vật (9C hoặc K), c là nhiệt dung riêng của chất làm vật
+
+$ Nhiệt dung riêng của một chất cho biết nhiệt lượng cần thiết để làm
+
+Có thể em chưa biết
+
+@ Trong kĩ thuật và đời sống, người ta còn dùng
+calo làm đơn vị nhiệt lượng. Calo là nhiệt lượng
+cần thiết để làm cho 1 gam nước ở 4°C nóng lên
+thêm 19C. Như vậy 1 calo = 4,2 jun.
+
+e Để xác định nhiệt lượng trong phòng thí nghiệm,
+người ta dùng một dụng cụ riêng gọi là nhiệt lượng
+kế. Nhiệt lượng kế là một bình hai vỏ, ở giữa có một
+lớp không khí để ngăn cản sự truyền nhiệt của các
+chất đặt trong bình với môi trường bên ngoài. Trong
+bình có một nhiệt kế và một que khuấy (H.24.4).
+
+e Nhiệt dung riêng của đất nhỏ hơn nhiệt dung
+riêng của nước nhiều lần (xem bảng 24.4). Do đó,
+ban ngày khi nhận được bức xạ nhiệt từ Mặt Trời,
+đất liền nóng lên nhanh hơn nước biển. Kết quả
+là không khí trên mặt đất nóng lên, nhẹ đi, bay
+lên cao còn không khí từ ngoài biển lạnh hơn di
+chuyển vào đất liền tạo nên gió biển (H.24.5).
+Hãy giải thích tại sao về đêm gió lại thổi từ đất
+liền ra biển ?
+
+Hình 24.4
+
+ S—— CHươnggð6
+lóng hơn Lạnh hơn
+
+Hình 24.5
+
+87 j
+
+--- Trang 89 (Vật lí 8.pdf) ---
+Bài 25
+PHƯƠNG TRÌNH CÂN BẰNG NHIỆT
+
+- Thái : Đố biết khi nhỏ một giọt nước
+sôi vào một ca đựng nước nóng thì
+giot nước truyền nhiệt cho ca nước hay
+ca nước truyền nhiệt cho giọt nước
+(H.25.1) ?
+
+- Bình : Dễ quá ! Nhiệt phải truyền từ
+vật có nhiệt năng lớn hơn sang vật có
+nhiệt năng nhỏ hơn, nghĩa là từ ca
+nước sang giọt nước.
+
+- An : Không phải ! Nhiệt phải truyền
+từ vật có nhiệt độ cao hơn sang vật có
+nhiệt độ thấp hơn, nghĩa là từ giọt Hình 25.1
+nước sang cq nước.
+
+Ai đúng, di sai 2
+
+II - NGUYÊN LÍ TRUYỀN NHIỆT
+
+Các thí nghiệm cũng như hiện tượng quan sát được trong đời sống, kĩ thuật
+và tự nhiên cho thấy khi có hai vật trao đổi nhiệt với nhau thì :
+
+1. Nhiệt tự truyền từ vật có nhiệt độ cao hơn sang vật có nhiệt độ thấp hơn.
+2. Sự truyền nhiệt xảy ra cho tới khi nhiệt độ của hai vật bàng nhau thì ngừng lại.
+3. Nhiệt lượng do vật này toả ra bằng nhiệt lượng do vật kia thu vào.
+
+M II - PHƯƠNG TRÌNH CÂN BẰNG NHIỆT
+Phương trình cân bàng nhiệt được viết dưới dạng
+họa ra = thu vào
+
+Nhiệt lượng toả ra cũng được tính bàng công thức Q = m.c.At, nhưng
+trong đó At = tị - tạ, với tạ là nhiệt độ ban đầu còn tạ là nhiệt độ cuối
+trong quá trình truyền nhiệt.
+
+lo
+
+--- Trang 90 (Vật lí 8.pdf) ---
+II - VÍ DỤ VỀ DÙNG PHƯƠNG TRÌNH CÂN BẰNG NHIỆT
+
+Thả một quả câu nhôm khối lượng 0,15kg được đun nóng tới 1009C vào một
+cốc nước ở 209C. Sau một thời gian, nhiệt độ của quả câu và của nước đều
+bằng 259C. Tính khối lượng nước, coi như chỉ có quả câu và nước truyền nhiệt
+cho nhau.
+
+Cho biết Bài giải
+mị = 0,15kg Nhiệt lượng quả cầu nhôm toả ra khi nhiệt độ hạ từ 1009C
+q =880J/kgK xuống 259C là :
+tị = 100C Q¡ = mị.c¡.(tị - t) = 0,15.880.(100 - 25) = 9 9007
+t = 259C Nhiệt lượng nước thu vào khi tăng nhiệt độ từ 209C lên
+œ =4200//kgK 259C là:
+tạ =20%C Q¿ = m;.ca.(t - ta)
+Nhiệt lượng quả cầu toả ra bằng nhiệt lượng nước thu vào :
+
+t =259 Mã,
+
+Q2=Q¡
+m„= ? mạ.ca.(t - tạ) = 9 900J
+
+- 9 900
+"2 ˆ '1200.(25 - 20)
+mạ = 0,47kg.
+
+Y IV - VẬN DỤNG
+
+a) Hay dùng phương trình cân bàng nhiệt đề tính nhiệt độ của hỗn hợp
+gồm 200g nước đang sôi đổ vào 300g nước ở nhiệt độ trong phòng.
+
+b) Tiến hành thí nghiệm để kiểm tra giá trị của nhiệt độ tính được. Giải
+thích tại sao nhiệt độ tính được không bàng nhiệt độ đo được ?
+Người ta thả một miếng đồng khối lượng 0,5kg vào 500g nước. Miếng
+đồng nguội đi từ 80Đ°C xuống 209C. Hỏi nước nhận được một nhiệt lượng
+bàng bao nhiêu và nóng lên thêm bao nhiêu độ ?
+Để xác định nhiệt dung riêng của một kim loại, người ta bỏ vào nhiệt
+lượng kế chứa 500g nước ở nhiệt độ 139C một miếng kim loại có khối lượng
+400g được nung nóng tới 1009C. Nhiệt độ khi có cân bằng nhiệt là 209C. Tính
+nhiệt dung riêng của kim loại. Bỏ qua nhiệt lượng làm nóng nhiệt lượng kế
+và không khí. Lấy nhiệt dung riêng của nước là 4 190J/kg.K.
+
+89 ]
+
+--- Trang 91 (Vật lí 8.pdf) ---
++ Khi có hai vật truyền nhiệt cho nhau thì :
+
++ Nhiệt truyền từ vật có nhiệt độ cao hơn sang vật có nhiệt độ thấp hơn
+cho tới khi nhiệt độ hai vật bằng nhau.
+
++ Nhiệt lượng vật này toả ra bằng nhiệt lượng vật kia thu vào.
+
+$ Phương trình cân bằng nhiệt : Qioa ra = nu vào-
+
+Có thể em chưa biết
+
+Cơ thể con người tuy không ngừng
+truyền nhiệt với môi trường bên ngoài
+nhưng luôn luôn giữ nhiệt độ không
+đổi vào khoảng 37°C dù nhiệt độ bên
+ngoài có thể giảm xuống dưới 09C
+hoặc tăng lên trên 50C. Nhiệt từ cơ
+thể con người có thể truyền ra bên
+ngoài bằng nhiều cách trong đó có
+dẫn nhiệt, đối lưu và bức xạ. Trung
+bình cơ thể con người toả ra môi
+trường bên ngoài dưới dạng nhiệt
+khoảng 17% năng lượng mà người đó
+tạo ra được. Nếu trời ẩm thì tỉ lệ này
+tăng lên. Hình 25.2 cho thấy tỉ lệ toả
+nhiệt dưới các hình thức dẫn nhiệt,
+đối lưu, bức xạ của một người cởi
+trần, ngồi yên trong một phòng có
+nhiệt độ ôn hoà. Hình 25.2
+
+9% do dẫn nhiệt
+22% do nguyên nhân khác
+
+:oo
+
+--- Trang 92 (Vật lí 8.pdf) ---
+Bài 26
+NĂNG SUẤT TOẢ NHIỆT CỦA NHIÊN LIỆU
+
+Nhiên liệu là gì ? Tại sao nói
+đầu hoả là nhiên liệu tốt hơn
+
+than đá, than đá là nhiên liệu
+tốt hơn củi ? Xệ
+Củi
+
+Than đá Dầu hoả
+
+Hình 26.1
+M I- NHIÊN LIỆU
+Trong đời sống và ki thuật, người ta phải đốt than, củi, dâu... để cung cấp
+nhiệt lượng cho các vật liệu khác. Than, củi, dâu... là các nhiên liệu.
+Hãy tìm thêm ba ví dụ về các nhiên liệu thường gặp.
+
+II - NĂNG SUẤT TOẢ NHIỆT CỦA NHIÊN LIỆU
+
+Đại lượng vật lí cho biết nhiệt lượng toả ra khi 1kg nhiên liệu bị đốt cháy hoàn
+toàn được gọi là năng suất toá nhiệt của nhiên liệu.
+
+Năng suất toả nhiệt của nhiên liệu được kí hiệu bàng chữ q và có đơn vị là J/kg.
+Ví dụ, năng suất toả nhiệt của dầu hoả là 44.106J/kg có nghĩa là 1kg dầu hoả
+
+bị đốt cháy hoàn toàn toả ra nhiệt lượng bằng 44.106J. Bảng 26.1 cho biết
+năng suất toả nhiệt của một số nhiên liệu.
+
+Năng suất
+
+Bảng 26.1
+
+
+--- Trang 93 (Vật lí 8.pdf) ---
+I II - CÔNG THỨC TÍNH NHIỆT LƯỢNG DO NHIÊN LIỆU BỊ ĐỐT CHÁY TOẢ RA
+
+Nhiệt lượng toả ra khi đốt cháy hoàn toàn m kg nhiên liệu được tính bàng
+công thức
+
+Q=q.m, trong đó : Q là nhiệt lượng toả ra (J),
+q là năng suất toả nhiệt của nhiên liệu (J⁄kg),
+m là khối lượng của nhiên liệu bị đốt cháy hoàn toàn (kg).
+
+Y IV - VẬN DỤNG
+Hay cho biết năng suất toả nhiệt của khí đốt bàng bao nhiêu lần năng
+suất toả nhiệt của than bùn ?
+
+Tính nhiệt lượng toả ra khi đốt cháy hoàn toàn 15kg củi, 15kg than đá.
+Để thu được mỗi nhiệt lượng trên cân đốt cháy hết bao nhiêu kg dầu hoả ?
+
+© Đại lượng cho biết nhiệt lượng toả ra khi 1kg nhiên liệu bị đốt cháy
+hoàn toàn gọi là năng suất toả nhiệt của nhiên liệu.
+
+e Đơn vị của năng suất toả nhiệt là J/kg.
+
+$ Công thức tính nhiệt lượng toả ra khi nhiên liệu bị đốt cháy hoàn toàn :
+Q=q.m.
+
+Có thể em chưa biết
+
+® Dầu và khí đốt tự nhiên hiện
+đang là các nhiên liệu chủ
+yếu của con người. Theo
+ước tính thì Trái Đất chỉ còn
+dự trữ khoảng 140 tỉ tấn dầu
+và 100 000 tỉ m khí đốt. Với
+nhịp độ dùng dầu và khí đốt
+như hiện nay thì chỉ trong
+vòng năm mươi năm nữa là
+các nguồn dự trữ trên sẽ cạn
+kiệt. Do đó, một trong những
+vấn đề sống còn của con
+người là phải tiết kiệm các
+nhiên liệu sẵn có, đồng thời _ Hình 26.2 Khai thác dầu và khí đốt ỏ Vũng Tàu.
+đi tìm các nhiên liệu mới.
+
+¡%2
+
+
+--- Trang 94 (Vật lí 8.pdf) ---
+Một trong những nhiên liệu có triển vọng thay thế cho dầu và khí đốt
+là hiđrô vì :
++ Hiđrô có năng suất toả nhiệt cao hơn dầu và khí đốt (xem bảng 26.1).
+
++ Hiđrô có thể được điều chế bằng cách dùng năng lượng mặt trời để điện phân
+nước biển. Như vậy, nguồn nguyên liệu để điều chế hidrô có thể coi như vô tận.
+
++ Hiđrô lỏng có thể được chuyên chở bằng các bình chứa hoặc ống dẫn.
+
++ Hiđrô khi bị đốt cháy không toả ra các khí độc như các nhiên liệu khác nên
+không làm ô nhiễm môi trường.
+
+e Hình 26.3 cho ta thấy lượng dầu tiêu thụ, sản xuất và dự trữ trên thế giới tính
+theo triệu tấn vào năm 2000.
+
+Hình 26.3
+
+93 J
+
+--- Trang 95 (Vật lí 8.pdf) ---
+Bài 27 SỰ BẢO TOÀN NĂNG LƯỢNG
+TRONG CÁC HIỆN TƯỢNG CƠ VÀ NHIỆT
+
+Trong các hiện tượng cơ và nhiệt luôn luôn xảy ra sự truyền cơ năng, nhiệt
+năng từ vật này sang vật khác ; sự chuyển hoá giữa các dạng của cơ năng
+cũng như giữa cơ năng và nhiệt năng. Trong khi truyền từ vật này sang vật
+khác, chuyển hoá từ dạng này sang dạng khác, các năng lượng trên tuân theo
+một trong những định luật tổng quát nhất của tự nhiên mà chúng ta sẽ học
+trong bài này.
+
+I- SỰ TRUYỀN CƠ NĂNG, NHIỆT NĂNG TỪ VẬT NÀY SANG VẬT KHÁC
+
+Hãy mô tả sự truyền cơ năng, nhiệt năng trong các hiện tượng sau đây
+và tìm từ thích hợp cho các chỗ trống của các câu ở cột bên phải bảng 27.1
+
+Bảng 27.1
+
+Sự truyền năng lượng
+
+Hòn bi truyền
+...(1).... cho miếng gỗ.
+
+Hòn bi thép lăn từ máng nghiêng xuống va chạm vào
+miếng gô làm miếng gỗ chuyển động.
+
+Thả một miếng | Miếng nhôm truyền
+nhôm đả được nung | ....(2).... cho cốc nước.
+nóng vào một cốc
+
+nước lạnh.
+
+L%
+
+Viên đạn từ nòng
+súng bay ra, rơi
+xuống biển, nguội đi
+và chìm dần.
+
+Viên đạn truyền
+"..".....
+cho nước biển.
+
+
+--- Trang 96 (Vật lí 8.pdf) ---
+II - SỰ CHUYỂN HOÁ GIỮA CÁC DẠNG CỦA GƠ NĂNG, GIỮA CƠ NĂNG VÀ
+NHIỆT NĂNG
+
+Hay mô tả sự chuyển hoá năng lượng trong các hiện tượng sau đây và
+tìm từ thích hợp cho các chỗ trống của các câu ở cột bên phải bảng 27.2.
+
+Bảng 27.2
+
+mm —
+
+Khi bỏ tay giữ con
+lác, con lác chuyển
+động nhanh dân từ
+A đến B, chậm dần từ
+B đến CC, rồi lại
+chuyển động nhanh
+dân từ € đến B, chậm
+dân từ B đến A...
+
+Dùng tay cọ xát
+miếng đồng lên mặt
+
+bàn, miếng đồng
+nóng lên.
+
+Đun nóng ống
+nghiệm. Không khí
+và hơi nước trong
+ống nghiệm nóng
+
+Khi con lắc chuyển
+động từ A đến B
+
+....(5).... đa chuyển hoá
+dân thành ....
+
+Khi con lác chuyển
+động từ B đến €
+...(7)... đã chuyển
+hoá dân thành ....(8)....
+
+..(9).... của tay đã
+chuyển hoá thành
+...(10).... của miếng
+kim loại.
+
+„..(11)... của không
+khí và hơi nước đã
+chuyển hoá thành
+....(12).... của nút.
+
+lên, dan nở, đầy nút
+bật lên và lạnh di.
+
+II - SỰ BẢO TOÀN NĂNG LƯỢNG TRONG CÁC HIỆN TƯỢNG CƠ VÀ NHIỆT
+
+Bàng những quan sát và thí nghiệm chính xác, người ta đả chứng tỏ được là
+trong các hiện tượng cơ và nhiệt : "Năng lượng không tự sinh ra cũng không
+tự mất đi ; nó chí truyền từ vật này sang vật khác, chuyến hoá từ dạng này
+
+sang dạng khác',
+95 ]
+
+--- Trang 97 (Vật lí 8.pdf) ---
+Đó chính là nội dung của định luật bảo toàn và chuyền hoá năng lượng, một
+trong những định luật tổng quát nhất của tự nhiên.
+
+Hay tìm ví dụ về sự biểu hiện của định luật trên trong các hiện tượng cơ
+và nhiệt đã học.
+
+IV - VẬN DỤNG
+
+Hãy tìm thêm ví dụ, ngoài những ví dụ đã có trong bài về sự truyền cơ
+năng, nhiệt năng từ vật này sang vật khác ; sự chuyển hoá giữa các dạng của
+cơ năng cũng như giữa nhiệt năng và cơ năng.
+
+Tại sao trong hiện tượng hòn Tại sao trong hiện tượng về dao
+bi va vào thanh gỏ, cả hòn bi và động của con lắc, con lắc chỉ dao
+thanh gỗ sau khi va chạm chỉ động trong một thời gian ngắn rồi
+chuyển động được một đoạn ngắn dùng lại ở vị trí cân bằng ? Cơ năng
+rồi dùng lại. Cơ năng của chúng đã của con lác đã chuyển hoá thành
+biến đi đâu ? dạng năng lượng nào ?
+
++ Cơ năng, nhiệt năng có thể truyền từ vật này sang vật khác, chuyển
+hoá từ dạng này sang dạng khác.
+
+$ Định luật bảo toàn và chuyển hoá năng lượng : Năng lượng không tự
+sinh ra cũng không tự mất đi ; nó chỉ truyền từ vật này sang vật khác,
+chuyển hoá từ dạng này sang dạng khác.
+
+Có thể em chưa biết
+
+Từ năm 1840 đến năm 1849, nhà bác học Jun (1818 - 1889) người Anh đã làm
+nhiều thí nghiệm để chứng minh sự tương đương giữa công và nhiệt lượng,
+nghĩa là chứng minh sự bảo toàn năng lượng trong các hiện tượng cơ và nhiệt.
+Sau đây là một trong những thí nghiệm nổi tiếng
+nhất của ông (H.27.1).
+
+Khi các vật nặng M rơi xuống, chúng thực hiện
+công làm quay các lá kim loại L đặt trong nước,
+do đó làm cho nước nóng lên. Các phép đo chính
+xác cho thấy công do các quả nặng thực hiện
+được đúng bằng nhiệt lượng mà nước nhận được,
+nghĩa là cơ năng của các quả nặng giảm đi bao
+nhiêu thì nhiệt năng của nước tăng lên bấy nhiêu.
+
+96
+
+
+--- Trang 98 (Vật lí 8.pdf) ---
+Bài 28
+ĐỘNG CƠ NHIỆT
+
+Kể từ chiếc máy hơi nước đầu tiên được chế tạo vào cuối thế kỉ XVI, vừa cồng
+kênh vừa chỉ sử dụng được không quá 5% năng lượng của nhiên liệu được đốt
+cháy, đến nay con người đả có những bước tiến khổng lô trong lĩnh vực chế
+tạo động cơ nhiệt. Ngày nay, con người sử dụng từ những động cơ nhiệt bé
+nhỏ dùng để chạy xe gắn máy đến những động cơ nhiệt không lô dùng để
+phóng những con tàu vũ trụ.
+
+ I- ĐỘNG CƠ NHIỆT LÀ GÌ ?
+
+Động cơ nhiệt là những động cơ trong đó một phần năng lượng của nhiên liệu
+bị đốt cháy được chuyền hoá thành cơ năng.
+
+Các động cơ nhiệt đầu tiên là các máy hơi nước (H.28.1). Chúng có đặc điểm
+chung là nhiên liệu (củi, than, dầu...) được đốt cháy ở bên ngoài xilanh của
+động cơ.
+
+Hàng trăm năm sau khi máy hơi nước ra đời mới xuất hiện động cơ đốt trong,
+là động cơ nhiệt mà nhiên liệu được đốt cháy ngay ở bên trong xilanh.
+
+Động cơ nhiệt là động cơ được sử dụng rộng rãi nhất hiện nay, bao gồm từ
+những động cơ chạy bàng xăng hoặc dâu ma dút của xe máy, ôtô (H.28.2),
+máy bay, tàu hoả, tàu thuỷ... đến các động cơ chạy bàng các nhiên liệu đặc
+biệt của tên lửa, con tàu vũ trụ (H.28.3), động cơ chạy bàng năng lượng
+nguyên tử của tàu ngầm, tàu phá băng, nhà máy điện nguyên tử...
+
+Hình 28.1 Hình 28.2 Hình 28.3
+
+97]
+
+--- Trang 99 (Vật lí 8.pdf) ---
+II - ĐỘNG CƠ NỔ BỐN KÌ
+
+Động cơ nổ bốn kì là động cơ nhiệt thường gặp
+nhất hiện nay.
+
+1. Cấu tạo
+
+Động cơ gồm xilanh, trong có pit-tông (3) chuyền
+động lên xuống được. Pittông được nối với trục
+bàng biên (4) và tay quay (5). Trên trục quay có gắn
+vô lăng (6). Phía trên xilanh có hai van (xupap) (1)
+và (2) có thể tự động đóng, mở khi pit-tông chuyển
+động. Ở trên xilanh có bugi (7) dùng để bật tia lửa
+điện, đốt cháy nhiên liệu trong xilanh (H.28.4).
+
+Hình 28.4
+2. Chuyền vận
+
+a) Kì thú nhất : Hút nhiên liệu. Pit-tông chuyển động xuống dưới. Van (1)
+mở, van (2) đóng, hôn hợp nhiên liệu được hút vào xilanh. Cuối kì này xilanh
+đã chứa đây hỏn hợp nhiên liệu và van (1) đóng lại (H.28.5a).
+
+b) Kì thú hai : Nén nhiên liệu. Pit-tông chuyển động lên phía trên nén hỗn
+hợp nhiên liệu trong xilanh (H.28.5b).
+
+Hình 28.5
+
+©) Kì thú ba : Đốt nhiên liệu. Khi pit-tông lên đến tận cùng thì bugi bật tia lửa
+điện đốt cháy hỗn hợp nhiên liệu, kèm theo tiếng nổ và toả nhiệt. Các chất
+khí mới tạo thành dan nở, sinh công đầy pit-tông xuống dưới. Cuối kì này
+van (2) mở ra (H.28.5c).
+
+đ) Kì thứ tư : Thoát khí. Pit-tông chuyển động lên phía trên, dồn hết khí trong
+xilanh ra ngoài qua van (2) (H.28.5d). Sau đó các kì của động cơ lại được lặp lại.
+Trong bốn kì, chỉ có kì thứ ba là kì động cơ sinh công. Ở các kì khác, động cơ
+chuyền động nhờ đà của vô lăng.
+
+98
+
+--- Trang 100 (Vật lí 8.pdf) ---
+I II - HIỆU SUẤT CỦA ĐỘNG CƠ NHIỆT
+
+Ở động cơ nồ bốn kì cũng như ở bất kì động cơ nhiệt nào có phải toàn
+bộ nhiệt lượng của nhiên liệu bị đốt cháy toả ra được biến thành công có ích
+không ? Tại sao ?
+
+Trong thực tế chi có khoảng từ 30% đến 40% nhiệt lượng do nhiên liệu bị đốt
+cháy toả ra được biến thành công có ích. Người ta nói các động cơ nhiệt có hiệu
+suất vào khoảng từ 30% đến 40% và đưa ra công thức tính hiệu suất
+
+L¬U
+
+H=
+Q
+
+Hay phát biểu định nghĩa hiệu suất của động cơ nhiệt và nêu tên, đơn vị của
+các đại lượng có mặt trong biểu thức trên.
+
+Y IV - VẬN DỤNG
+
+Các máy cơ đơn giản học ở lớp 6 có phải là động cơ nhiệt không ? Tại sao ?
+
+Hay kể tên các dụng cụ có sử dụng động cơ nổ bốn kì mà em biết.
+
+Theo em thì động cơ nhiệt có thể gây ra những tác hại nào đối với môi
+trường sống của chúng ta ?
+
+Một ôtô chạy được quảng đường 100km với lực kéo trung bình là 700N,
+tiêu thụ hết 5 lít xăng (khoảng 4kg). Tính hiệu suất của động cơ ôtô.
+
++ Động cơ nhiệt là động cơ trong đó một phần năng lượng của nhiên
+liệu bị đốt cháy được chuyển hoá thành cơ năng.
+¿ Ầ
+$ Hiệu suất của động cơ nhiệt : H= "h .
+
+99 j
+
+--- Trang 101 (Vật lí 8.pdf) ---
+Có thể em chưa biết
+
+e Năm 1698, một thợ cơ khí người Anh là Tô-mát Sa-vơ-ry đã chế tạo thành
+công chiếc máy hơi nước đầu tiên hết sức cồng kềnh, dùng để bơm nước từ
+dưới hầm mỏ lên. Mãi gần một trăm năm sau, Jêm Oát một kĩ sư người Anh,
+mới chế tạo được những máy hơi nước gọn nhẹ và dễ sử dụng. Từ đó, máy hơi
+nước được sử dụng rộng rãi trong đời sống và sản xuất. Năm 1766, máy hơi
+nước lần đầu tiên được sử dụng trong tàu thuỷ, năm 1769 trong ôtô và hơn
+ba mươi năm sau mới bắt đầu được sử dụng để chạy tàu hoả...
+
+° Động cơ đốt trong ra đời vào cuối thế kỉ XIX. Năm 1867, động cơ nổ bốn kì
+đầu tiên do Ni-cô-lai Ốt-tô chế tạo được đưa ra thử nghiệm và ba mươi năm sau
+thì đến lượt động cơ điêzen.
+
+Đầu thế kỉ XX, người ta chế tạo thành công các động cơ đốt trong có công suất
+và hiệu suất cao hơn rất nhiều các động cơ nổ bốn kì cũng như các động cơ
+điêzen. Đó là các tuabin hơi và động cơ phản lực.
+
+Các động cơ nhiệt đều có một nhược điểm chung là xả vào môi trường sống
+của chúng ta các khí độc sinh ra từ việc đốt cháy nhiên liệu. Người ta đang tìm
+cách thay thế động cơ nhiệt bằng những động cơ không làm hoặc ít làm ô
+nhiễm môi trường hơn.
+
+Hình 28.6 Hình 28.7
+Động cơ nhiệt của thế kỉ XIX. Động cơ nhiệt của thế ki XX.
+
+100
+
+--- Trang 102 (Vật lí 8.pdf) ---
+Bài 29
+
+CÂU HỎI VÀ BÀI TẬP TỔNG KẾT GHƯƠNG II : NHIỆT HỌC
+
+A - ÔN TẬP
+
+¬
+
+. Các chất được cấu tạo như thế nào ?
+
+2. Nêu hai đặc điểm của nguyên tử
+và phân tử cấu tạo nên các chất
+đa học trong chương này.
+
+3. Giữa nhiệt độ của vật và chuyền
+động của các nguyên tử, phân
+tử cấu tạo nên vật có mối quan
+hệ như thế nào ?
+
+4. Nhiệt năng của một vật là gì ? Khi
+nhiệt độ của vật tăng thì nhiệt
+năng tăng hay giảm 2? Tại sao ?
+
+5. Có mấy cách làm thay đổi nhiệt
+năng ? Tìm một ví dụ cho mỗi cách.
+
+6. Chọn các kí hiệu dưới đây cho chỗ
+trống thích hợp của bảng 29.1 :
+
+Bảng 29.1
+
+Dẫn nhiệt
+Đối lưu
+Bức xạ nhiệt
+
+a) Dấu * nếu là cách truyền nhiệt
+chủ yếu của chất tương ứng.
+
+b) Dấu + nếu là cách truyền nhiệt
+không chủ yếu của chất tương ứng.
+c) Dấu - nếu không phải là cách
+truyền nhiệt của chất tương ứng.
+
+. Nhiệt lượng là gì ? Tại sao đơn vị
+
+của nhiệt lượng lại là jun ?
+
+. Nói nhiệt dung riêng của nước là
+
+4 200J/kg.K có nghĩa là gì ?
+
+9. Viết công thức tính nhiệt lượng và
+
+nêu tên đơn vị của các đại lượng
+có mặt trong công thức này.
+
+10. Phát biểu nguyên lí truyền nhiệt.
+
+Nội dung nào của nguyên lí này
+thể hiện sự bảo toàn năng lượng ?
+
+
+--- Trang 103 (Vật lí 8.pdf) ---
+11. Năng suất toả nhiệt của nhiên
+liệu là gì ? Nói năng suất toả nhiệt
+của than đá là 27.106J/kg có
+nghĩa là gì ?
+
+12. Tìm một ví dụ cho mỗi hiện
+tượng sau đây :
+- Truyền cơ năng từ vật này
+sang vật khác.
+- Truyền nhiệt năng từ vật này
+sang vật khác.
+- Cơ năng chuyển hoá thành
+nhiệt năng.
+- Nhiệt năng chuyền hoá thành
+cơ năng.
+
+13. Viết công thức tính hiệu suất của
+động cơ nhiệt.
+
+B - VẬN DỤNG
+
+I - Khoanh tròn chữ cái đứng trước
+phương án trả lời mà em cho
+là đúng
+1. Tính chất nào sau đây không phái
+là của nguyên tử, phân tử ?
+A. Chuyền động không ngừng.
+B. Có lúc chuyền động, có lúc
+đúng yên.
+€. Giữa các nguyên tủ, phân tử có
+khoảng cách.
+
+D. Chuyển động càng nhanh,
+nhiệt độ của vật càng cao.
+
+102
+
+2. Trong các câu viết về nhiệt năng
+sau đây, câu nào là không đúng ?
+
+A. Nhiệt năng là một dạng
+năng lượng.
+
+B. Nhiệt năng của vật là nhiệt
+lượng vật thu vào hoặc toả ra.
+
+€. Nhiệt năng của vật là tổng
+động năng của các phân tử cấu
+tạo nên vật.
+
+D. Nhiệt năng của vật càng lớn
+khi nhiệt độ của vật càng cao.
+
+3. Dẫn nhiệt là hình thức truyền
+nhiệt có thể xảy ra
+A. chỉ ở chất lỏng.
+B. chỉ ở chất rắn.
+€. chỉ ở chất lỏng và chất rắn.
+D. ở cả chất lỏng, chất rắn, chất khí.
+
+4. Đối lưu là hình thức truyền nhiệt
+có thể xảy ra
+A. chỉ ở chất khí.
+B. chỉ ở chất lỏng.
+€. chi ở chất khí và chất lỏng.
+D. ở cả chất khí, chất lỏng, chất rắn.
+
+5. Nhiệt truyền từ bếp lò đến người
+đúng gần bếp lò chủ yếu bằng
+hình thức
+A. dẫn nhiệt.
+
+B. đối lưu.
+G. bức xạ nhiệt.
+D. dẫn nhiệt và đối lưu.
+
+--- Trang 104 (Vật lí 8.pdf) ---
+I - Trả lời câu hỏi
+
+¬
+
+. Tại sao có hiện tượng khuếch tán ?
+Hiện tượng khuếch tán xảy ra
+nhanh lên hay chậm đi khi nhiệt
+độ giảm ?
+
+2. Tại sao một vật không phải lúc
+nào cũng có cơ năng nhưng lúc
+nào cũng có nhiệt năng ?
+
+3. Khi cọ xát một miếng đồng trên
+mặt bàn thì miếng đồng nóng lên.
+Có thể nói là miếng đồng đã nhận
+được nhiệt lượng không ? Tại sao ?
+
+4. Đun nóng một ống nghiệm đậy nút
+
+kín có đụng một ít nước. Nước
+
+nóng dân và tới một lúc nào đó thì
+nút ống nghiệm bị bật lên. Trong
+hiện tượng này, nhiệt năng của
+nước thay đổi bàng những cách
+nào ; đã có sự chuyển hoá năng
+lượng từ dạng nào sang dạng nào ?
+
+II - Bài tập
+
+1. Dùng bếp dâu để đun sôi 2 lít
+nước ở 20°C đựng trong một ấm
+nhôm có khối lượng 0,5kg. Tính
+lượng dâu cân dùng. Biết chỉ có
+30% nhiệt lượng do dâu bị đốt
+cháy toả ra làm nóng ấm và nước
+đựng trong ấm.
+
+2. Một ôtô chạy được một quảng
+đường dài 100km với lực kéo
+trung bình là 1 400N, tiêu thụ hết
+10 lít (khoảng 8kg) xăng. Tính
+hiệu suất của ôtô.
+
+€ - TRÒ CHƠI Ô CHỮ
+
+Hàng ngang
+
+1. Một đặc điểm của chuyền động
+phân tử.
+
+lo
+
+. Dạng năng lượng vật nào cũng có.
+
+3. Một hình thức truyền nhiệt.
+
+4. Số do phần nhiệt năng thu vào,
+hay mất di.
+
+. Đại lượng có đơn vị là J/kg.K.
+
+Tên chung của những vật liệu
+dùng để cung cấp nhiệt lượng khi
+đốt cháy.
+
+7. Tên của một chương trong Vật lí 8.
+8. Một hình thức truyền nhiệt.
+
+a ưu
+
+Hàng dọc
+
+Hay xác định nội dung của từ ở
+hàng dọc màu xanh (H.29.1).
+
+103
+
+--- Trang 105 (Vật lí 8.pdf) ---
+MỤC LỤC
+
+CHƯƠNG I - CƠ HỌC
+
+Bài 1.
+Bài 2.
+Bài 3.
+Bài 4.
+Bài 5.
+Bài 6.
+Bài 7.
+Bài 8.
+Bài 9.
+
+Bài 10.
+Bài 11.
+Bài 12.
+Bài 13.
+Bài 14.
+Bài 15.
+Bài 16.
+Bài 17.
+Bài 18.
+
+Biểu diễn lực....
+Sự cân bằng lực - Quán tính
+
+Áp suất chất lỏng - Bình thông nhau ............... #54583550111OOVYg3z3d021g4220
+Áp suất khí quyển
+Lực đẩy Ác-si-mét
+Thực hành : Nghiệm lại lực đẩy Ác-si-mét
+Sự nổi
+Công cơ học
+Định luật về công
+Công suất......
+Cơ năng,
+Sự chuyển hoá và bảo toàn cơ ñãng
+Câu hỏi và bài tập tổng kết chương I : Cơ học...
+
+CHƯƠNG II - NHIỆT HỌC
+
+Bài 19.
+Bài 20.
+Bài 21.
+Bài 22.
+Bài 23.
+Bài 24.
+
+Bài 25.
+Bài 26.
+Bài 27.
+
+Bài 28.
+Bài 29.
+
+104
+
+Các chất được cấu tạo như thế nào ?.................
+Nguyên tử, phân tử chuyển động hay đứng yên ?......
+Nhiệt năng ....
+Dẫn nhiệt......
+Đối lưu - Bức xạ nhiệt .
+Công thức tính nhiệt lượng
+Phương trình cân bằng nhiệt
+Năng suất toả nhiệt của nhiên liệu....
+
+Sự bảo toàn năng lượng trong các hiện tượng cơ và nhiệt
+Động G0fiĐẨirrrsvasnpnsoeeneesddtttritbppiptpvl1000001010109098195103180938001000nn0003-N60000dt6rcard
+Câu hỏi và bài tập tổng kết chương II : Nhiệt học ...................................
+
+
+--- Trang 106 (Vật lí 8.pdf) ---
+
+--- Trang 107 (Vật lí 8.pdf) ---
+HUÂN CHƯƠNG HỒ CHÍ MINH
+
+SÁCH GIÁO KHOA LỚP 8
+
+1. Ngữ văn 8 (tập một, tập hai)  9.Sinhhọc8
+
+2, Lịch sử 8 10. Công nghệ 8
+3. Địa lí 8 11. Tiếng nước ngoài :
+4. Giáo dục công dân 8 - Tiếng Anh 8
+5, Âm nhạc và Mĩ thuật § - Tiếng Nga 8
+6. Toán 8 (tập một, tập hai) ~ Tiếng Pháp 8
+1. Vật lí 8 - Tiếng Trung Quốc 8
+§, Hoá học 8 - Tiếng Nhật 8
+
+mã vạch ()
+
+memxxzxeoE ŒGưí‹.. 7

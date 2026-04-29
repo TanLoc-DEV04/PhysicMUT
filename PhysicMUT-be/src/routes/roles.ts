@@ -1,5 +1,7 @@
 import { Router } from 'express';
 import { getRoles, getAdminRoles, getRoleById, createRole, updateRole, toggleRoleStatus, deleteRole } from '../controllers/roleController';
+import { validateRequest } from '../middlewares/validateRequest';
+import { createRoleSchema, updateRoleSchema, toggleRoleStatusSchema, roleIdSchema } from '../validators/role.validator';
 
 const router = Router();
 
@@ -83,7 +85,7 @@ router.get('/admin-roles', getAdminRoles);
  *       404:
  *         description: Role not found
  */
-router.get('/:id', getRoleById);
+router.get('/:id', validateRequest(roleIdSchema), getRoleById);
 
 /**
  * @openapi
@@ -110,7 +112,7 @@ router.get('/:id', getRoleById);
  *       201:
  *         description: Role created
  */
-router.post('/', createRole);
+router.post('/', validateRequest(createRoleSchema), createRole);
 
 /**
  * @openapi
@@ -141,7 +143,7 @@ router.post('/', createRole);
  *       200:
  *         description: Role updated
  */
-router.put('/:id', updateRole);
+router.put('/:id', validateRequest(updateRoleSchema), updateRole);
 
 /**
  * @openapi
@@ -159,7 +161,7 @@ router.put('/:id', updateRole);
  *       204:
  *         description: Role deleted
  */
-router.delete('/:id', deleteRole);
+router.delete('/:id', validateRequest(roleIdSchema), deleteRole);
 
 /**
  * @openapi
@@ -187,6 +189,6 @@ router.delete('/:id', deleteRole);
  *       200:
  *         description: Role status updated
  */
-router.patch('/:id/status', toggleRoleStatus);
+router.patch('/:id/status', validateRequest(toggleRoleStatusSchema), toggleRoleStatus);
 
 export default router;

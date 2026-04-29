@@ -3,12 +3,12 @@ import MathJaxPreview from '../../../../components/shared/MathJaxPreview';
 import { ArrowLeftOutlined } from '@ant-design/icons';
 import { useNavigate, useParams } from 'react-router-dom';
 import { useEffect } from 'react';
-import RenderFormItem from '../Admin/RenderFormItem';
+import RenderFormItem from '../admin/RenderFormItem';
 import { useQuery } from '@tanstack/react-query';
 import { model3DService } from '../../../../services/models.service';
 import { exampleService } from '../../../../services/example.service';
-import { useExampleMutations } from './useExampleMutations';
-import { use3DModelTypes } from '../3DModels/use3DModelManagement';
+import { useExampleMutations } from './hooks/useExampleMutations';
+import { use3DModelTypes } from '../3d-models/hooks/use3DModelManagement';
 
 const AddEditExample = () => {
   const [form] = Form.useForm();

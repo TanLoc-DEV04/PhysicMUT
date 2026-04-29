@@ -1,0 +1,3872 @@
+
+--- Trang 1 (vat li 6.pdf) ---
+BỘ GIÁO DỤC VÀ ĐÀO TẠO
+
+VŨ QUANG (Tổng chủ biên)
+BÙI GIA THỊNH (Chủ biên)
+NGUYỄN PHƯƠNG HỒNG
+
+VẬT LÍ ó
+
+(Tái bẳn lần thứ mười hai)
+
+NHÀ XUẤT BẢN GIÁO DỤC VIỆT NAM
+
+--- Trang 2 (vat li 6.pdf) ---
+LỜI NÓI ĐẦU
+
+Các em đang có trong tay cuốn sách Vật lí 6. Các em hãy hoạt
+động theo sự hướng dẫn của thầy giáo, cô giáo và theo các chỉ
+dẫn trong sách.
+
+Trong tiết học, các em sẽ thực hiện các hoạt động chủ yếu
+sau đây.
+1. Thu thập thông tin : Thông qua việc tự làm thí nghiệm hoặc
+quan sát thí nghiệm do thầy, cô giáo làm ; quan sát hiện tượng tự
+nhiên ; đọc tài liệu ; xem tranh, ảnh ; ôn lại những kiến thức đã học
+ở lớp dưới các em sẽ thu thập được những thông tin cần thiết về
+các hiện tượng vật lí cần học.
+
+Những phần có liên quan đến việc thu thập thông tin cần thiết
+được đánh dấu bằng kí hiệu E#.
+2. Xử lí thông tin : Căn cứ vào những thông tin đã thu thập được,
+đồng thời thông qua một hệ thống các câu hỏi trong bài học, các
+em sẽ rút ra những kết luận cần thiết. Đó là việc xử lí thông tin.
+
+Trong sách có nhiều câu không được viết trọn vẹn. Các em
+phải tìm từ thích hợp để điền vào chỗ trống của các câu này.
+
+Những phần có liên quan đến việc xử lí thông tin được đánh
+dấu bằng kí hiệu ®.
+3. Vận dụng : Hoạt động này vừa giúp các em vận dụng những,
+kết luận đã rút ra từ bài học vào thực tế để hiểu sâu bài học, vừa
+giúp các em tự kiểm tra trình độ của mình. Phần vận dụng được
+trình bày dưới dạng các câu hỏi và các bài tập, trong đó có bài
+các em phải tự viết câu trả lời, có bài các em phải chọn câu trả
+lời đúng trong số các câu trả lời cho sẵn. Các bài có đánh dấu (*)
+là các bài tập khó.
+
+Những phần có liên quan đến việc vận dụng được đánh dấu
+bằng kí hiệu .
+
+--- Trang 3 (vat li 6.pdf) ---
+4. Ghi nhớ : Những nội dung các em phải học thuộc và ghi nhớ
+được in bằng chữ đậm trong nền khung màu.
+
+Trong sách, việc hướng dẫn các em thu thập thông tin, xử lí
+thông tin và vận dụng các thông tin được thông qua các câu hỏi
+hoặc các lệnh. Chúng được kí hiệu bằng có đánh số liên
+,EH... từ đầu đến cuối mỗi bài.
+
+tục
+Với các câu yêu cầu điền từ vào chỗ trống, các em có thể điền
+trực tiếp vào sách giáo khoa, hoặc không điền trực tiếp, mà viết
+vào vở của mình kí hiệu của câu, chữ số ở chỗ trống phải điển
+từ, và cuối cùng là từ được chọn.
+Ví dụ : Ở bài 2, “ĐO ĐỘ DÀI”, phần “Rút ra kết luận”, sẽ
+được các em thực hiện trong vở như sau :
+(1) - độ đài
+(2) - giới hạn đo
+(3) - độ chia nhỏ nhất
+
+Ngoài ra, ở cuối mỗi bài còn có thể có mục “Có thể em chưa
+biết", viết về những vấn đề lí thú liên quan đến nội dung bài học
+hoặc mục “Giải tr”, giúp các em thư giãn một chút cuối bài học.
+
+Mong rằng cuốn sách này sẽ là người bạn gần gũi và thân thiết
+của các em trong suốt năm học.
+
+TẬP THỂ TÁC GIẢ
+
+--- Trang 4 (vat li 6.pdf) ---
+CHƯƠNG I
+
+CƠ HỌC
+
+Lực là gì ?
+
+Trọng lực là gì 2
+
+Khối lượng là gì 2
+
+Đo độ dài, thể tích, lực, khối lượng như thế nào ?
+Có những máy cơ đơn giản thường dùng nào 2
+Chúng giúp ích gì cho hoạt động của con người ?
+
+
+--- Trang 5 (vat li 6.pdf) ---
+BÀI I. ĐO ĐỘ DÀI
+
+'Chị bảo em cắt
+một đoạn dây dài
+15 gang tay,
+sao dây chỉ dài có.
+14 gang tay?
+Tại sao đo độ dài của cùng một
+đoạn dây, mà hai chị em lại có kết
+quả khác nhau ?
+Để khỏi tranh cãi, hai chị em phải
+thống nhất với nhau về điều gì ?
+
+I. ĐƠN VỊ ĐO ĐỘ DÀI
+
+l 1. Ôn lại một số đơn vị đo độ dài
+Đơn vị đo độ dài trong hệ thống đơn vị đo
+
+lường hợp pháp của nước ta là mét (kí hiệu : m).
+Đơn vị đo độ dài thường dùng nhỏ hơn
+
+mét là đềvimét (dm), xenmimét (cm), milimét
+(mm) và lớn hơn mét là kilômét (km).
+
+Tìm số thích hợp điển vào các chỗ
+trống sau :
+
+1m = (])..... dm ; Im = (2).......... em;
+lem = (3)..... mm ; Ikm = (4) ......... m.
+Y 2. Ước lượng độ dài
+
+Hãy ước lượng độ dài Im trên cạnh bàn. Dùng thước kiểm tra xem ước lượng
+của em có đúng không ?
+
+Hãy ước lượng xem độ đài của gang tay em là bao nhiêu em. Dùng thước
+kiểm tra xem ước lượng của em có đúng không ?
+
+6 m1
+
+--- Trang 6 (vat li 6.pdf) ---
+II. ĐO ĐỘ DÀI
+li 1. Tìm hiểu dụng cụ đo độ dài
+
+Hãy quan sát hình 1.1 và cho biết thợ
+mộc, học sinh, người bán vải đang dùng
+thước nào trong những thước sau đây :
+thước kẻ, thước dây (thước cuộn), thước
+mét (thước thẳng) ?
+
+Khi sử dụng bất kì dụng cụ đo nào cũng
+cần biết giới hạn đo và độ chia nhỏ nhất của nô.
+
+Giới hạn đo (GHĐ) của thước là độ dài
+lớn nhất ghi trên thước.
+
+Độ chia nhỏ nhất (ĐCNN) của thước là
+độ dài giữa 2 vạch chia liên tiếp trên thước.
+
+Hãy cho biết GHĐ và ĐCNN của một
+thước đo mà em có.
+
+Có 3 thước đo sau đây :
+
+~ Thước có GHĐ Im và ĐCNN Iem.
+
+— Thước có GHĐ 20cm và ĐCNN 1mm.
+
+— Thước có GHĐ 30cm và ĐCNN Imm.
+Hỏi nên dùng thước nào để đo :
+
+a) Chiểu rộng của cuốn sách Vật lí 6 ?
+
+b) Chiểu dài của cuốn sách Vật lí 6 ?
+
+e) Chiều dài của bàn học ?
+
+Thợ may thường dùng thước nào để đo
+chiều dài của mảnh vải, các số đo cơ thể của
+
+©)
+
+cu ảy cụa Hình 1.1. Một số hình ảnh về
+khách Hãng † đo độ dài
+
+_ ẶằẰ 2. 7
+
+--- Trang 7 (vat li 6.pdf) ---
+Y 2. Đo độ dài
+Đo chiều dài của bàn học và bề dày cuốn sách Vật lí 6.
+4) Chuẩn bị :
+— 1 thước dây, thước kẻ học sinh.
+~ Kẻ bảng kết quả đo độ dài vào vở (bảng 1.1).
+
+Bảng 1.1. Bảng kết quả đo độ dài
+
+Chiều dài bàn học
+của em
+
+Bề dày cuốn sách
+† lí 6
+
+b) Tiến hành đo :
+
+Đối với từng độ dài, làm theo chỉ dẫn dưới đây và ghi kết quả vào bảng :
+~ Ước lượng độ dài cần đo.
+— Chọn dụng cụ đo : xác định GHĐ và ĐCNN của dụng cụ đo.
+
+lị +lạ +l:
+~ Đo độ dài : đo 3 lần, ghi vào bảng, rồi tính giá trị trung bình I=-?—*=...
+
+8
+
+..,. D
+
+--- Trang 8 (vat li 6.pdf) ---
+BÀI 2. ĐO ĐỘ DÀI (tiếp theo)
+
+I. CÁCH ĐO ĐỘ DÀI
+
+# Hãy dựa vào phần thực hành đo độ dài đối với từng vật ở tiết trước để trả lời
+
+các câu hỏi sau :
+
+Em hãy cho biết độ dài ước lượng và kết quả đo thực tế khác nhau bao nhiêu ?
+
+Em đã chọn dụng cụ đo nào ? Tại sao ?
+
+Em đặt thước đo như thế nào ?
+
+Em đặt mắt nhìn như thế nào để đọc kết quả đo ?
+
+Nếu đầu cuối của vật không ngang bằng với vạch chia thì đọc kết quả đo như
+
+thế nào ?
+
+© Rút ra kết luận
+
+Hãy chọn từ thích hợp trong khung để điển vào chỗ trống trong các câu sau :
+Khi đo độ dài cần :
+
+a) Ước lượng (1).............. cần đo.
+
+b) Chọn thước có (2)..........và có (3).......
+
+thích hợp.
+
+e) Đặt thước (4)............... độ dài cần đo sao ~ĐCNN
+cho một đầu của vật (5) .......................... ~ độ dài
+vạch số 0 của thước. ~GHĐ
+
+đ) Đặt mắt nhìn theo hướng (6)................. ~— vuông góc
+với cạnh thước ở đầu kia của vật. ~ đọc theo
+e) Đọc và ghi kết quả đo theo vạch chia (7) ~ gẩn nhất
+
+"mm với đầu kia của vật. ¬-
+— ngang bằng với
+
+mmmäắẮÍíŨ 9
+
+--- Trang 9 (vat li 6.pdf) ---
+II. VẬN DỤNG
+
+Trong các hình sau đây, hình nào
+vẽ vị trí đặt thước đúng để đo chiều dài
+bút chì (H.2.1) ?
+
+a) Không đặt thước dọc theo chiều
+đài bút chì.
+
+b) Đặt thước dọc theo chiều dài bút chì,
+nhưng một đầu không ngang bằng với
+vạch số 0.
+
+e) Đặt thước đọc theo chiều dài bút chỉ,
+vạch số 0 ngang bằng với một đầu của
+bút chì.
+
+Trong các hình sau đây, hình nào
+vẽ vị trí đặt mắt đúng để đọc kết quả đo
+(H.22)?
+
+a) Đặt mắt nhìn theo hướng xiên
+sang phải.
+
+b) Đặt mắt nhìn theo hướng xiên
+sang trái.
+
+e) Đặt mắt nhìn theo hướng vuông góc
+với cạnh thước tại đầu của vật.
+
+Quan sát kĩ hình 2.3 và ghỉ kết
+quả đo tương ứng.
+
+4)
+
+©)
+
+b)
+
+1 2 3 4 5 6 7 8
+Hình 2.1
+^`
+%
+cm1 2 3 4 5 7 8
+⁄ZZ
+x
+cm1 2 3 4 5 6 7 8
+cmi 2 3 4 5 7 8
+Hình 2.2
+1 2 3 4 § 8
+1 2 3 4 5 6 7 8
+1 2 3 4 5 6 7 8
+
+lo ¬¬..._ ——
+
+--- Trang 10 (vat li 6.pdf) ---
+Kinh nghiệm cho
+thấy độ dài của sải tay
+một người thường gần
+bằng chiều cao người đó ;
+độ dài vòng nắm tay
+thường gần bằng chiều dài
+của bàn chân người đó
+(H24).
+
+Hãy kiểm tra lại xem
+có đúng không.
+
+Hình 24
+
+Cách đo độ dài :
+®_ Ước lượng độ dài cần đo để chọn thước đo thích hợp.
+@_ Đặt thước và mắt nhìn đúng cách.
+
+@_ Đọc, ghi kết quả đo đúng quy định.
+
+Có thể em chưa biết
+
+ Inh (inch) và dặm (mile) là đơn vị đo độ dài thường dùng của nước
+Anh và các nước sử dụng tiếng Anh.
+1iỉnh = 2,54cm. Một đốt ngón tay người lớn có chiều dài khoảng 1inh.
+Tivi 21inh có nghĩa là đường chéo của màn hình dài 21inh = 53,3cm.
+1 dặm (mile) = 1609m.
+
+*“ Để đo những khoảng cách rất lớn trong vũ trụ, người ta không dùng
+đơn vị mét hoặc kilômét (km), mà dùng đơn vị năm ánh sáng. Một
+năm ánh sáng (1 n.a.s) = 9461 tỉ km.
+
+ỊÏ]_T.m“Rẽ8e<“8ư8<€<B "
+
+--- Trang 11 (vat li 6.pdf) ---
+BÀI 3. ĐO THỂ TÍCH CHẤT LỎNG
+
+Làm thế nào để biết chính xác cái bình,
+cái ấm chứa được bao nhiêu nước ?
+
+I. ĐƠN VỊ ĐO THỂ TÍCH
+8 Mỗi vật, dù to hay nhỏ, đều chiếm một
+thể tích trong không gian.
+
+Đơn vị đo thể tích thường dùng là mét
+khối (m) và lít (7).
+1 lít= Idm ; Im/= IemŠ (Iee).
+Tìm số thích hợp điển vào các chỗ
+trống dưới đây :
+1m = (1).
+1m = (3)
+=6)...
+
+II. ĐO THỂ TÍCH CHẤT LỎNG
+
+li 1. Tìm hiểu dụng cụ đo thể tích
+Quan sát hình 3.1 và cho biết tên dụng
+cụ đo, GHĐ và ĐCNN của những dụng cụ đó.
+Ở nhà, nếu không có ca đong thì em có
+thể dùng những dụng cụ nào để đo thể tích
+chất lỏng ?
+
+Trong phòng thí nghiệm người ta
+thường dùng bình chia độ để đo thể tích chất
+lỏng (H.3.2). Hãy cho biết GHĐ và ĐCNN a) b) ©)
+của từng bình chia độ này. Hình 3.2 . Bình chia độ
+
+ụ2 ¬—.__
+
+
+--- Trang 12 (vat li 6.pdf) ---
+Điền vào chỗ trống của câu sau :
+
+Những dụng cụ đo thể tích chất lỏng
+
+8 2. Tìm hiểu cách đo thể tích
+chất lỏng
+
+Ở hình 3.3, hãy cho biết cách đặt
+bình chia độ nào cho phép đo thể tích
+chất lỏng chính xác ?
+
+Xem hình 3.4, hãy cho biết cách
+đặt mắt nào cho phép đọc đúng thể tích
+cần đo ?
+
+Hãy đọc thể tích đo theo các vị
+trí mũi tên chỉ bên ngoài bình chia
+độ ở hình 3.5.
+
+® Rút ra kết luận
+
+Chọn từ thích hợp trong khung
+để điển vào chỗ trống trong các câu sau :
+
+Khi đo thể tích chất lỏng bằng
+bình chia độ cần :
+
+Hình 3.3
+
+Hình 3.4
+củ cm? ch
+
+10( 100| 10\
+
+9 kó) 9
+
+8 80 8
+
+_ 70| 7
+
+0| 6
+
+~ 5
+
+~
+a) b) ©)
+
+Hình 3.5
+
+|——=tqdẲẳằ ñ
+
+--- Trang 13 (vat li 6.pdf) ---
+a) Ước lượng (1) ... cần đo.
+
+~— ngang
+b) Chọn bình chia độ có (2) và có (3) thích hợp. ~ gân nhất
+e) Đặt bình chia độ (4). ~ thẳng đứng
+đ) Đặt mắt nhìn (5) ......với độ cao mực chất lỏng trong bình. ~ thể tích
+e) Đọc và ghi kết quả đo theo vạch chia (6)... -GHĐ
+với mực chất lỏng. ĐCNN
+'Ÿ 3. Thực hành
+Đo thể tích nước chứa trong 2 bình.
+a) Chuẩn bị :
+~ Bình chia độ, chai, lọ hoặc ca đong có ghi sẵn dung tích.
+— Bình 1 đựng đầy nước, bình 2 đựng một ít nước.
+~— Kẻ sẵn bảng ghi kết quả đo thể tích chất lỏng vào vở
+(bảng 3.1).
+b) Tiến hành đo :
+~ Ước lượng thể tích của nước (lít) chứa trong 2 bình và
+ghi kết quả ước lượng đó vào bảng 3.1.
+~— Kiểm tra ước lượng bằng cách đo thể tích của chúng và
+ghỉ kết quả đo vào bảng 3.1.
+Bảng 3.1. Kết quả đo thể tích chất lỏng
+Vật cần đo thể ích Dụng cụ đo Thổ (chước 1IÚEEĐéD
+GHĐ ĐCNN lượng (lít) được (cm3)
+Nước trong bình 1 (1)...... (3)...... (8)...... (Œ?\......
+Nước trong bình 2 (2)..... (4)...... (@)...... (8)... |
+
+©®_ Để do thể tích chất lỏng có thể dùng bình chia độ, ca đong, ...
+
+14
+
+
+--- Trang 14 (vat li 6.pdf) ---
+BÀI 4. ĐO THỂ TÍCH VẬT RẮN
+
+KHÔNG THẤM NƯÓC
+
+Làm thế nào để biết chính xác thể
+tích của cái đỉnh ốc và hòn đá (H.4.1) ?
+
+I. CÁCH ĐO THỂ TÍCH VẬT RẮN
+KHÔNG THẤM NƯỚC VÀ CHÌM
+TRONG NƯỚC
+
+8 1. Dùng bình chia độ
+
+Quan sát hình 4.2 và mô tả cách đo
+thể tích của hòn đá bằng bình chia độ.
+# 2. Dùng bình tràn
+
+Nếu hòn đá to không bỏ lọt bình chia
+độ thì người ta dùng thêm bình tràn và bình
+chứa để đo thể tích của nó như ở hình 4.3a.
+
+Hãy mô tả cách đo thể tích hòn đá bằng
+phương pháp bình tràn vẽ ở hình 4.3.
+
+Hình 4.3
+
+Hình 4.1
+
+Jb)
+
+--- Trang 15 (vat li 6.pdf) ---
+® Rút ra kết luận
+
+Chọn từ thích hợp trong khung để điền
+vào chỗ trống trong các câu sau :
+
+Thể tích của vật rắn bất kì không thấm
+nước có thể đo được bằng cách :
+vật đó vào chất lỏng đựng,
+trong bình chia độ. Thể tích của phần chất
+lỏng (2) .... bằng thể tích của vật.
+b) Khi vật rắn không bỏ lọt bình chia độ thì
+()...........vật đó vào trong bình tràn. Thể tích
+của phần chất lỏng (4) bằng thể
+tích của vật.
+
+® 3. Thực hành : Đo thể tích vật rắn
+4) Chuẩn bị
+
+— 1 bình chia độ: 1 chai, lọ hoặc ca đong...
+có ghi sẵn dung tích ; đây buộc.
+
+— 1 bình tràn (nếu không có thì thay bằng
+ca, bát hoặc bình chứa bỏ lọt vật rắn).
+
+— 1 bình chứa (nếu không có thì thay bằng
+khay hoặc đĩa đặt dưới bình tràn).
+
+— Xô đựng nước.
+
+~ Vật rắn không thấm nước (hòn đá, đỉnh
+ốc hoặc khoá hỏng...).
+
+— Kẻ bảng 4.1 vào vở.
+
+b) Ước lượng thể tích của vật (em) và ghi
+kết quả vào bảng.
+
+c) Kiểm tra ước lượng bằng cách đo thể tích
+của vật và ghi kết quả vào bảng.
+
+16
+
+Bảng 4.1.
+Kết na] đo thể tích vật rắn
+
+
+--- Trang 16 (vat li 6.pdf) ---
+Y II. VẬN DỤNG
+
+Nếu dùng ca thay cho bình tràn và bát to thay cho bình chứa để đo thể tích
+của vật như ở hình 4.4 thì cẩn phải chú ý điều gì ?
+
+Hình 4.4
+
+Hãy tự làm một bình chia độ : Dán băng giấy trắng dọc theo chai nhựa (hoặc
+cốc), dùng bơm tiêm bơm SemŠ nước vào chai, đánh dấu mực nước và ghi 5cmẺ vào
+băng giấy. Tiếp tục làm như vậy và ghỉ 10cm), 15cmÊ ... cho đến khi nước đẩy bình chia độ.
+Hãy tìm hai vật nào đó và đo thể tích của chúng bằng bình chia độ vừa tạo ra.
+
+® Để do thể tích vật rắn không thấm nước và chìm trong nước, có
+thể dùng bình chia độ, bình tràn.
+
+Có thể em chưa biết
+
+*# Người ta đã xác định được công V-ảnh" :
+thức toán để tính thể tích của một số  —/⁄Ì, ˆ. l
+vật có dạng hình học khác nhau ' th t3
+(H.4.). Như vậy, chỉ cần đo độ dài í
+
+các cạnh hình hộp, bán kính hình Hình hộp Hình cầu Hình trụ
+câu,... rồi tính thể tích theo công thức. Hình 4.5
+
+17
+
+--- Trang 17 (vat li 6.pdf) ---
+BÀI 5. KHỐI LƯỢNG - ĐO KHỐI LƯỢNG
+
+Đo khối lượng bằng dụng cụ gì ?
+
+I. KHỐI LƯỢNG. ĐƠN VỊ KHỐI LƯỢNG
+
+1. Khối lượng
+
+la) Hãy trả lời các câu hỏi sau :
+
+Trên vỏ hộp sữa Ông Thọ có ghi : “Khối lượng
+tịnh 397g”. Số đó chỉ sức nặng của hộp sữa hay
+lượng sữa chứa trong hộp ?
+
+Trên vỏ túi bột giặt OMO có ghi 500g. Số đó
+
+chỉ gì ?
+
+® b) Hãy tìm từ hoặc số thích hợp trong khung để -397g
+
+điển vào chỗ trống trong các câu sau : ~ 500g
+(1)...... là khối lượng của bột giặt chứa trong túi. ~ lượng
+(2).......... là khối lượng của sữa chứa trong hộp. ~ khối lượng
+
+Mọi vật đều có (3)....
+
+Khối lượng của một vật chỉ (4) ...............
+chất chứa trong vật.
+
+2. Đơn vị khối lượng
+
+l8 a) Trong hệ thống đo lường hợp pháp của Việt
+Nam, đơn vị đo khối lượng là kilôgam (kí hiệu: kg).
+
+Kilôgam là khối lượng của một quả cân mâu, đặt
+ở Viện Đo lường quốc tế ở Pháp (H.5.1). Hình SJ
+
+_ ¬..._
+
+--- Trang 18 (vat li 6.pdf) ---
+b) Các đơn vị khối lượng khác thường gặp :
+— gam (kí hiệu g) : lạ = 1000FE- —miligem (kí hiệu mg) :Img=T Do &:
+— héctôgam (còn gọi là lạng) : 1 lạng = 100g. —/: I tạ = 100kg.
+
+~ rấn (kí hiệu t) : It= 1000kg.
+
+II. ĐO KHỐI LƯỢNG
+
+l8 Người ta đo khối lượng bằng cân. Trong
+
+phòng thí nghiệm, người ta thường dùng
+
+cân Rô-béc-van để đo khối lượng.
+
+lï 1. Tìm hiểu cân Rô-béc-van
+
+Hãy đối chiếu ảnh của cái cân
+
+Rô-béc-van trong hình 5.2 với cái cân thật
+
+để nhận ra các bộ phận sau đây : đòn cân
+
+{1), đĩa cân (2), kim cân (3), hộp quả cân
+
+(4). ốc điều chỉnh (5) và con mã (6).
+
+Hãy cho biết GHĐ và ĐCNN của cân
+
+Rô:béc-van trong lớp.
+
+® 2. Cách dùng cân Rô-béc-van để cân
+
+một vật Hình 5.2
+Chọn từ thích hợp trong khung để điển
+
+vào chỗ trống trong các câu sau :
+
+Thoạt tiên, phải điều chỉnh sao cho khi
+
+chưa cân, đòn cân phải nằm thăng bằng, kim
+
+cân chỉ đúng vạch giữa). Đó là việc (1)
+
+lên đĩa cân bên trái. Đặt lên đĩa cân bên kia ~ quả cân
+một số (3) ................ có khối lượng phù hợp
+và điều chỉnh con mã sao cho đòn cân nằm l
+.... kim cân nằm (S)................ ~ điều chỉnh số 0
+bảng chia độ. Tổng khối lượng của các (6) ~ đúng giữa
+
+... trên đĩa cân cộng với số chỉ của
+con mã sẽ bằng khối lượng của (7)
+
+~ vật đem cân
+
+~ thăng bằng
+
+v Hãy thực hiện phép cân một vật
+nào đó bằng cân Rô-béc-van.
+
+(*) Đặt con mã ở vị trí số 0, vặn ốc điều chỉnh cho đến khi đòn cân nằm thăng bằng.
+
+Jxš<:<zAag.g I9
+
+--- Trang 19 (vat li 6.pdf) ---
+l8 3. Các loại cân khác
+Hãy chỉ trên các hình 5.3, 5.4, 5.5 và 5.6 xem đâu là cân tạ, cân đòn, cân
+đồng hồ, cân y tế.
+
+Hình Š.S Hình 5.6
+
+Hình S.3 Hình 5.4
+
+Y III. VẬN DỤNG
+
+Hãy xác định GHĐ và ĐCNN của cái cân mà em (hoặc
+gia đình em) thường dùng và dùng cân đó để xác định khối
+lượng của một ống bơ gạo có ngọn. Nếu có thể, hãy so sánh
+
+kết quả đo của em với kết quả đo của các bạn khác trong tổ.
+Trước một chiếc cầu có một biển báo giao thông trên có
+ghi 5T (H.5.7). Số ST có ý nghĩa gì ? Hình 5.7
+
+®_ Mọi vật đều có khối lượng. Khối lượng sữa trong hộp, khối lượng
+bột giặt trong túi, v.v... chỉ lượng sữa trong hộp, lượng bột giặt trong
+túi, v.v... Khối lượng của một vật chỉ lượng chất tạo thành vật đó.
+
+©_ Đơn vị của khối lượng là kilôgam (kg).
+
+® Người ta dùng cân để đo khối lượng.
+
+Có thể em chưa biết
+
+# Một cái nhẫn 1 chỉ vàng (1 đồng cân vàng) có khối lượng là 3,75g. Một
+lượng (lạng ta) là 10 chỉ.
+
+se Khối lượng của một con voi vào khoảng 6000kg. Thế mà voi lại rất sợ
+kiến, con vật chỉ có khối lượng không đầy 1mg !
+
+'# Khối lượng của một con cá voi vào khoảng 100000kg.
+
+se Theo hệ thống đơn vị đo lường hợp pháp của Việt Nam, thì tấn có kí hiệu
+là t. Do đó, biển báo giao thông ỏ hình 5.7, đáng lẽ phải ghi là 5t.
+
+20 ¬
+
+--- Trang 20 (vat li 6.pdf) ---
+Trong hai người ai tác dụng lực đẩy,
+ai tác dụng lực kéo lên cái tủ ?
+
+I. LỰC
+
+l8 1. Thí nghiệm
+a) Bố trí thí nghiệm như ở hình 6.1.
+
+Nhận xét về tác dụng của lò xo lá tròn
+lên xe và của xe lên lò xo lá tròn khi ta đẩy
+xe cho nó ép lò xo lại.
+
+b) Bố trí thí nghiệm như ở hình 6.2.
+
+Nhận xét về tác dụng của lò xo lên xe
+và của xe lên lò xo khi ta kéo xe cho lò xo
+dẫn ra.
+
+©) Đưa từ từ một cực của một thanh nam
+châm lại gần một quả nặng bằng sắt (H.6.3).
+Nhận xét về tác dụng của nam châm
+lên quả nặng.
+
+aS
+Xà. BÀI 6. LỰC - HAI LỰC CAN BẰNG
+
+Hình 6.1
+
+Hình 6.2
+
+Hình 6.3
+
+21
+
+--- Trang 21 (vat li 6.pdf) ---
+Dùng từ thích hợp trong khung để điển vào chỗ
+trống trong các câu sau :
+
+a) Lò xo lá tròn bị ép đã tác đụng vào xe lăn một (1)......
+.... Lúc đó tay ta (thông qua xe lăn) đã tác dụng lên lò
+xo lá tròn một (2) làm cho lò xo bị méo đi.
+
+b) Lò xo bị dãn đã tác dụng lên xe lăn một (3)
+Lúc đó tay ta (thông qua xe lăn) đã tác dụng.
+lên lò xo một (4) .................. làm cho lò xo bị dãn dài ra.
+
+e) Nam châm đã tác dụng lên quả nặng một (Š) ..........
+® 2. Rút ra kết luận
+
+Khi vật này đẩy hoặc kéo vật kia, ta nói vật này tác
+dụng lực lên vật kia.
+II. PHƯƠNG VÀ CHIỀU CỦA LỰC
+
+Làm lại các thí nghiệm ở hình 6. và 6.2.
+
+— lực hút
+~ lực đẩy
+— lực kéo
+
+~ lực ép
+
+~ Lực do lò xo ở hình 6.2 tác dụng lên xe lăn có phương dọc theo lò xo và có chiều
+hướng từ xe lăn đến cái cọc (tức là hướng từ trái sang phải).
+
+~ Lực đo lò xo lá tròn ở hình 6.1 tác dụng lên xe lăn có phương gần song song với
+
+mặt bàn, và có chiều đẩy ra.
+
+Vậy, mỗi lực có phương và chiều xác định.
+
+Hãy xác định phương và chiều của lực do nam châm tác dụng lên quả nặng
+
+trong thí nghiệm ở hình 6.3.
+
+III. HAI LỰC CÂN BẰNG
+
+Quan sát hình 6.4. Đoán xem :
+sợi dây sẽ chuyển động như thế nảo,
+nếu đội kéo co bên trái mạnh hơn, yếu
+hơn và nếu hai đội mạnh ngang nhau?
+Nêu nhận xét về phương và
+chiều của hai lực mà hai đội tác dụng
+vào sợi dây.
+
+Hình 6.4
+
+2 ¬¬.._ —
+
+--- Trang 22 (vat li 6.pdf) ---
+©® Dùng các từ thích hợp trong khung để điển vào chỗ
+
+trống trong các câu sau : — phương
+a) Nếu hai đội kéo co mạnh ngang nhau thì họ sẽ tác dụng — chiêu
+lên dây hai lực (1)... Sợi dây chịu tác dụng của Suy
+hai lực cân bằng thì s sẽ (2) ~ cân bằng
+b) Lực do đội bên phải tác dụng lên dây có phương dọc theo ~ đứng yên
+sợi dây, có chiều hướng về bên phải. Lực do đội bên trái tác
+dụng lên sợi dây có phương đọc theo sợi dây và có (3)
+.. hướng về bên trái.
+e) Hai lực cân bằng là hai lực mạnh như nhau, có cùng (4) .................. nhưng
+
+ngược (Š)........................... „ tác dụng vào cùng một vật.
+
+Y IV. VẬN DỤNG
+
+E1 Tim từ thích hợp để điển vào chỗ trống trong các câu sau :
+
+—) —~`x~_ „>`>~
+
+Hình 6.5 Hình 6.6
+
+a) Gió tác dụng vào buồổm m b) Đầu tàu tác dụng vào toa tàu một .....
+
+Tìm một thí dụ về hai lực cân bằng.
+
+© Tác dụng đẩy, kéo của vật này lên vật khác gọi là lực.
+
+© Nếu chỉ có hai lực tác dụng vào cùng một vật mà vật vẫn đứng yên,
+thì hai lực đó là hai lực cân bằng.
+
+© Hai lực cân bằng là hai lực mạnh như nhau, có cùng phương nhưng
+ngược chiều, tác dụng vào cùng một vật.
+
+Có thể em chưa biết
+
+se Trong tiếng Việt có nhiều từ để chỉ các lực cụ thể như : Lực kéo, lực đẩy,
+lực hút, lực nâng, lực ép, lực uốn, lực nén, lực giữ v.v... Tuy nhiên, tất cả các
+lực đó đều có thể quy về tác dụng đẩy về phía này, hay kéo về phía kia.
+
+_ Ẩn 23
+
+--- Trang 23 (vat li 6.pdf) ---
+tà. BÀI 7. TÌM HIỂU KẾT QUÁ
+TÁC DỤNG CỦA LỰC
+
+I. NHỮNG HIỆN TƯỢNG CẦN CHÚ Ý QUAN SÁT KHI CÓ LỰC
+TÁC DỤNG
+
+li 1. Những sự biến đổi của chuyển động
+
+~ Vật đang chuyển động, bị dừng lại.
+
+~ Vật đang đứng yên, bắt đầu chuyển động.
+
+— Vật chuyển động nhanh lên.
+
+— Vật chuyển động chậm lại.
+
+~ Vật đang chuyển động theo hướng này, bỗng chuyển động theo hướng khác.
+Hãy tìm bốn thí dụ cụ thể để minh hoạ những sự biến đổi chuyển động.
+
+lĩ 2. Những sự biến dạng
+Đó là những sự thay đổi hình dạng của một vật. Thí dụ, lò xo bị kéo dãn dài ra.
+Hãy trả lời câu hỏi nêu ở đầu bài.
+
+34 ¬——=
+
+--- Trang 24 (vat li 6.pdf) ---
+II. ,NHỮNG KẾT QUẢ TÁC DỤNG
+CỦA LỰC
+
+l 1. Thí nghiệm
+
+Trong thí nghiệm ở bài 6 (H.6. L), đang
+
+giữ xe, ta đột nhiên buông tay không giữ xe nữa.
+Nhận xét về kết quả tác dụng của lò xo lá
+
+tròn lên xe lúc đó.
+
+Buộc sợi dây vào một xe lăn, rồi thả
+
+cho xe chạy xuống từ đỉnh một dốc nghiêng.
+
+Hãy tìm cách giữ dây, sao cho xe chỉ chạy đến
+
+lưng chừng dốc thì dừng lại (H.7.1).
+
+Hình 7.1
+
+Nhận xét về kết quả của lực mà tay ta tác
+dụng lên xe thông qua sợi dây.
+Đặt một lò xo lá tròn nằm ngang ở
+lưng chừng dốc. Thả một hòn bi lăn từ đỉnh
+dốc xuống sao cho nó va chạm vào thành
+bên của lò xo (H.7.2).
+
+Nhận xét về kết quả của lực mà lò xo tác
+dụng lên hòn bi khi va chạm.
+Lấy tay ép hai đầu một lò xo. Nhận xét Hình 7.2
+về kết quả của lực mà tay ta tác dụng lên lò xo.
+
+® 2. Rút ra kết luận ~ biến dạng
+Chọn cụm từ thích hợp trong khung để ~ biến đổi chuyển động của
+
+điển vào chỗ trống trong các câu sau :
+a) Lực đẩy mà lò xo lá tròn tác dụng lên xe lăn đã làm (1)...
+
+"¬—-
+b) Lực mà tay ta (thông qua sợi dây) tác dụng lên xe lăn khi đang chạy đã làm
+
+|—=HmHƯ1Íằẳằ 55
+
+--- Trang 25 (vat li 6.pdf) ---
+Hãy viết đầy đủ câu dưới đây :
+
+Lực mà vật A tác dụng lên vật B có thể làm (1)... " vật B hoặc làm
+(2)... HH re vật B. Hai kết quả này có thể cùng xảy ra.
+
+Y III. VẬN DỤNG
+Hãy nêu 3 thí dụ về lực tác dụng lên một vật làm biến đổi chuyển động
+của vật.
+
+Hãy nêu 3 thí dụ về lực tác dụng lên vật làm vật biến dạng.
+
+Hãy nêu một thí dụ về lực tác dụng lên một vật có thể gây ra đồng thời hai
+kết quả nói trên.
+
+©® Lực tác dụng lên một vật có thể làm biến đối chuyển động
+của vật đó hoặc làm nó biến dạng.
+
+—_—mẰ}—_—`Ẽ— Ừỷ—
+
+Có thể em chưa biết
+
+“Hình bên là ảnh chụp một cái vợt
+đang đập vào một quả bóng trong một
+khoảng thời gian rất ngắn. Lực mà mặt
+vợt tác dụng vào quả bóng làm cho quả
+bóng bị biến dạng. Ngược lại, lực mà
+quả bóng tác dụng vào mặt vợt cũng
+làm cho mặt vợt bị biến dạng.
+
+Hình 7.3
+
+% —— “WWNNNNNNR
+
+--- Trang 26 (vat li 6.pdf) ---
+Con : Bố ơi ! Tại sao người đứng
+ở Nam Cực không bị rơi ra ngoài
+Trái Đất ?
+
+Bố : Con không biết là Trái Đất hút
+tất cả mọi vật, kể cả các vật ỏ Nam
+Cực à ?
+
+I. TRỌNG LỰC LÀ GÌ ?
+
+l8 1. Thí nghiệm
+
+a) Treo một vật nặng vào một lò xo, ta
+thấy lò xo bị dãn ra (H.8. 1).
+
+Lò xo có tác dụng lực vào quả nặng
+không ? Lực đó có phương và chiều như
+thế nào ? Tại sao quả nặng vẫn đứng yên ?
+
+b) Cầm một viên phấn trên cao, rồi đột
+nhiên buông tay ra.
+
+Điều gì chứng tỏ có một lực tác
+dụng lên viên phấn ? Lực đó có phương
+và chiều như thế nào ?
+
+° at.
+Xà. BÀI 8. TRỌNG LỰC - ĐÓN VỊ LỰC
+
+Hình 8.1
+
+⁄Zj
+
+--- Trang 27 (vat li 6.pdf) ---
+Tìm từ thích hợp trong khung để điển vào chỗ
+
+trống trong các câu sau : ~ lực hút
+— Lò xo bị dãn dài ra đã tác dụng vào quả nặng một lực ~ Trái Đất
+kéo lên phía trên. Thế mà quả nặng vẫn đứng yên. Vậy ~ cân bằng
+phải có một lực nữa tác dụng vào quả nặng hướng ~ biến đổi
+xuống phía dưới để (1)............ ........ VỚI lực của lò
+
+xo. Lực này do (2)....................... tác dụng lên quả nặng.
+
+~ Khi viên phấn được buông ra, nó bắt đầu rơi xuống.
+Chuyển động của nó đã bị (3) Vậy phải
+có một (4) viên phấn xuống phía dưới. Lực
+này do (5) tác dụng lên viên phấn.
+
+© 2. Kết luận
+
+a) Trái Đất tác dụng lực hút lên mọi vật. Lực này gọi là
+trọng lực.
+
+b) Người ta gọi cường độ (độ lớn) của trọng lực tác
+dụng lên một vật là trọng lượng của vật đó.
+
+II. PHƯƠNG VÀ CHIỀU CỦA TRỌNG LỰC
+1. Phương và chiều của trọng lực
+
+8 Dây dọi (H.§.2) là dụng cụ mà thợ nề (thợ xây) dùng
+để xác định phương thăng đứng. Dây dọi gồm một quả
+nặng treo vào đầu một sợi dây mềm. Phương của dây
+dại là phương thẳng đứng. Hình 8.2
+Dùng từ thích hợp trong khung để điển vào chỗ
+
+trống trong các câu sau :
+
+3G đự
+a) Khi quả nặng treo trên dây dọi đứng yên thì trọng lực — thăng đứng
+tác dụng vào quả nặng đã (1) với lực kéo của ~ từ trên
+sợi dây. Do đó, phương của trọng lực cũng là phương xuống dưới
+của (2) tức là phương (3) " ~ cân bằng
+b) Căn cứ vào hai thí nghiệm ở hình 8.1 và 8.2 ta có thể ~ dây dọi
+kết luận là chiều của trọng lực hướng (4) ........................
+
+24 ——— TW
+
+--- Trang 28 (vat li 6.pdf) ---
+® 2. Kết luận
+Tìm từ thích hợp để điển vào chỗ trống
+trong câu :
+
+Trọng lực có phương (I)
+và có chiều (2)
+
+III. ĐƠN VỊ LỰC Y IV. VẬN DỤNG
+
+l8 Để đo cường độ của lực, hệ thống đơn vị Treo một dây dọi phía trên
+đo lường hợp pháp của Việt Nam dùng mặt nước đứng yên của một chậu
+
+đơn vị niutơn (kí hiệu N). nước. Mặt nước là mặt nằm ngang.
+Trọng lượng của quả cân 100g được tính Hãy dùng một thước êke để tìm
+tròn là 1 niutơn. mối liên hệ giữa phương thẳng
+
+Trọng lượng của quả cân Ikg là I0N. *® đứng và mặt nằm ngang.
+
+© Trọng lực là lực hút của Trái Đất.
+
+® Trọng lực có phương thẳng đứng và có chiều hướng về
+phía Trái Đất.
+
+® _ Trọng lượng của một vật là cường độ của trọng lực tác dụng lên
+vật đó.
+
+®ˆ Đơn vị lực là niutơn (N). Trọng lượng của quả cân 100g là 1N.
+
+Có thể em chưa biết
+
+*# Trọng lượng của một vật là cường độ của lực hút của Trái Đất lên vật đó. Do đó,
+trọng lượng của vật phụ thuộc vào vị trí của vật trên Trái Đất. Chẳng hạn, khi
+lên cao thì trọng lượng của vật sẽ giảm đi chút ít. Trái lại, khối lượng của một
+vật không thay đổi theo vị trí đặt vật, vì khối lượng chỉ lượng chất chứa trong vật.
+# Thực ra, trọng lượng của quả cân 100g chỉ có 0,98N. Tuy nhiên, nếu
+không yêu cầu độ chính xác cao, ta có thể lấy tròn trọng lượng của quả cân
+100g là 1N.
+
+# Khi đổ bộ lên Mặt Trăng thì trọng lượng trên Mặt Trăng của nhà du hành
+vũ trụ (tức là lực hút của Mặt Trăng lên người đó) chỉ bằng 1/6 trọng lượng
+của người đó trên Trái Đất, còn khối lượng của người đó không đổi.
+
+mTHH1ẵỈ'ỈrẼỨ.. ”
+
+--- Trang 29 (vat li 6.pdf) ---
+BÀI 9. LỰC ĐÀN HỒI
+
+Một sợi dây cao su và một lò xo có
+tính chất nào giống nhau ?
+
+I. BIẾN DẠNG ĐÀN HỒI.
+ĐỘ BIẾN DẠNG
+1. Biến dạng của một lò xo
+
+Ta hãy nghiên cứu xem sự biến dạng của
+một lò xo có đặc điểm gì ?
+8# Thí nghiệm
+
+Treo một lò xo xoắn dài ở tư thế thẳng
+đứng vào một cái giá thí nghiệm, rồi tiến
+hành các phép đo sau :
+
+— Đo chiều dài của lò xo khi chưa kéo dãn
+
+nó (lò xo chưa bị biến dạng, hình 9.1). Đó là
+
+chiêu dài tự nhiên của lò xo (I). Ghi giá trị
+
+đo được vào ô tương ứng của bảng 9.1.
+
+— Móc một quả nặng 50g vào đầu dưới của lò xo. Đo chiều dài của lò xo lúc đó ().
+Đó là chiều dài của lò xo lúc bị biến dạng. Ghi kết quả vào ô tương ứng của bảng 9.I.
+~— Tính trọng lượng của quả nặng và ghi vào ô tương ứng của bảng 9. .
+
+Bảng 9.1. Bảng kết quả
+
+0 0 (N) p=... (cm) 0 (cm)
+1 quả nặng .e«e. (N) 1=... (cm) ... (em)
+2 quả nặng se (N) 1=... (cm) ... (cm)
+3 quả nặng se (N) 1=... (cm) ... (Cm)
+
+3» ¬...
+
+--- Trang 30 (vat li 6.pdf) ---
+— Ðo lại chiểu dài của lò xo khi bỏ quả nặng
+ra và so sánh với chiều dải tự nhiên của lò xo.
+— Móc thêm một, rồi hai... quả nặng 50g vào
+đầu dưới của lò xo và làm như trên (H.9.2).
+(Không được treo đến 5 quả nặng, vì sẽ làm
+hỏng lò xo).
+
+® Rút ra kết luận
+Tìm từ thích hợp trong khung để điển
+vào chỗ trống của các câu sau :
+
+Khi bị các quả nặng kéo thì lò xo bị (1)
+" ..„ chiều đài của nó (2)...
+Khi bỏ các quả nặng đi, chiều dài của lò xo
+trở lại (3) ... chiều đài tự nhiên của nó.
+Lò xo lại có hình dạng ban đầu.
+
+Biến dạng của lò xo có đặc điểm như trên
+là biến dạng đàn hồi.
+
+Lò xo là vật có tính chất đàn hỏi.
+
+2. Độ biến dạng của lò xo
+
+l8 Độ biến dạng của lò xo là hiệu giữa chiều
+đài khi biến dạng và chiều dài tự nhiên của
+lò xo:
+
+© Hãy tính độ biến dạng của lò xo khi
+treo 1, 2, 3 quả nặng, rồi ghi kết quả vào các
+ô thích hợp trong bảng 9.1.
+
+II. LỰC ĐÀN HỒI VÀ ĐẶC ĐIỂM
+CỦA NÓ
+1. Lực đàn hổi
+
+l8 Lực mà lò xo khi biến dạng tác dụng
+vào quả nặng trong thí nghiệm trên gọi là
+lực đàn hồi.
+
+- bằng
+~— tăng lên
+
+~ dân ra
+
+31
+
+
+--- Trang 31 (vat li 6.pdf) ---
+Trong thí nghiệm vẽ ở hình 9.2, khi Y II. VẬN DỤNG
+quả nặng đứng yên, thì lực đàn hồi mà lò xo
+tác di ào nó đã cân bằ ới ào ?
+PPIDOEEGEECCNOCEDOOODEBDEECEELCSD Dựa vào bảng 9.1, hãy tìm từ
+
+Như vậy, cường độ của lực đàn hồi của thích hợp để điển vào chỗ trống
+lò xo sẽ bằng cường độ của lực nào ? trong các câu sau :
+® 2. Đặc điểm của lực đàn hồi a) Khi độ biến dạng tăng gấp đôi
+Chọn câu đúng trong các câu dưới đây ; thì lực đàn hồi (1).........................
+A. Lực đàn hồi không phụ thuộc vào độ _ b) Khi độ biến dạng tăng gấp ba thì
+biến dạng. TJG dân Hồi Œ]Jiascoaaanioaiiiiatria
+B. Độ biến dạng tăng thì lực đàn hồi giảm. Hãy trả lời câu hỏi nêu ra ở
+€. Độ biến dạng tăng thì lực đàn hồi tăng. đầu bài.
+
+-
+
+@ Lò xo là một vật đàn hồi. Sau khi nén hoặc kéo dãn nó một
+cách vừa phải, nếu buông ra, thì chiều dài của nó lại trở lại
+bằng chiều dài tự nhiên.
+
+®© Khi lò xo bị nén hoặc kéo dãn, thì nó sẽ tác dụng lực đàn
+hổi lên các vật tiếp xúc (hoặc gắn) với hai đầu của nó.
+
+®© Độ biến dạng của lò xo càng lớn, thì lực đàn hổi càng lớn.
+—_——__`Ễ—P ỷ—
+
+Có thể em chưa biết
+
+se Lò xo chỉ dãn đều nếu các vòng của nó được quấn đều đặn. Nếu em vô
+ý kéo dãn một vài vòng của lò xo quá mức, thì nó sẽ không dãn đều nữa
+và thí nghiệm sẽ thất bại.
+
+e Tính đàn hồi của lò xo phụ thuộc vào vật liệu làm lò xo. Thép và đồng
+thau đàn hồi rất tốt, nên lò xo thường được làm bằng thép hoặc đồng thau.
+Sắt và đồng đỏ đàn hồi rất kém, nên không thể dùng chúng làm lò xo được.
+e Nếu kéo dãn lò xo bằng một lực quá lớn, thì lò xo sẽ bị mất tính đàn hồi.
+Người ta nói là lò xo bị “mỏi”. Lúc đó, nếu thôi không kéo dãn, chiều dài của
+lò xo sẽ không thể trỏ lại bằng chiều dài tự nhiên của nó được nữa.
+
+» ¬_—_.
+
+--- Trang 32 (vat li 6.pdf) ---
+BÀI I0. LỰC KẾ - PHÉP ĐO LỰC
+
+TRỌNG LƯỢNG VÀ KHỐI LƯỢNG
+
+Tại sao khi đi mua, bán người ta có thể dùng một cái lực kế để làm
+một cái cân ?
+
+I. TÌM HIỂU LỰC KẾ
+
+l 1. Lực kế là gì 2
+Lực kế là dụng cụ dùng để đo lực.
+
+~ Có nhiều loại lực kế. Loại lực kế
+thường dùng là lực kế lò xo.
+
+— Có lực kế đo lực kéo, lực kế đo lực
+đẩy và lực kế đo cả lực kéo lẫn lực đẩy.
+
+BỊENEH.AOs 3
+
+--- Trang 33 (vat li 6.pdf) ---
+® 2. Mô tả một lực kế lò xo đơn giản
+Dùng từ thích hợp trong khung để điền vào chỗ trống
+
+của các câu sau : — kim chỉ thị
+Lực kế có một chiếc (1 một đầu gắn vào vỏ lực ~ bảng chia độ
+kế, đầu kia có gắn một cái móc và một cái (2) ................... '
+Kim chỉ thị chạy trên mặt một (3) -laxo
+Hãy tìm hiểu ĐCNN và GHĐ của lực kế ở nhóm em.
+II. ĐO MỘT LỰC BẰNG LỰC KẾ
+E8 1. Cách đo lực
+Dùng từ thích hợp trong khung để điền vào chỗ trống
+trong các câu sau :
+Thoạt tiên phải điều chinh số 0, nghĩa là phải điều chỉnh
+sao cho khi chưa đo lực, kim chỉ thị năm đúng ()....... ~ phương
+.... tác dụng vào lò xo của lực kế. Phải cầm
+vào vỏ lực kế và hướng sao cho lò xo của lực kế nằm dọc ~ vạch 0
+theo (3)........... của lực cần đo (xem 2 ảnh chụp ở đầu bài). ~ lực cân đo
+
+Y 2. Thực hành đo lực
+Hãy tìm cách đo trọng lượng của một cuốn sách giáo
+khoa Vật lí 6. So sánh kết quả đo giữa các bạn trong nhóm.
+
+Khi đo phải cầm lực kế ở tư thế như thế nào ? Tại sao
+phải cầm như thế ?
+
+III. CÔNG THỨC LIÊN HỆ GIỮA TRỌNG LƯỢNG
+VÀ KHÔI LƯỢNG
+
+© Hãy tìm những con số thích hợp để điển vào chỗ
+trống trong các câu sau :
+
+a) Một quả cân có khối lượng 100g thì có trọng lượng (1)... N.
+b) Một quả cân có khối lượng (2)...... ø thì có trọng lượng 2N.
+e) Mộttúi đường có khối lượng Ikg thì có trọng lượng (3).......
+
+lổ Da.
+
+--- Trang 34 (vat li 6.pdf) ---
+l8 Như vậy, giữa trọng lượng và khối lượng của cùng một vật có hệ thức : P= 10m,
+trong đó P là trọng lượng của vật, đo bằng niutơn (N), còn m là khối lượng của
+vật, đo bằng kilôgam (kg).
+
+Y IV. VẬN DỤNG
+Hãy giải thích tại sao trên các “cân bỏ túi” bán ở ngoài phố người ta không
+chia độ theo đơn vị miươn mà lại chia độ theo đơn vị k¡!⁄ôgøm ? Thực chất các “cân
+bỏ túi” là dụng cụ gì ?
+Về nhà, hãy thử làm một cái lực kế, và phải nhớ chia độ cho lực kế đó.
+Một xe tải có khối lượng 3,2 tấn sẽ có trọng lượng bao nhiêu niutơn ?
+
+©_ Lực kế dùng để đo lực.
+@©_ Hệ thức giữa trọng lượng và khối lượng của cùng một vật :
+P = 10m, trong đó : P là trọng lượng (đơn vị niutơn),
+m là khối lượng (đơn vị kilôgam).
+——_————~ TT  — —
+
+Có thể em chua biết
+
+= ~ Lực mà ngón tay ta bấm lò xo bút bi vào cỡ 1N.
+
+~ Lực kéo của một học sinh THCS khoảng từ 50N đến 60N.
+
+— Lực do chiếc vợt tác dụng vào quả bóng ở hình 7.3 vào cỡ 500N.
+— Lực kéo của một con trâu từ 800N đến 1000N.
+
+— Lực nâng của một lực sĩ cử tạ có thể lên đến 2200N.
+
+— Lực kéo của một đầu tàu hoả từ 40000N đến 60000N.
+
+- Lực của một động cơ đẩy tên lửa lúc khỏi hành có thể đến
+10000000N.
+
+se Số 10 trong hệ thức P = 10m chỉ là con số lấy gần đúng.
+Thực ra, một vật có khối lượng 1kg phải có trọng lượng là
+9,78N khi đặt ở xích đạo, và 9,83N khi đặt ỏ địa cực. Vậy
+trọng lượng của một vật thay đổi theo vị trí của nó trên Trái
+Đất, nhưng thay đổi rất ít.
+
+3
+
+--- Trang 35 (vat li 6.pdf) ---
+BÀI II. KHỐI LƯỢNG RIÊNG
+
+TRỌNG LƯỢNG RIÊNG
+
+Ở Ấn Độ, thời cổ xưa, người ta đã đúc được một cái
+cột bằng sắt nguyên chất, có khối lượng đến gần mười
+tấn. Làm thế nào để “cân” được chiếc cột đó ?
+
+I. KHỐI LƯỢNG RIÊNG. TÍNH KHỐI LƯỢNG
+CỦA CÁC VẬT THEO KHỐI LƯỢNG RIÊNG
+
+l8 1. Khối lượng riêng
+
+CÌ| Hãy chọn phương án xác định khối lượng của chiếc cột
+sắt ở Ấn Độ:
+
+A. Cưa chiếc cột sắt thành nhiều đoạn nhỏ, rồi đem cân từng
+đoạn một.
+
+B. Tìm cách đo thể tích của chiếc cột, xem nó bằng bao nhiêu
+mét khối ? Biết khối lượng của Imề sắt nguyên chất ta sẽ tính
+được khối lượng của chiếc cột.
+
+Để giúp các em lựa chọn, người ta cho biết số liệu sau : Sau
+khi đo chu vi và chiều cao của chiếc cột, người ta đã tính ra được
+thể tích của chiếc cột vào khoảng 0,9m. Mặt khác, người ta cũng
+đã cân và cho biết Idm° sắt nguyên chất có khối lượng 7,8kg.
+
+Em hãy xác định khối lượng của chiếc cột.
+lR Khối lượng của một mét khối một chất gọi là khối lượng
+riêng của chất đó.
+
+Đơn vị khối lượng riêng là k¡lôgưm trên mét khối, kí hiệu
+là kg/mẻ.
+
+% ¬
+
+--- Trang 36 (vat li 6.pdf) ---
+l# 2. Bảng khối lượng riêng của một số chất
+
+Chất rắn kh) êng Chất lồng ——.
+Chì 11300 Thuỷ ngân 13600
+Sắt 7800 Nước | 1000
+Nhôm 2700 Xăng 700
+Đá (khoảng) 2600 (khoảng) 800
+Gạo (khoảng) 1200 (khoảng) 800
+Gỗ tốt (khoảng) 800 (khoảng) 790
+
+3. Tính khối lượng của một vật theo khối
+
+lượng riêng ~ khối lượng riêng : D (kglm)
+vy Hãy tính khối lượng của một khối — khối lượng : m (kg)
+
+đá. Biết khối đá đó có thể tích là 0,5m, "3 V ím)
+
+Hãy tìm các chữ trong khung để điển
+vào các ô của công thức tính khối lượng
+
+theo khối lượng riêng : = x
+
+II. TRỌNG LƯỢNG RIÊNG
+
+B1. Trọng lượng của một mét khối của một
+chất gọi là trọng lượng riêng của chất đó.
+
+2. Đơn vị trọng lượng riêng là niưtơn trên
+mét khối (Ñ/m).
+
+© Chọn từ thích hợp trong khung để
+điển vào chỗ trống :
+
+đlà(1)...................... — trọng lượng (N)
+„ trong đó : á P là (2)...................... ~ thể tích (mỶ)
+Vilà(@) ~ trọng lượng riêng (NimẺ)
+
+3. Dựa vào công thức P = 10m, ta có thể
+tính trọng lượng riêng d theo khối lượng
+riêng D : đ= 10D.
+
+JỊIEInH.g.,'ỈIỗ »
+
+
+--- Trang 37 (vat li 6.pdf) ---
+II. XÁC ĐỊNH TRỌNG LƯỢNG RIÊNG CỦA MỘT CHẤT
+Hãy tìm cách xác định trọng lượng riêng của chất làm quả cân.
+Dụng cụ gồm có :
+— Một quả cân 200g mà ta cần đo trọng lượng riêng của chất làm nó, có một sợi
+chỉ buộc vào quả cân.
+— Một bình chia độ có GHĐ 250cm3, miệng rộng để có thể cho lọt quả cân vào
+trong bình. Bình chứa khoảng 100cm nước.
+~ Một lực kế có GHĐ ít nhất 2,5N.
+
+Y IV. VẬN DỤNG
+Hãy tính khối lượng và trọng lượng của một chiếc dầm sắt có thể tích 40dm).
+
+Mỗi nhóm học sinh hãy hoà 50g muối ăn vào 0,5/ nước rồi đo khối lượng
+riêng của nước muối đó.
+
+@ Khối lượng riêng của một chất được xác định bằng khối lượng
+
+của một đơn vị thể tích (1m2) chất đó : D=ÿ.
+
+Đơn vị khối lượng riêng là kilôgam trên mét khối (kg/m)).
+
+®_ Trọng lượng riêng của một chất được xác định bằng trọng lượng
+của một đơn vị thể tích (1m) chất đó : d=.
+
+®_ Công thức tính trọng lượng riêng theo khối lượng riêng : d = 10D.
+
+—————_———ằ ằẼỀ  T—ếŸ®
+
+Có thể em chưa biết
+
+e“ Khi người ta nói chì nặng hơn sắt thì phải hiểu ngầm là khối lượng riêng
+(hoặc trọng lượng riêng) của chì lớn hơn khối lượng riêng (hoặc trọng lượng
+riêng) của sắt.
+
+s“ lriđi thuộc loại chất “nặng” nhất, nó có khối lượng riêng là
+22400kg/m°.
+
+3g ¬
+
+--- Trang 38 (vat li 6.pdf) ---
+l~3 BÀI 12. THỰC HÀNH :
+XÁC ĐỊN
+
+H KHỐI LƯỢNG RIÊNG CỦA SỎI
+
+I. THỰC HÀNH
+
+1. Dụng cụ
+
+— Một cái cân.
+
+— Một bình chia độ có GHĐ 100cm hoặc lớn hơn.
+— Một cốc nước.
+
+~— Khoảng 15 hòn sỏi to bằng đốt ngón tay người lớn.
+Sỏi đã được rửa sạch và lau khô.
+
+~ Giấy lau hoặc khăn lau.
+
+2. Tiến hành đo
+~ Chia chỗ sỏi làm 3 phần để đo 3 lần và tính giá trị
+trung bình. Nhớ lấy bút chì hay bút dạ đánh dấu vào
+các hòn sỏi, để tránh lẫn hòn sỏi của phần nọ
+sang phần kia.
+~ Cân khối lượng của mỗi phần, sau đó để riêng mỗi
+phần, tránh lẫn.
+~ Đổ khoảng 50cm nước vào bình chia độ.
+~ Lần lượt cho từng phần sỏi vào bình để đo thể tích
+của mỗi phần.
+
+Chú ý : Phải nghiêng bình để cho sỏi trượt nhẹ
+xuống dưới, kẻo vỡ bình.
+
+3. Tính khối lượng riêng của sỏi
+
+Dựa vào công thức D = m „ trong đó : D là khối
+lượng riêng của sỏi tkgim).
+m là khối lượng của mỗi phần sỏi (kg), V là thể tích của phần sỏi đó (m).
+Nhớ lại :  Ikg = 1000g.
+1m3 = 1000000em.
+
+Ï]mm8ẽaẼaẼ. »
+
+--- Trang 39 (vat li 6.pdf) ---
+40
+
+II. MẪU BÁO CÁO
+1. Họ và tên học SỈHH ..............................-ee+cecccceeeeeeeeeeeeeeeeee ĐỐI 2 si. cv.
+2. Tên bài thực hành :
+
+3. Mục tiêu của bài : Nắm được cách xác định khối lượng riêng của các vật
+rắn không thấm nước.
+
+4. Tóm tắt lí thuyết :
+a) Khối lượng riêng của một chất là gì ?
+b) Đơn vị khối lượng riêng là gì ?
+5. Tóm tắt cách làm :
+
+Để đo khối lượng riêng của sỏi, em phải thực hiện những công việc sau :
+a) Đo khối lượng của sỏi bằng (dụng cụ gì ?)......................---:¿-¿555555cvvcvcccreze
+b) Đo thể tích của sỏi bằng (dụng cụ gì ?).....
+
+©) Tính khối lượng riêng của sỏi theo công thức .......................-.....----c5++
+6. Bảng kết quả đo khối lượng riêng của sỏi
+
+Khối lượng sỏi Thể tích sỏi Khối lượng riêng
+Theog | Theokg | Theo cm3 | Theo m° | của sỏi (kg/m3)
+
+Giá trị trung bình của khối lượng riêng của sỏi là :
+
+Dụạ= ——————— =... kg/m).
+
+--- Trang 40 (vat li 6.pdf) ---
+BÀI I3. MÁY CÓ ĐÓN GIẢN
+
+Một ống bêtông nặng bị lăn xuống mương
+(H.13.1). Có thể đưa ống lên bằng những cách
+nào và dùng những dụng cụ nào để cho đỡ
+vất vả ?
+
+I. KÉO VẬT LÊN THEO PHƯƠNG
+THẮNG ĐỨNG
+
+l8 1. Đặt vấn đề
+
+Nếu chỉ dùng dây, liệu có thể kéo vật lên theo
+phương thắng đứng với lực nhỏ hơn trọng lượng
+của vật được không (H.13.2) ?
+
+l 2. Thí nghiệm
+
+Ở lớp, ta dùng khối trụ kim loại nhỏ thay cho
+ống bêtông để làm thí nghiệm nhằm trả lời câu
+hỏi trên.
+
+Chắc ống này phải đến hai tạ:
+Làm thế nào để đưa ống lên
+được đây 2
+
+“sẽ
+sG
+
+Hình 13.1
+
+Hình 13.2
+
+4l
+
+--- Trang 41 (vat li 6.pdf) ---
+4) Chuẩn bị : Bảng 13.1. Kết quả thí nghiệm
+
+~— Hai lực kế, khối trụ kim loại có móc.
+
+— Chép bảng 13.I vào vở. Trọng lượng của vật
+Tổng 2 lực
+dùng để kéo vật lên
+
+b) Tiến hành đo :
+
+— Đo trọng lượng của vật như hình
+13.3a và ghi kết quả vào bảng 13.1.
+
+— Kéo vật lên từ từ như hình 13.3b, đo
+lực kéo và ghi kết quả vào bảng 13.1.
+
+® Nhận xét
+EI Tù kết quả thí nghiệm, hãy so sánh
+lực kéo vật lên với trọng lượng của vật.
+
+® 3. Rút ra kết luận
+Chọn từ thích hợp trong khung để % Hình 13.3
+điển vào chỗ trống trong câu sau :
+
+Khi kéo vật lên theo phương thẳng
+
+đứng cần phải dùng lực (1) ................... ~ lớn hơn
+trọng lượng của vật. ~ nhỏ hơn
+Hãy nêu những khó khăn trong —ít nhất bằng
+cách kéo này.
+
+II. CÁC MÁY CƠ ĐƠN GIẢN
+
+Trong thực tế, người ta sử dụng
+các dụng cụ như tấm ván đặt nghiêng,
+xà beng, ròng rọc, ... để di chuyển
+hoặc nâng các vật nặng lên cao một
+cách dễ dàng.
+
+4 DO coa.ceễe
+
+--- Trang 42 (vat li 6.pdf) ---
+l8 Các dụng cụ kể trên được gọi là những máy cơ đơn giản. Có ba loại máy cơ
+đơn giản thường dùng là mặt phẳng nghiêng (H.13.4), đòn bẩy (H.13.5) và
+
+ròng rọc (H.13.6).
+
+Hình 13.4
+
+Hình 13.Š
+
+Chọn từ thích hợp trong dấu ngoặc
+để điển vào chỗ trống trong các câu sau :
+
+a) Máy cơ đơn giản là những dụng cụ
+giúp thực hiện công việc (l) ................
+hơn. (nhanh/dê dàng)
+
+b) Mặt phẳng nghiêng, đòn bẩy, ròng rọc
+là(1).... sẻ
+(palănglmáy cơ đơn gi lu
+
+@©_ Khi kéo vật lên theo phương thẳng
+
+Hình 13.6
+
+l Nếu khối lượng của ống
+bêtông là 200kg và lực kéo của mỗi
+người trong hình 13.2 là 400N thì
+những người này có kéo được ống
+bêtông lên hay không ? Vì sao ?
+
+Tìm những thí dụ sử dụng máy
+cơ đơn giản trong cuộc sống.
+
+đứng cần phải dùng lực có
+
+cường độ ít nhất bằng trọng lượng của vật.
+©_ Các máy cơ đơn giản thường dùng là : mặt phẳng nghiêng, đòn
+
+bẩy, ròng rọc.
+
+— 4
+
+--- Trang 43 (vat li 6.pdf) ---
+BÀI 14. MẶT PHẲNG NGHIÊNG
+
+Một số người quyết định bạt bớt bờ
+mương, dùng mặt phẳng nghiêng để
+kéo ống bêtông lên (H.14.1). Liệu làm
+như thế có dễ dàng hơn không ?
+
+l8 1. Đặt vấn đề
+
+Hình 14.1
+
+Dùng tấm ván làm mặt phẳng nghiêng có
+thể làm giảm lực kéo vật lên hay không ?
+
+Muốn làm giảm lực kéo vật thì phải tăng
+hay giảm độ nghiêng của tấm ván ?
+l2. Thí nghiệm
+a) Chuẩn bị :
+~ Lực kế có GHĐ 2,5 - 3N, khối trụ kim
+loại có móc, 3 tấm ván có độ dài khác nhau
+và một số vật kê.
+
+~ Chép bảng 14.1 vào vở.
+
+Bảng 14.1. Kết quả thí nghiệm
+
+Trọng lượng Cường độ của
+
+Lần đo | Mặt phẳng nghiêng của vật: P = F; lực kéo vật Fz
+
+Lần 1 Độ nghiêng lớn Fz=...N
+
+Lần 2 Độ nghiêng vừa F¿=...N Fz=...N
+
+Lần 3 Độ nghiêng nhỏ Fạ=...N
+
+
+--- Trang 44 (vat li 6.pdf) ---
+b) Tiến hành đo :
+
+— Ðo trọng lượng của vật P = F¡
+và ghi kết quả vào bảng 14.1.
+
+— Đo lực kéo vật F; trên mặt phẳng
+nghiêng có độ nghiêng khác nhau :
+
++ Lân 1 : Dùng tấm ván có độ dài ngắn
+nhất và lắp thí nghiệm như hình 14.2.
+Cầm lực kế kéo vật lên từ từ đọc theo
+mặt phẳng nghiêng. Đọc và ghi số chỉ của
+lực kế vào bảng.
+
++ Lân 2 : Tìm cách làm giảm độ
+nghiêng của mặt phẳng nghiêng. Lặp
+lại thí nghiệm và ghi tiếp số chỉ của lực
+kế vào bảng.
+
++ Lân 3 : Tiếp tục làm giảm độ nghiêng
+của mặt phẳng nghiêng. Lặp lại thí
+nghiệm và ghi tiếp số chỉ của lực kế
+vào bảng.
+
+Trong thí nghiệm ở hình 14.2 em
+đã làm giảm độ nghiêng của mặt phẳng.
+nghiêng bằng cách nào ?
+
+® 3. Rút ra kết luận
+
+Dựa vào bảng kết quả thí nghiệm
+trên để trả lời vấn đề đặt ra ở đầu bài.
+Y 4. Vận dụng
+Nêu hai thí dụ về sử dụng mặt
+phẳng nghiêng.
+Tại sao đi lên dốc càng thoai
+thoải, càng dễ hơn ? "
+
+Hình 142
+
+Ở hình 14.3 chú Bình đã dùng
+một lực 500N để đưa một thùng phuy
+nặng 2000N từ mặt đất lên xe ôtô. Nếu
+sử dụng một tấm ván dài hơn thì chú
+Bình dùng lực nào có lợi hơn trong các
+lực sau đây ?
+
+a)F=2000N;  c)F< 500N
+b)F>5§500N;  d)F=S500N
+
+Hãy giải thích câu trả lời của em.
+
+Hình 14.3
+
+ma: 45
+
+--- Trang 45 (vat li 6.pdf) ---
+° Dùng mặt phẳng nghiêng có thể kéo (đẩy) vật lên với lực nhỏ
+hơn trọng lượng của vật.
+
+© Mặt phẳng càng nghiêng ít, thì lực cần để kéo vật trên mặt
+phẳng đó càng nhỏ.
+
+——_—m——  ỬỪT_—
+
+Có thể em chưa biết
+
+# Các kim tự tháp của Ai Cập được xây
+dựng cách đây hơn 4000 năm, là một
+trong những kì quan của nhân loại.
+Trong số các kim tự tháp này, có “Kim tự
+tháp Lớn” cao 138m, được xây dựng
+bằng hơn 2300000 tảng đá, mỗi tẳng
+nặng khoảng 25000N. Trong hình 14.4,
+hoạ sĩ tưởng tượng cảnh những người nô
+lệ dùng mặt phẳng nghiêng để kéo những
+tẳng đá khổng lồ lên xây kim tự tháp.
+
+% ¬——...____
+
+--- Trang 46 (vat li 6.pdf) ---
+BÀI I5. ĐÒN BẢY
+
+Một số người quyết định dùng cần vọt
+để nâng ống bêtông lên (H.15.1). Liệu
+làm như thế có dễ dàng hơn hay không ?
+
+I. TÌM HIỂU CẤU TẠO CỦA
+ĐÒN BẤY
+
+l8 Hãy quan sát hình vẽ chiếc cần vọt, xà
+beng, búa nhổ đỉnh ở các hình 15.1, 15.2,
+15.3. Chúng đều là các đòn bẩy. Các đòn
+bẩy đều có một điểm xác định, gọi là
+điểm tựa. Đòn bẩy quay quanh điểm tựa
+(O). Trọng lượng của vật cần nâng (Œ)
+tác dụng vào một điểm của đòn bẩy (O)).
+Lực nâng vật (F;) tác dụng vào một điểm
+khác của đòn bẩy (O¿).
+
+Hãy điển các chữ O, O¡ và O; vào vị
+trí thích hợp trên các hình 15.2, 15.3.
+
+Hình 15.I
+
+Hình 15.2
+
+| [5.2
+
+Hình 15.3
+
+47
+
+--- Trang 47 (vat li 6.pdf) ---
+II. ĐÒN BẨY GIÚP CON NGƯỜI LÀM
+VIỆC DỄ DÀNG HƠN NHƯ THẾ NÀO ?
+
+li 1. Đặt vấn để
+
+Trong đòn bẩy ở hình 15.4, muốn lực nâng vật
+lên nhỏ hơn trọng lượng của vật thì các khoảng
+cách OO, (khoảng cách từ điểm tựa tới điểm tác
+dụng của trọng lượng vật) và OO; (khoảng cách .
+từ điểm tựa tới điểm tác dụng của lực kéo) phải
+thoả mãn điều kiện gì ?
+
+l8 2. Thí nghiệm
+a) Chuẩn bị :
+
+Hình 15.4
+
+~— Lực kế, khối trụ kim loại có móc và đây buộc, giá
+đỡ có thanh ngang khối lượng không đáng kể.
+
+— Chép bảng 1Š.l vào vỡ.
+Bảng 15.1. Kết quả thí nghiệm
+
+So sánh Trọng lượng Cường độ của
+O0, với OO,
+
+OO, > OO,
+O0, = OO,
+O0, < O0,
+
+b) Tiến hành đo :
+
+Lắp dụng cụ thí nghiệm như hình 15.4 để đo
+lực kéo F;.
+
+— Ðo trọng lượng của vật và ghi kết quả vào
+bảng 15.1.
+
+— Kéo lực kế để nâng vật lên từ từ. Đọc và ghi số chỉ
+của lực kế theo 3 trường hợp ghi trong bảng 15.1.
+
+48 ` ———— ra.
+
+--- Trang 48 (vat li 6.pdf) ---
+® 3. Rút ra kết luận
+
+Chọn từ thích hợp trong khung để điền
+vào chỗ trống của câu sau :
+
+Muốn lực nâng vật (1)...
+trọng lượng của vật thì phải làm cho khoảng
+cách từ điểm tựa tới điểm tác dụng của lực
+nâng (2).... khoảng cách từ điểm
+tựa tới điểm tác dụng của trọng lượng vật.
+Y 4. Vận dụng
+
+Tìm thí dụ sử dụng đòn bẩy trong
+cuộc sống.
+
+Hãy chỉ ra điểm tựa, các điểm tác dụng
+của lực F¡, F; lên đòn bẩy trong hình 15.5.
+Hãy chỉ ra cách cải tiến việc sử
+dụng đòn bẩy ở hình 15.1 để làm giảm
+lực kéo hơn.
+
+@ Mỗi đòn bẩy đều có :
+~ Điểm tựa là O.
+~ Điểm tác dụng của lực F là O¿.
+~ Điểm tác dụng của lực F; là O¿.
+©_ Khi OO; > OO, thì F; < F.
+
+~ lớn hơn
+— bằng
+
+~ nhỏ hơn
+
+Hình 1Š.Š
+
+—_ễ—T——————— ——
+
+m—-ras.e - _
+
+--- Trang 49 (vat li 6.pdf) ---
+BÀI I6. RÒNG RỌC
+
+Một số người quyết định
+dùng ròng rọc để nâng vật
+lên (H.16.1). Liệu làm như
+thế có dễ dàng hơn hay
+không ?
+
+I. TÌM HIỂU VỀ
+
+RÒNG RỌC
+
+ Ròng rọc được mắc như ở
+hình 16.2a được gọi là ròng
+rọc cố định, còn ở hình 16.2b
+là ròng rọc động.
+
+Hãy mô tả các ròng rọc vẽ
+ở hình 16.2.
+
+II. RÒNG RỌC GIÚP
+CON NGƯỜI LÀM VIỆC
+DỄ DÀNG HƠN NHƯ
+THẾ NÀO ?
+
+50
+
+Hình 1ó.]
+
+a) b)
+
+Hình 16.2
+
+--- Trang 50 (vat li 6.pdf) ---
+li 1. Thí nghiệm
+
+a) Chuẩn bị : Bảng 16.1. Kết quả thí nghiệm
+- Lực kế, khối trụ ki
+loại sa dã ng sọc và Lực kéo vật lên Chiều của
+loại, giá đỡ, ròng rọc v trong trường hợp lực kéo
+đây kéo.
+Không dùng ròng rọc Từ dưới lên
+
+~ Chép bảng 16.1 vào vở.
+
+" Dùng ròng rọc cố định " .N
+b) Tiến hành đo : Dùng ròng rọc động = —N
+
+— Đo lực kéo vật
+theo phương thẳng đứng
+như hình 16.3 và ghi kết
+quả đo được vào bảng 16.1.
+— Ðo lực kéo vật qua ròng rọc cố định như hình 16.4. Kéo từ từ lực kế. Đọc và ghi
+số chỉ của lực kế vào bảng 16.1.
+
+— Đo lực kéo vật qua ròng rọc động như hình 16.5. Kéo từ từ lực kế. Đọc và ghi
+số chỉ của lực kế vào bảng 16.1.
+
+Hình 16.3 Hình 16.4 Hình 16.5
+
+|]——=HH.ÔủằẳĂmỶẺ sỊ
+
+--- Trang 51 (vat li 6.pdf) ---
+® 2. Nhận xét
+
+Dựa vào bảng kết quả thí nghiệm
+hãy so sánh :
+
+a) Chiều, cường độ của lực kéo vật lên
+trực tiếp và lực kéo vật qua ròng rọc
+cố định.
+
+b) Chiểu, cường độ của lực kéo vật lên
+trực tiếp và lực kéo vật qua ròng rọc động.
+® 3. Rút ra kết luận
+
+Tìm từ thích hợp để điển vào
+chỗ trống của các câu sau :
+
+a) Ròng rọc (I).............. có tác dụng
+làm đổi hướng của lực kéo so với khi
+kéo trực tiếp.
+
+b) Dùng ròng rọc (2)........ thì lực kéo vật
+lên nhỏ hơn trọng lượng của vật. *
+
+Hình 16.6
+
+Y III. VẬN DỤNG
+Tìm những thí dụ về sử dụng ròng rọc.
+Dùng ròng rọc có lợi gì ?
+
+Sử dụng hệ thống ròng rọc nảo trong.
+hình 16.6 có lợi hơn về lực ? Tại sao ?
+
+®_ Ròng rọc cố định giúp làm thay đối hướng của lực kéo so với khi
+
+kéo trực tiếp.
+
+® Ròng rọc động giúp làm lực kéo vật lên nhỏ hơn trọng lượng
+
+của vật.
+
+————— “ỐC
+
+Có thể em chưa biết
+
+* Trong thực tế, người ta hay sử
+dụng palăng, đó là một thiết bị
+gồm nhiều ròng rọc (H.16.7).
+Dùng palăng cho phép giảm
+cường độ lực kéo, đồng thời làm
+đổi hướng của lực này.
+
+Hình 16.7
+
+° ¬—.._
+
+--- Trang 52 (vat li 6.pdf) ---
+BÀI I7. TỔNG KẾT CHƯÓNG I: CƠ HỌC
+
+I. ÔN TẬP
+
+1. Hãy nêu tên các dụng cụ dùng để đo :
+a) độ đài ; b) thể tích chất lỏng ; c) lực ;
+đ) khối lượng.
+
+2. Tác dụng đẩy, kéo của vật này lên
+vật khác gọi là gì ?
+
+3. Lực tác dụng lên một vật có thể gây
+ra những kết quả gì trên vật ?
+
+4. Nếu chỉ có hai lực tác dụng vào cùng
+một vật đang đứng yên mà vật vẫn
+đứng yên thì hai lực đó gọi là hai
+lực gì ?
+
+5. Lực hút của Trái Đất lên các vật
+gọi là gì ?
+
+6. Dùng tay ép hai đầu của một lò xo
+bút bi lại. Lực mà lò xo tác dụng lên
+tay ta gọi là lực gì ?
+
+7. Trên vỏ một hộp kem giặt VISO có
+ghi Ikg. Số đó chỉ gì ?
+
+§. Hãy tìm từ thích hợp để điển vào chỗ
+trống : 7800kg/mỶ là...........................
+của sắt,
+
+9. Hãy tìm từ thích hợp để điển vào các
+chỗ trống :
+~ Đơn vị đo độ dài là ........ kí hiệu là...
+
+~ Đơn vị đo thể tích là ........................
+kí hiệu là ......
+
+— Đơn vị đo lực là ........... kí hiệu là ....
+
+— Đơn vị đo khối lượng là ........
+kí hiệu là ....
+
+- Đơn vị đo khối lượng riêng là
+kí hiệu là........
+10. Viết công thức liên hệ giữa trọng
+lượng và khối lượng của cùng một vật.
+
+11. Viết công thức tính khối lượng
+riêng theo khối lượng và thể tích.
+
+12. Hãy nêu tên ba loại máy cơ đơn
+giản mà em đã học.
+
+13. Hãy nêu tên của máy cơ đơn giản
+mà người ta dùng trong các công việc
+hoặc dụng cụ sau :
+
+— Kéo một thùng bêtông lên cao để đổ
+trần nhà.
+
+— Đưa một thùng phuy nặng từ mặt
+đường lên sàn xe tải.
+
+— Cái chắn ôtô tại những điểm bán vé
+trên đường cao tốc.
+
+s)
+
+--- Trang 53 (vat li 6.pdf) ---
+II. VẬN DỤNG
+
+1. Hãy dùng các từ trong 3 ô sau để viết ~ lực hút
+
+thành 5 câu khác nhau. — lực đẩy
+
+Ví dụ : Thanh nam châm tác dụng lực — lực kéo
+
+hút lên cái định.
+~ con trâu: ~— quả bóng đá
+— người thủ môn bóng đá ~— quả bóng bàn
+~ chiếc kìm nhổ đỉnh ~ cái cày
+~ thanh nam châm ~ cái đỉnh
+~ chiếc vợt bóng bàn ~ miếng sắt
+
+2. Một học sinh đá vào quả bóng. Có
+những hiện tượng gì xảy ra đối với
+quả bóng ? Hãy chọn câu trả lời
+đúng. "
+
+3*, Có ba hòn bi có kích thước bằng
+nhau, được đánh số I, 2, 3. Hòn bi I
+nặng nhất, hòn bi 3 nhẹ nhất. Trong ba
+hòn bi đó có một hòn bằng sắt, một hòn
+bằng nhôm và một hòn bằng chì. Hỏi
+hòn nảo bằng sắt, hòn nào bằng nhôm,
+hòn nào bằng chì ? Chọn cách trả lời
+đúng trong 3 cách trả lời A, B, C.
+
+A. Quả bóng chỉ bị biến dạng.
+
+B. Chỉ có chuyển động của quả bóng
+bị biến đổi.
+
+€. Quả bóng bị biến dạng, đồng thời
+chuyển động của nó bị biến đổi.
+
+D. Không có sự biến đổi nào xảy ra.
+
+s4 ¬
+
+--- Trang 54 (vat li 6.pdf) ---
+4. Hãy chọn những đơn vị thích hợp
+trong khung để điển vào chỗ trống của
+các câu sau :
+
+a) Khối lượng riêng của đồng là §900
+
+đ) Trọng lượng riêng của dầu ăn l
+
+Š. Hãy chọn những từ thích hợp trong khung
+để điển vào chỗ trống của các câu sau :
+
+a) Muốn đẩy một chiếc xe máy từ via
+hè lên nền nhà cao 0,4m thì phải dùng
+
+muốn kéo bao ximăng lên tầng hai
+thường dùng một
+
+c) Muốn nâng đầu một cây gỗ nặng lên
+cao khoảng 10cm để kê hòn gạch
+xuống dưới thì phải dùng ....
+
+đ) Ở đầu cần cầu của các xe cẩu người
+ta có lắp một........... Nhờ thế,
+người ta có thể nhấc những cỗ máy rất
+nặng lên cao bằng lực nhỏ hơn trọng
+lượng của cỗ máy.
+
+6. a) Tại sao kéo cắt kim loại có tay
+cầm dài hơn lưỡi kéo ?
+
+b) Tại sao kéo cắt giấy, cắt tóc có tay
+cầm ngắn hơn lưỡi kéo ?
+
+~ mét khối
+
+— kilôgam
+
+~ nhươn
+
+— kilôgam trên mét khối
+
+— nhươn trên mét khối
+
+— ròng rọc cố định
+
+— ròng rọc động
+
+— mặt phẳng nghiêng
+~ đòn bẩy
+
+—
+Kéo cắt giấy. Kéo cắt kim loại
+
+Hình 17.1
+
+55
+
+--- Trang 55 (vat li 6.pdf) ---
+III. TRÒ CHƠI Ô CHỮ
+A. Ô chữ thứ nhất (H.17.2)
+
+Theo hàng ngang :
+1. Máy cơ đơn giản giúp làm thay đổi
+độ lớn của lực, (I1 ô).
+2. Dụng cụ đo thể tích, (10 ô).
+3. Phần không gian mà vật chiếm chỗ, (7 ô).
+4. Loại dụng cụ giúp con người làm việc
+dễ dàng hơn, (12 ô).
+5. Dụng cụ giúp làm thay đổi cả độ lớn
+và hướng của lực, (15 ô).
+
+6. Lực hút của Trái Đất tác dụng lên
+vật, (8 ô).
+
+7. Thiết bị gồm cả ròng rọc động và
+ròng rọc cố định, (6 ô).
+
+Hãy nêu nội dung của từ hàng dọc
+trong các ô in đậm.
+
+B. Ô chữ thứ hai (H.17.3)
+Theo hàng ngang :
+
+1. Lực hút của Trái Đất tác dụng lên
+vật, (8 ô).
+
+2. Đại lượng chỉ lượng chất chứa
+trong vật, (9 ô).
+
+3. Cái gì dùng để đo khối lượng, (6 ô) ?
+
+4. Lực mà lò xo tác dụng lên tay ta khi
+tay ép lò xo lại, (9 ô).
+
+5. Máy cơ đơn giản có điểm tựa, (6 ô).
+
+Hình 17.2
+
+Hình 17.3
+
+6. Dụng cụ mà thợ may thường dùng để
+lấy số đo cơ thể khách hàng, (8 ô).
+
+Từ nằm trong các ô in đậm theo
+hàng dọc chỉ khái niệm gì ?
+
+% "`.
+
+--- Trang 56 (vat li 6.pdf) ---
+CHƯƠNG II
+
+NHIỆT HỌC
+
+8 Các chất dân nở vì nhiệt như thế nào 2
+
+Sự nóng chảy, sự đông đặc, sự bay hơi, sự ngưng tụ là gì ?
+
+8 Làm thế nào để tìm hiểu tác động của một yếu tố lên một
+hiện tượng khi có nhiều yếu tố cùng tác động một lúc 2
+
+8 Làm thế nào để kiểm tra một dự đoán ?
+
+
+--- Trang 57 (vat li 6.pdf) ---
+BÀI I8. SỰ NÓ VÌ NHIỆT CỦA CHẤT RẮN
+
+Tháp Ép-phen (Eiffel) ỏ Pari, Thủ đô nước
+Pháp là tháp bằng thép nổi tiếng thế giới. Các
+phép đo chiều cao tháp vào ngày 01/01/1890 và
+ngày 01/7/1890 cho thấy, trong vòng 6 tháng
+tháp cao thêm hơn 10cm. Tại sao lại có sự kì lạ
+đó ? Chẳng lẽ một cái tháp bằng thép lại có
+thể “lớn lên” được hay sao ?
+
+3 %9 ae
+Ệ 3a vwuseo
+
+Bài này sẽ giúp em trả lời câu hỏi trên.
+
+8 1. Làm thí nghiệm
+
+Dùng dụng cụ vẽ ở hình 18.1. "
+sa Tháp Ep-phen
+~ Trước khi hơ nóng quả cầu băng kim loại, thử thả
+
+xem quả cầu có lọt qua vòng kim loại không. Nhận xét.
+~ Dùng đèn cồn hơ nóng quả cẩu kim loại trong 3
+phút, rồi thử thả xem quả cầu có còn lọt qua vòng
+kim loại nữa không. Nhận xét.
+
+— Nhúng quả cầu đã được hơ nóng vào nước lạnh, rồi
+thử thả cho nó lọt qua vòng kim loại. Nhận xét.
+
+® 2. Trả lời câu hỏi
+Tại sao sau khi bị hơ nóng, quả cầu lại không
+lọt qua vòng kim loại ?
+
+Tại sao sau khi được nhúng vào nước lạnh, quả
+cầu lại lọt qua vòng kim loại ? Hình 18.1
+
+s — WNNNNN
+
+--- Trang 58 (vat li 6.pdf) ---
+® 3. Rút ra kết luận
+Chọn từ thích hợp trong khung để điển vào chỗ
+
+trống của các câu sau :
+a) Thể tích quả cầu (1)... khi quả cầu nóng lên.
+b) Thể tích quả cầu giảm khi quả cầu (2)
+
+Chú ý : Sự nở vì nhiệt theo chiều đài (sự nở dài) của
+vật rắn có nhiều ứng dụng trong đời sống và kĩ thuật.
+Bảng bên ghi độ tăng chiều dài của các thanh kim
+loại khác nhau có chiều dài ban đầu là 100em khi
+nhiệt độ tăng thêm 50C.
+Từ bảng trên có thể rút ra nhận xét gì về sự nở
+vì nhiệt của các chất rắn khác nhau ?
+
+Ÿ 4. Vận dụng
+
+Ở đầu cán (chuôi) dao, liểm bằng gỗ, thường có
+một đai bằng sắt, gọi là cái khâu (H.1§.2) dùng để giữ
+chặt lưỡi dao hay lưỡi liểm. Tại sao khi lắp khâu, người
+thợ rèn phải nung nóng khâu rồi mới tra vào cán ?
+Hãy nghĩ cách làm cho quả cầu trong thí nghiệm
+ở hình 18.1, dù đang nóng vẫn có thể lọt qua vòng,
+kim loại. Hãy làm thí nghiệm kiểm chứng.
+
+Hãy tự trả lời câu hỏi đã nêu ở đầu bài học. Biết
+rằng, ở Pháp tháng Một đang là mùa Đông, còn tháng
+Bảy đang là mùa Hạ.
+
+— nóng lên
+~ lạnh đi
+— tăng
+
+— giảm
+
+Hình 18.2
+
+© Chất rắn nở ra khi nóng lên, co lại khi lạnh di.
+®_ Các chất rắn khác nhau nở vì nhiệt khác nhau.
+
+Có thể em chưa biết
+
+'# Bêtông được làm từ ximăng trộn với nước và cát, sỏi, nở vì nhiệt như thép.
+Nhờ đó mà các trụ bêtông cốt thép không bị nứt khi nhiệt độ ngoài trời thay đổi.
+
+59
+
+--- Trang 59 (vat li 6.pdf) ---
+BÀI I9. SỰ NÓ VÌ NHIỆT CỦA CHẤT LỎNG
+
+An : Đố biết khi đun nóng một ca nước đầy thì nước có tràn ra ngoài không ?
+Bình : Nước chỉ nóng lên thôi, tràn thế nào được, vì lượng nước trong ca
+
+có tăng lên đâu.
+Bình trả lời như vậy, đúng hay sai ?
+
+1. Làm thí nghiệm
+
+Đổ đẩy nước màu vào một bình cầu. Nút chặt bình
+bằng nút cao su có một ống thủy tỉnh cắm xuyên qua.
+Khi đó nước màu sẽ dâng lên trong ống (H.19.).
+
+Đặt bình cầu vào chậu nước nóng và quan sát hiện
+tượng xảy ra với mực nước trong ống thuỷ tỉnh (H.19.2).
+
+® 2. Trả lời câu hỏi
+Có hiện tượng gì xảy ra với mực nước trong ống
+
+thuỷ tỉnh khi ta đặt bình vào chậu nước nóng ?
+Giải thích.
+
+Nếu sau đó ta đặt bình cầu vào nước lạnh thì sẽ có
+hiện tượng gì xảy ra với mực nước trong ống thuỷ tỉnh ?
+Hãy dự đoán và làm thí nghiệm kiểm chứng.
+
+Hãy quan sát hình 19.3 mô tả thí nghiệm về sự nở
+vì nhiệt của các chất lỏng khác nhau và rút ra nhận xét.
+
+Hình 19.1
+
+Hình 19.2
+
+Hình 19.3
+
+ø ¬.._
+
+--- Trang 60 (vat li 6.pdf) ---
+® 3. Rút ra kết luận
+
+Chọn từ thích hợp trong khung để điển vào chỗ
+trống của các câu sau :
+
+a) Thể tích nước trong bình (1) ................ khi nóng lên,
+@)............... khi lạnh đi.
+
+b) Các chất lỏng khác nhau nở vì nhiệt (3) .....................
+
+Ÿ 4. Vận dụng
+Tại sao khi đun nước, ta không nên đổ nước thật
+
+- tăng
+— giảm
+
+~ giống nhau
+
+— không giống nhau
+
+đầy ấm ?
+
+Tại sao người ta không đóng chai nước ngọt
+thật đầy ?
+
+Nếu trong thí nghiệm mô tả ở hình 19.1, ta cắm hai
+ống có tiết điện khác nhau vào hai bình có dung tích
+bằng nhau và đựng cùng một lượng chất lỏng, thì khi
+tăng nhiệt độ của hai bình lên như nhau, mực chất lỏng
+trong hai ống có dâng cao như nhau không ? Tại sao ?
+
+©_ Chất lỏng nở ra khi nóng lên, co lại khi lạnh di.
+®_ Các chất lỏng khác nhau nở vì nhiệt khác nhau.
+
+Có thể em chưa biết
+
+e Sự nỏ vì nhiệt của nước rất đặc biệt. Khi
+tăng nhiệt độ từ 09C đến 4°C thì nước co
+lại, chứ không nỏ ra. Chỉ khi nhiệt độ tăng
+từ 4°C trỏ lên, nước mới nở ra. Vì vậy, ỏ
+4°C nước có trọng lượng riêng lớn nhất.
+
+# Trong các hồ nước lạnh, về mùa đông,
+lớp nước ở 4°C nặng nhất, nên chìm xuống
+đáy hồ. Nhờ đó, về mùa đông, ở xứ lạnh,
+cá vẫn sống được ỏ đáy hồ, trong khi trên
+mặt hồ, nước đã đóng thành lớp băng dày
+(H.19.4).
+
+Hình 19.4
+
+6l
+
+--- Trang 61 (vat li 6.pdf) ---
+BÀI 20. SỰ NÓ VÌ NHIỆT CỦA CHẤT KHÍ
+
+An : Khi quả bóng bàn bị móp, làm thế nào cho nó phồng lên 2
+
+Bình : Quá dễ, chỉ việc nhúng bóng vào nước nóng, nó sẽ phồng trở lại.
+
+An : Mình đã nhúng bóng vào nước nóng rồi, nhưng không thấy nó
+phồng trở lại.
+
+Bình : Lạ nhỉ!
+
+Bài này sẽ giúp em hiểu tại sao có quả bóng bàn bị móp được
+nhúng vào nước nóng thì phồng lên, nhưng cũng có quả bóng bàn
+bị móp được nhúng vào nước nóng lại không phồng lên được.
+
+l8 1. Thí nghiệm
+
+~ Cắm một ống thuỷ tỉnh nhỏ xuyên qua nút
+cao su của một bình cầu.
+
+Nhúng một đầu ống vào cốc nước màu.
+Dùng ngón tay bịt chặt đầu còn lại rồi rút
+ống ra khỏi cốc sao cho còn một giọt nước
+màu trong ống (H.20.1).
+
+~ Lắp chặt nút cao su có gắn ống thuỷ tỉnh
+với giọt nước màu vào bình cầu, để nhốt
+một lượng khí trong bình. Xát hai bàn tay
+vào nhau cho nóng lên, rồi áp chặt vào bình
+cầu (H.20.2). Quan sát hiện tượng xảy ra
+với giọt nước màu. |
+
+Hình 20.1
+
+® 2. Trả lời câu hỏi
+
+Có hiện tượng gì xảy ra với giọt nước
+màu trong ống thuỷ tỉnh khi bàn tay áp vào
+bình cầu ? Hiện tượng này chứng tỏ thể tích
+không khí trong bình thay đổi thế nào ?
+Khi ta thôi không áp tay vào bình cầu,
+có hiện tượng gì xảy ra với giọt nước màu:
+trong ống thuỷ tỉnh ? Hiện tượng này chứng
+
+tỏ điều gì ? Hình 20.2
+
+ø —— “SWNNNNNNR
+
+
+--- Trang 62 (vat li 6.pdf) ---
+Tại sao thể tích không khí trong bình cầu lại tăng lên khi ta áp hai bàn tay
+nóng vào bình ?
+
+Tại sao thể tích không khí trong bình lại giảm đi khi ta thôi không áp tay vào
+bình cầu ?
+
+Hãy đọc bảng 20.1 ghi độ tăng thể tích của 1000emỶ (1 lít) một số chất, khi
+nhiệt độ của nó tăng thêm 50°C và rút ra nhận xét.
+
+Bảng 20.1.
+Chất khí Chất lỏng Chất rắn
+Không khí : 183cm3 Rượu : 58cm3 Nhôm : 3,45cm3
+Hơi nước : 183cm° | Dầu hoả : 55cm Đồng : 2,55cm3 |
+Khíôxi  : 183cm3 | Thuỷ ngân : 9cm8 Sắt  :1,80cm3 |
+
+Ghỉ chú : Sau này, khi học về áp suất chất khí,
+các em sẽ biết rằng các số liệu về sự nở của chất
+khí cho ở bảng này chỉ đúng khi áp suất chất khí
+không đổi.
+® 3. Rứt ra kết luận
+Chọn từ thích hợp trong khung để điển vào
+chỗ trống của các câu sau :
+
+a) Thể tích khí trong bình (1)...... khi khí nóng lên. ~ nóng lên, lạnh đi
+b) Thể tích khí trong bình giảm khi khí (2)........... ~ lăng, giảm
+
+e) Chất rắn nở ra vì nhiệt (3)...................... „ chất ~ nhiều nhất, ít nhất
+khí nở ra vì nhiệt (4) ..........................
+
+Ÿ 4. Vận dụng
+
+Phải có điều kiện gì thì quả bóng bàn bị
+móp, được nhúng vào nước nóng mới có thể
+phồng lên ?
+
+Tại sao không khí nóng lại nhẹ hơn không
+khí lạnh ? (Hãy xem lại bài trọng lượng riêng để
+trả lời câu hỏi này).
+
+x.=a=“a“uzaeuưSưBnBn @
+
+--- Trang 63 (vat li 6.pdf) ---
+Dụng cụ đo độ nóng, lạnh đầu tiên của loài
+người do nhà bác học Ga-li-lê (1564 — 1642) sáng chế.
+
+Nó gồm một bình cầu có gắn một ống thuỷ tỉnh. Hơ E
+nóng bình rồi nhúng đầu ống thuỷ tỉnh vào một bình ấ
+đựng nước. Khi bình khí nguội đi, nước dâng lên trong,
+
+ống thuỷ tỉnh (H.20.3). ề
+
+Bây giờ, dựa theo mức nước trong ống thuỷ tỉnh,
+người ta có thể biết thời tiết nóng hay lạnh. Hãy giải
+thích tại sao ?
+
+Hình 20.3
+
+© Chất khí nở ra khi nóng lên, co lại khi lạnh đi.
+
+© Các chất khí khác nhau nở vì nhiệt giống nhau.
+
+®© Chất khí nở vì nhiệt nhiều hơn chất lỏng, chất lỏng nở vì nhiệt
+nhiều hơn chất rắn.
+
+Có thể em chưa biết
+
+s Ngày 21 tháng 11 năm 1783, hai anh em kĩ sư
+người Pháp Mônggônphiê (Montgolfier) nhờ
+dùng không khí nóng đã làm cho quả khí cầu
+đầu tiên của loài người bay lên không trung
+(H.20.4).
+
+Hình 20.4
+
+
+--- Trang 64 (vat li 6.pdf) ---
+BÀI 2I. MỘT SỐ ỨNG DỤNG
+
+CỦA SỰ NỎ VÌ NHIỆT
+
+Sự nỏ vì nhiệt của các chất có rất nhiều
+ứng dụng trong đời sống và kĩ thuật. Bài
+này giới thiệu một số ứng dụng thường
+gặp của sự nỏ vì nhiệt của chất rắn.
+
+I. LỰC XUẤT HIỆN TRONG SỰ
+CO DÃN VÌ NHIỆT
+
+l 1. Thí nghiệm
+Bố trí thí nghiệm như hình 21.1a.
+
+Chốt ngang
+
+Ốc vặn xranh thế
+Lắp chốt ngang, rồi vặn ốc để siết chặt
+thanh thép lại.
+Quan sát hiện tượng xảy ra khi dùng
+bông tẩm cồn đốt thật nóng thanh thép. Hình 21.1a
+® 2. Trả lời câu hỏi
+Có hiện tượng gì xảy ra đối với thanh
+thép khi nó nóng lên ? Chốt ngang
+Hiện tượng xảy ra với chốt ngang Ốc vận Thanh thép
+chứng tỏ điều gì ?
+Bố trí thí nghiệm như hình 2I.Ib, rồi
+đốt nóng thanh thép. Sau đó vặn ốc để siết
+chặt thanh thép lại. Nếu dùng một khăn tầm
+nước lạnh phủ lên thanh thép thì chốt ngang
+
+cũng bị gãy. Từ đó rút ra kết luận gì ? Hình 21lIb
+
+]mm.ạaỈaH 6s
+
+--- Trang 65 (vat li 6.pdf) ---
+® 3. Rút ra kết luận
+Chọn từ thích hợp trong khung để điển vào
+chỗ trống của các câu sau :
+
+a) Khi thanh thép (1)... vì nhiệt nó gây ra
+
+(2)......... rất lớn.
+b) Khi thanh thép co lại (3) .............. nó cũng gây
+ra (4)... rất lớn.
+
+Ÿ 4. Vận dụng
+
+Hình 21.2 là ảnh chụp chỗ tiếp nối hai đầu
+thanh ray đường tàu hoả. Em có nhận xét gì ?
+Tại sao người ta phải làm như thế ?
+
+Hình 21.3 vẽ gối đỡ ở hai đầu cầu của
+một số cầu thép. Hai gối đỡ đó có cấu tạo
+giống nhau không ? Tại sao một gối đỡ phải
+đặt trên các con lăn ?
+
+II. BĂNG KÉP
+
+8 1. Quan sát thí nghiệm
+Hai thanh kim loại có bản chất khác nhau, thí
+dụ đồng và thép, được tán chặt vào nhau dọc theo
+chiểu dài của thanh, tạo thành một băng kép.
+Hãy quan sát hình dạng băng kép nếu bị hơ
+nóng trong hai trường hợp sau :
+— Mặt đồng ở phía dưới (H.21.4a).
+~ Mặt đồng ở phía trên (H.21.4b).
+
+® 2. Trả lời câu hỏi
+
+Đồng và thép nở vì nhiệt như nhau hay
+khác nhau ?
+
+Khi bị hơ nóng, băng kép luôn luôn cong về
+phía thanh nào ? Tại sao ?
+
+— lực
+— vì nhiệt
+
+~ nở ra
+
+Hình 21.3
+Thép
+Đồng
+Đèn cồn
+Đồng
+Thép
+Đèn cồn
+
+Hình 214
+
+6 ¬.._ —Đ——
+
+--- Trang 66 (vat li 6.pdf) ---
+Băng kép đang thẳng. Nếu làm cho
+lạnh đi thì nó có bị cong không ? Nếu có, thì
+cong về phía thanh thép hay thanh đồng ?
+Tại sao ?
+'Ÿ 3. Vận dụng
+
+Băng kép được sử dụng nhiều ở các thiết
+bị tự động đóng - ngắt mạch điện khi nhiệt
+độ thay đổi.
+Tại sao bàn là điện vẽ ở hình 21.5 lại
+tự động tắt khi đã đủ nóng ?
+
+Thanh đồng của băng kép ở thiết bị đóng
+ngắt của bàn là này nằm ở phía trên hay dưới ?
+
+Hình 21.5
+
+@_ Sự co dãn vì nhiệt khi bị ngăn cản có thể gây ra những lực rất lớn.
+® Băng kép khi bị đốt nóng hoặc làm lạnh đều cong lại.
+Người ta ứng dụng tính chất này của băng kép vào việc đóng -
+
+ngắt tự động mạch điện.
+
+Có thể em chưa biết
+
+# Mặc dù ỏ chỗ tiếp nối hai đầu thanh
+ray đường tàu hoả đã để khoảng cách
+cho thanh ray nỏ ra khi nhiệt độ tăng,
+nhưng khi nhiệt độ tăng quá nhiều, thì
+các thanh ray vẫn bị uốn cong
+(H.21.6). Như vậy đủ biết lực do sự dãn
+nỏ vì nhiệt gây ra lớn tới chừng nào !
+
+Hình 216
+
+67
+
+--- Trang 67 (vat li 6.pdf) ---
+Con : Mẹ ơi, cho con đi đá bóng nhé !
+Mẹ : Không được đâu ! Con đang sốt nóng đây này !
+Con : Con không sốt đâu ! Mẹ cho con đi nhé !
+
+Vậy phải dùng dụng cụ nào để có thể biết chính xác
+người con có sốt hay không ?
+
+1. Nhiệt kế
+
+lf Hãy nhớ lại bài học về nhiệt kế đã học ở lớp 4 để trả
+lời các câu hỏi sau đây :
+
+Có 3 bình đựng nước ø, b, c ; cho thêm nước đá
+vào bình z để có nước lạnh và cho thêm nước nóng vào
+bình e để có nước ấm.
+
+a) Nhúng ngón trỏ của bàn tay phải vào bình ø, nhúng
+ngón trỏ của bàn tay trái vào bình e (H.22.1). Các ngón
+tay có cảm giác thế nào ?
+
+b) Sau một phút, rút cả hai ngón tay ra, rồi cùng nhúng
+ngay vào bình b (H.22.2). Các ngón tay có cảm giác thế
+nào ? Từ thí nghiệm này có thể rút ra kết luận gì ?
+
+Cho biết, thí nghiệm vẽ ở hình 22.3 và hình 22.4
+dùng để làm gì ?
+
+Hình 22.1
+
+Hình 22.2
+
+Hình 22.3 — Hình 22.4
+
+6 ¬"...
+
+--- Trang 68 (vat li 6.pdf) ---
+® Trẻ lời câu hỏi
+
+Hãy quan sát rồi so sánh các nhiệt kế
+vẽ ở hình 22.5 về GHĐ, ĐCNN, công dụng
+và điển vào bảng 22.1.
+
+Cấu tạo của nhiệt kế y tế có đặc điểm
+gì ? Cấu tạo như vậy có tác dụng gì ?
+
+Bảng 22.1.
+
+Nhiệt kế Từ...
+thuỷ ngân |_ đến...
+
+Nhiệt kế Từ...
+ytế đến...
+Nhiệt kế | Từ...
+rượu đến...
+
+2. Thang Nhiệt độ
+
+Ñ a) Năm 1742, Xen-xiút (Celsius,
+1701- 1744), người Thuy Điển, đã để
+nghị chia khoảng cách giữa nhiệt độ của
+nước đá đang tan và nhiệt độ của hơi nước
+đang sôi thành 100 phần bằng nhau, mỗi
+phần ứng với 1 độ, kí hiệu là 1°C. Thang
+nhiệt độ này gọi là thang nhiệt độ Xen-xi-út.
+Chữ C trong kí hiệu °C là chữ cái đầu của
+tên nhà vật lí. Trong thang nhiệt độ này,
+những nhiệt độ thấp hơn 0°C được gọi
+là nhiệt độ âm. Ví dụ, -20°C được gọi
+là âm 209C.
+
+Hình 22.5
+
+JEHO.HAẶĂẼ 6
+
+--- Trang 69 (vat li 6.pdf) ---
+lb) Trước đó, vào năm 1714, nhà vật lí người Đức là Fa-ren-hai (Fahrenheit,
+1686 - 1736) đã để nghị một thang nhiệt độ mang tên ông. Trong thang nhiệt độ này,
+nhiệt độ của nước đá đang tan là 329F, còn nhiệt độ của hơi nước đang sôi là 2129F.
+
+Như vậy, khoảng 100%C ứng với khoảng 212°F - 329F = 180°F, nghĩa là
+khoảng 19C = khoảng 1,8°F.
+
+Thang nhiệt độ Fa-ren-hai được sử dụng ở phần lớn các nước nói tiếng Anh.
+Thí dụ : Tính xem 20°C ứng với bao nhiêu 9E ?
+
+209C = 0% + 209C. Vậy :
+
+20°%C = 32°F + (20 x 1,8°F) = 68°F.
+
+Y 3. Vận dụng
+Hãy tính xem 30%C, 379C ứng với bao nhiêu 9F ?
+
+@ Để đo nhiệt độ, người ta dùng nhiệt kế.
+
+© Nhiệt kế thường dùng hoạt động dựa trên hiện tượng dãn nở vì nhiệt
+của các chất.
+
+@ _ Có nhiều loại nhiệt kế khác nhau như : Nhiệt kế rượu, nhiệt kế thuỷ
+ngân, nhiệt kế y tế...
+
+© _ Trong thang nhật độ Xen-- xi- ứt, nhệt độ cửa nước đá đang tan À 0°C, của
+hơi nước đang sôi là 1009C. Trong thang nhiệt độ Fa - ren - hai, nhiệt độ
+của nước đá đang tan là 320F, của hơi nước dang sôi là 212°F.
+
+————_—~—_— Ỳ—
+
+Có thể em chưa biết
+
+# Ngoài hai thang nhiệt độ trên, trong khoa học còn dùng thang nhiệt độ Ken-vin.
+Đơn vị nhiệt độ trong thang nhiệt độ này gọi là kenvin, được kí hiệu bằng chữ
+K. Mỗi độ trong thang nhiệt độ Ken-vin (1K) bằng một độ trong thang nhiệt độ
+Xen-xi-út (19C) và 09C ứng với 273K. Nhiệt độ trong thang nhiệt độ
+Ken-vin được gọi là “nhiệt độ tuyệt đối”, và kí hiệu bằng T.
+
+10 — — TSWWENNH
+
+--- Trang 70 (vat li 6.pdf) ---
+s Nhiệt kế kim loại được cấu tạo dựa
+trên sự dãn nở vì nhiệt của một băng
+kép. Băng kép này được cuốn thành
+vòng tròn, một đầu được giữ cố định,
+đầu còn lại gắn với một kim quay trên
+bảng chia độ (H.22.6).
+
+Khi nhiệt độ thay đổi, thì vòng tròn
+băng kép cuốn lại hoặc dãn ra làm quay
+kim. Trên bằng chia độ có ghi các giá trị
+nhiệt độ.
+
+Hình 22.6
+
+# Có một số chất có đặc điểm đổi màu
+theo nhiệt độ. Người ta sử dụng tính
+chất này để chế tạo ra nhiệt kế, gọi là
+nhiệt kế đổi màu. Nhiệt kế này thường
+được dùng trong y tế, thay cho nhiệt kế
+thuỷ ngân. Chỉ cần dán một băng giấy
+nhỏ có phủ một lớp chất đổi màu theo
+nhiệt độ (H.22.7) lên trán người bệnh là
+có thể biết được nhiệt độ cơ thể của họ.
+“ Hiện nay, người ta còn sử dụng
+nhiệt kế hiện số, là loại nhiệt kế mà số
+chỉ nhiệt độ cần đo hiện ngay trên màn
+hình. Hình 22.8 là ảnh chụp nhiệt kế
+hiện số được gắn vào đồng hồ điện tử
+để bàn.
+
+Hình 22.7
+
+Hình 22.6
+
+7I
+
+--- Trang 71 (vat li 6.pdf) ---
+BÀI 23. THỰC HÀNH ĐO NHIỆT ĐỘ
+
+I. DÙNG NHIỆT KẾ Y TẾ ĐO NHIỆT
+ĐỘ CƠ THÊ
+
+8 1. Dụng cụ
+Nhiệt kế y tế (loại nhiệt kế thuỷ ngân).
+Quan sát nhiệt kế y tế và điển vào chỗ trống
+trong các câu sau đây :
+Nhiệt độ thấp nhất ghi trên nhiệt kế :.......
+Nhiệt độ cao nhất ghi trên nhiệt kế :.......
+Phạm vi đo của nhiệt kế : Từ ...... đến......
+Độ chia nhỏ nhất của nhiệt kế :......
+
+Nhiệt độ được ghi màu đỏ :......
+
+lf 2. Tiến trình đo
+~— Kiểm tra xem thuỷ ngân đã tụt hết xuống bầu chưa, nếu còn trên ống thì cầm vào
+phần thân nhiệt kế, vấy mạnh cho thuỷ ngân tụt hết xuống bầu.
+
+Chú ý : Khi vẩy, tay cầm chặt nhiệt kế để khỏi bị văng ra và phải chú ý không.
+để nhiệt kế va đập vào các vật khác.
+~ Dùng bông y tế lau sạch thân và bầu nhiệt kế.
+~ Dùng tay phải cầm thân nhiệt kế, đặt bầu nhiệt kế vào nách trái, kẹp cánh tay lại
+để giữ nhiệt kế.
+~ Chờ chừng 3 phút, rồi lấy nhiệt kế ra để đọc nhiệt độ.
+
+Chú ý : Không cầm vào bầu nhiệt kế khi đọc nhiệt độ.
+— Đo nhiệt độ của mình và của một bạn khác. Ghi các kết quả đo được vào bản báo
+cáo thí nghiệm.
+
+k #8 nnn
+
+--- Trang 72 (vat li 6.pdf) ---
+II. THEO DÕI SỰ THAY ĐỔI NHIỆT ĐỘ
+THEO THỜI GIAN TRONG OUÁ TRÌNH
+ĐUN NƯỚC
+
+E8 1. Dụng cụ
+
+Nhiệt kế dầu, cốc đựng nước (loại cốc bằng
+thuỷ tỉnh chịu nhiệt), đèn cồn, giá đỡ.
+
+Quan sát nhiệt kế dầu và điển số liệu vào chỗ
+trống trong các câu sau :
+
+Nhiệt độ thấp nhất ghi trên nhiệt kế :......
+Nhiệt độ cao nhất ghi trên nhiệt kế :.......
+Phạm vi đo của nhiệt kế : Từ .... đến.......
+Độ chia nhỏ nhất của nhiệt kế : .....
+li 2. Tiến trình đo
+
+a) Lắp dụng cụ theo hình 23.1.
+
+b) Ghi nhiệt độ của nước trước khi đun.
+
+e) Đốt đèn cồn để đun nước.
+
+Cứ sau 1 phút lại ghi nhiệt độ của nước vào bảng
+theo đối nhiệt độ, tới phút thứ 10 thì tắt đèn cồn.
+đ) Vẽ đồ thị. Vẽ trên giấy kẻ ô đường biểu diễn
+sự thay đổi nhiệt độ của nước khi đun như sau :
+~ Vẽ hai trục vuông góc. Trục nằm ngang ghi giá
+trị thời gian theo phút. Mỗi cạnh của ô vuông
+nằm trên trục ngang biểu thị 1 phút. Trục thẳng
+đứng ghi giá trị của nhiệt độ theo °C. Mỗi cạnh
+của ô vuông nằm trên trục này, biểu thị 29C.
+'Vạch gốc của trục nhiệt độ ghi nhiệt độ ban đầu
+của nước (tức là nhiệt độ đo trước khi đun).
+~ Nối các điểm xác định nhiệt độ ứng với thời
+gian đun, ta được đường biểu diễn sự thay đổi
+nhiệt độ theo thời gian của nước đang được
+đun nóng.
+
+Hình 23.1
+
+Hình 23.2
+
+73
+
+--- Trang 73 (vat li 6.pdf) ---
+7Á
+
+II. MẪU BÁO CÁO
+
+1, Họ và tên hỌC $ỈHH :............................cccccccexeveeeerrrrvee
+
+2. Ghỉ lại :
+
+a) 5 đặc điểm của nhiệt kế y tế.
+b) 4 đặc điểm của nhiệt kế dầu.
+
+3. Các kết quả đo :
+
+a) Đo nhiệt độ cơ thể người b) Bảng theo dõi nhiệt độ của nước
+Người Nhiệt độ Thời gian Nhiệt độ
+
+Bản thân (phút) 6©)
+
+Bạn... | 0
+1
+2
+3
+4
+5
+6
+H
+8
+Â)
+10
+
+Maa.—— >>
+
+
+--- Trang 74 (vat li 6.pdf) ---
+BÀI 24. SỰ NÓNG CHÀY
+
+VÀ SỰ ĐÔNG ĐẶC
+
+Làng Ngũ Xã ỏ Hà Nội nổi tiếng về
+đúc đồng. Năm 1677 các nghệ nhân
+của làng này đã đúc thành công pho
+tượng Huyền Thiên Trấn Vũ bằng đồng
+đen, là một trong những pho tượng
+đồng lớn nhất ở nước ta. Tượng cao
+3,48m, có khối lượng 4000kg, hiện
+đang được đặt tại đền Quán Thánh,
+Hà Nội.
+
+Việc đúc đồng liên quan đến hiện tượng
+vật lí mà các em sẽ học trong bài này.
+
+Tượng đông Huyền Thiên Trấn V ñ
+
+I. SỰ NÓNG CHẢY
+l# 1. Phân tích kết quả thí nghiệm
+
+Trong các phòng thí nghiệm, người ta
+nghiên cứu sự nóng chảy bằng thí nghiệm
+tương tự như thí nghiệm vẽ ở hình 24.1.
+
+~ Dùng đèn cồn đun nước và theo dõi nhiệt
+độ của băng phiến. Khi nhiệt độ băng phiến
+lên tới 60°C thì cứ sau 1 phút lại ghi nhiệt
+độ và nhận xét về thể (rắn hay lỏng) của
+băng phiến vào bảng theo dõi. Ghi cho tới
+khi nhiệt độ của băng phiến đạt đến 869C,
+ta được bảng 24.1.
+
+Hình 24.1
+
+EEHHAgẹAỶỲ 75
+
+--- Trang 75 (vat li 6.pdf) ---
+® Hãy dựa vào bảng 24.1 để vẽ trên giấy
+kẻ ô đường biểu diễn sự thay đổi nhiệt độ
+của băng phiến theo thời gian khi
+nóng chảy.
+
+~ Trục nằm ngang là trục thời gian. Mỗi
+cạnh của ô vuông nằm trên trục này biểu
+thị 1 phút. Trục thẳng đứng là trục nhiệt
+độ ; mỗi cạnh của ô vuông nằm trên trục
+này biểu thị 1°C. Gốc của trục nhiệt độ
+ghi 60°C ; gốc của trục thời gian ghi phút 0.
+~— Nối các điểm xác định nhiệt độ ứng với
+thời gian đun, ta được đường biểu diễn
+sự thay đổi nhiệt độ của băng phiến theo
+thời gian trong quá trình nóng chảy.
+
+— Căn cứ vào đường biểu diễn vừa vẽ
+được, trả lời các câu hỏi sau đây :
+
+Khi được đun nóng thì nhiệt độ của
+băng phiến thay đổi như thế nào ? Đường
+biểu diễn từ phút 0 đến phút thứ 6 là đoạn
+thắng nằm nghiêng hay nằm ngang ?
+Tới nhiệt độ nào thì băng phiến bắt
+đầu nóng chảy ? Lúc này băng phiến tồn
+tại ở những thể nào ?
+
+Trong suốt thời gian nóng chảy,
+nhiệt độ của băng phiến có thay đổi
+không ? Đường biểu diễn từ phút thứ §
+đến phút thứ II là đoạn thẳng nằm
+nghiêng hay nằm ngang ?
+
+Khi băng phiến đã nóng chảy hết
+thì nhiệt độ của băng phiến thay đổi như
+thế nào theo thời gian ? Đường biểu diễn
+từ phút thứ 11 đến phút thứ 15 là đoạn
+thắng nằm ngang hay nằm nghiêng ?
+
+Bảng 24.1.
+Thời gian | Nhiệt độ | Thể rắn
+đun (phút) (0©) hay lỏng
+0 60 rắn
+1 63 rắn
+2 66 rắn
+3 69 rắn
+4 72 rắn
+5 75 rắn
+6 T7 rắn
+7 79 rắn
+8 80 rắn và lỏng
+9 80 rắn và lỏng
+10 80 rắn và lỏng
+11 80 rắn và lỏng
+12 81 lồng
+13 82 lổng
+14 84 lỏng
+15 86 lỏng
+
+® 2. Rút ra kết luận
+
+Chọn từ thích hợp trong khung
+để điển vào chỗ trống của các câu sau :
+a) Băng phiến nóng chảy ở (1)
+nhiệt độ này gọi là nhiệt độ nóng chảy
+của băng phiến.
+
+b) Trong thời gian nóng chảy, nhiệt độ
+của băng phiến (2) .........................
+
+- 70C, 60°C, 90°C
+~ thay đổi, không thay đổi
+
+76 D ` ca:
+
+--- Trang 76 (vat li 6.pdf) ---
+BÀI 25. SỰ NÓNG CHÀY
+
+VÀ SỰ ĐÔNG ĐẶC (tiếp theo)
+
+II. SỰ ĐÔNG ĐẶC
+
+1. Dự đoán
+
+Trong thí nghiệm về sự nóng chảy của băng phiến, khi băng phiến được đun
+nóng, nó nóng dần lên rồi nóng chảy.
+
+Hãy dự đoán điều gì sẽ xảy ra đối với băng phiến khi thôi không đun nóng và
+để băng phiến nguội dần. Hãy viết điều dự
+
+đoán đó của em vào vở. Bảng 25.1.
+
+Nhiệt độ và thể của băng phiến
+
+lữ 2. Phân tích kết quả thí nghiệm '
+trong quá trình để nguội
+
+a) - Đun băng phiến như thí nghiệm ở trong.
+
+hình 24.1 (Bài 24) lên tới khoảng 90°C rồi |Thờigian | Nhiệt độ | Thể rắn
+tắt đèn cồn. nguội (phú) | CC) Pay long
+~ Lấy ống nghiệm đựng băng phiến ra khỏi 0 86 lỏng
+nước nóng và để cho băng phiến nguội dần. 1 84 lỏng
+Khi nhiệt độ băng phiến giảm dần đến 869C 2 82 lồng
+thì bắt đầu ghi nhiệt độ và thể của băng phiến 3 81 lỏng
+trong thời gian quan sát. Cứ sau 1 phút lại ghỉ 4 80 lông và rắn
+nhiệt độ và thể của băng phiến, cho tới khi 5 s0 lỏng và rắn
+nhiệt độ giảm tới 609C, ta được bảng 25.1.
+
+- ¬ ¬ " 6 80 lổng và rắn
+b) Hãy dự vào bảng 25 về đường biểu [ T7 —-Ƒ TT ly la g
+diễn sự thay đôi nhiệt độ của băng phiến P ?9 rắn
+theo thời gian trong quá trình băng phiến
+đông đặc. 9 77 rắn
+~ Trục nằm ngang là trục thời gian, mỗi 19 75 tần
+cạnh của ô vuông nằm trên trục này biểu thị là T2 rắn
+1 phút. Trục thẳng đứng là trục nhiệt độ, 12 69 rắn
+mỗi cạnh ô vuông nằm trên trục này biểu thị 13 68 rắn
+1°C. Gốc của trục nhiệt độ ghi 60°C ; gốc 14 63 rắn
+của trục thời gian là phút 0. 16 60 rắn
+
+_  Ẩ2 88 m
+
+--- Trang 77 (vat li 6.pdf) ---
+— Nối các điểm xác định nhiệt độ ứng
+với thời gian để nguội, ta được đường
+biểu diễn sự thay đổi nhiệt độ của băng
+phiến theo thời gian trong quá trình
+đông đặc.
+
+c) Căn cứ vào đường biểu diễn vừa vẽ
+được, trả lời các câu hỏi sau đây :
+
+Tới nhiệt độ nào thì băng phiến
+bắt đầu đông đặc ?
+
+Trong các khoảng thời gian sau,
+dạng của đường biểu diễn có đặc
+điểm gì :
+
+~ Từ phút 0 đến phút thứ 4 ;
+
+~ Từ phút thứ 4 đến phút thứ 7 ;
+
+~ Từ phút thứ 7 đến phút thứ 15 ?
+
+Bảng 25.2
+Nhiệt độ nóng chảy của một số chất
+
+Nhiệt độ
+nóng chảy
+(0€)
+
+78
+
+Trong các khoảng thời gian sau,
+nhiệt độ của băng phiến thay đổi
+thế nào :
+
+~ Từ phút 0 đến phút thứ 4 ;
+
+~ Từ phút thứ 4 đến phút thứ 7 ;
+
+~ Từ phút thứ 7 đến phút thứ 15 ?
+
+® 3. Rút ra kết luận
+
+Chọn từ thích hợp trong khung để
+điển vào chỗ trống của các câu sau :
+
+a) Băng phiến đông đặc ở (I)
+Nhiệt độ này gọi là nhiệt độ đông đặc
+của băng phiến. Nhiệt độ đông đặc (2)
+— nhiệt độ nóng chảy.
+
+b) Trong thời gian đông đặc, nhiệt độ
+của băng phiến (3) ..............................--
+
+~70°C, 80°C, 90%C
+~ bằng, lớn hơn, nhỏ hơn
+~ thay đổi, không thay đổi.
+
+Y III. VẬN DỤNG
+Hình 25.1 vẽ đường biểu điễn sự
+thay đổi nhiệt độ theo thời gian khi
+
+nóng chảy của chất nào ?
+Hình 25.1
+
+Nhiệt độ(C)
+
+
+--- Trang 78 (vat li 6.pdf) ---
+Hãy mô tả sự thay đổi nhiệt độ và thể của chất đó khi nóng chảy ?
+Trong việc đúc tượng đồng, có những quá trình chuyển thể nào của đồng ?
+
+Tại sao người ta dùng nhiệt độ của nước đá đang tan để làm một mốc đo nhiệt độ ?
+
+© Sự chuyển từ thể rắn sang thể lồng gọi là sự nóng chảy. Sự
+chuyển từ thể lỏng sang thể rắn gọi là sự đông đặc.
+
+®_ Phần lớn các chất nóng chảy (hay đông đặc) ở một nhiệt độ xác
+định. Nhiệt độ đó gọi là nhiệt độ nóng chảy. Nhiệt độ nóng chảy
+của các chất khác nhau thì khác nhau".
+
+© Trong thời gian nóng chảy (hay đông đặc) nhiệt độ của vật
+không thay đổi.
+
+Nóng chảy
+(ở nhiệt độ xác định)
+ES==—..
+Đông đặc
+(ở nhiệt độ xác định)
+
+—————— 7=
+
+* Ở các lớp trên, các em sẽ được biết không phải chất nào cũng nóng chảy (hay đông
+đặc) ở một nhiệt độ nhất định. Có nhiều chất (như thuỷ tinh, nhựa đường, v.v...) khi
+bị đun nóng, chúng mềm ra rồi nóng chảy dần trong khi nhiệt độ vẫn tiếp tục tăng.
+
+Có thể em chưa biết
+
+se Phần lớn các chất rắn khi nóng chẩy có kèm theo sự tăng thể tích, còn
+khi đông đặc thì giảm thể tích. Tuy nhiên, có một số ít chất như đồng, gang,
+nước... lại tăng thể tích khi đông đặc.
+
+se Trường hợp của nước là rất đặc biệt. Các phép đo chính xác cho thấy
+100cm nước, khi đông đặc ở 0°C sẽ cho 109cm nước đá. Trong khi tăng
+thể tích nước có thể gây ra những lực rất lớn. Khi nhiệt độ xuống tới 0°C,
+nước đông thành băng, gây ra những lực lớn đến mức có thể làm võ ống
+dẫn nước, chai đựng nước, tẳng đá có kẽ hỏ chứa nước.
+
+Ị|—HmHÍứằẳằ 79
+
+--- Trang 79 (vat li 6.pdf) ---
+BÀI 26. SỰ BAY HÓI
+
+VÀ SỰ NGƯNG TỤ
+
+I. SỰ BAY HƠI
+
+Nước mưa trên
+mặt đường nhựa đã
+biến đỉ đâu, khi
+Mặt Trời lại xuất
+
+hiện sau cơn mưa ? Hình 26.1
+l 1. Nhớ lại những điều đã học từ lớp 4 về sự
+bay hơi
+
+~ Hiện tượng nước biến thành hơi (nước bay hơi)
+các em đã học ở lớp 4.
+
+Mỗi em hãy tìm và ghi vào vở một thí dụ về
+nước bay hơi.
+~ Không phải chỉ có nước mới bay hơi, mọi chất
+lỏng đều có thể bay hơi. Hãy tìm và ghi vào vở
+một thí dụ về sự bay hơi của một chất lỏng không
+phải là nước.
+2. Sự bay hơi nhanh hay chậm của một chất
+lồng phụ thuộc vào những yếu tố nào ?
+Ñl a) Quan sát hiện tượng
+
+Trong đời sống, có nhiều hiện tượng giúp ta nhận
+biết sự bay hơi của một chất xảy ra nhanh hay chậm
+(tốc độ bay hơi) phụ thuộc vào những yếu tố nào.
+
+Hãy quan sát những hiện tượng mô tả ở hình
+26.2 để trả lời các câu hỏi sau đây.
+
+Quần áo vẽ ở hình A2 khô nhanh hơn vẽ ở
+hình A, , chứng tỏ tốc độ bay hơi phụ thuộc vào
+yếu tố nào ?
+
+Hình 26.2a
+
+$0 — “SWWNNNNNR
+
+--- Trang 80 (vat li 6.pdf) ---
+BE Quản áo vẽ ở hình BỊ khô nhanh  EEI Quần áo vẽ ở hình C; khô nhanh
+hơn vẽ ở hình B; , chứng tỏ tốc độ bay hơn vẽ ở hình C¡ , chứng tỏ tốc độ bay
+hơi phụ thuộc vào yếu tố nào?  * hơi phụ thuộc vào yếu tố nào ?
+
+Hình 26.2b~c
+
+© b) Rút ra nhận xét
+
+Từ việc phân tích các hiện tượng trên, có thể rút ra nhận xét :
+Tốc độ bay hơi của một chất lỏng phụ thuộc vào nhiệt độ,
+gió và diện tích mặt thoáng của chất lỏng.
+Chọn từ thích hợp trong khung để điển vào chỗ trống
+của các câu sau :
+— Nhiệt độ càng (1) ...... thì tốc độ bay hơi càng (2) .........
+
+~ Gió càng (3) ....... thì tốc độ bay hơi càng (4) ............. ~ lớn, nhỏ
+— Diện tích mặt thoáng của chất lỏng càng (5) ......... thì tốc ~ cao, thấp
+độ bay hơi càng (6)..................... ~ mạnh, yếu
+
+—T.mưằg  :
+
+--- Trang 81 (vat li 6.pdf) ---
+® c) Thí nghiệm kiểm tra
+
+Nhận xét ở trên mới chỉ là một dự
+đoán. Cần phải làm thí nghiệm để
+kiêm tra.
+
+Thí dụ : Muốn kiểm tra tác động của
+nhiệt độ đối với sự bay hơi của nước, ta
+phải làm cho nhiệt độ thay đổi, còn giữ
+nguyên diện tích mặt thoáng và không,
+cho gió tác động.
+
+Cụ thể, có thể làm thí nghiệm
+như sau :
+~— Lấy hai đĩa nhôm có diện tích lòng
+đĩa như nhau, đặt trong phòng không
+Có gió.
+
+— Hơ nóng một đĩa.
+~ Đổ vào mỗi đĩa khoảng từ 2cm đến
+5cm nước.
+
+Quan sát xem nước ở đĩa nào bay
+hơi nhanh hơn.
+
+Tại sao phải dùng đĩa có diện tích
+lòng đĩa như nhau ?
+
+Tại sao phải đặt hai đĩa trong
+cùng một phòng không có gió ?
+
+Tại sao chỉ hơ nóng một đĩa ?
+
+-
+
+Căn cứ vào kết quả thí nghiệm
+
+nào, có thể khẳng định dự đoán tốc độ
+
+bay hơi phụ thuộc nhiệt độ là đúng ?
+Hãy tự vạch kế hoạch để thực hiện
+
+thí nghiệm kiểm tra xem tốc độ bay hơi
+
+có phụ thuộc vào các yếu tố gió, diện
+
+tích mặt thoáng của chất lỏng không.
+Chú ý : Trong kế hoạch thí nghiệm
+
+cần nêu rõ :
+
+— Mục đích thí nghiệm : Dùng để kiểm
+
+tra tác động của yếu tố nào ?
+
+— Các dụng cụ cần dùng.
+
+— Các bước tiến hành thí nghiệm.
+
+Ghi kế hoạch thí nghiệm vào vở để
+xin ý kiến thầy giáo, cô giáo. Thầy cô
+giáo sẽ cho em biết kế hoạch thế nào là
+đúng, để các em thực hiện nếu có đủ
+dụng cụ.
+
+Ÿ 4) Vận dụng
+
+Tại sao khi trồng chuối hay trồng
+mía, người ta phải phạt bớt lá ?
+
+Để làm muối, người ta cho nước
+biển chảy vào ruộng muối. Nước trong
+nước biển bay hơi, còn muối đọng lại
+trên ruộng. Thời tiết như thế nào thì
+nhanh thu hoạch được muối ? Tại sao ?
+
+$2 ¬—._ ———
+
+--- Trang 82 (vat li 6.pdf) ---
+BÀI 27. SỰ BAY HÓI
+
+VÀ SỰ NGƯNG TỰ (tiếp theo)
+
+II. SỰ NGƯNG TỤ
+
+E 1. Tìm cách quan sát sự ngưng tụ
+a) Dự đoán
+Hiện tượng chất lỏng biến thành hơi là Bay hơi
+SA 2 s2 22 Lỏng ————————>*| Hơi
+sự bay hơi, còn hiện tượng hơi biến thành Ngang
+chất lỏng là sự ngưng tụ. Ngưng tụ là quá ...
+trình ngược với bay hơi.
+
+Để đễ quan sát hiện tượng bay hơi, ta có thể cho chất lỏng bay hơi nhanh bằng
+cách tăng nhiệt độ chất lỏng. Vậy muốn dễ quan sát hiện tượng ngưng tụ, ta làm
+tăng hay giảm nhiệt độ ?
+
+Ngưng tụ là quá trình ngược với bay hơi, nên ta có thể dự đoán khi giảm nhiệt độ của
+hơi, sự ngưng tụ sẽ xảy ra nhanh hơn và ta sẽ dễ quan sát được hiện tượng hơi ngưng tụ.
+b) Thí nghiệm kiểm tra
+
+Trong không khí có hơi nước. Bằng cách giảm nhiệt độ của không khí, ta có thể
+làm hơi nước trong không khí ngưng tụ nhanh hơn và quan sát được hiện tượng này.
+— Dụng cụ thí nghiệm :
+
++ 2 cốc thuỷ tỉnh giống nhau.
+
++ Nước có pha màu.
+
++ Nước đá đập nhỏ. + 2 nhiệt kế.
+— Tiến hành thí nghiệm (H.27.1) :
+
++ Dùng khăn khô lau mặt ngoài của hai cốc.
++ Đổ nước màu đây tới 2/3 mỗi cốc. Một
+cốc dùng để đối chứng, một cốc dùng làm
+thí nghiệm.
+
++ Ðo nhiệt độ của nước ở hai cốc.
+
++ Đổ nước đá vụn vào cốc làm thí nghiệm.
+Chú ý : Phải đặt hai cốc khá xa nhau. Hình 27.1
+
+' s
+
+--- Trang 83 (vat li 6.pdf) ---
+® c) Rút ra kết luận ¬ ' .
+
+¬ ¬ Các giọt nước đọng ở mặt ngoài
+
+“Theo dõi nhiệt độ của nước ở hai cốc thí nghiệm là do đâu mà có ?
+
+cốc và quan sát hiện tượng xảy ra ở
+
+mặt ngoài của hai cốc nước để trả lời
+các câu hỏi sau :
+
+Vậy dự đoán của chúng ta có
+đúng không ?
+
+Có gì khác nhau giữa nhiệt độcủa + 2, Vận dụng
+nước trong cốc đối chứng và trong cốc ¬ xu.
+thí nghiệm ? Hãy nêu hai thí dụ về hiện tượng
+ngưng tụ.
+
+Giải thích sự tạo thành giọt nước
+đọng trên lá cây vào ban đêm.
+
+Có hiện tượng gì xảy ra ở mặt
+ngoài của cốc thí nghiệm ? Hiện tượng
+này có xảy ra ở cốc đối chứng không ?
+Tại sao rượu đựng trong chai
+không đậy nút sẽ cạn dần, còn nếu nút
+kín thì không cạn ?
+
+Các giọt nước đọng ở mặt ngoài
+của cốc thí nghiệm có thể là do nước ở
+trong cốc thấm ra không ? Tại sao ? e-
+
+©_ Sự chuyển từ thể lỏng sang thể hơi gọi là sự bay hơi.
+® Tốc độ bay hơi của một chất lỏng phụ thuộc vào nhiệt độ,
+gió và diện tích mặt thoáng của chất lỏng.
+
+©_ Sự chuyển từ thể hơi sang thể lỏng gọi là sự ngưng tụ.
+
+Có thể em chưa biết
+
+*# Hai phần ba bề mặt Trái Đất có nước bao phủ. Lượng nước này không
+ngừng bay hơi, tạo thành một lớp hơi nước trong khí quyển dày từ 10km đến
+17km. Hơi nước tạo thành mây, mưa, sương mù, tuyết ảnh hưởng đến khí
+hậu Trái Đất và đời sống con người.
+
+'# Khi không khí có nhiệt độ 30°C, ta vẫn cẩm thấy dễ chịu, nếu trong mỗi
+mét khối không khí chứa không quá 7,5g hơi nước. Còn nếu lượng hơi nước
+trong một mét khối không khí vượt quá 25g, thì ta cảm thấy rất oi bức, khó
+chịu, dù nhiệt độ vẫn là 30C.
+
+*# Ở nước ta trong những ngày ẩm ướt, mỗi mét khối không khí có thể chứa
+tới 30g hơi nước.
+
+_ — — SN
+
+--- Trang 84 (vat li 6.pdf) ---
+BÀI 28. SỰ SÔI
+
+Bình và An đang đun nước, Bình chợt
+reo lên :
+~ A1 Nước sôi rồi, tắt lửa đi thôi !
+
+An ngắt lời Bình :
+~ Nước sôi rồi, nhưng cứ đun thêm ít nữa
+cho nó nóng già hơn.
+
+Bình khẳng định :
+~ Nước đã sôi, thì dù có đun mãi, nước
+cũng không nóng hơn lên đâu !
+
+An cãi lại :
+~ Vô lí ! Mình vẫn tiếp tục đun thì nước
+phải vẫn tiếp tục nóng lên chứ !
+
+Bài này giúp các em biết được trong cuộc
+tranh luận này, ai đúng, ai sai.
+
+li I. THÍ NGHIỆM VỀ SỰ SÔI
+Trước khi tiến hành thí nghiệm, các em
+cần đọc kĩ nội dung của phần này, để nắm
+chắc cách làm thí nghiệm và ghi kết quả.
+1. Tiến hành thí nghiệm
+Muốn biết ai đúng, ai sai, cách tốt nhất là
+làm thí nghiệm kiểm chứng.
+a) Thí nghiệm được bố trí như hình 28. I.
+~ Đốt đèn cồn để đun nước.
+b) Theo dõi sự thay đổi nhiệt độ của nước
+theo thời gian, các hiện tượng xảy ra ở trong,
+lòng khối nước, trên mặt nước và ghi kết
+quả theo hướng dẫn sau : Hình 28.1
+
+_ ==. s
+
+
+--- Trang 85 (vat li 6.pdf) ---
+— Khi nhiệt độ của nước đạt tới 405C,
+thì cứ sau I phút lại ghi nhiệt độ của
+nước, cùng với phần nhận xét hiện
+tượng xảy ra trong bình nước vào bảng
+theo dõi (bảng 28.1), cho tới khi nước
+sôi được 3 phút thì dừng và tắt đèn.
+
+— Khi ghi nhận xét hiện tượng xảy ra
+trong lòng khối nước và trên mặt nước
+cần theo hướng dẫn sau :
+
++ Quan sát xem vào phút thứ bao
+nhiêu thì xuất hiện các hiện tượng
+được nêu dưới đây :
+
+Ở trên mặt nước : Ở trong lòng nước :
+- Hiện tượng I : | - Hiện tượng A :
+Có một ít hơi | Các bọt khí bắt đầu
+nước bay lên. xuất hiện ở đáy bình.
+- Hiện tượng II : | - Hiện tượng B :
+Mặt nước bắt | Các bọt khí nổi lên.
+đầu xáo động. ~ Hiện tượng C :
+- Hiện tượng III : | Nước reo.
+Mặt nước xáo động | _ Hiện tượng D:
+mạnh, hơi nước | Các bọt khí nổi lên
+bay lên rất nhiều. _ | nhiều hơn, càng đi
+lên càng to ra, khi
+tới mặt thoáng thì
+vỡ tung. Nước sôi
+sùng sục.
+
+® 2. Vẽ đường biểu diễn
+~ Vẽ trên giấy kẻ ô đường biểu diễn sự
+thay đổi nhiệt độ của nước theo thời gian.
++ Trục nằm ngang là trục thời gian ; ghỉ
+các giá trị thời gian theo phút, (mỗi
+cạnh của ô vuông nằm trên trục này
+biểu thị 1 phúU).
++ Trục thẳng đứng là trục nhiệt độ, ghi
+các giá trị nhiệt độ theo °C, (mỗi cạnh ô
+vuông nằm trên trục này biểu thị 2°C).
+Gốc của trục nhiệt độ là 40%C. Gốc
+của trục thời gian là phút 0.
+
+~ Ghi nhận xét về đường biểu diễn.
+
+Bảng 28.1.
+Các hiện tượng xảy ra trong quá trình
+đun nước
+
++ Khi ghi phần nhận xét hiện tượng
+xảy ra vào bảng theo dõi, không cẩn
+dùng lời để mô tả hiện tượng, chỉ cần
+ghỉ vào bảng các chữ cái A, B, C, D
+hoặc các con số la mã I, II, III chỉ các
+hiện tượng đã nêu ứng với thời gian xảy
+ra hiện tượng đó. -
+
+% ¬—.._
+
+--- Trang 86 (vat li 6.pdf) ---
+BÀI 29. SỰ SÔI (tiếp theo)
+
+II. NHIỆT ĐỘ SÔI
+l8 1. Trả lời câu hỏi
+Dựa vào kết quả thí nghiệm trả lời các câu hỏi sau :
+Ở nhiệt độ nào bắt đầu thấy xuất hiện các bọt khí ở đáy bình ?
+Ở nhiệt độ nào bắt đầu thấy các bọt khí tách khỏi đáy bình và đi lên mặt nước ?
+
+Ở nhiệt độ nào xảy ra hiện tượng các bọt khí nổi lên tới mặt nước, vỡ tung
+ra và hơi nước bay lên nhiều (nước sôi) ?
+
+Trong khi nước đang sôi, nhiệt độ của nước có
+
+ă ông ?
+tăng không ? Bảng 29.1.
+l8 Chú ý : Nhiệt độ sôi của
+Z . mm một số chất
+Các chất khác nhau sôi ở nhiệt độ khác nhau.
+Bảng 29.1 ghi nhiệt độ sôi của một số chất ở điều Chất Nhiệt độ
+kiện chuẩn. [| sô609 -
+Ête 35
+® 2. Rút ra kết luận Rượu 80
+Trong cuộc tranh luận của Bình và An (nêu ở Nước 100
+phần đầu bài), ai đúng, ai sai ? Thuỷ ngân 357
+` TÀI SA z Đồng 2580
+Chọn từ thích hợp trong khung điền vào chỗ
+trống trong các câu sau đây :
+a) Nước sôi ở nhiệt độ (1) .......... Nhiệt độ này gọi là
+6 —.......... của nước. ~ 100%, gân 100%
+b) Trong suốt thời gian sôi, nhiệt độ của nước (3) ~ thay đổi, không
+thay đổi
+e) Sự sôi là một sự bay hơi đặc biệt. Trong suốt thời |_ ~",#/đósới
+gian sôi, nước vừa bay hơi tạo ra các (4) .. = bọt khí -
+vừa bay hơi trên (S) ~ mặt thoáng
+
+_ b
+
+--- Trang 87 (vat li 6.pdf) ---
+Y II. VẬN DỤNG
+
+Tại sao người ta chọn nhiệt độ của hơi nước
+đang sôi để làm một mốc chia nhiệt độ ?
+
+Tại sao để đo nhiệt độ của hơi nước sôi, người
+ta phải dùng nhiệt kế thuỷ ngân, mà không dùng
+nhiệt kế rượu ?
+
+Hình 29.1 vẽ đường biểu diễn sự thay đổi nhiệt
+độ của nước khi được đun nóng. Các đoạn AB và BC
+của đường biểu diễn ứng với những quá trình nào ?
+
+Nhiệt độ(°C)
+
+o9e888
+
+Thời
+gian
+
+A 5 10 15 20(phút)
+
+Hình 29.1
+
+©._ Mỗi chất lỏng sôi ở một nhiệt độ nhất định. Nhiệt độ đó gọi là nhiệt
+
+độ sôi.
+
+© _ Trong suốt thời gian sôi, nhiệt độ của chất lồng không thay đổi.
+
+Có thể em chưa biết
+
+# Nhiệt độ sôi của chất lỏng còn phụ thuộc áp
+suất trên mặt thoáng. Áp suất trên mặt thoáng
+càng lớn thì nhiệt độ sôi của chất lỏng càng cao.
+Do đó trong nồi áp suất, nhiệt độ sôi của nước
+cao hơn 100C.
+
+# Hình 29.2 vẽ đường biểu diễn sự phụ thuộc
+của nhiệt độ sôi của nước vào độ cao so với mặt
+biển khi độ cao này không lớn lắm.
+
+Đỉnh Phăng Xi Păng thuộc dãy Hoàng Liên Sơn
+cao khoảng 3200m so với mặt biển, là đỉnh núi
+cao nhất nước ta. Hãy dựa vào đồ thị để xác
+định gần đúng nhiệt độ sôi của nước ỏ đây.
+
+Nhiệt độ sôi (°C)
+
+0 1000 2009 3000 4000 50096090)
+Độ cao (m)
+
+Hình 29.2
+
+s8 "`...
+
+--- Trang 88 (vat li 6.pdf) ---
+BÀI 30. TỔNG KẾT CHƯÓNG II: NHIỆT HỌC
+
+I. ÔN TẬP
+
+l8 Trả lời câu hỏi
+
+1. Thể tích của các chất thay đổi như
+thế nào khi nhiệt độ tăng, khi nhiệt độ
+giảm ?
+
+2. Trong các chất rắn, lỏng, khí chất
+nào nở vì nhiệt nhiều nhất, chất nào nở
+vì nhiệt ít nhất ?
+
+3. Tìm một thí dụ chứng tỏ sự co dân
+vì nhiệt khi bị ngăn trở có thể gây ra
+những lực rất lớn ?
+
+4. Nhiệt kế hoạt động dựa trên hiện
+tượng nào ? Hãy kể tên và nêu công dụng
+của các nhiệt kế thường gặp trong
+đời sống.
+
+5. Điển vào đường chấm chấm trong
+sơ đồ tên gọi của các sự chuyển thể
+ứng với các chiều mũi tên.
+
+Œœ)
+
+6. Mỗi chất có nóng chảy và đông đặc
+ở cùng một nhiệt độ xác định không ?
+Nhiệt độ này gọi là gì ?
+
+7. Trong thời gian nóng chảy, nhiệt
+độ của chất rắn có tăng không khi ta
+vẫn tiếp tục đun ?
+
+§. Chất lỏng có bay hơi ở một nhiệt độ
+xác định không ? Tốc độ bay hơi của
+một chất lỏng phụ thuộc vào những
+yếu tố nào ?
+
+9. Ở nhiệt độ nào thì một chất lỏng, cho
+đù có tiếp tục đun vẫn không tăng nhiệt
+độ ? Sự bay hơi của chất lỏng ở nhiệt
+độ này có đặc điểm gì ?
+
+(2)
+
+Thể
+
+rắn
+
+Thể lỏng
+
+Thể
+khí
+
+Y II. VẬN DỤNG
+
+4)
+
+1. Trong các cách sắp xếp dưới đây cho các chất
+nở vì nhiệt từ ít tới nhiều, cách sắp xếp nào đúng ?
+
+A. Rắn — khí — lỏng.
+B. Lỏng — rắn — khí.
+C. Rắn - lỏng - khí.
+D. Lỏng - khí - rắn.
+
+2. Nhiệt kế nào trong các nhiệt kế sau đây có thể
+dùng để đo nhiệt độ của hơi nước đang sôi ?
+
+_  Ẩ2 88 $
+
+--- Trang 89 (vat li 6.pdf) ---
+A. Nhiệt kế rượu.
+
+B. Nhiệt kế y tế.
+
+€. Nhiệt kế thuỷ ngân.
+
+D. Cả ba loại trên đều không dùng được.
+
+3. Tại sao trên đường ống dẫn hơi phải có những
+đoạn được uốn cong (H.30.1). Hãy vẽ lại hình của
+đoạn ống này khi đường ống nóng lên, lạnh đi ?
+
+4. Hãy sử dụng số liệu trong bảng 30.1 để trả lời
+
+các câu hỏi sau đây : Hình 30.1
+Bảng 30.1.
+Chất Nhiệt độ nóng chảy (°C)
+Nướcđá | 0 R
+Rượu | -117 1800 -C
+Sắt | 1535 1500
+Đồng | 1083 1400
+Thuỷ ngân _ | -39 1300
+1200
+Muối ăn 801 1100
+1000
+a) Chất nào có nhiệt độ nóng chảy cao nhất ? 900
+b) Chất nào có nhiệt độ nóng chảy thấp nhất ? 800
+€) Tại sao có thể dùng nhiệt kế rượu để đo những 700
+nhiệt độ thấp tới ~50%C. Có thể dùng nhiệt kế thuỷ 00
+ngân để đo những nhiệt độ này không ? Tại sao ? 500
+đ) Hình 30.2 vẽ một thang nhiệt độ từ -200%C đến %
+16009C. Hãy : 20o
+~ Dùng bút màu đánh dấu vào vị trí trên thang có 100
+ghi nhiệt độ ứng với nhiệt độ trong lớp em. 0 Nước
+~ Đánh dấu nhiệt độ nóng chảy và ghi tên chất có -100
+trong bảng 30.1 vào thang nhiệt độ, (thí dụ, -200
+nước được ghi ở vạch ứng với 0°C của thang
+trên hình 30.2). Hình 30.2
+
+% ¬—._ ———
+
+--- Trang 90 (vat li 6.pdf) ---
+~ Ở nhiệt độ của lớp học, các chất nào
+trong bảng 30.1 ở thể rắn, ở thể lỏng ?
+~ Ở nhiệt độ của lớp học, có thể có hơi
+của chất nào trong các hơi sau đây ?
++ Hơi nước.
++ Hơi đồng.
++ Hơi thuỷ ngân.
++ Hơi sắt.
+5. An và Bình cùng luộc khoai. Khi nồi
+khoai bắt đầu sôi, Bình bảo nên rút bớt
+củi ra, chỉ để ngọn lửa nhỏ, đủ cho nồi
+khoai tiếp tục sôi. An lại nói, phải tiếp
+tục chất thêm củi nữa, để ngọn lửa cháy
+thật to, vì An cho rằng, càng đun cho lửa
+to, thì nước luộc khoai càng nóng, như
+vậy khoai càng mau chín.
+
+Ý kiến nào đúng ? Tại sao ?
+6. Hình 30.3 vẽ đường biểu diễn sự thay
+đổi nhiệt độ theo thời gian của nước. Hỏi :
+a) Các đoạn BC, DE ứng với các quá
+trình nào ?
+b) Trong các đoạn AB, CD nước tổn tại
+ở những thể nào ?
+
+GIẢI TRÍ
+Ô CHỮ VỀ Sự CHUYỂN THỂ
+
+Hàng ngang
+
+1. Tên gọi sự chuyển từ thể rắn sang thể
+lỏng (8 ô).
+
+2. Tên gọi sự chuyển từ thể lỏng sang thể
+khí (hay hơi) (6 ô).
+
+3. Một yếu tố tác động đến tốc độ bay
+hơi (3 ô).
+
+......
+
+Hình 30.3
+
+Hình 30.4
+
+91
+
+--- Trang 91 (vat li 6.pdf) ---
+4. Việc ta phải làm để kiểm tra các dự đoán (9 ô).
+
+5. Một yếu tố nữa tác động đến tốc độ bay hơi (9 ô).
+6. Tên gọi sự chuyển từ thể lỏng sang thể rắn (7 ô).
+7. Từ dùng để chỉ sự nhanh chậm (5 ô).
+
+Hàng dọc
+Hãy diễn tả nội dung của từ trong các ó hàng dọc được tô đậm (H.30.4).
+
+Có thể em chưa biết
+
+'* Chất cacbon điôxit (thường gọi là tuyết khô) có thể chuyển thẳng từ thể
+rắn sang thể hơi. Sự chuyển thể đặc biệt này gọi là “Sự thăng hoa”. Khi
+thăng hoa, tuyết khô làm lạnh không khí xung quanh, khiến cho hơi nước
+trong không khí ngưng tụ, tạo nên một màn sương. Nếu chiếu ánh sáng
+màu vào màn sương này, ta sẽ được một màn sương màu tuyệt đẹp. Hiện
+tượng này thường được sử dụng để tạo cảnh trên sàn diễn ca - múa - nhạc.
+Trong lòng Mặt Trời nhiệt độ lên tới 20 triệu độ (20000000°C). Ở nhiệt
+độ này, vật chất không tồn tại ỏ thể rắn, thể lỏng hay thể khí thông thường
+mà ta biết. Nó tồn tại dưới một thể đặc biệt, gọi là “Plasma”. Ở thể plasma,
+vật chất tồn tại dưới dạng các hạt mang điện.
+
+% ¬—  ——— cá
+
+--- Trang 92 (vat li 6.pdf) ---
+Trang
+Lời nói đầu 3
+CHƯƠNG I : CƠ HỌC
+Đo độ dài 6
+Đo độ dài (tiếp theo) 9
+Đo thể tích chất lỏng 12
+Đo thể tích vật rắn không thấm nước 15
+Khối lượng - Đo khối lượng 18
+Lực - Hai lực cân bằng 21
+Tìm hiểu kết quả tác dụng của lực 24
+Trọng lực - Đơn vị lực. 27
+Lực đàn hồi 30
+Lực kế - Phép đo lực - Trọng lượng và khối lượng 33
+Khối lượng riêng - Trọng lượng riêng 36
+Thực hành : Xác định khối lượng riêng của sỏi 39
+Máy cơ đơn giản 41
+Mặt phẳng nghiêng 44
+Đòn bẩy 47
+Ròng rọc 50
+Tổng kết chương I : Cơ học 53
+CHƯƠNG II : NHIỆT HỌC
+Sự nở vì nhiệt của chất rắn 58
+Sự nở vì nhiệt của chất lỏng 60
+Sự nở vì nhiệt của chất khí 62
+Một số ứng dụng của sự nở vì nhiệt 65
+. Nhiệt kế - Thang nhiệt độ 68
+Bài 23. Thực hành đo nhiệt độ 72
+Bài 24. Sự nóng chảy và sự đông đặc 75
+Bài 25. Sự nóng chảy và sự đông đặc (tiếp theo) T7
+Bài 26. Sự bay hơi và sự ngưng tụ 80
+Bài 27. Sự bay hơi và sự ngưng tụ (tiếp theo) 83
+Bài 28. Sự sôi 85
+Bài 29. Sự sôi (tiếp theo) 87
+Bài 30. Tổng kết chương II : Nhiệt học 89

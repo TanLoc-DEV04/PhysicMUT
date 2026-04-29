@@ -1,8 +1,8 @@
 import { useState } from 'react';
 import { Table, Button, Space, Popconfirm, message, Switch } from 'antd';
 import { PlusOutlined, DeleteOutlined, EyeOutlined } from '@ant-design/icons';
-import { useAdmin } from './useAdmin';
-import { useUpdateAndAddAdmin } from './useUpdateAndAddAdmin';
+import { useAdmin } from './hooks/useAdmin';
+import { useUpdateAndAddAdmin } from './hooks/useUpdateAndAddAdmin';
 import AddAdminModal from './AddAdminModal';
 import SearchInput from '../../../../components/shared/SearchInput';
 import { userService } from '../../../../services/user.service';

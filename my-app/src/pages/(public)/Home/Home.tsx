@@ -1,14 +1,23 @@
 import { Button } from 'antd';
 import { useNavigate } from 'react-router-dom';
 import { CaretRightOutlined } from '@ant-design/icons';
+import useSEO from '../../../hooks/useSEO';
 
   import { useAuth } from '../../../contexts/AuthContext';
 
   function Home() {
     const navigate = useNavigate();
-    const { currentUser } = useAuth();
-  
-    const handleStartLearning = () => {
+  const { currentUser } = useAuth();
+
+  useSEO({
+    title: 'PhysicMUT – Học Vật lý 3D Trực quan',
+    description:
+      'PhysicMUT là nền tảng mô phỏng thí nghiệm Vật lý ảo 3D trực quan, giúp việc học tập và giảng dạy trở nên sinh động và hiệu quả hơn.',
+    keywords: 'Vật lý 12, mô phỏng 3D, PhysicMUT, học vật lý online, thí nghiệm ảo',
+    canonicalUrl: window.location.origin + '/',
+  });
+
+  const handleStartLearning = () => {
       if (currentUser) {
         navigate('/models');
       } else {
@@ -17,10 +26,13 @@ import { CaretRightOutlined } from '@ant-design/icons';
     };
 
   return (
-    <div className="min-h-[calc(100vh-64px)] relative flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100 overflow-hidden">
+    <main
+      className="min-h-[calc(100vh-64px)] relative flex items-center justify-center bg-gradient-to-br from-blue-50 to-indigo-100 overflow-hidden"
+      aria-label="Trang chủ PhysicMUT"
+    >
       {/* Background decoration */}
       <div className="absolute top-0 right-0 w-1/2 h-full opacity-10 pointer-events-none">
-         <img src="/logo.png" alt="Background" className="w-full h-full object-contain transform translate-x-1/4 scale-150" />
+         <img src="/logo.png" alt="Logo nền PhysicMUT" className="w-full h-full object-contain transform translate-x-1/4 scale-150" />
       </div>
 
       <div className="relative z-10 text-center max-w-4xl px-6">
@@ -43,7 +55,7 @@ import { CaretRightOutlined } from '@ant-design/icons';
           Bắt đầu học ngay
         </Button>
       </div>
-    </div>
+    </main>
   );
 }
 

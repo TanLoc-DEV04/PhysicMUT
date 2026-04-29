@@ -2,6 +2,8 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = require("express");
 const roleController_1 = require("../controllers/roleController");
+const validateRequest_1 = require("../middlewares/validateRequest");
+const role_validator_1 = require("../validators/role.validator");
 const router = (0, express_1.Router)();
 /**
  * @openapi
@@ -80,7 +82,7 @@ router.get('/admin-roles', roleController_1.getAdminRoles);
  *       404:
  *         description: Role not found
  */
-router.get('/:id', roleController_1.getRoleById);
+router.get('/:id', (0, validateRequest_1.validateRequest)(role_validator_1.roleIdSchema), roleController_1.getRoleById);
 /**
  * @openapi
  * /roles:
@@ -106,7 +108,7 @@ router.get('/:id', roleController_1.getRoleById);
  *       201:
  *         description: Role created
  */
-router.post('/', roleController_1.createRole);
+router.post('/', (0, validateRequest_1.validateRequest)(role_validator_1.createRoleSchema), roleController_1.createRole);
 /**
  * @openapi
  * /roles/{id}:
@@ -136,7 +138,7 @@ router.post('/', roleController_1.createRole);
  *       200:
  *         description: Role updated
  */
-router.put('/:id', roleController_1.updateRole);
+router.put('/:id', (0, validateRequest_1.validateRequest)(role_validator_1.updateRoleSchema), roleController_1.updateRole);
 /**
  * @openapi
  * /roles/{id}:
@@ -153,7 +155,7 @@ router.put('/:id', roleController_1.updateRole);
  *       204:
  *         description: Role deleted
  */
-router.delete('/:id', roleController_1.deleteRole);
+router.delete('/:id', (0, validateRequest_1.validateRequest)(role_validator_1.roleIdSchema), roleController_1.deleteRole);
 /**
  * @openapi
  * /roles/{id}/status:
@@ -180,6 +182,6 @@ router.delete('/:id', roleController_1.deleteRole);
  *       200:
  *         description: Role status updated
  */
-router.patch('/:id/status', roleController_1.toggleRoleStatus);
+router.patch('/:id/status', (0, validateRequest_1.validateRequest)(role_validator_1.toggleRoleStatusSchema), roleController_1.toggleRoleStatus);
 exports.default = router;
 //# sourceMappingURL=roles.js.map

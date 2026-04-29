@@ -1,83 +1,57 @@
 "use strict";
-var __importDefault = (this && this.__importDefault) || function (mod) {
-    return (mod && mod.__esModule) ? mod : { "default": mod };
-};
+var __createBinding = (this && this.__createBinding) || (Object.create ? (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    var desc = Object.getOwnPropertyDescriptor(m, k);
+    if (!desc || ("get" in desc ? !m.__esModule : desc.writable || desc.configurable)) {
+      desc = { enumerable: true, get: function() { return m[k]; } };
+    }
+    Object.defineProperty(o, k2, desc);
+}) : (function(o, m, k, k2) {
+    if (k2 === undefined) k2 = k;
+    o[k2] = m[k];
+}));
+var __setModuleDefault = (this && this.__setModuleDefault) || (Object.create ? (function(o, v) {
+    Object.defineProperty(o, "default", { enumerable: true, value: v });
+}) : function(o, v) {
+    o["default"] = v;
+});
+var __importStar = (this && this.__importStar) || (function () {
+    var ownKeys = function(o) {
+        ownKeys = Object.getOwnPropertyNames || function (o) {
+            var ar = [];
+            for (var k in o) if (Object.prototype.hasOwnProperty.call(o, k)) ar[ar.length] = k;
+            return ar;
+        };
+        return ownKeys(o);
+    };
+    return function (mod) {
+        if (mod && mod.__esModule) return mod;
+        var result = {};
+        if (mod != null) for (var k = ownKeys(mod), i = 0; i < k.length; i++) if (k[i] !== "default") __createBinding(result, mod, k[i]);
+        __setModuleDefault(result, mod);
+        return result;
+    };
+})();
 Object.defineProperty(exports, "__esModule", { value: true });
 exports.updateUserStatus = exports.deleteUser = exports.updateUser = exports.getUserById = exports.createUser = exports.getUsers = void 0;
-const db_1 = __importDefault(require("../config/db"));
-// List of role names that are NOT allowed to be assigned to admin users
-const NON_ADMIN_ROLE_NAMES = ['USER', 'STUDENT'];
-// Get all users
+const userService = __importStar(require("../services/userService"));
 const getUsers = async (req, res) => {
     try {
-        const users = await db_1.default.user.findMany({
-            select: {
-                id: true,
-                username: true,
-                email: true,
-                full_name: true,
-                department: true,
-                role: true,
-                is_active: true,
-                last_login: true,
-                created_at: true,
-            },
+        const users = await userService.getUsers({
+            roleId: req.query.roleId,
+            search: req.query.search
         });
         res.json(users);
     }
     catch (error) {
+        console.error('Get users error:', error);
         res.status(500).json({ error: 'Failed to fetch users' });
     }
 };
 exports.getUsers = getUsers;
-// Create User (Admin only)
 const createUser = async (req, res) => {
-    const { username, email, password, full_name, role_name, role_id, department, is_active } = req.body;
-    if (!username || !email || !password) {
-        res.status(400).json({ error: 'Username, email và password là bắt buộc' });
-        return;
-    }
-    if (password.length < 6) {
-        res.status(400).json({ error: 'Mật khẩu phải có ít nhất 6 ký tự' });
-        return;
-    }
     try {
-        let resolvedRole = null;
-        if (role_id) {
-            resolvedRole = await db_1.default.role.findUnique({ where: { id: role_id } });
-        }
-        else if (role_name) {
-            resolvedRole = await db_1.default.role.findUnique({ where: { name: role_name } });
-        }
-        // Validate: admin creation must use an admin-level role
-        if (resolvedRole && NON_ADMIN_ROLE_NAMES.includes(resolvedRole.name)) {
-            res.status(400).json({
-                error: `Dữ liệu không hợp lệ: Role "${resolvedRole.name}" không được phép gán cho tài khoản admin.`
-            });
-            return;
-        }
-        const newUser = await db_1.default.user.create({
-            data: {
-                username,
-                email,
-                password_hash: password,
-                full_name,
-                department: department || null,
-                is_active: is_active !== undefined ? is_active : true,
-                role: resolvedRole ? { connect: { id: resolvedRole.id } } : undefined
-            },
-            select: {
-                id: true,
-                username: true,
-                email: true,
-                full_name: true,
-                department: true,
-                role: true,
-                is_active: true,
-                last_login: true,
-                created_at: true,
-            }
-        });
+        const newUser = await userService.createUser(req.body);
         res.status(201).json(newUser);
     }
     catch (error) {
@@ -87,32 +61,17 @@ const createUser = async (req, res) => {
             res.status(400).json({ error: `${field} đã tồn tại trong hệ thống` });
             return;
         }
+        if (error.message && error.message.includes('Dữ liệu không hợp lệ')) {
+            res.status(400).json({ error: error.message });
+            return;
+        }
         res.status(500).json({ error: 'Failed to create user' });
     }
 };
 exports.createUser = createUser;
-// Get user by ID
 const getUserById = async (req, res) => {
-    const { id } = req.params;
-    if (!id || typeof id !== 'string') {
-        res.status(400).json({ error: 'Invalid ID' });
-        return;
-    }
     try {
-        const user = await db_1.default.user.findUnique({
-            where: { id },
-            select: {
-                id: true,
-                username: true,
-                email: true,
-                full_name: true,
-                department: true,
-                role: true,
-                is_active: true,
-                last_login: true,
-                created_at: true,
-            },
-        });
+        const user = await userService.getUserById(req.params.id);
         if (!user) {
             res.status(404).json({ error: 'User not found' });
             return;
@@ -124,75 +83,24 @@ const getUserById = async (req, res) => {
     }
 };
 exports.getUserById = getUserById;
-// Update user
 const updateUser = async (req, res) => {
-    const { id } = req.params;
-    const { full_name, role_id, role_name, department } = req.body;
-    if (!id || typeof id !== 'string') {
-        res.status(400).json({ error: 'Invalid ID' });
-        return;
-    }
     try {
-        const updateData = {};
-        if (full_name !== undefined)
-            updateData.full_name = full_name;
-        if (department !== undefined)
-            updateData.department = department;
-        // Handle Role Update
-        if (role_id) {
-            const resolvedRole = await db_1.default.role.findUnique({ where: { id: role_id } });
-            if (resolvedRole && NON_ADMIN_ROLE_NAMES.includes(resolvedRole.name)) {
-                res.status(400).json({
-                    error: `Dữ liệu không hợp lệ: Role "${resolvedRole.name}" không được phép gán cho tài khoản admin.`
-                });
-                return;
-            }
-            updateData.role = { connect: { id: role_id } };
-        }
-        else if (role_name) {
-            const role = await db_1.default.role.findUnique({ where: { name: role_name } });
-            if (role) {
-                if (NON_ADMIN_ROLE_NAMES.includes(role.name)) {
-                    res.status(400).json({
-                        error: `Dữ liệu không hợp lệ: Role "${role.name}" không được phép gán cho tài khoản admin.`
-                    });
-                    return;
-                }
-                updateData.role = { connect: { id: role.id } };
-            }
-        }
-        const user = await db_1.default.user.update({
-            where: { id },
-            data: updateData,
-            select: {
-                id: true,
-                username: true,
-                email: true,
-                full_name: true,
-                department: true,
-                role: true,
-                is_active: true,
-                last_login: true,
-                created_at: true,
-            },
-        });
+        const user = await userService.updateUser(req.params.id, req.body);
         res.json(user);
     }
     catch (error) {
         console.error(error);
+        if (error.message && error.message.includes('Dữ liệu không hợp lệ')) {
+            res.status(400).json({ error: error.message });
+            return;
+        }
         res.status(500).json({ error: 'Failed to update user' });
     }
 };
 exports.updateUser = updateUser;
-// Delete user
 const deleteUser = async (req, res) => {
-    const { id } = req.params;
-    if (!id || typeof id !== 'string') {
-        res.status(400).json({ error: 'Invalid ID' });
-        return;
-    }
     try {
-        await db_1.default.user.delete({ where: { id } });
+        await userService.deleteUser(req.params.id);
         res.status(204).send();
     }
     catch (error) {
@@ -200,28 +108,9 @@ const deleteUser = async (req, res) => {
     }
 };
 exports.deleteUser = deleteUser;
-// Toggle user active/inactive status
 const updateUserStatus = async (req, res) => {
-    const { id } = req.params;
-    const { is_active } = req.body;
-    if (!id || typeof id !== 'string' || typeof is_active !== 'boolean') {
-        res.status(400).json({ error: 'Invalid ID or is_active value (must be boolean)' });
-        return;
-    }
     try {
-        const user = await db_1.default.user.update({
-            where: { id },
-            data: { is_active },
-            select: {
-                id: true,
-                username: true,
-                email: true,
-                full_name: true,
-                department: true,
-                role: true,
-                is_active: true,
-            },
-        });
+        const user = await userService.updateUserStatus(req.params.id, req.body.is_active);
         res.json(user);
     }
     catch (error) {

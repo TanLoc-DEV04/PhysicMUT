@@ -2,7 +2,7 @@ import os
 import glob
 from langchain_community.document_loaders import PyMuPDFLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
-from langchain_openai import OpenAIEmbeddings
+from langchain_huggingface import HuggingFaceEmbeddings
 from langchain_chroma import Chroma
 from dotenv import load_dotenv
 
@@ -61,14 +61,14 @@ def ingest_design_documents():
     print(f"\nTotal chunks to embed: {len(all_chunks)}")
     
     # Initialize embeddings matching the core knowledge DB
-    embeddings = OpenAIEmbeddings(model="text-embedding-3-small")
+    embedding_function = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
     
     print("\nBuilding Chroma DB...")
     print("Please wait. This process will upload and index all chunks to OpenAI which may take several minutes.")
     
     vectorstore = Chroma.from_documents(
         documents=all_chunks,
-        embedding=embeddings,
+        embedding=embedding_function,
         persist_directory=DB_PATH
     )
     

@@ -2,6 +2,8 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = require("express");
 const authController_1 = require("../controllers/authController");
+const validateRequest_1 = require("../middlewares/validateRequest");
+const auth_validator_1 = require("../validators/auth.validator");
 const router = (0, express_1.Router)();
 /**
  * @openapi
@@ -46,7 +48,7 @@ const router = (0, express_1.Router)();
  *       401:
  *         description: Invalid credentials
  */
-router.post('/login', authController_1.login);
+router.post('/login', (0, validateRequest_1.validateRequest)(auth_validator_1.loginSchema), authController_1.login);
 /**
  * @openapi
  * /auth/register:
@@ -87,7 +89,7 @@ router.post('/login', authController_1.login);
  *       400:
  *         description: Username or email already exists
  */
-router.post('/register', authController_1.register);
+router.post('/register', (0, validateRequest_1.validateRequest)(auth_validator_1.registerSchema), authController_1.register);
 /**
  * @openapi
  * /auth/change-password:
@@ -117,7 +119,7 @@ router.post('/register', authController_1.register);
  *       401:
  *         description: Incorrect old password
  */
-router.post('/change-password', authController_1.changePassword);
+router.post('/change-password', (0, validateRequest_1.validateRequest)(auth_validator_1.changePasswordSchema), authController_1.changePassword);
 /**
  * @openapi
  * /auth/forgot-password:
@@ -139,7 +141,7 @@ router.post('/change-password', authController_1.changePassword);
  *       200:
  *         description: Reset link sent
  */
-router.post('/forgot-password', authController_1.forgotPassword);
-router.post('/google', authController_1.googleLogin);
+router.post('/forgot-password', (0, validateRequest_1.validateRequest)(auth_validator_1.forgotPasswordSchema), authController_1.forgotPassword);
+router.post('/google', (0, validateRequest_1.validateRequest)(auth_validator_1.googleLoginSchema), authController_1.googleLogin);
 exports.default = router;
 //# sourceMappingURL=auth.js.map

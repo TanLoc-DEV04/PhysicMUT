@@ -2,7 +2,8 @@ import os
 from langchain_community.document_loaders import PyMuPDFLoader
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_chroma import Chroma
-from langchain_openai import OpenAIEmbeddings
+# from langchain_openai import OpenAIEmbeddings
+from langchain_huggingface import HuggingFaceEmbeddings
 from dotenv import load_dotenv
 
 # Ensure environment variables (like OPENAI_API_KEY) are loaded
@@ -60,7 +61,7 @@ def create_vectorstore():
     print("Initializing OpenAI Embeddings and creating ChromaDB. This might take a few minutes...")
     
     try:
-        embedding_function = OpenAIEmbeddings(model="text-embedding-3-small")
+        embedding_function = HuggingFaceEmbeddings(model_name="all-MiniLM-L6-v2")
         
         # We create the vectorstore from the chunks
         Chroma.from_documents(

@@ -193,37 +193,37 @@ async function main() {
 
         <h3>a. Lực Lo-ren-xơ (Lực hướng tâm)</h3>
         <p>Lực từ tác dụng lên hạt đóng vai trò là lực hướng tâm:</p>
-        <p style="background-color: #f1f1f1; padding: 10px; border-left: 5px solid #3498db;">
-            F = |q|vB = m(v<sup>2</sup> / r)
+        <p style="background-color: #f1f1f1; padding: 10px; border-left: 5px solid #3498db; text-align: center; overflow-x: auto;">
+            $$ F_{ht} = F_{Lorentz} \\Rightarrow m \\cdot \\frac{v^2}{R} = |q| \\cdot v \\cdot B $$
         </p>
-        <p><em>Trong đó: v là vận tốc dài, r là bán kính quỹ đạo [1, 2].</em></p>
+        <p><em>Trong đó: \\( v \\) là vận tốc dài, \\( R \\) là bán kính quỹ đạo [1, 2].</em></p>
 
-        <h3>b. Bán kính quỹ đạo (r)</h3>
-        <p style="background-color: #f1f1f1; padding: 10px; border-left: 5px solid #3498db;">
-            r = (mv) / (|q|B)
+        <h3>b. Bán kính quỹ đạo (\\( R \\))</h3>
+        <p style="background-color: #f1f1f1; padding: 10px; border-left: 5px solid #3498db; text-align: center; overflow-x: auto;">
+            $$ R = \\frac{m \\cdot v}{|q| \\cdot B} $$
         </p>
-        <p><em>Nhận xét:</em> Bán kính tỉ lệ thuận với vận tốc. Khi hạt được gia tốc, <em>v</em> tăng thì <em>r</em> tăng [2, 5].</p>
+        <p><em>Nhận xét:</em> Bán kính tỉ lệ thuận với vận tốc. Khi hạt được gia tốc, \\( v \\) tăng thì \\( R \\) tăng theo, tạo thành quỹ đạo xoắn ốc [2, 5].</p>
 
-        <h3>c. Chu kỳ (T) và Tần số (f)</h3>
+        <h3>c. Chu kỳ (\\( T \\)) và Tần số (\\( f \\))</h3>
         <p>Đây là đại lượng quan trọng nhất chứng minh khả năng đồng bộ hóa của Cyclotron.</p>
         <ul>
-            <li><strong>Chu kỳ quay:</strong> T = (2&pi;r) / v = (2&pi;m) / (|q|B)</li>
-            <li><strong>Tần số Cyclotron:</strong> f = 1/T = (|q|B) / (2&pi;m)</li>
-            <li><strong>Tần số góc:</strong> &omega; = (|q|B) / m</li>
+            <li><strong>Chu kỳ quay:</strong> $$ T = \\frac{2\\pi R}{v} = \\frac{2\\pi m}{|q| \\cdot B} $$</li>
+            <li><strong>Tần số Cyclotron (điều kiện đồng bộ):</strong> $$ f = \\frac{1}{T} = \\frac{|q| \\cdot B}{2\\pi \\cdot m} $$</li>
+            <li><strong>Tần số góc:</strong> $$ \\omega = \\frac{|q| \\cdot B}{m} $$</li>
         </ul>
-        <p><strong>Lưu ý cực kỳ quan trọng:</strong> Chu kỳ và tần số quay <strong>không phụ thuộc</strong> vào vận tốc <em>v</em> và bán kính <em>r</em> (trong phạm vi phi tương đối tính). Điều này cho phép dùng nguồn điện xoay chiều có tần số không đổi để gia tốc hạt liên tục [5-7].</p>
+        <p><strong>Lưu ý cực kỳ quan trọng:</strong> Chu kỳ và tần số quay <strong>không phụ thuộc</strong> vào vận tốc \\( v \\) và bán kính \\( R \\) (trong phạm vi phi tương đối tính). Điều này cho phép dùng nguồn điện xoay chiều có tần số không đổi để gia tốc hạt liên tục [5-7].</p>
 
-        <h3>d. Động năng cực đại (W<sub>đmax</sub>)</h3>
-        <p>Hạt đạt động năng cực đại khi ở mép ngoài cùng của hộp D (bán kính R<sub>max</sub> của máy):</p>
-        <p style="background-color: #f1f1f1; padding: 10px; border-left: 5px solid #3498db;">
-            v<sub>max</sub> = (|q|B R<sub>max</sub>) / m <br>
-            W<sub>đmax</sub> = 0.5 * m * v<sub>max</sub><sup>2</sup> = (q<sup>2</sup> B<sup>2</sup> R<sub>max</sub><sup>2</sup>) / (2m)
+        <h3>d. Động năng cực đại (\\( W_{d(max)} \\))</h3>
+        <p>Hạt đạt động năng cực đại khi ở mép ngoài cùng của hộp D (bán kính \\( R_{max} \\) của máy):</p>
+        <p style="background-color: #f1f1f1; padding: 10px; border-left: 5px solid #3498db; text-align: center; overflow-x: auto;">
+            $$ v_{max} = \\frac{|q| \\cdot B \\cdot R_{max}}{m} $$
+            $$ W_{d(max)} = \\frac{1}{2} m \\cdot v_{max}^2 = \\frac{|q|^2 \\cdot B^2 \\cdot R_{max}^2}{2m} $$
         </p>
-        <p><em>Nhận xét:</em> Động năng cực đại tỉ lệ với bình phương bán kính máy và bình phương cảm ứng từ, <strong>không phụ thuộc</strong> vào hiệu điện thế gia tốc <em>U</em> giữa hai bản cực [8].</p>
+        <p><em>Nhận xét:</em> Động năng cực đại tỉ lệ với bình phương bán kính máy và bình phương cảm ứng từ, <strong>không phụ thuộc</strong> vào hiệu điện thế gia tốc \\( U \\) giữa hai bản cực [8].</p>
 
-        <h3>e. Số vòng quay (N)</h3>
-        <p>Giả sử hiệu điện thế giữa hai hộp D là <em>U</em>. Mỗi vòng quay hạt đi qua khe 2 lần, mỗi lần nhận năng lượng |q|U. Tổng động năng đạt được:</p>
-        <p>W<sub>đmax</sub> = N * (2|q|U) &rArr; N = W<sub>đmax</sub> / (2|q|U)</p>
+        <h3>e. Số vòng quay (\\( N \\))</h3>
+        <p>Giả sử hiệu điện thế giữa hai khe hở là \\( U \\). Mỗi vòng quay hạt đi qua khe 2 lần, mỗi lần nhận năng lượng \\( |q| \\cdot U \\). Tổng động năng đạt được:</p>
+        <p style="text-align: center;">$$ W_{d(max)} = N \\cdot (2|q| \\cdot U) \\Rightarrow N = \\frac{W_{d(max)}}{2|q| \\cdot U} $$</p>
     </section>
 
     <section>
@@ -586,17 +586,18 @@ $W_{d} = \\frac{1,333 \\cdot 10^{-12}}{1,6 \\cdot 10^{-13}} \\approx 8,33 \\text
         <h2 style="color: #2980b9;">3. Các công thức quan trọng (Dùng cho thi THPT QG)</h2>
         
         <h3>a. Độ lớn lực từ (Lực đẩy/kéo màng loa)</h3>
-        <p>Lực từ tác dụng lên cuộn dây khi có dòng điện chạy qua:</p>
-        <div style="background-color: #f1f1f1; padding: 15px; border-left: 5px solid #27ae60; margin: 10px 0;">
-            <strong>F = B &cdot; I &cdot; &ell;</strong>
+        <p>Lực từ tác dụng lên cuộn dây khi có dòng điện chạy qua được xác định bởi công thức:</p>
+        <div style="background-color: #f1f1f1; padding: 15px; border-left: 5px solid #27ae60; margin: 10px 0; overflow-x: auto; text-align: center;">
+            $$ F = B \\cdot I \\cdot l $$
         </div>
         <p><em>Trong đó:</em></p>
         <ul style="list-style-type: square;">
-            <li><strong>F:</strong> Lực từ (Newton - N).</li>
-            <li><strong>B:</strong> Cảm ứng từ của nam châm (Tesla - T).</li>
-            <li><strong>I:</strong> Cường độ dòng điện chạy qua cuộn dây (Ampe - A).</li>
-            <li><strong>&ell;:</strong> Tổng chiều dài dây dẫn trong từ trường (mét - m) [6].</li>
+            <li>\\( F \\) là lực từ tác dụng lên cuộn dây (N).</li>
+            <li>\\( B \\) là cảm ứng từ của nam châm vĩnh cửu (T).</li>
+            <li>\\( I \\) là cường độ dòng điện chạy qua cuộn dây (A) [1].</li>
+            <li>\\( l \\) là chiều dài tổng cộng của đoạn dây dẫn nằm trong từ trường (m).</li>
         </ul>
+        <p>Khi cường độ dòng điện \\( I \\) thay đổi, lực từ \\( F \\) thay đổi làm màng loa dao động với biên độ thay đổi, từ đó quyết định độ to của âm thanh phát ra [1, 7]. Tần số của dòng điện đầu vào sẽ quyết định tần số dao động của màng loa, tạo ra âm thanh có cùng tần số [8].</p>
 
         <h3>b. Áp suất tác dụng lên màng loa (p)</h3>
         <p>Trong các bài tập nâng cao, áp suất cực đại tác dụng lên màng loa có diện tích <em>S</em> được tính bằng:</p>
@@ -971,38 +972,25 @@ $W_{d} = \\frac{1,333 \\cdot 10^{-12}}{1,6 \\cdot 10^{-13}} \\approx 8,33 \\text
 
     <section>
         <h2 style="color: #2980b9;">2. Cấu tạo và Nguyên lý hoạt động</h2>
-        <p>Quá trình hoạt động gồm 3 giai đoạn chính:</p>
-        
-        <h3>Giai đoạn 1: Tạo ion và Tăng tốc (Buồng gia tốc)</h3>
+        <p>Quá trình hoạt động gồm các giai đoạn chính:</p>
         <ul>
-            <li>Các nguyên tử của mẫu chất được làm nóng bay hơi và bị bắn phá bởi chùm electron để trở thành các ion dương (thường là ion +1) [1].</li>
-            <li>Các ion này được tăng tốc bởi một điện trường mạnh (hiệu điện thế U) giữa hai khe hẹp S<sub>1</sub> và S<sub>2</sub>.</li>
-            <li>Vận tốc khi ra khỏi buồng gia tốc:</li>
+            <li>
+                <strong>1. Buồng ion hoá:</strong> Biến các nguyên tử/phân tử của mẫu chất thành ion mang điện tích \\( q \\) [12].
+            </li>
+            <li>
+                <strong>2. Buồng gia tốc:</strong> Dưới tác dụng của một hiệu điện thế mạnh \\( U \\), các ion được gia tốc. Theo định lý biến thiên động năng (bỏ qua vận tốc đầu), ta có:
+                <div style="background-color: #f1f1f1; padding: 10px; border-left: 5px solid #8e44ad; overflow-x: auto; text-align: center; margin: 10px 0;">
+                    $$ \\Delta W_d = \\frac{1}{2}mv^2 = |q|U \\Rightarrow v = \\sqrt{\\frac{2 \\cdot |q| \\cdot U}{m}} $$
+                </div>
+            </li>
+            <li>
+                <strong>3. Buồng phân tích (vùng từ trường):</strong> Ion đi vào từ trường đều \\( \\vec{B} \\) theo phương vuông góc với các đường sức từ. Lực từ (lực Lorentz) có độ lớn \\( F = |q|vB \\) đóng vai trò là lực hướng tâm làm ion chuyển động theo quỹ đạo tròn [12, 13]:
+                <div style="background-color: #f1f1f1; padding: 10px; border-left: 5px solid #8e44ad; overflow-x: auto; text-align: center; margin: 10px 0;">
+                    $$ F_{ht} = F_{Lorentz} \\Rightarrow \\frac{m \\cdot v^2}{r} = |q| \\cdot v \\cdot B \\Rightarrow r = \\frac{m \\cdot v}{|q| \\cdot B} $$
+                </div>
+            </li>
         </ul>
-        <div style="background-color: #f1f1f1; padding: 10px; border-left: 5px solid #8e44ad; margin-bottom: 15px;">
-            <strong>&frac12;mv<sup>2</sup> = |q|U &rArr; v = &radic;(2|q|U / m)</strong>
-        </div>
-
-        <h3>Giai đoạn 2: Chọn vận tốc (Bộ lọc vận tốc - Tùy chọn)</h3>
-        <ul>
-            <li>Để chùm hạt có vận tốc giống nhau, người ta cho chúng đi qua vùng không gian có cả điện trường E và từ trường B<sub>0</sub> vuông góc nhau.</li>
-            <li>Chỉ những hạt có vận tốc thỏa mãn <strong>v = E / B<sub>0</sub></strong> mới đi thẳng qua khe vào buồng phân tách [4].</li>
-        </ul>
-
-        <h3>Giai đoạn 3: Phân tách theo khối lượng (Buồng từ trường)</h3>
-        <ul>
-            <li>Chùm ion đi vào vùng từ trường đều B (vuông góc với vận tốc).</li>
-            <li>Lực Lo-ren-xơ đóng vai trò lực hướng tâm làm ion chuyển động theo quỹ đạo tròn [1], [5].</li>
-            <li>Bán kính quỹ đạo:</li>
-        </ul>
-        <div style="background-color: #f1f1f1; padding: 10px; border-left: 5px solid #8e44ad;">
-            <strong>R = (mv) / (|q|B)</strong>
-        </div>
-        <p>Thay v từ giai đoạn 1 vào, ta có mối liên hệ giữa R và m:</p>
-        <div style="background-color: #f1f1f1; padding: 10px; border-left: 5px solid #8e44ad;">
-            <strong>R = (1/B) * &radic;(2mU / |q|)</strong>
-        </div>
-        <p>&rArr; <strong>R &sim; &radic;m</strong>. Các hạt có khối lượng m khác nhau sẽ chùm lên phim ảnh (hoặc detector) ở các vị trí khác nhau (bán kính R khác nhau) [5], [6].</p>
+        <p>Do bán kính quỹ đạo \\( r \\) phụ thuộc vào tỉ số \\( \\frac{m}{|q|} \\), các ion nặng nhẹ khác nhau sẽ bị lệch theo các đường cong khác nhau và rơi vào những vị trí khác biệt trên bản phim máy dò [12, 14].</p>
     </section>
 
     <section>

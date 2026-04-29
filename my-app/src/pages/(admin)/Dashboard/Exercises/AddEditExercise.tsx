@@ -7,12 +7,12 @@ import {
 } from "@ant-design/icons";
 import { useNavigate, useParams } from "react-router-dom";
 import { useEffect } from "react";
-import RenderFormItem from '../Admin/RenderFormItem';
+import RenderFormItem from '../admin/RenderFormItem';
 import { useQuery } from "@tanstack/react-query";
 import { model3DService } from '../../../../services/models.service';
 import { exerciseService } from '../../../../services/exercise.service';
-import { useExerciseMutations } from "./useExerciseMutations";
-import { use3DModelTypes } from '../3DModels/use3DModelManagement';
+import { useExerciseMutations } from "./hooks/useExerciseMutations";
+import { use3DModelTypes } from '../3d-models/hooks/use3DModelManagement';
 
 const AddEditExercise = () => {
   const [form] = Form.useForm();

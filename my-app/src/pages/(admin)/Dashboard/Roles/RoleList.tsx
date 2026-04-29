@@ -2,8 +2,8 @@ import { useState } from "react";
 import { Table, Button, Space, Popconfirm, Switch } from "antd";
 import { PlusOutlined, EyeOutlined, DeleteOutlined } from "@ant-design/icons";
 import { useNavigate } from "react-router-dom";
-import { useRole } from "./useRole";
-import { useRoleMutations } from "./useRoleMutations";
+import { useRole } from "./hooks/useRole";
+import { useRoleMutations } from "./hooks/useRoleMutations";
 import SearchInput from '../../../../components/shared/SearchInput';
 import Pagination from '../../../../components/shared/Pagination';
 

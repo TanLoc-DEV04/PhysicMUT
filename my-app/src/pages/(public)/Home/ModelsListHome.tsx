@@ -5,12 +5,21 @@ import SearchInput from '../../../components/shared/SearchInput';
 import MultiFilterSelect from '../../../components/shared/MultiFilterSelect';
 import Pagination from '../../../components/shared/Pagination';
 import { useModels3D } from '../../../hooks/useContent';
+import useSEO from '../../../hooks/useSEO';
 
 function ModelsListHome() {
   const [searchQuery, setSearchQuery] = useState('');
   const [selectedCategory, setSelectedCategory] = useState<string | null>(null);
   const [first, setFirst] = useState(0);
   const [rows, setRows] = useState(8);
+
+  useSEO({
+    title: 'Danh sách Mô hình Vật lý 3D',
+    description:
+      'Khám phá thư viện mô hình Vật lý 3D tương tác trên PhysicMUT: Cyclotron, Loa điện động, và nhiều thí nghiệm ảo khác. Tìm kiếm và lọc theo chủ đề ngay.',
+    keywords: 'danh sách mô hình 3D, Vật lý 12, Cyclotron, loa điện động, mô phỏng vật lý',
+    canonicalUrl: window.location.origin + '/models',
+  });
 
   // Fetch directly from Model3D table
   const { data: models3d = [], isLoading, error, refetch } = useModels3D();

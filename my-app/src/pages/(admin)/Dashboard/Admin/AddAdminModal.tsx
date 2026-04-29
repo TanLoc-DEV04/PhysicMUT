@@ -1,6 +1,6 @@
 import { Modal, Form, Input, Select, Switch } from 'antd';
 import { useEffect } from 'react';
-import { useUpdateAndAddAdmin } from './useUpdateAndAddAdmin';
+import { useUpdateAndAddAdmin } from './hooks/useUpdateAndAddAdmin';
 import { useQuery } from '@tanstack/react-query';
 import { roleService } from '../../../../services/role.service';
 
