@@ -45,9 +45,7 @@ app.use(
         connectSrc: [
           "'self'",
           process.env.BOT_URL || "http://localhost:8000",
-          process.env.FRONTEND_URL ||
-            "http://localhost:5173" ||
-            "http://localhost:4173",
+          process.env.FRONTEND_URL || "http://localhost:5173",
         ],
         // Cho phép tải ảnh từ chính domain, data URI và Supabase Storage
         imgSrc: ["'self'", "data:", "blob:", "https://*.supabase.co"],
