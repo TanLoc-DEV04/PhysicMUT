@@ -1,7 +1,12 @@
 *.pdf
 *.sqlite3
-docs/*
 .env
 *.env
 my-app/playwright-report/
 my-app/test-results/
+
+# Ignore documentation and diagrams folders
+drawio/
+out/
+docs/
+plant-uml/
