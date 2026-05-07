@@ -66,24 +66,32 @@ function App() {
 
           {/* Dashboard Routes (No MainLayout or different layout) */}
           <Route
-            element={
-              <PrivateRoute
-                requiredPermissions={["view_dashboard"]}
-              />
-            }
+            element={<PrivateRoute requiredPermissions={["view_dashboard"]} />}
           >
             <Route path="/dashboard" element={<MainDashboard />}>
               <Route index element={<DashboardOverview />} />
 
-              <Route element={<PrivateRoute requiredPermissions={["view_admin_list"]} />}>
+              <Route
+                element={
+                  <PrivateRoute requiredPermissions={["view_admin_list"]} />
+                }
+              >
                 <Route path="admins" element={<AdminManagementList />} />
               </Route>
-              <Route element={<PrivateRoute requiredPermissions={["view_role_list"]} />}>
+              <Route
+                element={
+                  <PrivateRoute requiredPermissions={["view_role_list"]} />
+                }
+              >
                 <Route path="roles" element={<RoleList />} />
                 <Route path="roles/add" element={<AddRole />} />
                 <Route path="roles/:id" element={<AddRole />} />
               </Route>
-              <Route element={<PrivateRoute requiredPermissions={["view_user_list"]} />}>
+              <Route
+                element={
+                  <PrivateRoute requiredPermissions={["view_user_list"]} />
+                }
+              >
                 <Route path="users" element={<UserList />} />
                 <Route path="users/:id" element={<UserDetail />} />
               </Route>
@@ -95,14 +103,15 @@ function App() {
               >
                 <Route path="3d-models" element={<ThreeDModelList />} />
                 <Route path="3d-models/add" element={<AddEdit3DModel />} />
-                <Route path="3d-models/:typeName" element={<AddEdit3DModel />} />
+                <Route
+                  path="3d-models/:typeName"
+                  element={<AddEdit3DModel />}
+                />
               </Route>
 
               <Route
                 element={
-                  <PrivateRoute
-                    requiredPermissions={["view_theory_list"]}
-                  />
+                  <PrivateRoute requiredPermissions={["view_theory_list"]} />
                 }
               >
                 <Route path="theory" element={<TheoryList />} />
@@ -112,9 +121,7 @@ function App() {
 
               <Route
                 element={
-                  <PrivateRoute
-                    requiredPermissions={["view_example_list"]}
-                  />
+                  <PrivateRoute requiredPermissions={["view_example_list"]} />
                 }
               >
                 <Route path="examples" element={<ExampleManagementList />} />
@@ -124,16 +131,13 @@ function App() {
 
               <Route
                 element={
-                  <PrivateRoute
-                    requiredPermissions={["view_exercise_list"]}
-                  />
+                  <PrivateRoute requiredPermissions={["view_exercise_list"]} />
                 }
               >
                 <Route path="exercises" element={<ExerciseManagementList />} />
                 <Route path="exercises/add" element={<AddEditExercise />} />
                 <Route path="exercises/:id" element={<AddEditExercise />} />
               </Route>
-
 
               {/* Add other routes similarly */}
               <Route

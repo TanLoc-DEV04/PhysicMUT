@@ -42,7 +42,9 @@ export default function ModelRegistry({
       case "SPEAKER":
         return <LoudspeakerSim />;
       default:
-        return <Placeholder modelName={modelName || ""} description={description} />;
+        return (
+          <Placeholder modelName={modelName || ""} description={description} />
+        );
     }
   };
 
@@ -50,38 +52,40 @@ export default function ModelRegistry({
   if (!isLoaded && normalizedType !== "UNKNOWN") {
     return (
       <Model3D title={modelName}>
-        <div 
+        <div
           className="relative w-full h-[500px] overflow-hidden group cursor-pointer bg-slate-200"
           onClick={() => setIsLoaded(true)}
         >
           {thumbnailUrl ? (
-            <img 
-              src={thumbnailUrl} 
-              alt={modelName} 
+            <img
+              src={thumbnailUrl}
+              alt={modelName}
               className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
               loading="lazy"
             />
           ) : (
             <div className="w-full h-full flex items-center justify-center text-gray-400">
-               Chưa có hình ảnh mô phỏng
+              Chưa có hình ảnh mô phỏng
             </div>
           )}
-          
+
           {/* Overlay with play button */}
           <div className="absolute inset-0 bg-black/40 flex flex-col items-center justify-center transition-all group-hover:bg-black/20">
-             <div className="w-20 h-20 rounded-full bg-[#0f6cbf] flex items-center justify-center mb-4 shadow-xl transform transition-transform group-hover:scale-110">
-                <PlayCircleOutlined style={{ fontSize: '48px', color: 'white' }} />
-             </div>
-             <Button 
-               type="primary" 
-               size="large" 
-               className="bg-[#0f6cbf] border-none font-bold px-8 h-12 rounded-full shadow-lg"
-             >
-               TẢI MÔ HÌNH 3D TƯƠNG TÁC
-             </Button>
-             <p className="text-white mt-4 font-medium opacity-80">
-               Tiết kiệm dữ liệu & Tăng tốc độ tải trang
-             </p>
+            <div className="w-20 h-20 rounded-full bg-[#0f6cbf] flex items-center justify-center mb-4 shadow-xl transform transition-transform group-hover:scale-110">
+              <PlayCircleOutlined
+                style={{ fontSize: "48px", color: "white" }}
+              />
+            </div>
+            <Button
+              type="primary"
+              size="large"
+              className="bg-[#0f6cbf] border-none font-bold px-8 h-12 rounded-full shadow-lg"
+            >
+              TẢI MÔ HÌNH 3D TƯƠNG TÁC
+            </Button>
+            <p className="text-white mt-4 font-medium opacity-80">
+              Tiết kiệm dữ liệu & Tăng tốc độ tải trang
+            </p>
           </div>
         </div>
       </Model3D>
