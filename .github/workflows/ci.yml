@@ -2,43 +2,43 @@ name: CI Pipeline
 
 on:
   push:
-    branches: [ "main" ]
+    branches: ["main"]
   pull_request:
-    branches: [ "main" ]
+    branches: ["main"]
 
 jobs:
   build-and-test:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout code
-      uses: actions/checkout@v4
+      - name: Checkout code
+        uses: actions/checkout@v4
 
-    - name: Setup Node.js
-      uses: actions/setup-node@v4
-      with:
-        node-version: '20'
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: "20"
 
-    - name: Install dependencies
-      run: |
-        cd PhysicMUT-be
-        npm install
+      - name: Install dependencies
+        run: |
+          cd PhysicMUT-be
+          npm install
 
-    - name: Build project (TypeScript Check)
-      run: |
-        cd PhysicMUT-be
-        npm run build
+      - name: Build project (TypeScript Check)
+        run: |
+          cd PhysicMUT-be
+          npm run build
 
-    - name: Run Integration Tests
-      run: |
-        cd PhysicMUT-be
-        npm test
+      - name: Run Integration Tests
+        run: |
+          cd PhysicMUT-be
+          npm test
 
-    - name: SonarCloud Scan
-      uses: SonarSource/sonarcloud-github-action@master
-      env:
-        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
-      with:
-        args: >
-          -Dsonar.projectBaseDir=PhysicMUT-be
+      - name: SonarQube Scan
+        uses: sonarsource/sonarqube-scan-action@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+        with:
+          args: >
+            -Dsonar.projectBaseDir=PhysicMUT-be
