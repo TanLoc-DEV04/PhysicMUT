@@ -93,7 +93,7 @@ export const getAllowedOrigins = (): string[] => {
     "http://localhost:4173",
     "http://localhost:3000",
     "http://127.0.0.1:5173",
-    "https://physic-mut.vercel.app/",
+    "https://physic-mut.vercel.app",
   ];
 
   const productionOrigin = process.env.FRONTEND_URL;
