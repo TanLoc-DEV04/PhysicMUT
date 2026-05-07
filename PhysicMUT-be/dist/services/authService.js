@@ -8,6 +8,7 @@ const db_1 = __importDefault(require("../config/db"));
 const bcrypt_1 = __importDefault(require("bcrypt"));
 const jsonwebtoken_1 = __importDefault(require("jsonwebtoken"));
 const google_auth_library_1 = require("google-auth-library");
+const crypto_1 = __importDefault(require("crypto"));
 const client = new google_auth_library_1.OAuth2Client(process.env.GOOGLE_CLIENT_ID || 'dummy');
 const JWT_SECRET = process.env.JWT_SECRET || 'fallback-secret-key';
 const login = async (data) => {
@@ -19,7 +20,7 @@ const login = async (data) => {
         throw new Error('Invalid credentials');
     }
     if (!user.is_active || !user.role || !user.role.is_active) {
-        throw new Error('Tài khoản hoặc quyền của bạn đã bị vô hiệu hóa.');
+        throw new Error('Your account or role has been disabled.');
     }
     let isMatch = false;
     if (user.password_hash.startsWith('$2b$') || user.password_hash.startsWith('$2a$')) {
@@ -74,7 +75,7 @@ const googleLogin = async (credential) => {
         throw new Error('Invalid Google token');
     }
     const email = payload.email;
-    const name = payload.name || 'Người dùng Google';
+    const name = payload.name || 'Google User';
     let user = await db_1.default.user.findUnique({
         where: { email },
         include: { role: true }
@@ -85,7 +86,7 @@ const googleLogin = async (credential) => {
             throw new Error('Default USER role not found.');
         }
         const salt = await bcrypt_1.default.genSalt(10);
-        const randomPassword = await bcrypt_1.default.hash(Math.random().toString(36).slice(-10), salt);
+        const randomPassword = await bcrypt_1.default.hash(crypto_1.default.randomBytes(8).toString('hex'), salt);
         const baseUsername = email.split('@')[0];
         let username = baseUsername;
         let counter = 1;
@@ -105,7 +106,7 @@ const googleLogin = async (credential) => {
         });
     }
     if (!user || !user.is_active || !user.role?.is_active) {
-        throw new Error('Tài khoản hoặc quyền đã bị vô hiệu.');
+        throw new Error('Your account or role has been disabled.');
     }
     const token = jsonwebtoken_1.default.sign({ userId: user.id, role: user.role?.name || 'USER' }, JWT_SECRET, { expiresIn: '24h' });
     const { password_hash: p_h, ...userBuffer } = user;

@@ -1,0 +1,69 @@
+@startuml
+!theme plain
+skinparam componentStyle rectangle
+skinparam arrowThickness 1.5
+skinparam packageStyle rectangle
+
+' Cấu hình màu sắc tổng thể
+skinparam component {
+  BackgroundColor<<Frontend>> #E6F2FF
+  BorderColor<<Frontend>> #00509E
+  
+  BackgroundColor<<Backend>> #E6FFE6
+  BorderColor<<Backend>> #006600
+  
+  BackgroundColor<<AI>> #FFF2E6
+  BorderColor<<AI>> #CC6600
+}
+
+skinparam database {
+  BackgroundColor<<Data>> #F2E6FF
+  BorderColor<<Data>> #660099
+}
+
+skinparam node {
+  BackgroundColor<<Data>> #F2E6FF
+  BorderColor<<Data>> #660099
+}
+
+package "Tầng Giao diện (Frontend Layer)" #F8F9FA {
+    component "React SPA & Router\n(Ant Design, PrimeReact)" as ui <<Frontend>>
+    component "WebGL 3D Engine\n(Three.js Canvas)" as threejs <<Frontend>>
+}
+
+package "Tầng Ứng dụng & Trợ lý ảo (App & AI Layer)" #F8F9FA {
+    component "Express.js Server\n(CMS API, Xác thực, Limit)" as express <<Backend>>
+    component "Prisma ORM\n(Data Access Layer)" as prisma <<Backend>>
+    
+    component "FastAPI Server\n(Endpoints Chat/Gen, Guard)" as fastapi <<AI>>
+    component "RAG Pipeline\n(LangChain, HuggingFace)" as langchain <<AI>>
+}
+
+package "Tầng Lưu trữ & Suy luận (Data & Engine Layer)" #F8F9FA {
+    database "PostgreSQL\n(Tài khoản, Lý thuyết)" as postgres <<Data>>
+    database "ChromaDB\n(Vector SGK/Design)" as chroma <<Data>>
+    node "Ollama Engine\n(Local Llama 3)" as ollama <<Data>>
+}
+
+' =========================================================
+' LIÊN KẾT NỘI BỘ VÀ TẦNG DATA
+' =========================================================
+ui <--> threejs : Truyền tham số\n(State & Props)
+
+express <--> prisma
+fastapi <--> langchain
+
+prisma <--> postgres
+langchain <--> chroma : Truy xuất/Lưu Vector
+langchain <--> ollama : Inference/Tool Calls
+
+' =========================================================
+' KẾT NỐI XUYÊN TẦNG (CROSS-LAYER ROUTING)
+' =========================================================
+ui --> express : REST API (JSON)
+ui --> fastapi : Gửi Message / Sinh học liệu
+
+' Điểm nhấn Tool Calling (Đường nét đứt màu đỏ giống TikZ)
+fastapi .[#CC0000,thickness=2].> threejs : <color:#CC0000>Gọi công cụ (Tool Calling: update_3d)
+
+@enduml

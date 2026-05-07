@@ -1,0 +1,74 @@
+@startuml
+' Ép các đường nối thành đường thẳng (vuông góc)
+skinparam linetype ortho
+skinparam nodesep 70
+skinparam ranksep 70
+skinparam componentStyle rectangle
+skinparam Padding 10
+
+' Tùy chỉnh màu sắc
+skinparam database {
+    BackgroundColor #FFF3E0
+    BorderColor #EF6C00
+}
+skinparam component {
+    BackgroundColor #E3F2FD
+    BorderColor #1565C0
+}
+skinparam artifact {
+    BackgroundColor #E8F5E9
+    BorderColor #2E7D32
+}
+skinparam package {
+    BackgroundColor #FAFAFA
+    BorderColor #757575
+    FontSize 14
+    FontStyle bold
+}
+
+' ==========================================
+' ĐỊNH NGHĨA CÁC THÀNH PHẦN
+' (Thứ tự khai báo từ trái qua phải hỗ trợ căn giữa)
+' ==========================================
+
+package "Tầng Máy khách (Client/Frontend)" {
+    actor "User\n(Học sinh)" as Student
+    actor "Admin\n(Quản trị viên)" as Admin
+}
+
+package "1. Tầng Giao tiếp (Presentation Layer)" {
+    artifact "Public DTO\n(Lọc bỏ đáp án & DRAFT)" as DTO_Pub
+    component "Controller\n(DTO Mapper & Filter)" as Ctrl
+    artifact "Admin DTO\n(Bảo toàn toàn bộ dữ liệu)" as DTO_Priv
+}
+
+package "2. Tầng Nghiệp vụ (Business Layer)" {
+    component "Service Logic" as Svc
+    artifact "Domain Model\n(Thực thể chứa đáp án\nvà nội dung DRAFT)" as Domain
+}
+
+package "3. Tầng Lưu trữ (Persistence Layer)" {
+    component "Repository" as Repo
+}
+
+database "PostgreSQL\n(Physical DB)" as DB
+
+' ==========================================
+' ĐỊNH NGHĨA LUỒNG DỮ LIỆU
+' ==========================================
+
+' 1. Trục dọc trung tâm (Ép căn giữa thẳng tắp)
+DB -up--> Repo : "1. Truy xuất"
+Repo -up-> Svc : "2. Dữ liệu thô"
+Svc -up-> Domain : "3. Xử lý nghiệp vụ"
+Domain -up-> Ctrl : "4. Chuyển giao"
+
+' 2. Trục ngang (Dàn đều 2 bên từ Controller)
+Ctrl -left-> DTO_Pub : "5a. Lọc dữ liệu\n(Role = User)"
+Ctrl -right-> DTO_Priv : "5b. Giữ nguyên\n(Role = Admin)"
+
+' 3. Kết nối lên trên Actor (Tạo đường thẳng đứng hoàn hảo)
+DTO_Pub -up--> Student : "6a. JSON Response"
+DTO_Priv -up-> Admin : "6b. JSON Response"
+
+@enduml

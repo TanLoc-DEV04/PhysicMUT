@@ -56,7 +56,7 @@ const deleteRole = async (id) => {
     // Check if role is assigned to any users
     const usersWithRole = await db_1.default.user.count({ where: { role_id: id } });
     if (usersWithRole > 0) {
-        throw new Error(`Không thể xóa role này vì đang có ${usersWithRole} tài khoản đang sử dụng. Vui lòng chuyển các tài khoản đó sang role khác trước.`);
+        throw new Error(`Cannot delete this role because there are ${usersWithRole} accounts using it. Please move these accounts to another role first.`);
     }
     await db_1.default.role.delete({ where: { id } });
 };

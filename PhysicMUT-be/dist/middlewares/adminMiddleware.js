@@ -32,18 +32,18 @@ const requireAdminAccess = async (req, res, next) => {
         }
         // Check 1: User account must be active
         if (!user.is_active) {
-            res.status(403).json({ error: 'Forbidden: Tài khoản của bạn đã bị vô hiệu hóa.' });
+            res.status(403).json({ error: 'Forbidden: Your account is disabled.' });
             return;
         }
         // Check 2: Role must exist and be active
         if (!user.role || !user.role.is_active) {
-            res.status(403).json({ error: 'Forbidden: Role của bạn đã bị vô hiệu hóa.' });
+            res.status(403).json({ error: 'Forbidden: Your role is disabled.' });
             return;
         }
         // Check 3: Role must not be a non-admin role
         if (NON_ADMIN_ROLES.includes(user.role.name)) {
             res.status(403).json({
-                error: 'Forbidden: Tài khoản của bạn không có quyền truy cập trang quản trị.'
+                error: 'Forbidden: Your account does not have permission to access the admin page.'
             });
             return;
         }

@@ -1,0 +1,19 @@
+@startuml
+title Mô hình triển khai lai của PhysicMUT
+
+' Cấu hình chung cho các khối (bo góc giống rounded corners)
+skinparam rectangle {
+    RoundCorner 15
+    Shadowing false
+}
+
+' Định nghĩa các khối với màu nền tương ứng
+rectangle "Frontend\nVercel\nReact + Vite" as fe #E6E6FF
+rectangle "Backend\nRailway\nExpress + Prisma" as be #E6FFE6
+rectangle "AI Engine\nOn-Premise / Localhost\nFastAPI + RAG" as ai #FFF0E6
+
+' Định nghĩa các mũi tên và nhãn
+fe -right-> be : REST / JWT
+be -right-> ai : HTTP / JSON
+
+@enduml

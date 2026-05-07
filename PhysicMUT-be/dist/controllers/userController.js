@@ -58,10 +58,10 @@ const createUser = async (req, res) => {
         console.error('Create user error:', error);
         if (error.code === 'P2002') {
             const field = error.meta?.target?.includes('email') ? 'Email' : 'Username';
-            res.status(400).json({ error: `${field} đã tồn tại trong hệ thống` });
+            res.status(400).json({ error: `${field} already exists in the system` });
             return;
         }
-        if (error.message && error.message.includes('Dữ liệu không hợp lệ')) {
+        if (error.message && error.message.includes('Invalid data')) {
             res.status(400).json({ error: error.message });
             return;
         }
@@ -90,7 +90,7 @@ const updateUser = async (req, res) => {
     }
     catch (error) {
         console.error(error);
-        if (error.message && error.message.includes('Dữ liệu không hợp lệ')) {
+        if (error.message && error.message.includes('Invalid data')) {
             res.status(400).json({ error: error.message });
             return;
         }

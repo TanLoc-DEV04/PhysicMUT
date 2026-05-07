@@ -112,7 +112,7 @@ const deleteRole = async (req, res) => {
         res.status(204).send();
     }
     catch (error) {
-        if (error.message && error.message.includes('Không thể xóa role')) {
+        if (error.message && error.message.includes('Cannot delete role')) {
             res.status(400).json({ error: error.message });
             return;
         }

@@ -12,7 +12,7 @@ exports.createUserSchema = zod_1.z.object({
     body: zod_1.z.object({
         username: zod_1.z.string().min(1),
         email: zod_1.z.string().email('Invalid email'),
-        password: zod_1.z.string().min(6, 'Mật khẩu phải có ít nhất 6 ký tự'),
+        password: zod_1.z.string().min(6, 'Password must be at least 6 characters long'),
         full_name: zod_1.z.string().optional(),
         role_name: zod_1.z.string().optional(),
         role_id: zod_1.z.string().optional(),

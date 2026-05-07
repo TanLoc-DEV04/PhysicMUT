@@ -1,0 +1,83 @@
+@startuml
+autonumber
+skinparam maxMessageSize 150
+skinparam wrapWidth 250
+
+' Tùy chỉnh màu sắc chuẩn chuyên nghiệp, loại bỏ các yếu tố rườm rà (UML Distilled)
+skinparam sequence {
+    ArrowColor #424242
+    LifeLineBorderColor #757575
+    LifeLineBackgroundColor #FAFAFA
+    ParticipantBorderColor #1565C0
+    ParticipantBackgroundColor #E3F2FD
+    DatabaseBackgroundColor #FFF3E0
+    DatabaseBorderColor #EF6C00
+}
+
+actor "Người dùng\n(User/Admin)" as User
+
+' Phân định ranh giới hệ thống (C4 Model Boundaries)
+box "Frontend Tier (Client-side)" #FAFAFA
+participant "React SPA\n(Router/State)" as UI
+end box
+
+box "Backend & Data Tier (Server-side)" #F1F8E9
+participant "Express API\n(Auth Middleware)" as API
+database "PostgreSQL\n(Prisma ORM)" as DB
+end box
+
+== Luồng Xác thực (Authentication) ==
+
+User -> UI: Nhập Credentials (Email/Pass)\nhoặc chọn Google OAuth
+activate UI
+
+UI -> API: POST /api/auth/login\n(Payload: Credentials)
+activate API
+
+API -> DB: Truy vấn User theo Email
+activate DB
+DB --> API: User Record (kèm Hashed Password)
+deactivate DB
+
+API -> API: Đối chiếu mật khẩu (Bcrypt)
+
+alt Đăng nhập thành công (Happy Path)
+    API -> API: Ký & Tạo JWT Token
+    API --> UI: HTTP 200 OK\n(Trả về JWT Token & Role)
+    UI -> UI: Lưu Token vào LocalStorage/Cookie
+    UI --> User: Điều hướng trang theo Role (Redirect)
+else Thông tin không hợp lệ
+    API --> UI: HTTP 401 Unauthorized
+    UI --> User: Hiển thị cảnh báo lỗi đăng nhập
+end
+
+deactivate API
+deactivate UI
+
+== Luồng Phân quyền (Authorization) ==
+
+User -> UI: Truy cập trang quản trị bảo mật\n(vd: /admin-dashboard)
+activate UI
+
+UI -> API: Yêu cầu lấy dữ liệu (GET /api/admin/...)\n[Header: Authorization Bearer <JWT>]
+activate API
+
+API -> API: Giải mã JWT & Kiểm tra Role\n(RBAC Middleware)
+
+alt Role hợp lệ (Có đặc quyền)
+    API -> DB: Truy vấn dữ liệu nghiệp vụ
+    activate DB
+    DB --> API: Dữ liệu trả về
+    deactivate DB
+    API --> UI: HTTP 200 OK + JSON Data
+    UI --> User: Render giao diện Dashboard & Dữ liệu
+else Thiếu đặc quyền / Token hết hạn
+    API --> UI: HTTP 403 Forbidden / 401 Unauthorized
+    UI -> UI: Xóa Session (nếu cần) & Điều hướng
+    UI --> User: Chuyển về Home & Báo lỗi truy cập
+end
+
+deactivate API
+deactivate UI
+
+@enduml

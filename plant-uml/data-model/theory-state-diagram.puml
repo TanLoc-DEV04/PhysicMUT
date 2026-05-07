@@ -1,0 +1,45 @@
+@startuml
+hide empty description
+skinparam maxMessageSize 150
+skinparam wrapWidth 250
+
+' Tùy chỉnh màu sắc chuẩn chuyên nghiệp theo UML Distilled
+skinparam state {
+    BackgroundColor #FAFAFA
+    BorderColor #1565C0
+    ArrowColor #424242
+    StartColor #2E7D32
+    EndColor #C62828
+    AttributeFontName sans-serif
+}
+
+' Điểm bắt đầu (Initial Node)
+[*] --> DRAFT : Admin chọn "Thêm Lý thuyết"\n(Gán vào Model3D)
+
+' Định nghĩa các Trạng thái (States)
+state DRAFT {
+    DRAFT : Bản nháp (Đang soạn thảo nội dung)
+    DRAFT : Chỉ Admin có quyền truy cập
+}
+
+state ACTIVE #E8F5E9 {
+    ACTIVE : Đã xuất bản (Published)
+    ACTIVE : Hiển thị đồng bộ với Model3D\ntrên Không gian học tập (Public)
+}
+
+state INACTIVE #FFF3E0 {
+    INACTIVE : Tạm ẩn (Hidden)
+    INACTIVE : Đang được Admin chỉnh sửa\nhoặc Model3D gốc bị ẩn
+}
+
+' Định nghĩa các Chuyển tiếp (Transitions)
+DRAFT -right-> ACTIVE : Cập nhật đủ nội dung\n& Xuất bản (Publish)
+DRAFT --> [*] : Hủy/Xóa (Delete)
+
+ACTIVE -down-> INACTIVE : Vô hiệu hóa (Deactivate)
+ACTIVE --> [*] : Xóa (Delete)
+
+INACTIVE -up-> ACTIVE : Kích hoạt lại (Reactivate)
+INACTIVE --> [*] : Xóa vĩnh viễn (Delete)
+
+@enduml

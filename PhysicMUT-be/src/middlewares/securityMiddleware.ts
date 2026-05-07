@@ -1,5 +1,5 @@
-import { Request, Response, NextFunction } from 'express';
-import rateLimit from 'express-rate-limit';
+import { Request, Response, NextFunction } from "express";
+import rateLimit from "express-rate-limit";
 
 // ──────────────────────────────────────────────────────────────────────────────
 // 1. RATE LIMITERS
@@ -15,9 +15,9 @@ export const authRateLimiter = rateLimit({
   standardHeaders: true,
   legacyHeaders: false,
   message: {
-    error: 'Bạn đã thử quá nhiều lần. Vui lòng đợi 15 phút và thử lại.',
+    error: "Bạn đã thử quá nhiều lần. Vui lòng đợi 15 phút và thử lại.",
   },
-  skip: (req) => process.env.NODE_ENV === 'test',
+  skip: (req) => process.env.NODE_ENV === "test",
 });
 
 /**
@@ -30,7 +30,7 @@ export const contentRateLimiter = rateLimit({
   standardHeaders: true,
   legacyHeaders: false,
   message: {
-    error: 'Bạn đang gửi quá nhiều yêu cầu. Vui lòng thử lại sau.',
+    error: "Bạn đang gửi quá nhiều yêu cầu. Vui lòng thử lại sau.",
   },
 });
 
@@ -44,7 +44,7 @@ export const globalRateLimiter = rateLimit({
   standardHeaders: true,
   legacyHeaders: false,
   message: {
-    error: 'Đã vượt quá giới hạn yêu cầu. Vui lòng thử lại sau 15 phút.',
+    error: "Đã vượt quá giới hạn yêu cầu. Vui lòng thử lại sau 15 phút.",
   },
 });
 
@@ -68,7 +68,7 @@ export const globalErrorHandler = (
     ip: req.ip,
   });
 
-  const isProduction = process.env.NODE_ENV === 'production';
+  const isProduction = process.env.NODE_ENV === "production";
 
   if (res.headersSent) {
     return;
@@ -78,7 +78,7 @@ export const globalErrorHandler = (
 
   res.status(statusCode).json({
     error: isProduction
-      ? 'Đã xảy ra lỗi hệ thống. Vui lòng thử lại sau.' // Production: ẩn chi tiết
+      ? "Đã xảy ra lỗi hệ thống. Vui lòng thử lại sau." // Production: ẩn chi tiết
       : err.message, // Development: hiện message để debug
   });
 };
@@ -89,9 +89,10 @@ export const globalErrorHandler = (
 // ──────────────────────────────────────────────────────────────────────────────
 export const getAllowedOrigins = (): string[] => {
   const base = [
-    'http://localhost:5173',
-    'http://localhost:3000',
-    'http://127.0.0.1:5173',
+    "http://localhost:5173",
+    "http://localhost:4173",
+    "http://localhost:3000",
+    "http://127.0.0.1:5173",
   ];
 
   const productionOrigin = process.env.FRONTEND_URL;

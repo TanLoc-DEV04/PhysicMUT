@@ -18,7 +18,7 @@ export const options = {
 // 2. Kịch bản thực thi cho mỗi VUs (Virtual User - Người dùng ảo)
 export default function () {
   const url = 'http://localhost:8000/chat'; // API Bot chạy ở port 8000
-  
+
   // Giả lập dữ liệu gửi lên
   const payload = JSON.stringify({
     message: 'Hãy giải thích nguyên lý hoạt động của máy gia tốc Cyclotron?',
@@ -44,7 +44,7 @@ export default function () {
       check(res, {
         'Trả về tin nhắn từ AI': (r) => r.json().message !== undefined,
       });
-    } catch (e) {}
+    } catch (e) { }
   }
 
   // Nghỉ 3 giây giữa các lần hỏi để giống với con người đang đọc câu trả lời

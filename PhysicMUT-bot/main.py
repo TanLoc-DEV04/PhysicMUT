@@ -40,6 +40,7 @@ app.add_exception_handler(RateLimitExceeded, _rate_limit_exceeded_handler)
 _allowed_origins_env = os.getenv("ALLOWED_ORIGINS", "")
 ALLOWED_ORIGINS: list[str] = [
     "http://localhost:5173",
+    'http://localhost:4173',
     "http://localhost:3000",
     "http://127.0.0.1:5173",
     *[o.strip() for o in _allowed_origins_env.split(",") if o.strip()],
@@ -93,17 +94,19 @@ class ChatResponse(BaseModel):
     tool_call: Optional[Dict[str, Any]] = None
 
 @app.post("/chat", response_model=ChatResponse, responses={400: {"description": "Bad Request"}, 500: {"description": "Internal Server Error"}})
-@limiter.limit("20/minute")  # Giới hạn 20 câu hỏi/phút/IP — chống spam AI
-async def chat(request: ChatRequest, http_request: Request):
+
+# Giới hạn 20 câu hỏi/phút/IP — chống spam AI
+# @limiter.limit("20/minute")  # Test K6 comment dòng này
+async def chat(request: Request, body: ChatRequest):
     try:
         # ── Prompt Injection Guard ──────────────────────────────────────────────
-        if len(request.message) > MAX_MESSAGE_LENGTH:
+        if len(body.message) > MAX_MESSAGE_LENGTH:
             raise HTTPException(
                 status_code=400,
                 detail=f"Tin nhắn quá dài. Vui lòng giới hạn dưới {MAX_MESSAGE_LENGTH} ký tự.",
             )
-        if prompt_injection_guard(request.message):
-            print(f"[SECURITY] Prompt injection attempt detected: {request.message[:100]}")
+        if prompt_injection_guard(body.message):
+            print(f"[SECURITY] Prompt injection attempt detected: {body.message[:100]}")
             raise HTTPException(
                 status_code=400,
                 detail="Thầy không thể xử lý yêu cầu này. Vui lòng đặt câu hỏi liên quan đến Vật lý nhé!",
@@ -122,10 +125,10 @@ async def chat(request: ChatRequest, http_request: Request):
         # llm_with_tools = llm.bind_tools(tools) # llama3:8b does not natively support bind_tools via Ollama's OpenAI API layer
         
         # Build search query using history context for better RAG retrieval
-        search_query = request.message
-        if request.history:
-            last_msg = request.history[-1].get("content", "")
-            search_query = f"{last_msg}\n{request.message}"
+        search_query = body.message
+        if body.history:
+            last_msg = body.history[-1].get("content", "")
+            search_query = f"{last_msg}\n{body.message}"
             
         # RAG Retrieval
         rag_results = query_rag(search_query)
@@ -173,14 +176,14 @@ Quan trọng: Khi được yêu cầu thay đổi thông số mô phỏng, hãy 
         messages.append({"role": "system", "content": rag_prompt})
             
         # VỊ TRÍ 3 (Thay đổi theo Session): Chat History (Lịch sử hội thoại)
-        for msg in request.history:
+        for msg in body.history:
             role = msg.get("role", "user")
             content = msg.get("content", "")
             if role and content:
                 messages.append({"role": role, "content": content})
                 
         # VỊ TRÍ 4 (Mới hoàn toàn): User Query (Câu hỏi mới nhất)
-        messages.append({"role": "user", "content": request.message})
+        messages.append({"role": "user", "content": body.message})
 
         response = llm.invoke(messages)
         

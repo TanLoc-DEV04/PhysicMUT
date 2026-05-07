@@ -1,5 +1,5 @@
-import { useCallback, useEffect, useRef, useState } from 'react';
-import CyclotronSimulation from './CyclotronSimulation';
+import { useCallback, useEffect, useRef, useState, lazy, Suspense } from 'react';
+const CyclotronSimulation = lazy(() => import('./CyclotronSimulation'));
 import { BADGES, type GameMode, type GameState, type BadgeId } from '../../../core/cyclotron/cyclotronConstants';
 import {
     createInitialGameState,
@@ -221,12 +221,18 @@ export default function CyclotronGame() {
 
     return (
         <div className="cg-root">
-            {/* ── 3D Canvas ── */}
-            <CyclotronSimulation
-                gameStateRef={gameStateRef}
-                callbacks={simCallbacks.current}
-                imperativeRef={imperative}
-            />
+            <Suspense fallback={
+                <div className="cg-loading-overlay">
+                    <div className="cg-spinner" />
+                    <p>Đang nạp mô hình 3D...</p>
+                </div>
+            }>
+                <CyclotronSimulation
+                    gameStateRef={gameStateRef}
+                    callbacks={simCallbacks.current}
+                    imperativeRef={imperative}
+                />
+            </Suspense>
 
             {/* ── Mission Select Modal ── */}
             {showMissionSelect && (

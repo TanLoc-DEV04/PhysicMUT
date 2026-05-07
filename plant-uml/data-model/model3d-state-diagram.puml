@@ -1,0 +1,48 @@
+@startuml
+hide empty description
+skinparam maxMessageSize 150
+skinparam wrapWidth 250
+
+' Tùy chỉnh màu sắc chuẩn chuyên nghiệp theo UML Distilled
+skinparam state {
+    BackgroundColor #FAFAFA
+    BorderColor #1565C0
+    ArrowColor #424242
+    StartColor #2E7D32
+    EndColor #C62828
+    AttributeFontName sans-serif
+}
+
+' Điểm bắt đầu (Initial State)
+[*] --> DRAFT : Admin nhấp "Create Model"
+
+' Định nghĩa các Trạng thái (States) và đặc tả nội bộ
+state DRAFT {
+    DRAFT : Trạng thái khởi tạo (Bản nháp)
+    DRAFT : Chưa có dữ liệu hoàn chỉnh
+    DRAFT : Chỉ hiển thị cho Admin/Creator
+}
+
+state ACTIVE #E8F5E9 {
+    ACTIVE : Trạng thái xuất bản
+    ACTIVE : Hiển thị công khai cho Guest & User
+    ACTIVE : Cho phép tương tác & làm bài tập
+}
+
+state INACTIVE #FFF3E0 {
+    INACTIVE : Trạng thái vô hiệu hóa
+    INACTIVE : Bị ẩn khỏi Public Space
+    INACTIVE : Vẫn tồn tại trong CMS để chỉnh sửa
+}
+
+' Định nghĩa các Chuyển tiếp (Transitions)
+DRAFT --> ACTIVE : Xuất bản\n(Cập nhật đủ dữ liệu)
+DRAFT --> [*] : Hủy/Xóa\n(Delete)
+
+ACTIVE --> INACTIVE : Vô hiệu hóa\n(Deactivate)
+ACTIVE --> [*] : Xóa\n(Delete)
+
+INACTIVE --> ACTIVE : Kích hoạt lại\n(Reactivate)
+INACTIVE --> [*] : Xóa vĩnh viễn\n(Delete)
+
+@enduml

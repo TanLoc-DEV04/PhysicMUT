@@ -44,7 +44,7 @@ const createUser = async (data) => {
         resolvedRole = await db_1.default.role.findUnique({ where: { name: data.role_name } });
     }
     if (resolvedRole && NON_ADMIN_ROLE_NAMES.includes(resolvedRole.name)) {
-        throw new Error(`Dữ liệu không hợp lệ: Role "${resolvedRole.name}" không được phép gán cho tài khoản admin.`);
+        throw new Error(`Invalid data: Role "${resolvedRole.name}" is not allowed to be assigned to admin accounts.`);
     }
     return await db_1.default.user.create({
         data: {
@@ -96,7 +96,7 @@ const updateUser = async (id, data) => {
     if (data.role_id) {
         const resolvedRole = await db_1.default.role.findUnique({ where: { id: data.role_id } });
         if (resolvedRole && NON_ADMIN_ROLE_NAMES.includes(resolvedRole.name)) {
-            throw new Error(`Dữ liệu không hợp lệ: Role "${resolvedRole.name}" không được phép gán cho tài khoản admin.`);
+            throw new Error(`Invalid data: Role "${resolvedRole.name}" is not allowed to be assigned to admin accounts.`);
         }
         updateData.role = { connect: { id: data.role_id } };
     }
@@ -104,7 +104,7 @@ const updateUser = async (id, data) => {
         const role = await db_1.default.role.findUnique({ where: { name: data.role_name } });
         if (role) {
             if (NON_ADMIN_ROLE_NAMES.includes(role.name)) {
-                throw new Error(`Dữ liệu không hợp lệ: Role "${role.name}" không được phép gán cho tài khoản admin.`);
+                throw new Error(`Invalid data: Role "${role.name}" is not allowed to be assigned to admin accounts.`);
             }
             updateData.role = { connect: { id: role.id } };
         }

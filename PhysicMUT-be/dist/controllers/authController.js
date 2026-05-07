@@ -44,7 +44,7 @@ const login = async (req, res) => {
         if (error.message === 'Invalid credentials') {
             res.status(401).json({ error: error.message });
         }
-        else if (error.message === 'Tài khoản hoặc quyền của bạn đã bị vô hiệu hóa.') {
+        else if (error.message === 'Your account or role has been disabled.') {
             res.status(403).json({ error: error.message });
         }
         else {
@@ -76,8 +76,8 @@ const googleLogin = async (req, res) => {
         res.json({ message: 'Google Login successful', ...result });
     }
     catch (error) {
-        if (error.message === 'Invalid Google token' || error.message.includes('vô hiệu')) {
-            res.status(error.message.includes('vô hiệu') ? 403 : 400).json({ error: error.message });
+        if (error.message === 'Invalid Google token' || error.message.includes('disabled')) {
+            res.status(error.message.includes('disabled') ? 403 : 400).json({ error: error.message });
         }
         else {
             console.error('Google login error:', error);
