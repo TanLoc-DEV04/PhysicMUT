@@ -12,8 +12,13 @@ const crypto_1 = __importDefault(require("crypto"));
 const client = new google_auth_library_1.OAuth2Client(process.env.GOOGLE_CLIENT_ID || 'dummy');
 const JWT_SECRET = process.env.JWT_SECRET || 'fallback-secret-key';
 const login = async (data) => {
-    const user = await db_1.default.user.findUnique({
-        where: { username: data.username },
+    const user = await db_1.default.user.findFirst({
+        where: {
+            OR: [
+                { username: data.username },
+                { email: data.username }
+            ]
+        },
         include: { role: true },
     });
     if (!user) {

@@ -35,8 +35,8 @@ export function updateParticlePhysics(
         // --- REAL RESONANCE LOGIC ---
         // 1. Calculate the resonance omega
         const omega = (Math.abs(params.charge) * params.magneticField) / params.mass;
-        // 2. Voltage phase at current simulation time
-        const phaseValue = Math.cos(omega * state.time);
+        // 2. Voltage phase at current simulation time (scaled for visual stability)
+        const phaseValue = Math.cos(omega * state.time * 1e-7);
         
         // 3. Direction check
         // cos(angle) > 0 means we are on the Right half (towards Right/D2)
@@ -84,7 +84,7 @@ export function updateParticlePhysics(
     // Circular motion
     if (state.velocity > 0) {
         const angularVelocity = (Math.abs(params.charge) * params.magneticField) / params.mass;
-        state.angle -= angularVelocity * dt * params.animationSpeed * 0.05;
+        state.angle -= angularVelocity * dt * 1e-7;
 
         if (Math.abs(state.angle) > (state.revolutionCount + 1) * 2 * Math.PI) {
             state.revolutionCount++;

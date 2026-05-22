@@ -8,8 +8,13 @@ const client = new OAuth2Client(process.env.GOOGLE_CLIENT_ID || 'dummy');
 const JWT_SECRET = process.env.JWT_SECRET || 'fallback-secret-key';
 
 export const login = async (data: any) => {
-    const user = await prisma.user.findUnique({
-      where: { username: data.username },
+    const user = await prisma.user.findFirst({
+      where: {
+        OR: [
+          { username: data.username },
+          { email: data.username }
+        ]
+      },
       include: { role: true },
     });
 

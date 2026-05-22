@@ -18,9 +18,9 @@ exports.authRateLimiter = (0, express_rate_limit_1.default)({
     standardHeaders: true,
     legacyHeaders: false,
     message: {
-        error: 'Bạn đã thử quá nhiều lần. Vui lòng đợi 15 phút và thử lại.',
+        error: "Bạn đã thử quá nhiều lần. Vui lòng đợi 15 phút và thử lại.",
     },
-    skip: (req) => process.env.NODE_ENV === 'test',
+    skip: (req) => process.env.NODE_ENV === "test",
 });
 /**
  * Rate Limiter cho Content API (models, theories, examples, exercises).
@@ -32,7 +32,7 @@ exports.contentRateLimiter = (0, express_rate_limit_1.default)({
     standardHeaders: true,
     legacyHeaders: false,
     message: {
-        error: 'Bạn đang gửi quá nhiều yêu cầu. Vui lòng thử lại sau.',
+        error: "Bạn đang gửi quá nhiều yêu cầu. Vui lòng thử lại sau.",
     },
 });
 /**
@@ -45,7 +45,7 @@ exports.globalRateLimiter = (0, express_rate_limit_1.default)({
     standardHeaders: true,
     legacyHeaders: false,
     message: {
-        error: 'Đã vượt quá giới hạn yêu cầu. Vui lòng thử lại sau 15 phút.',
+        error: "Đã vượt quá giới hạn yêu cầu. Vui lòng thử lại sau 15 phút.",
     },
 });
 // ──────────────────────────────────────────────────────────────────────────────
@@ -62,14 +62,14 @@ const globalErrorHandler = (err, req, res, _next) => {
         method: req.method,
         ip: req.ip,
     });
-    const isProduction = process.env.NODE_ENV === 'production';
+    const isProduction = process.env.NODE_ENV === "production";
     if (res.headersSent) {
         return;
     }
     const statusCode = err.status ?? err.statusCode ?? 500;
     res.status(statusCode).json({
         error: isProduction
-            ? 'Đã xảy ra lỗi hệ thống. Vui lòng thử lại sau.' // Production: ẩn chi tiết
+            ? "Đã xảy ra lỗi hệ thống. Vui lòng thử lại sau." // Production: ẩn chi tiết
             : err.message, // Development: hiện message để debug
     });
 };
@@ -80,10 +80,11 @@ exports.globalErrorHandler = globalErrorHandler;
 // ──────────────────────────────────────────────────────────────────────────────
 const getAllowedOrigins = () => {
     const base = [
-        'http://localhost:5173',
-        'http://localhost:4173',
-        'http://localhost:3000',
-        'http://127.0.0.1:5173',
+        "http://localhost:5173",
+        "http://localhost:4173",
+        "http://localhost:3000",
+        "http://127.0.0.1:5173",
+        "https://physic-mut.vercel.app",
     ];
     const productionOrigin = process.env.FRONTEND_URL;
     if (productionOrigin) {

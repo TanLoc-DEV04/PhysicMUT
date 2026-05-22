@@ -129,6 +129,10 @@ function MainModelDetail() {
 
   const handleUpdateSimulation = (modelName: string, params: any) => {
     console.log(`[MainModelDetail] Updating ${modelName}:`, params);
+    // Phát sự kiện ra window để Model 3D (ví dụ: CyclotronSimulation) bắt lấy và tự động cập nhật
+    window.dispatchEvent(new CustomEvent('update_3d_model', { 
+      detail: { modelName, params } 
+    }));
   };
 
   if (isLoading) {

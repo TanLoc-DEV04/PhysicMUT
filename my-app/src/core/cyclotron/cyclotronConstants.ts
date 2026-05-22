@@ -76,6 +76,7 @@ export interface SimulationParams {
     animationSpeed: number;
     isRunning: boolean;
     showEField: boolean;
+    showTrajectory: boolean;
     
     // Computed
     cyclotronFreq: number;

@@ -151,6 +151,7 @@ export default function CyclotronSimulation({
     animationSpeed: 1.0,
     isRunning: true,
     showEField: true,
+    showTrajectory: true,
     cyclotronFreq: 0,
     currentRadius: 0,
     currentVelocity: 0,
@@ -413,6 +414,38 @@ export default function CyclotronSimulation({
     };
     rebuildFieldLines();
 
+    // ── FEATURE: Static Spiral Trajectory ─────────────────────────────────
+    const trajectoryGroup = new THREE.Group();
+    scene.add(trajectoryGroup);
+
+    const rebuildTrajectoryLines = () => {
+      trajectoryGroup.clear();
+      if (!paramsRef.current.showTrajectory) return;
+      const maxR = paramsRef.current.maxRadius;
+      
+      const turns = 10;
+      const numSegments = 300;
+      const maxTheta = turns * 2 * Math.PI;
+      const points = [];
+      
+      for (let i = 0; i <= numSegments; i++) {
+        const theta = (i / numSegments) * maxTheta;
+        const r = maxR * Math.sqrt(theta / maxTheta);
+        points.push(new THREE.Vector3(r * Math.cos(-theta), 0, r * Math.sin(-theta)));
+      }
+      
+      const geometry = new THREE.BufferGeometry().setFromPoints(points);
+      const material = new THREE.LineBasicMaterial({
+        color: 0x00ffff,
+        transparent: true,
+        opacity: 0.35,
+        linewidth: 1.5
+      });
+      const spiralLine = new THREE.Line(geometry, material);
+      trajectoryGroup.add(spiralLine);
+    };
+    rebuildTrajectoryLines();
+
     // ── Flash screen quad ─────────────────────────────────────────────────
     const flashMat = new THREE.MeshBasicMaterial({
       color: 0x00ff88,
@@ -521,7 +554,7 @@ export default function CyclotronSimulation({
       // --- RESONANCE SYNC ---
       // Use same omega and simulation time as physics
       const omega = (Math.abs(p.charge) * p.magneticField) / p.mass;
-      const phaseValue = Math.cos(omega * st.time);
+      const phaseValue = Math.cos(omega * st.time * 1e-7);
       const pol = phaseValue > 0 ? 1 : -1;
 
       const m1 = (dee1.children[0] as THREE.Mesh)
@@ -707,7 +740,10 @@ export default function CyclotronSimulation({
     cycF
       .add(p, "maxRadius", 1.0, 6.0, 0.1)
       .name("BK tối đa (đơn vị)")
-      .onChange(rebuildFieldLines)
+      .onChange(() => {
+        rebuildFieldLines();
+        rebuildTrajectoryLines();
+      })
       .listen();
     cycF.add(p, "animationSpeed", 0.1, 3.0).name("Tốc độ mô phỏng");
 
@@ -722,6 +758,7 @@ export default function CyclotronSimulation({
       .name("Đường sức từ")
       .onChange(rebuildFieldLines);
     vizF.add(p, "showEField").name("Hiện điện trường (E)");
+    vizF.add(p, "showTrajectory").name("Quỹ đạo tĩnh").onChange(rebuildTrajectoryLines);
     vizF.add(p, "animateFieldLines").name("Cuộn đường sức từ");
     vizF.add(p, "fieldAnimationSpeed", 0.5, 5.0).name("Tốc độ cuộn B");
 
@@ -811,6 +848,41 @@ export default function CyclotronSimulation({
     };
     window.addEventListener("cyclotron_fire", onFireEvent);
 
+    // ── AI Bot Update Simulation Event ──────────────────────────────────────
+    const onBotUpdateEvent = (e: Event) => {
+      const detail = (e as CustomEvent).detail as { modelName: string, params: any };
+      if (!detail || !detail.params) return;
+      
+      const newParams = detail.params;
+      const p = paramsRef.current;
+      let needsReset = false;
+      let needsRebuildField = false;
+
+      // Update basic values
+      for (const key in newParams) {
+         if (key in p) {
+            (p as any)[key] = newParams[key];
+         }
+      }
+
+      // Handle special side-effects like particle change
+      if (newParams.particleType && PARTICLE_TYPES[newParams.particleType as keyof typeof PARTICLE_TYPES]) {
+         const data = PARTICLE_TYPES[newParams.particleType as keyof typeof PARTICLE_TYPES];
+         p.mass = data.mass;
+         p.charge = data.charge;
+         needsReset = true;
+      }
+
+      // Handle side-effects for visual changes
+      if ('magneticField' in newParams || 'maxRadius' in newParams || 'showFieldLines' in newParams) {
+         needsRebuildField = true;
+      }
+
+      if (needsReset) resetParticle();
+      if (needsRebuildField) rebuildFieldLines();
+    };
+    window.addEventListener("update_3d_model", onBotUpdateEvent);
+
     // ── Animation loop ────────────────────────────────────────────────────
     let frameId: number;
     let prevTime = performance.now();
@@ -876,7 +948,7 @@ export default function CyclotronSimulation({
 
           if (pr.showEField) {
             const omega = (Math.abs(pr.charge) * pr.magneticField) / pr.mass;
-            const phase = Math.cos(omega * simStateRef.current.time);
+            const phase = Math.cos(omega * simStateRef.current.time * 1e-7);
 
             const len = Math.max(0.01, Math.abs(phase) * 0.5);
             eFieldArrow.setLength(len, len * 0.2, len * 0.2);
@@ -898,14 +970,20 @@ export default function CyclotronSimulation({
         if (pr.lc_isOn) {
           // Diff eq: L*di/dt + R*i + q/C = 0  =>  di/dt = -(q/C + R*i) / L
           const di_dt = -(os.q / pr.lc_C + pr.lc_R * os.i) / pr.lc_L;
-          const dq_dt = os.i;
 
+          // Dùng Semi-Implicit Euler giúp tích phân ổn định hơn cho hệ dao động
           os.i += di_dt * dt;
-          os.q += dq_dt * dt;
+          os.q += os.i * dt; // dùng os.i vừa mới được cập nhật
+
+          // Chống bùng nổ (explode) hoặc NaN nếu dt quá lớn
+          if (Math.abs(os.q) > 1000 || Number.isNaN(os.q)) os.q = 10.0;
+          if (Math.abs(os.i) > 1000 || Number.isNaN(os.i)) os.i = 0.0;
         } else {
           // Quickly damp to zero when off
           os.i *= 0.92;
           os.q *= 0.92;
+          if (Math.abs(os.q) < 1e-5) os.q = 0;
+          if (Math.abs(os.i) < 1e-5) os.i = 0;
         }
 
         if (statusLed) {
@@ -949,7 +1027,7 @@ export default function CyclotronSimulation({
           for (let i = 0; i < arr.length / 3; i++) {
             // Move particles along a rectangular loop (simplified)
             const offset = i / (arr.length / 3) + time * flowSpeed;
-            const t = offset % 1.0;
+            const t = ((offset % 1.0) + 1.0) % 1.0;
 
             let px = 0,
               py = 0,
@@ -1076,6 +1154,7 @@ export default function CyclotronSimulation({
       window.removeEventListener("cyclotron_healing", onHealingEvent);
       window.removeEventListener("cyclotron_space", onSpaceEvent);
       window.removeEventListener("cyclotron_fire", onFireEvent);
+      window.removeEventListener("update_3d_model", onBotUpdateEvent);
       healingParticles.forEach((s) => scene.remove(s));
       if (guiRef.current) guiRef.current.destroy();
       if (mountRef.current?.contains(renderer.domElement)) {
@@ -1098,8 +1177,13 @@ export default function CyclotronSimulation({
 
     for (let j = 0; j < os.historyQ.length; j++) {
       const x = j * step;
-      const yQ = 50 - os.historyQ[j] * 3.5;
-      const yI = 50 - os.historyI[j] * 12.0;
+      let yQ = 50 - os.historyQ[j] * 3.5;
+      let yI = 50 - os.historyI[j] * 12.0;
+
+      // Bảo vệ khỏi lỗi NaN
+      if (Number.isNaN(yQ)) yQ = 50;
+      if (Number.isNaN(yI)) yI = 50;
+
       pathQ += `L ${x} ${Math.max(0, Math.min(100, yQ))} `;
       pathI += `L ${x} ${Math.max(0, Math.min(100, yI))} `;
     }

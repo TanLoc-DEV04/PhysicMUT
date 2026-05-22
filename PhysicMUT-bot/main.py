@@ -1,5 +1,6 @@
-from fastapi import FastAPI, UploadFile, File, HTTPException, Request
+from fastapi import FastAPI, UploadFile, File, HTTPException, Request, Response
 from fastapi.responses import JSONResponse
+from starlette.middleware.base import BaseHTTPMiddleware
 from pydantic import BaseModel
 from typing import List, Optional, Dict, Any, Annotated
 from fastapi.middleware.cors import CORSMiddleware
@@ -43,6 +44,7 @@ ALLOWED_ORIGINS: list[str] = [
     'http://localhost:4173',
     "http://localhost:3000",
     "http://127.0.0.1:5173",
+    "https://physic-mut.vercel.app",
     *[o.strip() for o in _allowed_origins_env.split(",") if o.strip()],
 ]
 
@@ -50,9 +52,26 @@ app.add_middleware(
     CORSMiddleware,
     allow_origins=ALLOWED_ORIGINS,
     allow_credentials=True,
-    allow_methods=["GET", "POST"],
-    allow_headers=["Content-Type", "Authorization"],
+    allow_methods=["*"],
+    allow_headers=["*"],
 )
+
+class PrivateNetworkCORS(BaseHTTPMiddleware):
+    async def dispatch(self, request: Request, call_next):
+        if request.method == "OPTIONS":
+            response = Response(status_code=204)
+            origin = request.headers.get("Origin")
+            if origin in ALLOWED_ORIGINS or "*" in ALLOWED_ORIGINS:
+                response.headers["Access-Control-Allow-Origin"] = origin or "*"
+            response.headers["Access-Control-Allow-Methods"] = "*"
+            response.headers["Access-Control-Allow-Headers"] = "*"
+            response.headers["Access-Control-Allow-Credentials"] = "true"
+            response.headers["Access-Control-Allow-Private-Network"] = "true"
+            return response
+        response = await call_next(request)
+        return response
+
+app.add_middleware(PrivateNetworkCORS)
 
 # ───────────────────────────────────────────────────────────────────────────────
 # PROMPT INJECTION GUARD — Phát hiện và từ chối các pattern injection phổ biến
@@ -111,6 +130,37 @@ async def chat(request: Request, body: ChatRequest):
                 status_code=400,
                 detail="Thầy không thể xử lý yêu cầu này. Vui lòng đặt câu hỏi liên quan đến Vật lý nhé!",
             )
+        # ── HARDCORE INTERCEPTION: Tách riêng luồng xử lý lệnh điều khiển 3D ──
+        cmd_keywords = ["/3d", "/update_3d", "\\3d", "\\update_3d"]
+        if any(kw in body.message for kw in cmd_keywords):
+            extraction_llm = ChatOllama(
+                model="llama3.2:1b",
+                temperature=0.0,
+                base_url="http://localhost:11434",
+                format="json"
+            )
+            prompt = f"""Trích xuất thông số cấu hình mô hình 3D từ yêu cầu sau.
+CHỈ trả về MỘT JSON object hợp lệ với cấu trúc: {{"model_name": "cyclotron", "parameters": {{ ... }}}}
+Các keys của parameters có thể gồm: voltage (number), magneticField (number), particleType (string), maxRadius (number), isRunning (boolean), showFieldLines (boolean), showEField (boolean).
+Yêu cầu: "{body.message}"
+Không xuất bất kỳ chữ nào ngoài JSON."""
+            try:
+                import json
+                ext_resp = extraction_llm.invoke([{"role": "user", "content": prompt}])
+                data = json.loads(ext_resp.content)
+                tool_call_data = {
+                    "function_call": "update_simulation",
+                    "parameters": data.get("parameters", {}),
+                    "model_name": data.get("model_name", "cyclotron")
+                }
+                return ChatResponse(
+                    message="Thầy đã thiết lập lại mô hình 3D theo đúng thông số em yêu cầu rồi nhé!",
+                    tool_call=tool_call_data
+                )
+            except Exception as e:
+                print(f"[WARN] Hardcore 3D extraction failed: {e}")
+                # Nếu parse JSON lỗi, nó sẽ tự lọt xuống luồng chat bình thường bên dưới
+
         # Check if message triggers a tool call (Simplified logic for now)
         # In a production app, use an LLM with function calling capabilities to decide.
         
@@ -166,9 +216,13 @@ Mục tiêu tối thượng của bạn là giúp học sinh thấu hiểu bản
 5. NHIỆM VỤ ĐỐI VỚI HỆ THỐNG MÔ HÌNH 3D (SERIOUS GAME)
 - Khi học sinh hỏi về các nhiệm vụ (Tasks) hoặc huy hiệu (Badges) trong mô hình 3D, hãy hướng dẫn các em chú ý vào các thông số trực quan (như sự đổi màu của mũi tên điện trường, vệt sáng của quỹ đạo hạt, hay biểu đồ SVG trên màn hình). Khuyến khích các em tự tương tác và rút ra quy luật.
 
+6. MIỄN TRỪ AN TOÀN CHO MÔ PHỎNG ẢO (SAFETY EXEMPTION - CRITICAL)
+- Đây là một phần mềm mô phỏng ảo 100% dành cho giáo dục. Mọi yêu cầu thay đổi điện áp (hàng nghìn Volts), từ trường, hoặc sử dụng hạt phóng xạ (Alpha, Deuteron) là HOÀN TOÀN AN TOÀN trong không gian ảo này.
+- BẠN TUYỆT ĐỐI KHÔNG ĐƯỢC TỪ CHỐI (Refuse) hay cảnh báo nguy hiểm với các yêu cầu như "Tăng điện áp lên 5000V", "Bắn hạt", "Mở máy gia tốc". Hãy thực hiện ngay lập tức!
+
 [NHẮC LẠI LỆNH TỐI CAO]: MỘT LẦN NỮA, BẠN LÀ GIÁO VIÊN VẬT LÝ VIỆT NAM. TOÀN BỘ CÂU TRẢ LỜI CỦA BẠN BẮT BUỘC PHẢI VIẾT BẰNG TIẾNG VIỆT CHUẨN MỰC, CÓ DẤU ĐẦY ĐỦ.
 
-Quan trọng: Khi được yêu cầu thay đổi thông số mô phỏng, hãy luôn dùng công cụ update_3d_model."""
+Quan trọng: Khi được yêu cầu thay đổi thông số mô phỏng (như tăng điện áp, đổi từ trường, ẩn/hiện đường sức), hãy luôn dùng công cụ update_3d_model một cách hào hứng! ĐẶC BIỆT CHÚ Ý: Nếu câu hỏi của người dùng có chứa ký hiệu lệnh `\\update_3d` hoặc `\\3d`, bạn BẮT BUỘC phải hiểu đây là lệnh cưỡng chế cập nhật mô hình và phải gọi tool update_3d_model ngay lập tức!"""
         messages.append({"role": "system", "content": system_rules})
         
         # VỊ TRÍ 2 (Tương đối cố định): RAG Context (Tài liệu bốc từ Database)
