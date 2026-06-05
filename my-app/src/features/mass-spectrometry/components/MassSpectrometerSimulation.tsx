@@ -8,7 +8,7 @@ import { MassAnalyzer } from "./MassAnalyzer";
 import { LabController } from "./LabController";
 import { ParticleSystem } from "./ParticleSystem";
 import { MultiDetector } from "./MultiDetector";
-import type { MSGameState } from "./Types";
+import { ISOTOPE_PRESETS, type MSGameState } from "./Types";
 import type { MSCallbacks } from "./msMissionLogic";
 import { checkDetectorBin, computeVisualR } from "./msMissionLogic";
 
@@ -89,10 +89,7 @@ export default function MassSpectrometerSimulation({
     scene.add(detector.mesh);
 
     // ── LabController (lil-gui) ───────────────────────────────────────────
-    const controller = new LabController(
-      mountRef.current,
-      () => {}, // onUpdatePhysics
-      () => {
+    const updateVisuals = () => {
         const opacity = controller.params.housingOpacity;
         const showLines = controller.params.showFieldLines;
         group.traverse((child) => {
@@ -103,7 +100,12 @@ export default function MassSpectrometerSimulation({
           if (child instanceof THREE.LineSegments) child.visible = showLines;
         });
         particleSystem.updateVisuals();
-      },
+    };
+
+    const controller = new LabController(
+      mountRef.current,
+      () => {}, // onUpdatePhysics
+      updateVisuals
     );
 
     // ── ParticleSystem ────────────────────────────────────────────────────
@@ -200,6 +202,44 @@ export default function MassSpectrometerSimulation({
       }
     };
 
+    // ── Bot Command Listener ──────────────────────────────────────────────
+    const handleBotCommand = (e: Event) => {
+      const customEvent = e as CustomEvent;
+      const { modelName, params } = customEvent.detail || {};
+      
+      if (modelName && modelName.toLowerCase() !== "mass_spectrometry") return;
+
+      const p = controller.params;
+      const { voltage, magneticField, isotope, particleSkin, heaterTemp, electronEnergy, isRunning, showFieldLines } = params || {};
+
+      if (voltage !== undefined && voltage !== null) p.voltage = voltage;
+      if (magneticField !== undefined && magneticField !== null) p.magneticField = magneticField;
+      if (isotope !== undefined && isotope !== null) {
+        const presetKeys = Object.keys(ISOTOPE_PRESETS);
+        const match = presetKeys.find(k => k.toLowerCase() === String(isotope).toLowerCase());
+        if (match) {
+           p.isotope = match;
+           if (match !== 'Mix' && ISOTOPE_PRESETS[match]) {
+               p.customMass = ISOTOPE_PRESETS[match].mass;
+               p.customCharge = ISOTOPE_PRESETS[match].charge;
+           }
+        }
+      }
+      if (particleSkin !== undefined && particleSkin !== null) {
+        const skins = ['Standard', 'Glow', 'Metallic', 'Ghost'];
+        const match = skins.find(s => s.toLowerCase() === String(particleSkin).toLowerCase());
+        if (match) p.particleSkin = match;
+      }
+      if (heaterTemp !== undefined && heaterTemp !== null) p.heaterTemp = heaterTemp;
+      if (electronEnergy !== undefined && electronEnergy !== null) p.electronEnergy = electronEnergy;
+      if (isRunning !== undefined && isRunning !== null) p.isRunning = isRunning;
+      if (showFieldLines !== undefined && showFieldLines !== null) p.showFieldLines = showFieldLines;
+
+      controller.updateCalculations();
+      updateVisuals();
+    };
+    window.addEventListener("update_3d_model", handleBotCommand);
+
     // ── Animation loop ────────────────────────────────────────────────────
     let frameId: number;
     let spawnTimer = 0;
@@ -239,6 +279,7 @@ export default function MassSpectrometerSimulation({
     ro.observe(mountRef.current);
 
     return () => {
+      window.removeEventListener("update_3d_model", handleBotCommand);
       ro.disconnect();
       cancelAnimationFrame(frameId);
       renderer.dispose();

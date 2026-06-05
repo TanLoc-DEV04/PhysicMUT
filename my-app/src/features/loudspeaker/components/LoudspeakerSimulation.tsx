@@ -279,6 +279,35 @@ export default function LoudspeakerSimulation({
       };
     }
 
+    // ── Bot Command Listener ──────────────────────────────────────────────
+    const handleBotCommand = (e: Event) => {
+      const customEvent = e as CustomEvent;
+      const { modelName, params } = customEvent.detail || {};
+      const { frequency, current, medium } = params || {};
+      
+      if (modelName && modelName.toLowerCase() !== "loudspeaker") return;
+
+      if (frequency !== undefined && frequency !== null) {
+        state.frequency = frequency;
+        updateBioRadar();
+      }
+      if (current !== undefined && current !== null) {
+        state.currentAmplitude = current;
+        if (audioRef.current) audioRef.current.volume = Math.min(1, current * 0.2);
+      }
+      if (medium !== undefined && medium !== null) {
+        let mKey = medium;
+        const lowerM = medium.toLowerCase();
+        if (lowerM === "water" || lowerM === "nước") mKey = "Water";
+        else if (lowerM === "vacuum" || lowerM === "chân không") mKey = "Vacuum";
+        else if (lowerM === "air" || lowerM === "không khí") mKey = "Air";
+        
+        state.medium = mKey;
+        updateMediumVisuals(mKey);
+      }
+    };
+    window.addEventListener("update_3d_model", handleBotCommand);
+
     // ── GUI ───────────────────────────────────────────────────────────────
     if (guiRef.current) guiRef.current.destroy();
     const gui = new GUI({
@@ -371,6 +400,7 @@ export default function LoudspeakerSimulation({
     folderEnv
       .add(state, "medium", Object.keys(MEDIUMS))
       .name("Chất dẫn truyền")
+      .listen()
       .onChange(updateMediumVisuals);
 
     const infoF = gui.addFolder("Thông số");
@@ -503,6 +533,7 @@ export default function LoudspeakerSimulation({
     ro.observe(mountRef.current);
 
     return () => {
+      window.removeEventListener("update_3d_model", handleBotCommand);
       ro.disconnect();
       cancelAnimationFrame(frameId);
       renderer.dispose();

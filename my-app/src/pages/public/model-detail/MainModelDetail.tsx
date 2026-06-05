@@ -294,7 +294,7 @@ function MainModelDetail() {
       )}
 
       {/* Chat Interface */}
-      <ChatInterface onUpdateSimulation={handleUpdateSimulation} onStateChange={setBotState} isMobile={isMobile} />
+      <ChatInterface onUpdateSimulation={handleUpdateSimulation} onStateChange={setBotState} isMobile={isMobile} currentModel={typeName || "cyclotron"} />
     </Layout>
   );
 }

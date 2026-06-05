@@ -21,6 +21,34 @@ from dotenv import load_dotenv
 
 load_dotenv()
 
+# 1. ĐỊNH NGHĨA REGISTRY SCHEMA CHO 3 MÔ HÌNH DỰA TRÊN ĐẶC TẢ PHYSICMUT
+MODEL_SCHEMAS = {
+    "cyclotron": {
+        "voltage": "number (Hiệu điện thế U, đv: V/kV)",
+        "magneticField": "number (Cảm ứng từ B, đv: T)",
+        "particleType": "string (Proton, Deuteron, Alpha)",
+        "maxRadius": "number (Bán kính tối đa, đv: m)",
+        "isRunning": "boolean (Chạy/Dừng)",
+        "showFieldLines": "boolean (Ẩn/Hiện đường sức từ)",
+        "showEField": "boolean (Ẩn/Hiện điện trường)"
+    },
+    "mass_spectrometry": {
+        "voltage": "number (Điện áp gia tốc U, đv: V)",
+        "magneticField": "number (Cảm ứng từ B, đv: T)",
+        "isotope": "string (Ví dụ: C-12, C-14, U-235, U-238, I-127, I-131, Mix)",
+        "particleSkin": "string (Hiển thị ion: Standard, Glow, Metallic, Ghost)",
+        "heaterTemp": "number (Nhiệt độ lò, đv: °C)",
+        "electronEnergy": "number (Năng lượng chùm tia, đv: eV)",
+        "showFieldLines": "boolean (Ẩn/Hiện đường sức từ)",
+        "isRunning": "boolean (Bật/Tắt nguồn)"
+    },
+    "loudspeaker": {
+        "frequency": "number or null (Tần số dao động f, đv: Hz, null nếu không nhắc đến)",
+        "current": "number or null (Cường độ dòng điện I, đv: A, null nếu không nhắc đến)",
+        "medium": "string or null (Môi trường: Air, Water, Vacuum, null nếu không nhắc)"
+    }
+}
+
 # ───────────────────────────────────────────────────────────────────────────────
 # RATE LIMITER — Giới hạn 20 request/phút/IP cho /chat, chống spam AI API
 # ───────────────────────────────────────────────────────────────────────────────
@@ -105,6 +133,7 @@ def prompt_injection_guard(message: str) -> bool:
 
 class ChatRequest(BaseModel):
     message: str
+    current_model: str = "cyclotron"
     history: List[Dict[str, str]] = []
     current_simulation_state: Optional[Dict[str, Any]] = None
 
@@ -133,28 +162,58 @@ async def chat(request: Request, body: ChatRequest):
         # ── HARDCORE INTERCEPTION: Tách riêng luồng xử lý lệnh điều khiển 3D ──
         cmd_keywords = ["/3d", "/update_3d", "\\3d", "\\update_3d"]
         if any(kw in body.message for kw in cmd_keywords):
+            active_model = getattr(body, "current_model", "cyclotron").lower()
+            if active_model == "mass_spectrometer":
+                active_model = "mass_spectrometry"
+            if active_model not in MODEL_SCHEMAS:
+                active_model = "cyclotron"
+
+            schema_text = json.dumps(MODEL_SCHEMAS[active_model], ensure_ascii=False, indent=2)
+
             extraction_llm = ChatOllama(
                 model="llama3.2:1b",
-                temperature=0.0,
-                base_url="http://localhost:11434",
-                format="json"
+                temperature=0.1,
+                base_url="http://localhost:11434"
             )
-            prompt = f"""Trích xuất thông số cấu hình mô hình 3D từ yêu cầu sau.
-CHỈ trả về MỘT JSON object hợp lệ với cấu trúc: {{"model_name": "cyclotron", "parameters": {{ ... }}}}
-Các keys của parameters có thể gồm: voltage (number), magneticField (number), particleType (string), maxRadius (number), isRunning (boolean), showFieldLines (boolean), showEField (boolean).
-Yêu cầu: "{body.message}"
-Không xuất bất kỳ chữ nào ngoài JSON."""
+            
+            prompt = f"""You are a parameter extraction AI for the physics model: {active_model}.
+Extract physical parameters from the user's message. Output ONLY a valid JSON object.
+
+Required JSON Structure: {{"parameters": {{ ... }}}}
+
+Allowed keys (ONLY use these):
+{schema_text}
+
+Rules:
+1. If the user mentions a parameter, add it to the JSON.
+2. If the user DOES NOT mention a parameter, OMIT IT completely. DO NOT output null, 0, or empty strings for unmentioned parameters.
+3. Map values correctly (e.g. 'water' to medium).
+
+Example 1: "Tăng hiệu điện thế lên 50kV và từ trường 1.5T" -> {{"parameters": {{"voltage": 50, "magneticField": 1.5}}}}
+Example 2: "Đổi môi trường sang water và dòng điện 2A" -> {{"parameters": {{"medium": "water", "current": 2}}}}
+Example 3: "Thay đổi tần số lên 5000" -> {{"parameters": {{"frequency": 5000}}}}
+
+User message: "{body.message}"
+JSON: """
             try:
-                import json
                 ext_resp = extraction_llm.invoke([{"role": "user", "content": prompt}])
-                data = json.loads(ext_resp.content)
+                content = ext_resp.content.strip()
+                if "```json" in content:
+                    content = content.split("```json")[1].split("```")[0].strip()
+                elif "```" in content:
+                    content = content.split("```")[1].split("```")[0].strip()
+                    
+                data = json.loads(content)
+                raw_params = data.get("parameters", {})
+                cleaned_params = {k: v for k, v in raw_params.items() if v is not None and v != ""}
+                
                 tool_call_data = {
                     "function_call": "update_simulation",
-                    "parameters": data.get("parameters", {}),
-                    "model_name": data.get("model_name", "cyclotron")
+                    "parameters": cleaned_params,
+                    "model_name": active_model
                 }
                 return ChatResponse(
-                    message="Thầy đã thiết lập lại mô hình 3D theo đúng thông số em yêu cầu rồi nhé!",
+                    message=f"Thầy đã thiết lập lại mô hình 3D ({active_model}) theo đúng thông số em yêu cầu rồi nhé!",
                     tool_call=tool_call_data
                 )
             except Exception as e:
@@ -264,7 +323,9 @@ Quan trọng: Khi được yêu cầu thay đổi thông số mô phỏng (như 
     except Exception as e:
         # Log đầy đủ server-side nhưng ẨN chi tiết khỏi response
         print(f"[ERROR] /chat internal error: {type(e).__name__}: {e}")
-        raise HTTPException(status_code=500, detail="Đã xảy ra lỗi xử lý. Vui lòng thử lại sau.")
+        import traceback
+        trace = traceback.format_exc()
+        raise HTTPException(status_code=500, detail=f"Error: {e}\nTrace: {trace}")
 
 class GenerateRequest(BaseModel):
     theory_content: str

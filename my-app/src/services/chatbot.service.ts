@@ -8,14 +8,14 @@ interface ChatResponse {
   };
 }
 
-export const sendMessage = async (message: string): Promise<ChatResponse> => {
+export const sendMessage = async (message: string, current_model: string): Promise<ChatResponse> => {
   try {
     const response = await fetch('http://127.0.0.1:8000/chat', {
       method: 'POST',
       headers: {
         'Content-Type': 'application/json',
       },
-      body: JSON.stringify({ message }),
+      body: JSON.stringify({ message, current_model }),
     });
 
     if (!response.ok) {

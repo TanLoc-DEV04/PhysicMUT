@@ -41,7 +41,7 @@ def get_tool_definitions():
                     "properties": {
                         "model_name": {
                             "type": "string",
-                            "enum": ["cyclotron", "loudspeaker"],
+                            "enum": ["cyclotron", "mass_spectrometry", "loudspeaker"],
                             "description": "The name of the 3D model to control."
                         },
                         "parameters": {

@@ -41,12 +41,14 @@ interface ChatInterfaceProps {
   onUpdateSimulation: (modelName: string, params: any) => void;
   onStateChange: (state: AvatarState) => void;
   isMobile?: boolean;
+  currentModel: string;
 }
 
 export default function ChatInterface({
   onUpdateSimulation,
   onStateChange,
   isMobile = false,
+  currentModel,
 }: ChatInterfaceProps) {
   const [messages, setMessages] = useState<Message[]>([
     {
@@ -90,7 +92,7 @@ export default function ChatInterface({
     onStateChange("THINKING");
 
     try {
-      const response = await sendMessage(inputText);
+      const response = await sendMessage(inputText, currentModel);
 
       const botMessage: Message = {
         id: messages.length + 2,

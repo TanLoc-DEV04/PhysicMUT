@@ -1,0 +1,8 @@
+{
+  "parameters": {
+    "frequency": null,
+    "current": null,
+    "medium": "air",
+    "voltage": null
+  }
+}

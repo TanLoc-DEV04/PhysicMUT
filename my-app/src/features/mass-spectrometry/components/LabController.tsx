@@ -21,7 +21,7 @@ export class LabController {
     // Callbacks để giao tiếp với Scene chính
     private onUpdatePhysics: () => void;
     private onUpdateVisuals: () => void;
-    private updateCalculations: () => void = () => {};
+    public updateCalculations: () => void = () => {};
 
     constructor(
         container: HTMLElement,
@@ -98,9 +98,9 @@ export class LabController {
         // --- GROUP 1: SYSTEM ---
         const sysFolder = this.gui.addFolder('System Control');
         addIcon(sysFolder, <SettingOutlined style={{ marginRight: 6, color: '#94a3b8' }} />, 'System Control');
-        const playCtrl = sysFolder.add(this.params, 'isRunning').name('Power On/Off');
+        const playCtrl = sysFolder.add(this.params, 'isRunning').name('Power On/Off').listen();
         addIcon(playCtrl, <PlayCircleOutlined style={{ marginRight: 6, color: '#22c55e' }} />, 'Power On/Off');
-        sysFolder.add(this.params, 'simulationSpeed', 0.1, 5.0).name('Time Scale');
+        sysFolder.add(this.params, 'simulationSpeed', 0.1, 5.0).name('Time Scale').listen();
         const resetCtrl = sysFolder.add({ reset: () => location.reload() }, 'reset').name('Emergency Reset');
         addIcon(resetCtrl, <ReloadOutlined style={{ marginRight: 6, color: '#ef4444' }} />, 'Emergency Reset');
 
@@ -115,7 +115,7 @@ export class LabController {
         // Chọn Đồng vị
         // Chọn Đồng vị
         sampleFolder.add(this.params, 'isotope', Object.keys(ISOTOPE_PRESETS))
-            .name('Isotope Select')
+            .name('Isotope Select').listen()
             .onChange((val: string) => {
                 // Tự động điền thông số khi chọn Preset
                 if (val !== 'Mix') {
@@ -132,7 +132,7 @@ export class LabController {
 
         // Particle Skins (Hiệu ứng thị giác)
         sampleFolder.add(this.params, 'particleSkin', ['Standard', 'Glow', 'Metallic', 'Ghost'])
-            .name('Ion Appearance')
+            .name('Ion Appearance').listen()
             .onChange(() => this.onUpdateVisuals());
 
         // --- GROUP 3: MACHINE PARAMETERS (Các cửa ải) ---
@@ -140,23 +140,23 @@ export class LabController {
         addIcon(machFolder, <ThunderboltOutlined style={{ marginRight: 6, color: '#f59e0b' }} />, 'Instrument Settings');
         
         // 1. Vaporization (A -> B)
-        machFolder.add(this.params, 'heaterTemp', 25, 500).name('Heater Temp (°C)')
+        machFolder.add(this.params, 'heaterTemp', 25, 500).name('Heater Temp (°C)').listen()
             .onChange(() => {
                 // Logic: Nhiệt độ thấp -> Mẫu di chuyển chậm/ngưng tụ
             });
 
         // 2. Ionization (B -> C)
-        machFolder.add(this.params, 'electronEnergy', 0, 100).name('Electron Beam (eV)')
+        machFolder.add(this.params, 'electronEnergy', 0, 100).name('Electron Beam (eV)').listen()
             .onChange(() => {
                 // Logic: < 10eV -> Không ion hóa được (hạt không đổi màu/không bị gia tốc)
             });
 
         // 3. Acceleration (C -> D)
-        machFolder.add(this.params, 'voltage', 0, 5000).name('Accel Voltage U (V)')
+        machFolder.add(this.params, 'voltage', 0, 5000).name('Accel Voltage U (V)').listen()
             .onChange(() => this.updateCalculations());
 
         // 4. Analyzer (D -> E)
-        machFolder.add(this.params, 'magneticField', 0.1, 2.0).name('Magnetic Field B (T)')
+        machFolder.add(this.params, 'magneticField', 0.1, 2.0).name('Magnetic Field B (T)').listen()
             .onChange(() => this.updateCalculations());
 
         // --- GROUP 4: REAL-TIME ANALYSIS (Công thức tính) ---
@@ -196,9 +196,9 @@ export class LabController {
         // --- GROUP 5: VISUALS ---
         const visFolder = this.gui.addFolder('X-Ray Mode');
         addIcon(visFolder, <EyeOutlined style={{ marginRight: 6, color: '#8b5cf6' }} />, 'X-Ray Mode');
-        visFolder.add(this.params, 'housingOpacity', 0, 1).name('Case Opacity')
+        visFolder.add(this.params, 'housingOpacity', 0, 1).name('Case Opacity').listen()
             .onChange(() => this.onUpdateVisuals());
-        visFolder.add(this.params, 'showFieldLines').name('Show B-Field Lines')
+        visFolder.add(this.params, 'showFieldLines').name('Show B-Field Lines').listen()
             .onChange(() => this.onUpdateVisuals());
     }
     
