@@ -15,7 +15,8 @@ model User {
   id            String    @id @default(uuid())
   username      String    @unique
   email         String    @unique
-  password_hash String
+  password_hash String?
+  auth_provider String    @default("LOCAL") // "LOCAL" or "GOOGLE"
   full_name     String?
   
   role_id       String?

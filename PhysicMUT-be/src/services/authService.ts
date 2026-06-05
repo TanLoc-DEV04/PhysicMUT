@@ -26,6 +26,10 @@ export const login = async (data: any) => {
       throw new Error('Your account or role has been disabled.');
     }
 
+    if (!user.password_hash) {
+      throw new Error('Tài khoản này được đăng ký bằng Google. Vui lòng đăng nhập qua Google.');
+    }
+
     let isMatch = false;
     if (user.password_hash.startsWith('$2b$') || user.password_hash.startsWith('$2a$')) {
         isMatch = await bcrypt.compare(data.password, user.password_hash);
@@ -110,9 +114,6 @@ export const googleLogin = async (credential: string) => {
             throw new Error('Default USER role not found.');
         }
 
-        const salt = await bcrypt.genSalt(10);
-        const randomPassword = await bcrypt.hash(crypto.randomBytes(8).toString('hex'), salt);
-
         const baseUsername = email.split('@')[0];
         let username = baseUsername;
         let counter = 1;
@@ -126,7 +127,7 @@ export const googleLogin = async (credential: string) => {
                 username: username as string,
                 email: email as string,
                 full_name: name as string,
-                password_hash: randomPassword,
+                auth_provider: "GOOGLE",
                 role: { connect: { id: userRole.id } }
             },
             include: { role: true }
@@ -152,6 +153,11 @@ export const changePassword = async (data: any) => {
     if (!user) {
         throw new Error('User not found');
     }
+    
+    if (!user.password_hash) {
+        throw new Error('Tài khoản Google không thể đổi mật khẩu. Vui lòng đổi mật khẩu trên Google.');
+    }
+
     let isMatch = false;
     if (user.password_hash.startsWith('$2b$') || user.password_hash.startsWith('$2a$')) {
         isMatch = await bcrypt.compare(data.oldPassword, user.password_hash);
