@@ -13,14 +13,14 @@ async function main() {
 
     // UPSERT ROLES & USERS
     const adminPermissions = {
-      "Dashboard": ["view_dashboard"],
-      "Admin Management": ["view_admin_list", "view_admin_details", "add_new_admin", "edit_admin", "delete_admin"],
-      "Role Management": ["view_role_list", "add_role", "edit_role", "delete_role"],
-      "Theory Management": ["view_theory_list", "add_theory", "edit_theory", "delete_theory"],
-      "Example Management": ["view_example_list", "add_example", "edit_example", "delete_example"],
-      "Exercise Management": ["view_exercise_list", "add_exercise", "edit_exercise", "delete_exercise"],
-      "3D Model Management": ["view_model_list", "add_model", "edit_model", "delete_model"],
-      "User Management": ["view_user_list", "edit_user", "delete_user"]
+        "Dashboard": ["view_dashboard"],
+        "Admin Management": ["view_admin_list", "view_admin_details", "add_new_admin", "edit_admin", "delete_admin"],
+        "Role Management": ["view_role_list", "add_role", "edit_role", "delete_role"],
+        "Theory Management": ["view_theory_list", "add_theory", "edit_theory", "delete_theory"],
+        "Example Management": ["view_example_list", "add_example", "edit_example", "delete_example"],
+        "Exercise Management": ["view_exercise_list", "add_exercise", "edit_exercise", "delete_exercise"],
+        "3D Model Management": ["view_model_list", "add_model", "edit_model", "delete_model"],
+        "User Management": ["view_user_list", "edit_user", "delete_user"]
     };
 
     const adminRole = await prisma.role.upsert({
@@ -34,10 +34,10 @@ async function main() {
         create: { name: 'USER', description: 'Regular user - read only, no admin access', permissions: {}, is_active: true }
     });
     const teacherLeadPermissions = {
-      "Dashboard": ["view_dashboard"],
-      "Theory Management": ["view_theory_list", "add_theory", "edit_theory", "delete_theory"],
-      "Example Management": ["view_example_list", "add_example", "edit_example", "delete_example"],
-      "Exercise Management": ["view_exercise_list", "add_exercise", "edit_exercise", "delete_exercise"],
+        "Dashboard": ["view_dashboard"],
+        "Theory Management": ["view_theory_list", "add_theory", "edit_theory", "delete_theory"],
+        "Example Management": ["view_example_list", "add_example", "edit_example", "delete_example"],
+        "Exercise Management": ["view_exercise_list", "add_exercise", "edit_exercise", "delete_exercise"],
     };
     const teacherLeadRole = await prisma.role.upsert({
         where: { name: 'TEACHER LEAD' },
@@ -45,8 +45,8 @@ async function main() {
         create: { name: 'TEACHER LEAD', description: 'Lead Teacher - manages theory, examples and exercises', permissions: teacherLeadPermissions, is_active: true }
     });
     const teacherTheoryPermissions = {
-      "Dashboard": ["view_dashboard"],
-      "Theory Management": ["view_theory_list", "add_theory", "edit_theory", "delete_theory"]
+        "Dashboard": ["view_dashboard"],
+        "Theory Management": ["view_theory_list", "add_theory", "edit_theory", "delete_theory"]
     };
     const teacherTheoryRole = await prisma.role.upsert({
         where: { name: 'TEACHER THEORY' },
@@ -54,8 +54,8 @@ async function main() {
         create: { name: 'TEACHER THEORY', description: 'Theory Teacher - manages theory content only', permissions: teacherTheoryPermissions, is_active: true }
     });
     const teacherExamplePermissions = {
-      "Dashboard": ["view_dashboard"],
-      "Example Management": ["view_example_list", "add_example", "edit_example", "delete_example"]
+        "Dashboard": ["view_dashboard"],
+        "Example Management": ["view_example_list", "add_example", "edit_example", "delete_example"]
     };
     const teacherExampleRole = await prisma.role.upsert({
         where: { name: 'TEACHER EXAMPLE' },
@@ -63,8 +63,8 @@ async function main() {
         create: { name: 'TEACHER EXAMPLE', description: 'Example Teacher - manages example content only', permissions: teacherExamplePermissions, is_active: true }
     });
     const teacherExercisePermissions = {
-      "Dashboard": ["view_dashboard"],
-      "Exercise Management": ["view_exercise_list", "add_exercise", "edit_exercise", "delete_exercise"]
+        "Dashboard": ["view_dashboard"],
+        "Exercise Management": ["view_exercise_list", "add_exercise", "edit_exercise", "delete_exercise"]
     };
     const teacherExerciseRole = await prisma.role.upsert({
         where: { name: 'TEACHER EXERCISE' },
@@ -72,8 +72,8 @@ async function main() {
         create: { name: 'TEACHER EXERCISE', description: 'Exercise Teacher - manages exercise content only', permissions: teacherExercisePermissions, is_active: true }
     });
     const designer3DPermissions = {
-      "Dashboard": ["view_dashboard"],
-      "3D Model Management": ["view_model_list", "add_model", "edit_model", "delete_model"]
+        "Dashboard": ["view_dashboard"],
+        "3D Model Management": ["view_model_list", "add_model", "edit_model", "delete_model"]
     };
     const designer3DRole = await prisma.role.upsert({
         where: { name: '3D DESIGNER' },
@@ -139,8 +139,8 @@ async function main() {
         await prisma.model3D.create({
             data: {
                 ...modelData,
-                theories:  { create: theoriesWithType },
-                examples:  { create: examplesWithType },
+                theories: { create: theoriesWithType },
+                examples: { create: examplesWithType },
                 exercises: { create: exercisesWithType },
             }
         });
@@ -165,14 +165,14 @@ async function main() {
 
     <section>
         <h2 style="color: #e67e22;">1. Định nghĩa và Cấu tạo</h2>
-        <p><strong>Định nghĩa:</strong> Cyclotron là một loại máy gia tốc hạt sử dụng phối hợp điện trường biến thiên và từ trường đều để tăng tốc cho các hạt mang điện (như proton, deuteron, hạt alpha...) di chuyển theo quỹ đạo tròn với bán kính tăng dần theo hình xoắn ốc [1, 2].</p>
+        <p><strong>Định nghĩa:</strong> Cyclotron là một loại máy gia tốc hạt sử dụng phối hợp điện trường biến thiên và từ trường đều để tăng tốc cho các hạt mang điện (như proton, deuteron, hạt alpha...) di chuyển theo quỹ đạo tròn với bán kính tăng dần theo hình xoắn ốc.</p>
         
         <p><strong>Cấu tạo chính:</strong></p>
         <ul>
-            <li><strong>Hai hộp rỗng hình chữ D (Dees):</strong> Là hai điện cực kim loại rỗng hình chữ D, đặt đối diện nhau và cách nhau một khe hở hẹp [2, 3].</li>
-            <li><strong>Từ trường đều (B):</strong> Toàn bộ hệ thống hộp D được đặt trong chân không giữa hai cực của nam châm điện mạnh. Cảm ứng từ B vuông góc với mặt phẳng của các hộp D [2, 3].</li>
-            <li><strong>Nguồn điện xoay chiều (U<sub>~</sub>):</strong> Được nối vào hai hộp D để tạo ra điện trường biến thiên tần số cao tại khe hở giữa hai hộp [2].</li>
-            <li><strong>Nguồn phát hạt:</strong> Đặt ở tâm của máy (khe hở) để phát ra các hạt mang điện cần gia tốc [1].</li>
+            <li><strong>Hai hộp rỗng hình chữ D (Dees):</strong> Là hai điện cực kim loại rỗng hình chữ D, đặt đối diện nhau và cách nhau một khe hở hẹp.</li>
+            <li><strong>Từ trường đều (B):</strong> Toàn bộ hệ thống hộp D được đặt trong chân không giữa hai cực của nam châm điện mạnh. Cảm ứng từ B vuông góc với mặt phẳng của các hộp D.</li>
+            <li><strong>Nguồn điện xoay chiều (U<sub>~</sub>):</strong> Được nối vào hai hộp D để tạo ra điện trường biến thiên tần số cao tại khe hở giữa hai hộp.</li>
+            <li><strong>Nguồn phát hạt:</strong> Đặt ở tâm của máy (khe hở) để phát ra các hạt mang điện cần gia tốc.</li>
         </ul>
     </section>
 
@@ -180,10 +180,10 @@ async function main() {
         <h2 style="color: #e67e22;">2. Nguyên lý hoạt động</h2>
         <p>Quá trình gia tốc diễn ra theo chu trình sau:</p>
         <ol>
-            <li><strong>Trong lòng hộp D:</strong> Bên trong hộp D là đẳng thế (không có điện trường). Hạt chỉ chịu tác dụng của <strong>lực Lo-ren-xơ</strong> do từ trường B gây ra. Hạt chuyển động tròn đều với bán kính <em>r</em> [1].</li>
-            <li><strong>Tại khe hở:</strong> Khi hạt đi đến khe hở, điện trường giữa hai hộp D đổi chiều sao cho hạt được tăng tốc. Hạt nhận năng lượng từ điện trường, vận tốc <em>v</em> tăng lên [2].</li>
-            <li><strong>Quỹ đạo xoắn ốc:</strong> Khi vận tốc tăng, bán kính quỹ đạo của hạt trong từ trường sẽ tăng theo (do <em>r ~ v</em>). Do đó, hạt di chuyển theo đường xoắn ốc từ tâm ra ngoài [2].</li>
-            <li><strong>Dẫn ra ngoài:</strong> Khi hạt đạt đến bán kính cực đại (mép ngoài của hộp D), nó được dẫn ra khỏi máy qua một cửa sổ để sử dụng [2, 4].</li>
+            <li><strong>Trong lòng hộp D:</strong> Bên trong hộp D là đẳng thế (không có điện trường). Hạt chỉ chịu tác dụng của <strong>lực Lo-ren-xơ</strong> do từ trường B gây ra. Hạt chuyển động tròn đều với bán kính <em>r</em>.</li>
+            <li><strong>Tại khe hở:</strong> Khi hạt đi đến khe hở, điện trường giữa hai hộp D đổi chiều sao cho hạt được tăng tốc. Hạt nhận năng lượng từ điện trường, vận tốc <em>v</em> tăng lên.</li>
+            <li><strong>Quỹ đạo xoắn ốc:</strong> Khi vận tốc tăng, bán kính quỹ đạo của hạt trong từ trường sẽ tăng theo (do <em>r ~ v</em>). Do đó, hạt di chuyển theo đường xoắn ốc từ tâm ra ngoài.</li>
+            <li><strong>Dẫn ra ngoài:</strong> Khi hạt đạt đến bán kính cực đại (mép ngoài của hộp D), nó được dẫn ra khỏi máy qua một cửa sổ để sử dụng.</li>
         </ol>
     </section>
 
@@ -196,13 +196,13 @@ async function main() {
         <p style="background-color: #f1f1f1; padding: 10px; border-left: 5px solid #3498db; text-align: center; overflow-x: auto;">
             $$ F_{ht} = F_{Lorentz} \\Rightarrow m \\cdot \\frac{v^2}{R} = |q| \\cdot v \\cdot B $$
         </p>
-        <p><em>Trong đó: \\( v \\) là vận tốc dài, \\( R \\) là bán kính quỹ đạo [1, 2].</em></p>
+        <p><em>Trong đó: \\( v \\) là vận tốc dài, \\( R \\) là bán kính quỹ đạo.</em></p>
 
         <h3>b. Bán kính quỹ đạo (\\( R \\))</h3>
         <p style="background-color: #f1f1f1; padding: 10px; border-left: 5px solid #3498db; text-align: center; overflow-x: auto;">
             $$ R = \\frac{m \\cdot v}{|q| \\cdot B} $$
         </p>
-        <p><em>Nhận xét:</em> Bán kính tỉ lệ thuận với vận tốc. Khi hạt được gia tốc, \\( v \\) tăng thì \\( R \\) tăng theo, tạo thành quỹ đạo xoắn ốc [2, 5].</p>
+        <p><em>Nhận xét:</em> Bán kính tỉ lệ thuận với vận tốc. Khi hạt được gia tốc, \\( v \\) tăng thì \\( R \\) tăng theo, tạo thành quỹ đạo xoắn ốc.</p>
 
         <h3>c. Chu kỳ (\\( T \\)) và Tần số (\\( f \\))</h3>
         <p>Đây là đại lượng quan trọng nhất chứng minh khả năng đồng bộ hóa của Cyclotron.</p>
@@ -211,7 +211,7 @@ async function main() {
             <li><strong>Tần số Cyclotron (điều kiện đồng bộ):</strong> $$ f = \\frac{1}{T} = \\frac{|q| \\cdot B}{2\\pi \\cdot m} $$</li>
             <li><strong>Tần số góc:</strong> $$ \\omega = \\frac{|q| \\cdot B}{m} $$</li>
         </ul>
-        <p><strong>Lưu ý cực kỳ quan trọng:</strong> Chu kỳ và tần số quay <strong>không phụ thuộc</strong> vào vận tốc \\( v \\) và bán kính \\( R \\) (trong phạm vi phi tương đối tính). Điều này cho phép dùng nguồn điện xoay chiều có tần số không đổi để gia tốc hạt liên tục [5-7].</p>
+        <p><strong>Lưu ý cực kỳ quan trọng:</strong> Chu kỳ và tần số quay <strong>không phụ thuộc</strong> vào vận tốc \\( v \\) và bán kính \\( R \\) (trong phạm vi phi tương đối tính). Điều này cho phép dùng nguồn điện xoay chiều có tần số không đổi để gia tốc hạt liên tục.</p>
 
         <h3>d. Động năng cực đại (\\( W_{d(max)} \\))</h3>
         <p>Hạt đạt động năng cực đại khi ở mép ngoài cùng của hộp D (bán kính \\( R_{max} \\) của máy):</p>
@@ -219,7 +219,7 @@ async function main() {
             $$ v_{max} = \\frac{|q| \\cdot B \\cdot R_{max}}{m} $$
             $$ W_{d(max)} = \\frac{1}{2} m \\cdot v_{max}^2 = \\frac{|q|^2 \\cdot B^2 \\cdot R_{max}^2}{2m} $$
         </p>
-        <p><em>Nhận xét:</em> Động năng cực đại tỉ lệ với bình phương bán kính máy và bình phương cảm ứng từ, <strong>không phụ thuộc</strong> vào hiệu điện thế gia tốc \\( U \\) giữa hai bản cực [8].</p>
+        <p><em>Nhận xét:</em> Động năng cực đại tỉ lệ với bình phương bán kính máy và bình phương cảm ứng từ, <strong>không phụ thuộc</strong> vào hiệu điện thế gia tốc \\( U \\) giữa hai bản cực.</p>
 
         <h3>e. Số vòng quay (\\( N \\))</h3>
         <p>Giả sử hiệu điện thế giữa hai khe hở là \\( U \\). Mỗi vòng quay hạt đi qua khe 2 lần, mỗi lần nhận năng lượng \\( |q| \\cdot U \\). Tổng động năng đạt được:</p>
@@ -229,16 +229,16 @@ async function main() {
     <section>
         <h2 style="color: #e67e22;">4. Ứng dụng thực tế</h2>
         <ul>
-            <li><strong>Y học hạt nhân:</strong> Sản xuất đồng vị phóng xạ phục vụ chẩn đoán (PET/CT) và điều trị ung thư (Xạ trị hạt - Particle therapy) [9, 10].</li>
-            <li><strong>Nghiên cứu vật lý:</strong> Tạo chùm hạt năng lượng cao để bắn phá hạt nhân, nghiên cứu cấu trúc vật chất [10].</li>
+            <li><strong>Y học hạt nhân:</strong> Sản xuất đồng vị phóng xạ phục vụ chẩn đoán (PET/CT) và điều trị ung thư (Xạ trị hạt - Particle therapy).</li>
+            <li><strong>Nghiên cứu vật lý:</strong> Tạo chùm hạt năng lượng cao để bắn phá hạt nhân, nghiên cứu cấu trúc vật chất.</li>
         </ul>
     </section>
 
     <section>
         <h2 style="color: #e67e22;">5. Các dạng câu hỏi thường gặp</h2>
         <ul>
-            <li><strong>Dạng 1 - Điều kiện cộng hưởng:</strong> Tần số của nguồn điện xoay chiều phải bằng tần số quay của hạt: f<sub>điện</sub> = f<sub>hạt</sub> = (|q|B) / (2&pi;m) [7].</li>
-            <li><strong>Dạng 2 - Yếu tố ảnh hưởng động năng cuối cùng:</strong> Chỉ phụ thuộc vào bán kính máy (R) và từ trường (B), không phụ thuộc vào hiệu điện thế U [8].</li>
+            <li><strong>Dạng 1 - Điều kiện cộng hưởng:</strong> Tần số của nguồn điện xoay chiều phải bằng tần số quay của hạt: f<sub>điện</sub> = f<sub>hạt</sub> = (|q|B) / (2&pi;m).</li>
+            <li><strong>Dạng 2 - Yếu tố ảnh hưởng động năng cuối cùng:</strong> Chỉ phụ thuộc vào bán kính máy (R) và từ trường (B), không phụ thuộc vào hiệu điện thế U.</li>
             <li><strong>Dạng 3 - So sánh chu kỳ các hạt:</strong> Lập tỉ số T ~ m / |q|. Ví dụ: So sánh hạt Proton và hạt Alpha.</li>
         </ul>
     </section>
@@ -260,14 +260,14 @@ async function main() {
         }],
 
         [{
-            title: 'Bài toán Cyclotron (Câu 6)',
+            title: 'Bài toán Cyclotron ',
             problem: `
 <p>
     Máy cyclotron là một loại máy gia tốc hạt sử dụng từ trường và điện trường để tăng tốc các hạt tích điện theo quỹ đạo có bán kính tăng dần. Thiết bị này được ứng dụng rộng rãi trong y học hạt nhân và nghiên cứu vật lý hạt. Hình bên mô tả cấu tạo một máy cyclotron gồm có hai hộp rỗng hình chữ D (hai cực \\( D_1 \\) và \\( D_2 \\)) làm bằng đồng ghép với nhau thành một hình tròn được đặt trong chân không từ trường đều có cảm ứng từ \\( B \\) vuông góc với mặt hộp. Hai cạnh thẳng đứng của các hộp D không đặt sát nhau mà cách nhau một khoảng hẹp, ở giữa khoảng hẹp có một điện trường \\( E \\). Điện tích phóng ra ở gần tâm máy được tăng tốc trực tiếp bởi lực điện khi đi qua điện trường giữa hai hộp D. Xét chuyển động của hạt Deuteron trong một máy cyclotron khi nó đang ở cực \\( D_1 \\) và bay theo phương vuông góc với các đường sức từ, lực từ tác dụng lên hạt có độ lớn \\( F = Bv|q| \\), có phương vuông góc với cảm ứng từ \\( B \\) và vận tốc \\( v \\) của hạt, cho tốc độ của hạt khi đó là \\( 3,2 \\cdot 10^6 \\text{ m/s} \\). Biết Deuteron có khối lượng là \\( m = 3,31 \\cdot 10^{-27} \\text{ kg} \\) và điện tích \\( q = +1,6 \\cdot 10^{-19} \\text{ C} \\). Hiệu điện thế giữa hai cực \\( D_1, D_2 \\) là \\( 100 \\text{ kV} \\) và độ lớn cảm ứng từ \\( B \\) là \\( 2,0 \\text{ T} \\). Lấy \\( \\pi = 3,14 \\) trong các phép tính có dùng đến số \\( \\pi \\). Sau 150 lần (kể từ lúc bắt đầu chuyển động của Deuteron) tăng tốc bởi điện trường thì bán kính quỹ đạo của Deuteron là bao nhiêu cm (kết quả làm tròn đến hàng phần mười).
 </p>
             `,
             solution: `
-<h1>Lời Giải: Bài Toán Máy Gia Tốc Cyclotron (Câu 6)</h1>
+<h1>Lời Giải: Bài Toán Máy Gia Tốc Cyclotron</h1>
 
     <h3>1. Tóm tắt dữ kiện đề bài</h3>
     <ul>
@@ -339,6 +339,32 @@ async function main() {
             status: 'ACTIVE'
         }],
         [
+            // Base Problem
+            {
+                question: `<p>Một máy gia tốc hạt <strong>Cyclotron</strong> gồm hai hộp rỗng bằng kim loại hình chữ D cách nhau một khe hẹp như hình vẽ. Vùng không gian trong mỗi hộp D có từ trường đều với cảm ứng từ $B = 0,6\\,\\text{T}$, đường sức từ vuông góc với mặt hộp D. Đặt một điện áp xoay chiều thích hợp $u$ vào máy để các hạt điện tích được tăng tốc mỗi lần chúng bay qua khe.</p>
+
+<p>Trong thí nghiệm, một chùm hạt được gia tốc, thời gian mỗi lần một điện tích $q$ chuyển động được $0,5$ vòng trong hộp D là $5\\cdot 10^{-8}\\,\\text{s}$. Trong lần cuối cùng trước khi thoát khỏi máy, quỹ đạo hạt có bán kính $0,5\\,\\text{m}$ và cường độ trung bình $I = 4,2\\,\\text{mA}$, sau đó chúng bay ra đập vào một cái bia.</p>
+
+<p>Biết rằng $80\\%$ động năng của hạt chuyển hóa thành nhiệt làm nóng bia; toàn bộ nhiệt lượng bia nhận được lại được hấp thụ bởi dòng nước chảy qua bia có lưu lượng ổn định.</p>
+
+<p>Cho khối lượng điện tích là $m$, bỏ qua tác dụng của trọng lực lên điện tích, không xét đến sự thay đổi khối lượng tương đối tính; lực từ tác dụng lên điện tích $q$ chuyển động với vận tốc $v$ theo phương vuông góc với cảm ứng từ $B$ có độ lớn $f = Bv|q|$; nhiệt dung riêng của nước là $c = 4200\\,\\text{J/kg.K}$; khối lượng riêng của nước là $\\rho = 1000\\,\\text{kg/m}^3$.</p>
+
+<p><strong>a)</strong> Trong mỗi hộp D, bán kính quỹ đạo của điện tích được xác định bằng biểu thức $R = \\dfrac{mv}{B|q|}$.</p>
+
+<p><strong>b)</strong> Có thể thay đổi bán kính quỹ đạo của điện tích bằng cách điều chỉnh điện áp xoay chiều đặt vào máy.</p>
+
+<p><strong>c)</strong> Trong mỗi hộp D, lực do từ trường tác dụng lên mỗi điện tích có tác dụng tăng tốc cho điện tích.</p>
+
+<p><strong>d)</strong> Nếu dòng nước ngay sau khi làm mát bia được tăng thêm $10^\\circ\\text{C}$ thì lưu lượng của dòng nước này là $0,967\\,\\text{lít/giây}$.</p>`,
+                options: [],
+                correct_answer: "",
+                level: 'HARD',
+                type: 'Essay',
+                status: 'ACTIVE',
+                reference: 'Đề Sở GD Nam Định 2025',
+                solution: `Đáp án đang được đội ngũ PhysicMUT biên soạn`
+            },
+
             // PROBLEM 1 & 2 (Identical in text, mapped as one)
             {
                 question: `
@@ -360,21 +386,21 @@ async function main() {
                 type: 'Essay',
                 status: 'ACTIVE',
                 solution: `
-<p><strong>a)</strong> Khi hạt điện tích dương<em>q</em> bay vào từ trường đều <em> B</em> với vận tốc <em> v</em> vuông góc với <em> B</em>, hạt chịu tác dụng của lực Lo - ren - xơ có độ lớn <em> F = | q | vB</em> [1, 2].Lực này luôn vuông góc với véc - tơ vận tốc nên không sinh công, chỉ làm thay đổi hướng chuyển động và đóng vai trò là lực hướng tâm <em> F <sub> ht</sub> = mv <sup> 2</sup> /R</em> [2, 3].Do đó, quỹ đạo của hạt là một đường tròn[3].Bán kính quỹ đạo được xác định từ phương trình <em> F = F <sub> ht</sub></em>, suy ra <em> R = mv / (| q | B)</em> [2, 3].</p>
+<p><strong>a)</strong> Khi hạt điện tích dương<em>q</em> bay vào từ trường đều <em> B</em> với vận tốc <em> v</em> vuông góc với <em> B</em>, hạt chịu tác dụng của lực Lo - ren - xơ có độ lớn <em> F = | q | vB</em>.Lực này luôn vuông góc với véc - tơ vận tốc nên không sinh công, chỉ làm thay đổi hướng chuyển động và đóng vai trò là lực hướng tâm <em> F <sub> ht</sub> = mv <sup> 2</sup> /R</em>.Do đó, quỹ đạo của hạt là một đường tròn.Bán kính quỹ đạo được xác định từ phương trình <em> F = F <sub> ht</sub></em>, suy ra <em> R = mv / (| q | B)</em>.</p>
 
-<p><strong>b)</strong> Bên trong hai hộp chữ D (nơi được che chắn điện trường, chỉ có từ trường), hạt chuyển động theo các quỹ đạo nửa đường tròn [4]. Mỗi khi đi qua khe hở giữa hai hộp, điện trường xoay chiều thực hiện công làm tăng tốc độ của hạt [5, 6]. Vì bán kính <em>R</em> tỉ lệ thuận với vận tốc <em>v</em>, nên sau mỗi lần được gia tốc qua khe, bán kính quỹ đạo của hạt lại lớn hơn [5, 6]. Chính vì vậy, quỹ đạo của hạt là sự ghép nối của các nửa đường tròn có bán kính tăng dần, tạo thành một đường trôn ốc từ tâm mở rộng ra ngoài [5, 6].</p>
+<p><strong>b)</strong> Bên trong hai hộp chữ D (nơi được che chắn điện trường, chỉ có từ trường), hạt chuyển động theo các quỹ đạo nửa đường tròn. Mỗi khi đi qua khe hở giữa hai hộp, điện trường xoay chiều thực hiện công làm tăng tốc độ của hạt. Vì bán kính <em>R</em> tỉ lệ thuận với vận tốc <em>v</em>, nên sau mỗi lần được gia tốc qua khe, bán kính quỹ đạo của hạt lại lớn hơn. Chính vì vậy, quỹ đạo của hạt là sự ghép nối của các nửa đường tròn có bán kính tăng dần, tạo thành một đường trôn ốc từ tâm mở rộng ra ngoài.</p>
 
-<p><strong>c)</strong> Tần số quay của hạt (số vòng quay trong 1 giây) được tính bằng <em>f<sub>p</sub> = v / (2&pi;R)</em> [7]. Thay biểu thức bán kính vào, ta có <em>f<sub>p</sub> = |q|B / (2&pi;m)</em> [6, 8]. <strong>Nhận xét:</strong> Tần số quay của hạt là một hằng số, hoàn toàn không phụ thuộc vào vận tốc hay bán kính quỹ đạo của nó [6, 8]. Để hạt được tăng tốc liên tục mỗi khi đi qua khe, tần số của điện áp xoay chiều phải luôn đồng bộ và bằng với tần số quay của hạt, tức là <em>f = |q|B / (2&pi;m)</em> [6, 9].</p>
+<p><strong>c)</strong> Tần số quay của hạt (số vòng quay trong 1 giây) được tính bằng <em>f<sub>p</sub> = v / (2&pi;R)</em>. Thay biểu thức bán kính vào, ta có <em>f<sub>p</sub> = |q|B / (2&pi;m)</em>. <strong>Nhận xét:</strong> Tần số quay của hạt là một hằng số, hoàn toàn không phụ thuộc vào vận tốc hay bán kính quỹ đạo của nó. Để hạt được tăng tốc liên tục mỗi khi đi qua khe, tần số của điện áp xoay chiều phải luôn đồng bộ và bằng với tần số quay của hạt, tức là <em>f = |q|B / (2&pi;m)</em>.</p>
 
 <p><strong>d)</strong> <br>
-Từ công thức tần số, cảm ứng từ B là <em>B = 2&pi;m<sub>p</sub>f / e</em> [6, 10]. Thay số ta được <em>B = (2 &cdot; 3,14 &cdot; 1,66&cdot;10<sup>-27</sup> &cdot; 10<sup>7</sup>) / 1,6&cdot;10<sup>-19</sup> &approx; 0,65 T</em> [6, 10]. <br>
-Vận tốc cực đại của prôtôn khi đạt bán kính quỹ đạo ngoài cùng <em>R<sub>max</sub> = 0,42 m</em> là <em>v<sub>max</sub> = 2&pi;fR<sub>max</sub></em> [11]. <br>
-Động năng cuối cùng của prôtôn là <em>W<sub>đ</sub> = 1/2 m<sub>p</sub>v<sub>max</sub><sup>2</sup> = 2&pi;<sup>2</sup>m<sub>p</sub>f<sup>2</sup>R<sub>max</sub><sup>2</sup></em> [10, 11]. <br>
-Thay số ta tính được <em>W<sub>đ</sub> = 2 &cdot; (3,14)<sup>2</sup> &cdot; 1,66&cdot;10<sup>-27</sup> &cdot; (10<sup>7</sup>)<sup>2</sup> &cdot; (0,42)<sup>2</sup> &approx; 5,77&cdot;10<sup>-13</sup> J</em> (tương đương khoảng 3,6 MeV) [10, 11].</p>
+Từ công thức tần số, cảm ứng từ B là <em>B = 2&pi;m<sub>p</sub>f / e</em>. Thay số ta được <em>B = (2 &cdot; 3,14 &cdot; 1,66&cdot;10<sup>-27</sup> &cdot; 10<sup>7</sup>) / 1,6&cdot;10<sup>-19</sup> &approx; 0,65 T</em>. <br>
+Vận tốc cực đại của prôtôn khi đạt bán kính quỹ đạo ngoài cùng <em>R<sub>max</sub> = 0,42 m</em> là <em>v<sub>max</sub> = 2&pi;fR<sub>max</sub></em>. <br>
+Động năng cuối cùng của prôtôn là <em>W<sub>đ</sub> = 1/2 m<sub>p</sub>v<sub>max</sub><sup>2</sup> = 2&pi;<sup>2</sup>m<sub>p</sub>f<sup>2</sup>R<sub>max</sub><sup>2</sup></em>. <br>
+Thay số ta tính được <em>W<sub>đ</sub> = 2 &cdot; (3,14)<sup>2</sup> &cdot; 1,66&cdot;10<sup>-27</sup> &cdot; (10<sup>7</sup>)<sup>2</sup> &cdot; (0,42)<sup>2</sup> &approx; 5,77&cdot;10<sup>-13</sup> J</em> (tương đương khoảng 3,6 MeV).</p>
 
-<p><strong>e)</strong> Mỗi lần đi qua khe hở, prôtôn được nhận thêm năng lượng <em>&Delta;W<sub>1</sub> = eU</em> [5]. Trong mỗi một vòng quay hoàn chỉnh, hạt đi qua khe 2 lần, do đó năng lượng tăng thêm trong một vòng là <em>&Delta;W = 2eU</em> [5]. <br>
-Thay số, độ tăng năng lượng mỗi vòng là <em>&Delta;W = 2 &cdot; 1,6&cdot;10<sup>-19</sup> &cdot; 20&cdot;10<sup>3</sup> = 6,4&cdot;10<sup>-15</sup> J</em> [5]. <br>
-Số vòng mà prôtôn đã quay trước khi bay ra khỏi xiclôtrôn là <em>N = W<sub>đ</sub> / &Delta;W = (5,77&cdot;10<sup>-13</sup>) / (6,4&cdot;10<sup>-15</sup>) &approx; 90</em> vòng [6, 10].</p>
+<p><strong>e)</strong> Mỗi lần đi qua khe hở, prôtôn được nhận thêm năng lượng <em>&Delta;W<sub>1</sub> = eU</em>. Trong mỗi một vòng quay hoàn chỉnh, hạt đi qua khe 2 lần, do đó năng lượng tăng thêm trong một vòng là <em>&Delta;W = 2eU</em>. <br>
+Thay số, độ tăng năng lượng mỗi vòng là <em>&Delta;W = 2 &cdot; 1,6&cdot;10<sup>-19</sup> &cdot; 20&cdot;10<sup>3</sup> = 6,4&cdot;10<sup>-15</sup> J</em>. <br>
+Số vòng mà prôtôn đã quay trước khi bay ra khỏi xiclôtrôn là <em>N = W<sub>đ</sub> / &Delta;W = (5,77&cdot;10<sup>-13</sup>) / (6,4&cdot;10<sup>-15</sup>) &approx; 90</em> vòng.</p>
                 `
             },
             // PROBLEM 3 (Context + 3 Multiple Choice Questions)
@@ -433,11 +459,11 @@ Số vòng mà prôtôn đã quay trước khi bay ra khỏi xiclôtrôn là <em
                 status: 'ACTIVE',
                 solution: `
 <p><strong>Giải thích:</strong></p>
-<p>Khi hạt chuyển động trong máy gia tốc cyclotron, lực từ (lực Lo-ren-xơ) đóng vai trò là lực hướng tâm: <em>|q|vB = mv<sup>2</sup>/R</em> [1].</p>
+<p>Khi hạt chuyển động trong máy gia tốc cyclotron, lực từ (lực Lo-ren-xơ) đóng vai trò là lực hướng tâm: <em>|q|vB = mv<sup>2</sup>/R</em>.</p>
 <p>Động lượng của hạt tại quỹ đạo bán kính <em>R</em> là: <em>p = mv = |q|BR</em>.</p>
 <p>Hai hạt khác nhau được gia tốc trong cùng một máy cyclotron sẽ đạt trạng thái cuối cùng khi bán kính quỹ đạo đạt giá trị cực đại bằng bán kính của hộp D (<em>R = R<sub>max</sub></em>). Do đó, động lượng cuối cùng cực đại của hạt là: <em>p<sub>max</sub> = |q|BR<sub>max</sub></em>.</p>
 <p>Vì cảm ứng từ <em>B</em> và bán kính <em>R<sub>max</sub></em> của máy là không đổi, động lượng cuối cùng tỉ lệ thuận với độ lớn điện tích <em>|q|</em> của hạt. Vậy hạt có điện tích lớn hơn chắc chắn sẽ có động lượng cuối cùng lớn hơn. <strong>&rArr; Phương án A đúng, B sai.</strong></p>
-<p>Đối với động năng cuối cùng của hạt: <em>W<sub>đ,max</sub> = p<sub>max</sub><sup>2</sup> / (2m) = q<sup>2</sup>B<sup>2</sup>R<sub>max</sub><sup>2</sup> / (2m)</em> [2]. Động năng phụ thuộc vào cả điện tích <em>q</em> và khối lượng <em>m</em>. Vì đề bài chỉ cho "hai hạt khác nhau" mà không cung cấp thông tin về tỉ số khối lượng của chúng, ta không thể kết luận hạt nào có động năng lớn hơn. <strong>&rArr; Phương án C và D sai.</strong></p>
+<p>Đối với động năng cuối cùng của hạt: <em>W<sub>đ,max</sub> = p<sub>max</sub><sup>2</sup> / (2m) = q<sup>2</sup>B<sup>2</sup>R<sub>max</sub><sup>2</sup> / (2m)</em>. Động năng phụ thuộc vào cả điện tích <em>q</em> và khối lượng <em>m</em>. Vì đề bài chỉ cho "hai hạt khác nhau" mà không cung cấp thông tin về tỉ số khối lượng của chúng, ta không thể kết luận hạt nào có động năng lớn hơn. <strong>&rArr; Phương án C và D sai.</strong></p>
 <p><strong>&rArr; Chọn A.</strong></p>
                 `
             },
@@ -452,13 +478,13 @@ Số vòng mà prôtôn đã quay trước khi bay ra khỏi xiclôtrôn là <em
                 type: 'Essay',
                 status: 'ACTIVE',
                 solution: `
-                <p><strong>a) Sai.</strong> Trong một chu kì quay hoàn chỉnh, quỹ đạo của hạt gồm hai nửa đường tròn nằm trong hai hộp D [1]. Hạt sẽ đi qua khoảng hở giữa hai hộp D hai lần. Do đó, trong mỗi chu kì, proton được tăng tốc hai lần chứ không phải một lần.</p>
+                <p><strong>a) Sai.</strong> Trong một chu kì quay hoàn chỉnh, quỹ đạo của hạt gồm hai nửa đường tròn nằm trong hai hộp D. Hạt sẽ đi qua khoảng hở giữa hai hộp D hai lần. Do đó, trong mỗi chu kì, proton được tăng tốc hai lần chứ không phải một lần.</p>
 
-<p><strong>b) Sai.</strong> Khi proton chuyển động trong từ trường, lực từ (lực Lo-ren-xơ) đóng vai trò là lực hướng tâm: <em>evB = m(v<sup>2</sup>/r)</em>, suy ra tốc độ góc <em>&omega; = v/r = eB/m</em>. Tần số quay của proton trong từ trường là <em>f = &omega;/(2&pi;) = eB / (2&pi;m)</em>. Để hạt liên tục được tăng tốc, tần số của điện áp xoay chiều phải bằng tần số quay của hạt, tức là <em>f = eB / (2&pi;m)</em> chứ không phải <em>eB/(&pi;m)</em> [2].</p>
+<p><strong>b) Sai.</strong> Khi proton chuyển động trong từ trường, lực từ (lực Lo-ren-xơ) đóng vai trò là lực hướng tâm: <em>evB = m(v<sup>2</sup>/r)</em>, suy ra tốc độ góc <em>&omega; = v/r = eB/m</em>. Tần số quay của proton trong từ trường là <em>f = &omega;/(2&pi;) = eB / (2&pi;m)</em>. Để hạt liên tục được tăng tốc, tần số của điện áp xoay chiều phải bằng tần số quay của hạt, tức là <em>f = eB / (2&pi;m)</em> chứ không phải <em>eB/(&pi;m)</em>.</p>
 
-<p><strong>c) Đúng.</strong> Vận tốc cực đại của proton đạt được khi hạt chuyển động ở quỹ đạo ngoài cùng có bán kính bằng bán kính của hộp D (<em>r = R</em>). Từ biểu thức lực hướng tâm, ta có vận tốc cực đại <em>v<sub>max</sub> = eBR/m</em> [3]. Động năng cực đại mà proton đạt được là: <em>W<sub>đ,max</sub> = 1/2 mv<sub>max</sub><sup>2</sup> = 1/2 m(eBR/m)<sup>2</sup> = (e<sup>2</sup>B<sup>2</sup>R<sup>2</sup>) / (2m)</em> [3].</p>
+<p><strong>c) Đúng.</strong> Vận tốc cực đại của proton đạt được khi hạt chuyển động ở quỹ đạo ngoài cùng có bán kính bằng bán kính của hộp D (<em>r = R</em>). Từ biểu thức lực hướng tâm, ta có vận tốc cực đại <em>v<sub>max</sub> = eBR/m</em>. Động năng cực đại mà proton đạt được là: <em>W<sub>đ,max</sub> = 1/2 mv<sub>max</sub><sup>2</sup> = 1/2 m(eBR/m)<sup>2</sup> = (e<sup>2</sup>B<sup>2</sup>R<sup>2</sup>) / (2m)</em>.</p>
 
-<p><strong>d) Đúng.</strong> Mỗi lần đi qua khe hở giữa hai hộp D, proton được điện trường thực hiện công và tăng thêm một lượng năng lượng là <em>&Delta;W = eU</em> [1, 4]. Tổng số lần proton đi qua khe (tương ứng với số nửa vòng quay) để đạt được động năng cực đại là: <em>N = W<sub>đ,max</sub> / &Delta;W = (e<sup>2</sup>B<sup>2</sup>R<sup>2</sup>) / (2m &cdot; eU) = (eB<sup>2</sup>R<sup>2</sup>) / (2mU)</em>. Thời gian proton chuyển động trong mỗi nửa vòng quay là một nửa chu kì: <em>t<sub>1/2</sub> = T/2 = &pi;/&omega; = (&pi;m) / (eB)</em>. Vậy tổng thời gian proton chuyển động trong máy gia tốc (bỏ qua thời gian bay qua khe) là: <em>t = N &cdot; t<sub>1/2</sub> = [(eB<sup>2</sup>R<sup>2</sup>) / (2mU)] &cdot; [(&pi;m) / (eB)] = (&pi;BR<sup>2</sup>) / (2U)</em>.</p>
+<p><strong>d) Đúng.</strong> Mỗi lần đi qua khe hở giữa hai hộp D, proton được điện trường thực hiện công và tăng thêm một lượng năng lượng là <em>&Delta;W = eU</em>. Tổng số lần proton đi qua khe (tương ứng với số nửa vòng quay) để đạt được động năng cực đại là: <em>N = W<sub>đ,max</sub> / &Delta;W = (e<sup>2</sup>B<sup>2</sup>R<sup>2</sup>) / (2m &cdot; eU) = (eB<sup>2</sup>R<sup>2</sup>) / (2mU)</em>. Thời gian proton chuyển động trong mỗi nửa vòng quay là một nửa chu kì: <em>t<sub>1/2</sub> = T/2 = &pi;/&omega; = (&pi;m) / (eB)</em>. Vậy tổng thời gian proton chuyển động trong máy gia tốc (bỏ qua thời gian bay qua khe) là: <em>t = N &cdot; t<sub>1/2</sub> = [(eB<sup>2</sup>R<sup>2</sup>) / (2mU)] &cdot; [(&pi;m) / (eB)] = (&pi;BR<sup>2</sup>) / (2U)</em>.</p>
         
                 `
             },
@@ -473,13 +499,13 @@ Số vòng mà prôtôn đã quay trước khi bay ra khỏi xiclôtrôn là <em
                 type: 'Essay',
                 status: 'ACTIVE',
                 solution: `
-                <p><strong>a) Sai.</strong> Năng lượng hạt nhận được để tăng tốc đúng là do công của điện trường cung cấp. Tuy nhiên, động năng cực đại của hạt khi bay ra khỏi máy gia tốc đạt được khi quỹ đạo bằng bán kính hộp D: <em>W<sub>đ,max</sub> = q<sup>2</sup>B<sup>2</sup>R<sup>2</sup> / (2m)</em> [1]. Biểu thức này cho thấy động năng cực đại chỉ phụ thuộc vào bản chất của hạt (<em>q, m</em>) và thông số máy (<em>B, R</em>), hoàn toàn <strong>không phụ thuộc</strong> vào hiệu điện thế <em>U</em> [2].</p>
+                <p><strong>a) Sai.</strong> Năng lượng hạt nhận được để tăng tốc đúng là do công của điện trường cung cấp. Tuy nhiên, động năng cực đại của hạt khi bay ra khỏi máy gia tốc đạt được khi quỹ đạo bằng bán kính hộp D: <em>W<sub>đ,max</sub> = q<sup>2</sup>B<sup>2</sup>R<sup>2</sup> / (2m)</em>. Biểu thức này cho thấy động năng cực đại chỉ phụ thuộc vào bản chất của hạt (<em>q, m</em>) và thông số máy (<em>B, R</em>), hoàn toàn <strong>không phụ thuộc</strong> vào hiệu điện thế <em>U</em>.</p>
 
-<p><strong>b) Đúng.</strong> Khi hạt chuyển động trong từ trường, lực Lo-ren-xơ đóng vai trò là lực hướng tâm, ta có chu kì quay của hạt là: <em>T = 2&pi;r/v = 2&pi;m / (qB)</em> [3, 4]. Để quá trình tăng tốc diễn ra liên tục và đồng bộ sau mỗi nửa vòng quay, chu kì của hiệu điện thế xoay chiều đặt vào hai hộp D phải bằng chính chu kì quay của hạt trong từ trường [4].</p>
+<p><strong>b) Đúng.</strong> Khi hạt chuyển động trong từ trường, lực Lo-ren-xơ đóng vai trò là lực hướng tâm, ta có chu kì quay của hạt là: <em>T = 2&pi;r/v = 2&pi;m / (qB)</em>. Để quá trình tăng tốc diễn ra liên tục và đồng bộ sau mỗi nửa vòng quay, chu kì của hiệu điện thế xoay chiều đặt vào hai hộp D phải bằng chính chu kì quay của hạt trong từ trường.</p>
 
-<p><strong>c) Đúng.</strong> Vận tốc cực đại của hạt đạt được ở quỹ đạo ngoài cùng (khi bán kính quỹ đạo đạt cực đại bằng bán kính <em>R</em> của hộp D). Từ hệ thức lực từ bằng lực hướng tâm: <em>qv<sub>max</sub>B = m(v<sub>max</sub><sup>2</sup>/R)</em>, ta dễ dàng suy ra được tốc độ cực đại <em>v<sub>max</sub> = qBR/m</em> [1, 4, 5].</p>
+<p><strong>c) Đúng.</strong> Vận tốc cực đại của hạt đạt được ở quỹ đạo ngoài cùng (khi bán kính quỹ đạo đạt cực đại bằng bán kính <em>R</em> của hộp D). Từ hệ thức lực từ bằng lực hướng tâm: <em>qv<sub>max</sub>B = m(v<sub>max</sub><sup>2</sup>/R)</em>, ta dễ dàng suy ra được tốc độ cực đại <em>v<sub>max</sub> = qBR/m</em>.</p>
 
-<p><strong>d) Sai.</strong> Mỗi lần đi qua khe hở giữa hai hộp, điện trường sinh công giúp hạt nhận thêm năng lượng <em>&Delta;W = qU</em>. Tổng số lần hạt qua khe để đạt đến động năng cực đại <em>W<sub>đ,max</sub></em> là <em>N = W<sub>đ,max</sub> / (qU)</em>. Nếu tăng <em>U</em>, số lần qua khe <em>N</em> (tương ứng với số nửa vòng quay cần thiết) sẽ giảm. Vì chu kì quay của mỗi vòng là hằng số không phụ thuộc vận tốc, tổng thời gian hạt chuyển động trong máy sẽ <strong>ngắn lại</strong> chứ không phải dài hơn [2, 6].</p>
+<p><strong>d) Sai.</strong> Mỗi lần đi qua khe hở giữa hai hộp, điện trường sinh công giúp hạt nhận thêm năng lượng <em>&Delta;W = qU</em>. Tổng số lần hạt qua khe để đạt đến động năng cực đại <em>W<sub>đ,max</sub></em> là <em>N = W<sub>đ,max</sub> / (qU)</em>. Nếu tăng <em>U</em>, số lần qua khe <em>N</em> (tương ứng với số nửa vòng quay cần thiết) sẽ giảm. Vì chu kì quay của mỗi vòng là hằng số không phụ thuộc vận tốc, tổng thời gian hạt chuyển động trong máy sẽ <strong>ngắn lại</strong> chứ không phải dài hơn.</p>
         
                 `
             },
@@ -530,6 +556,138 @@ Thay số: $W_{d} = 2 \\cdot \\pi^2 \\cdot 1,67 \\cdot 10^{-27} \\cdot (12 \\cdo
 $W_{d} = \\frac{1,333 \\cdot 10^{-12}}{1,6 \\cdot 10^{-13}} \\approx 8,33 \\text{ MeV} \\approx 8,3 \\text{ MeV}$.</p>
         
                 `
+            },
+            {
+                question: `<p>Trong một số nghiên cứu hạt nhân, người ta cần gia tốc các hạt tích điện như proton, đơteron, electron, các ion,... để các hạt đó có năng lượng đủ lớn gây ra phản ứng hạt nhân. Một trong các thiết bị gia tốc hạt là máy gia tốc <strong>xiclotron</strong>.</p>
+
+<p><strong>Xiclotron</strong> gồm một hình trụ rỗng bằng kim loại được cắt thành hai phần theo đường kính, gọi là các cực đề hay cực D. Cả hệ thống được đặt trong từ trường đều không đổi có cảm ứng từ $B$ vuông góc với mặt phẳng của các cực. Hai cực này được nối với nguồn điện xoay chiều tần số cao để tạo một điện trường xoay chiều ở khe giữa chúng.</p>
+
+<p>Hạt tích điện cần gia tốc được tạo thành ở tâm hai cực, đi vào các cực D rỗng và chuyển động trong đó theo quỹ đạo tròn với tốc độ không đổi. Hạt chỉ được gia tốc mỗi khi đi qua khe giữa các cực D nếu chiều chuyển động phù hợp với chiều của điện trường. Để có sự cộng hưởng đó, tần số góc của chuyển động tròn của hạt phải bằng tần số góc của điện trường xoay chiều.</p>
+
+<p>Kết quả là hạt chuyển động theo đường xoắn ốc và được lái ra ngoài qua cửa sổ $W$ bởi bộ phận lái $L$.</p>
+
+<p>Do khối lượng của hạt phụ thuộc vào tốc độ nên tần số góc của hạt thay đổi, dẫn đến sự cộng hưởng bị phá vỡ. Để không xảy ra sự mất đồng bộ pha trong xiclotron, người ta có thể thay đổi tần số của điện trường xoay chiều mà vẫn giữ từ trường không đổi. Khi đó ta có máy gia tốc <strong>phazotron</strong>.</p>
+
+<p>Nếu dùng phazotron để gia tốc đơteron thì cần thay đổi tần số của điện trường theo thời gian như thế nào, biết rằng cứ sau mỗi vòng quay, hạt nhận được năng lượng trung bình là $\\Delta$?</p>
+
+<p>Để động năng của hạt đạt đến $200\\,\\text{MeV}$ thì tần số của điện trường thay đổi bao nhiêu phần trăm? Bỏ qua động năng ban đầu của hạt.</p>
+
+<p>Cho biết năng lượng nghỉ của đơteron là:</p>
+
+<p>\\[
+E_d = 1876\\,\\text{MeV}
+\\]</p>`,
+                options: [],
+                correct_answer: "",
+                level: 'HARD',
+                type: 'Essay',
+                reference: 'Olympic Vật lý Sinh viên Toàn quốc – Hà Nội 2010',
+                solution: `<p>Ký hiệu $E$ là năng lượng của hạt, $\\Delta$ là năng lượng hạt nhận được sau một vòng quay, $\\omega$ là tần số góc của nó. Tốc độ tăng năng lượng của hạt là:</p>
+
+<p>\\[
+\\frac{dE}{dt} = \\frac{\\omega\\Delta}{2\\pi}
+\\tag{1}
+\\]</p>
+
+<p>Mặt khác:</p>
+
+<p>\\[
+\\omega = \\frac{c^2qB}{E}
+\\tag{2}
+\\]</p>
+
+<p>Do đó:</p>
+
+<p>\\[
+E_d + \\int_0^t dt\\,\\frac{\\omega\\Delta}{2\\pi}
+= \\frac{c^2qB}{\\omega}
+\\tag{3}
+\\]</p>
+
+<p>Do $B = \\text{const}$, lấy đạo hàm hai vế của (3) theo $t$, ta nhận được phương trình:</p>
+
+<p>\\[
+\\frac{1}{\\omega^3}\\frac{d\\omega}{dt}
+= -\\frac{1}{2}\\frac{d}{dt}\\left(\\frac{1}{\\omega^2}\\right)
+= -\\frac{\\Delta}{2\\pi c^2qB}
+\\]</p>
+
+<p>hay:</p>
+
+<p>\\[
+\\frac{d}{dt}\\left(\\frac{1}{\\omega^2}\\right)
+= \\frac{\\Delta}{\\pi c^2qB}
+\\tag{4}
+\\]</p>
+
+<p>Cuối cùng, ta nhận được biểu thức biểu diễn sự phụ thuộc vào thời gian của tần số góc của hạt, tức là tần số của điện trường:</p>
+
+<p>\\[
+\\omega(t) = \\frac{\\omega_0}{\\sqrt{At + 1}}
+\\]</p>
+
+<p>với:</p>
+
+<p>\\[
+A = \\frac{\\omega_0^2\\Delta}{\\pi c^2qB}
+\\tag{5}
+\\]</p>
+
+<p>Trong đó $\\omega_0$ là tần số tại $t = 0$.</p>
+
+<p>Từ (2) ta rút ra:</p>
+
+<p>\\[
+\\left|\\frac{\\omega - \\omega_0}{\\omega_0}\\right|
+=
+\\left|\\frac{E - E_d}{E}\\right|
+\\approx 9,6\\%
+\\]</p>`
+            },
+            {
+                question: `<p><strong>4.11</strong> Trong một buồng thí nghiệm, duy trì một từ trường đều có độ lớn:</p>
+
+<p>\\[
+B = 6.5\\,\\text{G}
+\\]</p>
+
+<p>với:</p>
+
+<p>\\[
+1\\,\\text{G} = 10^{-4}\\,\\text{T}
+\\]</p>
+
+<p>Một electron được bắn vào từ trường với vận tốc:</p>
+
+<p>\\[
+v = 4.8 \\times 10^6\\,\\text{m/s}
+\\]</p>
+
+<p>vuông góc với từ trường.</p>
+
+<p>Hãy giải thích vì sao quỹ đạo của electron là một đường tròn. Xác định bán kính quỹ đạo tròn của electron.</p>
+
+<p>Cho:</p>
+
+<p>\\[
+e = 1.5\\times10^{-19}\\,\\text{C}
+\\]</p>
+
+<p>\\[
+m_e = 9.1\\times10^{-31}\\,\\text{kg}
+\\]</p>
+
+<hr/>
+
+<p><strong>4.12</strong> Dựa trên dữ kiện của Bài 4.11, hãy xác định tần số quay của electron trên quỹ đạo tròn của nó.</p>
+
+<p>Tần số này có phụ thuộc vào vận tốc của electron hay không? Hãy giải thích.</p>`,
+                options: [],
+                correct_answer: "",
+                level: 'MEDIUM',
+                type: 'Essay',
+                reference: 'NCERT Physics XII Chapter 4 PDF - Moving Charges and Magnetism, NCERT; Exercise 4.11 & 4.12, tr. 135',
+                solution: `Đáp án đang được đội ngũ PhysicMUT biên soạn`
             }
         ]
     );
@@ -552,17 +710,17 @@ $W_{d} = \\frac{1,333 \\cdot 10^{-12}}{1,6 \\cdot 10^{-13}} \\approx 8,33 \\text
 
     <section>
         <h2 style="color: #2980b9;">1. Định nghĩa và Cấu tạo</h2>
-        <p><strong>Định nghĩa:</strong> Loa điện động là một thiết bị biến đổi tín hiệu điện (dao động điện) thành tín hiệu âm thanh (dao động cơ học của sóng âm) có cùng tần số [1].</p>
+        <p><strong>Định nghĩa:</strong> Loa điện động là một thiết bị biến đổi tín hiệu điện (dao động điện) thành tín hiệu âm thanh (dao động cơ học của sóng âm) có cùng tần số.</p>
         
         <p><strong>Cấu tạo chính:</strong></p>
         <ul>
-            <li><strong>Nam châm vĩnh cửu (Magnet):</strong> Thường là nam châm hình tròn hoặc hình trụ, được cố định vào khung loa. Chức năng là tạo ra một từ trường mạnh và đều (B) trong khe từ (khe hở) [1], [2].</li>
-            <li><strong>Cuộn dây (Voice Coil/Cuộn âm):</strong> Là một ống dây dẫn nhẹ, được đặt trong khe từ của nam châm nhưng không chạm vào nam châm. Dòng điện tín hiệu sẽ chạy qua cuộn dây này [1], [3].</li>
-            <li><strong>Màng loa (Cone/Diaphragm):</strong> Gắn chặt với cuộn dây. Khi cuộn dây dao động, màng loa dao động theo để nén và giãn không khí, tạo ra sóng âm [1], [4].</li>
+            <li><strong>Nam châm vĩnh cửu (Magnet):</strong> Thường là nam châm hình tròn hoặc hình trụ, được cố định vào khung loa. Chức năng là tạo ra một từ trường mạnh và đều (B) trong khe từ (khe hở).</li>
+            <li><strong>Cuộn dây (Voice Coil/Cuộn âm):</strong> Là một ống dây dẫn nhẹ, được đặt trong khe từ của nam châm nhưng không chạm vào nam châm. Dòng điện tín hiệu sẽ chạy qua cuộn dây này.</li>
+            <li><strong>Màng loa (Cone/Diaphragm):</strong> Gắn chặt với cuộn dây. Khi cuộn dây dao động, màng loa dao động theo để nén và giãn không khí, tạo ra sóng âm.</li>
             <li><strong>Các bộ phận phụ trợ:</strong>
                 <ul>
-                    <li><em>Nhện loa (Spider) và Gân loa (Surround):</em> Giữ cho cuộn dây nằm chính giữa khe từ và giúp hệ thống đàn hồi trở về vị trí cân bằng [2], [5].</li>
-                    <li><em>Nắp che bụi (Dust cap):</em> Chắn bụi bẩn rơi vào khe từ [3].</li>
+                    <li><em>Nhện loa (Spider) và Gân loa (Surround):</em> Giữ cho cuộn dây nằm chính giữa khe từ và giúp hệ thống đàn hồi trở về vị trí cân bằng.</li>
+                    <li><em>Nắp che bụi (Dust cap):</em> Chắn bụi bẩn rơi vào khe từ.</li>
                 </ul>
             </li>
         </ul>
@@ -570,15 +728,15 @@ $W_{d} = \\frac{1,333 \\cdot 10^{-12}}{1,6 \\cdot 10^{-13}} \\approx 8,33 \\text
 
     <section>
         <h2 style="color: #2980b9;">2. Nguyên lý hoạt động</h2>
-        <p>Hoạt động của loa dựa trên <strong>tác dụng của từ trường lên dòng điện</strong> (Lực Lo-ren-xơ/Lực Ampère) [6].</p>
+        <p>Hoạt động của loa dựa trên <strong>tác dụng của từ trường lên dòng điện</strong> (Lực Lo-ren-xơ/Lực Ampère).</p>
         <ol>
             <li><strong>Tín hiệu vào:</strong> Dòng điện xoay chiều (tín hiệu âm thanh) từ ampli chạy qua cuộn dây (Voice coil).</li>
-            <li><strong>Tương tác từ:</strong> Cuộn dây mang dòng điện nằm trong từ trường của nam châm vĩnh cửu sẽ chịu tác dụng của lực từ. Chiều của lực tuân theo <em>Quy tắc bàn tay trái</em> [7].
+            <li><strong>Tương tác từ:</strong> Cuộn dây mang dòng điện nằm trong từ trường của nam châm vĩnh cửu sẽ chịu tác dụng của lực từ. Chiều của lực tuân theo <em>Quy tắc bàn tay trái</em>.
                 <ul>
                     <li>Khi dòng điện đổi chiều, chiều của lực từ cũng thay đổi (hướng ra hoặc hướng vào), làm cuộn dây dao động dọc theo trục.</li>
                 </ul>
             </li>
-            <li><strong>Tạo ra âm thanh:</strong> Cuộn dây gắn liền với màng loa nên màng loa cũng dao động theo với cùng tần số của dòng điện [8]. Màng loa nén và giãn lớp không khí tiếp xúc, tạo ra sóng dọc lan truyền ra môi trường [9].</li>
+            <li><strong>Tạo ra âm thanh:</strong> Cuộn dây gắn liền với màng loa nên màng loa cũng dao động theo với cùng tần số của dòng điện. Màng loa nén và giãn lớp không khí tiếp xúc, tạo ra sóng dọc lan truyền ra môi trường.</li>
         </ol>
     </section>
 
@@ -594,17 +752,17 @@ $W_{d} = \\frac{1,333 \\cdot 10^{-12}}{1,6 \\cdot 10^{-13}} \\approx 8,33 \\text
         <ul style="list-style-type: square;">
             <li>\\( F \\) là lực từ tác dụng lên cuộn dây (N).</li>
             <li>\\( B \\) là cảm ứng từ của nam châm vĩnh cửu (T).</li>
-            <li>\\( I \\) là cường độ dòng điện chạy qua cuộn dây (A) [1].</li>
+            <li>\\( I \\) là cường độ dòng điện chạy qua cuộn dây (A).</li>
             <li>\\( l \\) là chiều dài tổng cộng của đoạn dây dẫn nằm trong từ trường (m).</li>
         </ul>
-        <p>Khi cường độ dòng điện \\( I \\) thay đổi, lực từ \\( F \\) thay đổi làm màng loa dao động với biên độ thay đổi, từ đó quyết định độ to của âm thanh phát ra [1, 7]. Tần số của dòng điện đầu vào sẽ quyết định tần số dao động của màng loa, tạo ra âm thanh có cùng tần số [8].</p>
+        <p>Khi cường độ dòng điện \\( I \\) thay đổi, lực từ \\( F \\) thay đổi làm màng loa dao động với biên độ thay đổi, từ đó quyết định độ to của âm thanh phát ra. Tần số của dòng điện đầu vào sẽ quyết định tần số dao động của màng loa, tạo ra âm thanh có cùng tần số.</p>
 
         <h3>b. Áp suất tác dụng lên màng loa (p)</h3>
         <p>Trong các bài tập nâng cao, áp suất cực đại tác dụng lên màng loa có diện tích <em>S</em> được tính bằng:</p>
         <div style="background-color: #f1f1f1; padding: 15px; border-left: 5px solid #27ae60; margin: 10px 0;">
             <strong>p = F / S</strong>
         </div>
-        <p>Nếu màng loa hình tròn bán kính R, diện tích là S = &pi;R<sup>2</sup> [10].</p>
+        <p>Nếu màng loa hình tròn bán kính R, diện tích là S = &pi;R<sup>2</sup>.</p>
 
         <h3>c. Mối liên hệ tần số</h3>
         <p>Tần số của sóng âm phát ra bằng tần số của dòng điện xoay chiều chạy trong cuộn dây:</p>
@@ -622,22 +780,22 @@ $W_{d} = \\frac{1,333 \\cdot 10^{-12}}{1,6 \\cdot 10^{-13}} \\approx 8,33 \\text
             <tr>
                 <td>Sóng âm từ loa có thể truyền trong chân không.</td>
                 <td style="color: red; font-weight: bold;">SAI</td>
-                <td>Sóng âm là sóng cơ học, cần môi trường vật chất để lan truyền [9].</td>
+                <td>Sóng âm là sóng cơ học, cần môi trường vật chất để lan truyền.</td>
             </tr>
             <tr>
                 <td>Khi tăng cường độ dòng điện, âm thanh phát ra nhỏ đi.</td>
                 <td style="color: red; font-weight: bold;">SAI</td>
-                <td>I tăng &rarr; F tăng &rarr; Biên độ dao động mạnh hơn &rarr; Âm to hơn [4].</td>
+                <td>I tăng &rarr; F tăng &rarr; Biên độ dao động mạnh hơn &rarr; Âm to hơn.</td>
             </tr>
             <tr>
                 <td>Loa hoạt động dựa trên hiện tượng cảm ứng điện từ.</td>
                 <td style="color: orange; font-weight: bold;">Cần lưu ý</td>
-                <td>Chính xác là dựa trên <strong>lực từ tác dụng lên dòng điện</strong>. Cảm ứng điện từ là nguyên lý của Micro (ngược lại với Loa) [11], [1].</td>
+                <td>Chính xác là dựa trên <strong>lực từ tác dụng lên dòng điện</strong>. Cảm ứng điện từ là nguyên lý của Micro (ngược lại với Loa).</td>
             </tr>
             <tr>
                 <td>Sóng âm do loa tạo ra trong không khí là sóng dọc.</td>
                 <td style="color: green; font-weight: bold;">ĐÚNG</td>
-                <td>Do quá trình nén và giãn của khối không khí [12].</td>
+                <td>Do quá trình nén và giãn của khối không khí.</td>
             </tr>
         </table>
     </section>
@@ -650,13 +808,13 @@ $W_{d} = \\frac{1,333 \\cdot 10^{-12}}{1,6 \\cdot 10^{-13}} \\approx 8,33 \\text
             <p><strong>Giải:</strong></p>
             <p>1. Đổi đơn vị: &ell; = 0,25 m; D = 0,15 m &rarr; R = 0,075 m; I<sub>0</sub> = 2 A.</p>
             <p>2. Lực từ cực đại (F<sub>max</sub>):<br>
-               F<sub>max</sub> = B &cdot; I<sub>0</sub> &cdot; &ell; = 0,35 &cdot; 2 &cdot; 0,25 = <strong>0,175 (N)</strong> [13].
+               F<sub>max</sub> = B &cdot; I<sub>0</sub> &cdot; &ell; = 0,35 &cdot; 2 &cdot; 0,25 = <strong>0,175 (N)</strong>.
             </p>
             <p>3. Diện tích màng loa (S):<br>
-               S = &pi; &cdot; R<sup>2</sup> = &pi; &cdot; (0,075)<sup>2</sup> &approx; 0,01767 (m<sup>2</sup>) [10].
+               S = &pi; &cdot; R<sup>2</sup> = &pi; &cdot; (0,075)<sup>2</sup> &approx; 0,01767 (m<sup>2</sup>).
             </p>
             <p>4. Áp suất cực đại (p<sub>max</sub>):<br>
-               p<sub>max</sub> = F<sub>max</sub> / S = 0,175 / 0,01767 &approx; <strong>9,9 (Pa)</strong> [10].
+               p<sub>max</sub> = F<sub>max</sub> / S = 0,175 / 0,01767 &approx; <strong>9,9 (Pa)</strong>.
             </p>
         </div>
     </section>
@@ -808,51 +966,7 @@ $W_{d} = \\frac{1,333 \\cdot 10^{-12}}{1,6 \\cdot 10^{-13}} \\approx 8,33 \\text
             status: 'ACTIVE'
         }],
         [
-            // PROBLEM 1
-            {
-                question: `
-<div>
-    <p>
-        Loa là một thiết bị có nhiệm vụ phát ra âm thanh bằng cách chuyển tín hiệu điện thành tín hiệu âm thanh (sóng âm). Loa có thể được cấu tạo gồm các bộ phận đơn giản như (Hình a). Khi tín hiệu điện biến thiên theo tần số của tín hiệu âm thanh, cuộn dây và màng loa dao động cùng tần số, dẫn đến sự dao động của không khí và sóng âm được tạo ra.
-    </p>
-    <p>
-        Cấu tạo đơn giản của bộ phận tạo ra sự dao động của không khí của loa gồm hai phần: nam châm hình tròn được đặt cố định, trọng tâm nam châm đặt thẳng hàng với trọng tâm màng loa và cuộn dây hình tròn (Hình b). Khi dòng điện thay đổi theo thời gian chạy qua cuộn dây đặt trong từ trường của nam châm sẽ làm xuất hiện lực từ tác dụng lên cuộn dây, lực từ này có chiều thay đổi làm nón loa dao động theo, từ đó tạo ra âm thanh phát ra tương ứng với tín hiệu âm thanh đầu vào.
-    </p>
-    <ul>
-        <li>
-            <strong>a.</strong> Loa điện hoạt động dựa trên hiện tượng cảm ứng điện từ.
-        </li>
-        <li>
-            <strong>b.</strong> Loa có nhiệm vụ biến dao động điện thành dao động âm cùng tần số.
-        </li>
-        <li>
-            <strong>c.</strong> Sóng âm do loa tạo ra truyền trong không khí tới tai người nghe thuộc loại sóng dọc.
-        </li>
-        <li>
-            <strong>d.</strong> Biết từ trường của nam châm có độ lớn cảm ứng từ là 0,075T. Cuộn dây có đường kính khoảng 7,2cm, gồm 20 vòng dây và có điện trở là 5,8Ω. Khi kết nối với nguồn có hiệu điện thế 12V, dòng điện chạy trong cuộn dây tại một thời điểm xác định có chiều cùng chiều kim đồng hồ như (Hình b). Tại thời điểm này, lực từ tác dụng trên cuộn dây có độ lớn là 0,7N.
-        </li>
-    </ul>
-</div>
-                `,
-                options: [],
-                correct_answer: "",
-                level: 'MEDIUM',
-                type: 'Essay',
-                status: 'ACTIVE',
-                solution: `
-<p><strong>a) Sai.</strong> Loa điện động hoạt động dựa trên tác dụng của lực từ lên đoạn dây dẫn mang dòng điện đặt trong từ trường (được gọi là lực từ hay lực Ampere), không phải dựa trên hiện tượng cảm ứng điện từ [1], [2]. Hiện tượng cảm ứng điện từ là nguyên lí hoạt động của micro điện động hoặc máy phát điện.</p>
-
-<p><strong>b) Đúng.</strong> Căn cứ vào nguyên lí hoạt động, khi tín hiệu điện biến thiên với một tần số xác định truyền vào cuộn dây, lực từ tác dụng lên cuộn dây cũng biến thiên cùng tần số đó, làm màng loa dao động và tạo ra sóng âm thanh trong không khí có cùng tần số với dao động điện đầu vào [3].</p>
-
-<p><strong>c) Đúng.</strong> Khi sóng âm truyền trong chất khí (như không khí), các phần tử của môi trường dao động dọc theo phương truyền sóng. Do đó, sóng âm trong không khí luôn luôn là sóng dọc [4], [5].</p>
-
-<p><strong>d) Đúng.</strong> Ta có thể kiểm tra độ lớn của lực từ bằng các bước sau: <br>
-- Cường độ dòng điện chạy qua cuộn dây: $I = \\frac{U}{R} = \\frac{12}{5,8} \\approx 2,07 \\text{ A}$. <br>
-- Tổng chiều dài của 20 vòng dây (với chu vi mỗi vòng là $\\pi d$): $L = N \\cdot \\pi d = 20 \\cdot \\pi \\cdot 0,072 \\approx 4,52 \\text{ m}$. <br>
-- Độ lớn lực từ tác dụng lên cuộn dây (vì từ trường vuông góc với dòng điện): $F = B \\cdot I \\cdot L = 0,075 \\cdot 2,07 \\cdot 4,52 \\approx 0,70 \\text{ N}$.</p>
-        `
-            },
-            // PROBLEM 2
+            // Based Problem 1
             {
                 question: `
 <div>
@@ -930,16 +1044,453 @@ $W_{d} = \\frac{1,333 \\cdot 10^{-12}}{1,6 \\cdot 10^{-13}} \\approx 8,33 \\text
                 level: 'HARD',
                 type: 'Essay',
                 status: 'ACTIVE',
+                reference: 'Câu 2 Đề thi thử tốt nghiệp 2025 (Mã đề 1201)',
                 solution: `
-<p><strong>a) Sai.</strong> Khi cho dòng điện không đổi (DC) vào hai điểm nối tín hiệu, cuộn dây sẽ sinh ra một từ trường không đổi, dẫn đến lực từ tác dụng lên cuộn dây cũng không đổi. Lực này chỉ làm màng loa dịch chuyển đến một vị trí cố định mới rồi dừng lại chứ không tạo ra dao động liên tục. Vì vậy, loa sẽ không thể phát ra âm thanh [1], [2].</p>
+<p><strong>a) Sai.</strong> Khi cho dòng điện không đổi (DC) vào hai điểm nối tín hiệu, cuộn dây sẽ sinh ra một từ trường không đổi, dẫn đến lực từ tác dụng lên cuộn dây cũng không đổi. Lực này chỉ làm màng loa dịch chuyển đến một vị trí cố định mới rồi dừng lại chứ không tạo ra dao động liên tục. Vì vậy, loa sẽ không thể phát ra âm thanh.</p>
 
-<p><strong>b) Sai.</strong> Sóng âm thanh phát ra từ loa là sóng cơ học, được tạo ra từ sự dao động của các phần tử vật chất trong môi trường (như nén và giãn không khí). Sóng âm chỉ truyền được trong các môi trường rắn, lỏng, khí và hoàn toàn không thể truyền được trong chân không [3], [4].</p>
+<p><strong>b) Sai.</strong> Sóng âm thanh phát ra từ loa là sóng cơ học, được tạo ra từ sự dao động của các phần tử vật chất trong môi trường (như nén và giãn không khí). Sóng âm chỉ truyền được trong các môi trường rắn, lỏng, khí và hoàn toàn không thể truyền được trong chân không.</p>
 
-<p><strong>c) Sai.</strong> Theo cấu tạo của loa điện động, bộ phận nam châm vĩnh cửu được đặt cố định, không di chuyển [2]. Khi có dòng điện xoay chiều chạy qua, chính cuộn dây (được gắn cứng với màng loa) mới là bộ phận chịu tác dụng của lực từ biến thiên và dao động, từ đó kéo theo màng loa dao động để phát ra âm thanh [1], [2].</p>
+<p><strong>c) Sai.</strong> Theo cấu tạo của loa điện động, bộ phận nam châm vĩnh cửu được đặt cố định, không di chuyển. Khi có dòng điện xoay chiều chạy qua, chính cuộn dây (được gắn cứng với màng loa) mới là bộ phận chịu tác dụng của lực từ biến thiên và dao động, từ đó kéo theo màng loa dao động để phát ra âm thanh.</p>
 
-<p><strong>d) Sai.</strong> Tần số của sóng âm do loa phát ra luôn bằng với tần số của dòng điện (tín hiệu điện) truyền vào cuộn dây [5]. Dựa vào thông số được cung cấp trực tiếp từ đồ thị, tần số của điện áp đầu vào là $f = \\frac{40000}{3} \\text{ Hz}$ (chứ không phải $\\frac{4000}{3} \\text{ Hz}$). Do đó, tần số âm loa phát ra cũng là $\\frac{40000}{3} \\text{ Hz}$, phát biểu đã cho sai giá trị.</p>
+<p><strong>d) Sai.</strong> Tần số của sóng âm do loa phát ra luôn bằng với tần số của dòng điện (tín hiệu điện) truyền vào cuộn dây. Dựa vào thông số được cung cấp trực tiếp từ đồ thị, tần số của điện áp đầu vào là $f = \\frac{40000}{3} \\text{ Hz}$ (chứ không phải $\\frac{4000}{3} \\text{ Hz}$). Do đó, tần số âm loa phát ra cũng là $\\frac{40000}{3} \\text{ Hz}$, phát biểu đã cho sai giá trị.</p>
         `
+            },
+            // Based Problem 2
+            {
+                question: `<p><strong>Loa điện động</strong> hoạt động dựa trên tác dụng từ giữa nam châm vĩnh cửu và cuộn dây dẫn. Cấu tạo chính gồm một <strong>cuộn dây nhẹ</strong> gắn chặt với <strong>màng loa</strong>, được đặt trong khe hở từ của nam châm vĩnh cửu, nơi có các đường sức từ hướng xuyên tâm.</p>
+
+                <p>Xét một mẫu loa có ống dây gồm:</p>
+
+                <p>\\[
+                N = 100\\ \\text{vòng}
+                \\]</p>
+
+                <p>Các vòng dây quấn sít nhau tạo thành ống dây có chiều dài:</p>
+
+                <p>\\[
+                L = 2\\,\\text{cm}
+                \\]</p>
+
+                <p>Hãy cho biết các phát biểu sau đây là đúng hay sai.</p>
+
+                <p><strong>a)</strong> Khi có dòng điện xoay chiều đi qua, cuộn dây đóng vai trò như một nam châm điện, tương tác với nam châm vĩnh cửu và khiến cho màng loa dao động để tạo ra âm thanh.</p>
+
+                <p><strong>b)</strong> Nguyên lí hoạt động của loa điện động là hiện tượng cảm ứng điện từ.</p>
+
+                <p><strong>c)</strong> Để loa hoạt động ổn định và phát ra âm thanh liên tục, ta có thể nối hai đầu cuộn dây với nguồn điện một chiều có cường độ dòng điện không đổi.</p>
+
+                <p><strong>d)</strong> Biết độ lớn cảm ứng từ trong cuộn dây được tính bằng công thức:</p>
+
+                <p>\\[
+                B = 4\\pi\\cdot10^{-7}\\cdot n\\cdot I
+                \\]</p>
+
+                <p>Giả sử dòng điện trong cuộn dây tại một thời điểm có cường độ:</p>
+
+                <p>\\[
+                I = 2\\,\\text{A}
+                \\]</p>
+
+                <p>Khi đó cảm ứng từ do chính cuộn dây sinh ra trong lòng nó có độ lớn khoảng:</p>
+
+                <p>\\[
+                B \\approx 12,6\\,\\text{mT}
+                \\]</p>`,
+                options: [],
+                correct_answer: "",
+                level: 'MEDIUM',
+                type: 'Essay',
+                status: 'ACTIVE',
+                reference: 'Đề Sở GD Hà Tĩnh 2025',
+                solution: `Đáp án đang được đội ngũ PhysicMUT biên soạn`
+
+            },
+            // PROBLEM 1
+            {
+                question: `
+<div>
+    <p>
+        Loa là một thiết bị có nhiệm vụ phát ra âm thanh bằng cách chuyển tín hiệu điện thành tín hiệu âm thanh (sóng âm). Loa có thể được cấu tạo gồm các bộ phận đơn giản như (Hình a). Khi tín hiệu điện biến thiên theo tần số của tín hiệu âm thanh, cuộn dây và màng loa dao động cùng tần số, dẫn đến sự dao động của không khí và sóng âm được tạo ra.
+    </p>
+    <p>
+        Cấu tạo đơn giản của bộ phận tạo ra sự dao động của không khí của loa gồm hai phần: nam châm hình tròn được đặt cố định, trọng tâm nam châm đặt thẳng hàng với trọng tâm màng loa và cuộn dây hình tròn (Hình b). Khi dòng điện thay đổi theo thời gian chạy qua cuộn dây đặt trong từ trường của nam châm sẽ làm xuất hiện lực từ tác dụng lên cuộn dây, lực từ này có chiều thay đổi làm nón loa dao động theo, từ đó tạo ra âm thanh phát ra tương ứng với tín hiệu âm thanh đầu vào.
+    </p>
+    <ul>
+        <li>
+            <strong>a.</strong> Loa điện hoạt động dựa trên hiện tượng cảm ứng điện từ.
+        </li>
+        <li>
+            <strong>b.</strong> Loa có nhiệm vụ biến dao động điện thành dao động âm cùng tần số.
+        </li>
+        <li>
+            <strong>c.</strong> Sóng âm do loa tạo ra truyền trong không khí tới tai người nghe thuộc loại sóng dọc.
+        </li>
+        <li>
+            <strong>d.</strong> Biết từ trường của nam châm có độ lớn cảm ứng từ là 0,075T. Cuộn dây có đường kính khoảng 7,2cm, gồm 20 vòng dây và có điện trở là 5,8Ω. Khi kết nối với nguồn có hiệu điện thế 12V, dòng điện chạy trong cuộn dây tại một thời điểm xác định có chiều cùng chiều kim đồng hồ như (Hình b). Tại thời điểm này, lực từ tác dụng trên cuộn dây có độ lớn là 0,7N.
+        </li>
+    </ul>
+</div>
+                `,
+                options: [],
+                correct_answer: "",
+                level: 'MEDIUM',
+                type: 'Essay',
+                status: 'ACTIVE',
+                solution: `
+<p><strong>a) Sai.</strong> Loa điện động hoạt động dựa trên tác dụng của lực từ lên đoạn dây dẫn mang dòng điện đặt trong từ trường (được gọi là lực từ hay lực Ampere), không phải dựa trên hiện tượng cảm ứng điện từ. Hiện tượng cảm ứng điện từ là nguyên lí hoạt động của micro điện động hoặc máy phát điện.</p>
+
+<p><strong>b) Đúng.</strong> Căn cứ vào nguyên lí hoạt động, khi tín hiệu điện biến thiên với một tần số xác định truyền vào cuộn dây, lực từ tác dụng lên cuộn dây cũng biến thiên cùng tần số đó, làm màng loa dao động và tạo ra sóng âm thanh trong không khí có cùng tần số với dao động điện đầu vào.</p>
+
+<p><strong>c) Đúng.</strong> Khi sóng âm truyền trong chất khí (như không khí), các phần tử của môi trường dao động dọc theo phương truyền sóng. Do đó, sóng âm trong không khí luôn luôn là sóng dọc.</p>
+
+<p><strong>d) Đúng.</strong> Ta có thể kiểm tra độ lớn của lực từ bằng các bước sau: <br>
+- Cường độ dòng điện chạy qua cuộn dây: $I = \\frac{U}{R} = \\frac{12}{5,8} \\approx 2,07 \\text{ A}$. <br>
+- Tổng chiều dài của 20 vòng dây (với chu vi mỗi vòng là $\\pi d$): $L = N \\cdot \\pi d = 20 \\cdot \\pi \\cdot 0,072 \\approx 4,52 \\text{ m}$. <br>
+- Độ lớn lực từ tác dụng lên cuộn dây (vì từ trường vuông góc với dòng điện): $F = B \\cdot I \\cdot L = 0,075 \\cdot 2,07 \\cdot 4,52 \\approx 0,70 \\text{ N}$.</p>
+        `
+            },
+            {
+                question: `<p><strong>Câu 5 (ID: 763740)</strong></p>
+
+<p>Một loa điện động có một cuộn dây nằm trong khe hở của một nam châm. Giả sử từ trường của nam châm có độ lớn cảm ứng từ:</p>
+
+<p>\\[
+B = 0,1\\,\\text{T}
+\\]</p>
+
+<p>Cuộn dây có đường kính:</p>
+
+<p>\\[
+d = 6\\,\\text{cm}
+\\]</p>
+
+<p>Điện trở của cuộn dây:</p>
+
+<p>\\[
+R = 6,0\\,\\Omega
+\\]</p>
+
+<p>Gồm:</p>
+
+<p>\\[
+N = 20
+\\]</p>
+
+<p>vòng dây.</p>
+
+<p>Khi kết nối với nguồn có hiệu điện thế:</p>
+
+<p>\\[
+U = 12\\,\\text{V}
+\\]</p>
+
+<p>Dòng điện chạy trong cuộn dây tại một thời điểm xác định có chiều cùng chiều kim đồng hồ như hình bên.</p>
+
+<p>Hãy xác định độ lớn lực từ tác dụng lên cuộn dây tại thời điểm đó.</p>
+
+<p><em>(Làm tròn kết quả đến chữ số hàng phần trăm.)</em></p>
+
+<div style="margin-top:12px;padding:12px;border-left:4px solid #007bff;background:#f1f8ff;">
+<strong>Dữ kiện:</strong>
+<ul>
+<li>$B = 0,1\\,\\text{T}$</li>
+<li>$d = 6\\,\\text{cm}$</li>
+<li>$R = 6,0\\,\\Omega$</li>
+<li>$N = 20$ vòng</li>
+<li>$U = 12\\,\\text{V}$</li>
+</ul>
+</div>`,
+                options: [],
+                correct_answer: "",
+                level: 'MEDIUM',
+                type: 'Essay',
+                reference: 'Khảo sát chất lượng học sinh lớp 12 (lần 1) năm học 2024–2025 - Môn Vật lí, 2025, Sở GD&ĐT Thanh Hóa',
+                solution: `Đáp án đang được đội ngũ PhysicMUT biên soạn`
+            },
+            {
+                question: `<p><strong>Câu 4.</strong> Chọn câu ĐÚNG/SAI: Micro điện động là thiết bị được sử dụng để chuyển dao động âm thanh thành dòng điện biến đổi dựa trên hiện tượng cảm ứng điện từ, nhờ đó có thể khuếch đại âm thanh của người hát ra loa điện động.</p>
+
+<p>Về nguyên lý hoạt động, khi một người hát trước micro, màng rung bên trong micro được gắn với ống dây sẽ dao động làm ống dây di chuyển qua lại trong từ trường của một thanh nam châm vĩnh cửu, trục của ống dây trùng với trục của nam châm. Khi đó trong ống dây xuất hiện dòng điện cảm ứng, dòng điện này sẽ được dẫn ra mạch khuếch đại rồi ra loa.</p>
+
+  <div style="margin-top:12px;padding:10px;background:#f1f8ff;border-left:4px solid #007bff;">
+    <strong>Dữ kiện:</strong>
+    <ul style="margin:5px 0;padding-left:20px;">
+      <li>Số vòng dây: $N = 20$</li>
+      <li>Tiết diện vòng dây: $S = 30\\,\\text{cm}^2$</li>
+      <li>Tốc độ biến thiên cảm ứng từ cực đại:
+      $\\left|\\dfrac{dB}{dt}\\right|_{\\max}=7,0\\,\\text{T/s}$</li>
+    </ul>
+  </div>
+</div>
+
+<p>Giả sử rằng ống dây có:</p>
+
+<p>\\[
+N = 20
+\\]</p>
+
+<p>vòng dây và tiết diện vòng dây:</p>
+
+<p>\\[
+S = 30\\,\\text{cm}^2
+\\]</p>
+
+<p>Khi người hát phát ra một đơn âm khiến cuộn dây di chuyển đi vào và đi ra khỏi nam châm làm tốc độ biến thiên cảm ứng từ qua ống dây có giá trị cực đại:</p>
+
+<p>\\[
+\\left|\\frac{dB}{dt}\\right|_{\\max}=7,0\\,\\text{T/s}
+\\]</p>
+
+<p><strong>a)</strong> Tần số dao động điện trong micro bằng tần số âm thanh tạo ra.</p>
+
+<p><strong>b)</strong> Qua khuếch đại, biên độ dao động điện giảm xuống đáng kể, trong khi đó tần số được tăng lên.</p>
+
+<p><strong>c)</strong> Dòng điện cảm ứng xuất hiện trong ống dây của micro là dòng điện được cấp bởi nguồn điện bên ngoài, thường là pin.</p>
+
+<p><strong>d)</strong> Độ lớn suất điện động cực đại xuất hiện trong ống dây là:</p>
+
+<p>\\[
+0,42\\,\\text{V}
+\\]</p>`,
+                options: [],
+                correct_answer: "",
+                level: 'HARD',
+                type: 'Essay',
+                reference: 'Kỳ thi thử tốt nghiệp THPT năm 2025-2026 - Môn Vật lí, 2026, Sở GD&ĐT Thanh Hóa',
+                solution: `Đáp án đang được đội ngũ PhysicMUT biên soạn`
+            },
+            {
+                question: `Loa điện là gì? Hãy kể tên các loại loa điện khác nhau.</p>`,
+                options: [],
+                correct_answer: "",
+                level: 'HARD',
+                type: 'Essay',
+                reference: 'Class XII Electronics Technology (344), 2025, Central Board of Secondary Education; Section A, Câu 17',
+                solution: `<p>Loa điện là một thiết bị điện - âm học dùng để chuyển đổi tín hiệu điện thành sóng âm thanh.</p>
+
+                <p>Một số loại loa điện phổ biến gồm:</p>
+
+                <ul>
+                <li>Loa điện động (Moving-coil loudspeaker)</li>
+                <li>Loa kèn (Horn loudspeaker)</li>
+                <li>Loa áp điện (Piezoelectric loudspeaker)</li>
+                <li>Loa tĩnh điện (Electrostatic loudspeaker)</li>
+                <li>Loa từ phẳng (Planar magnetic loudspeaker)</li>
+                <li>Loa trầm (Woofer)</li>
+                <li>Loa trung (Mid-range speaker)</li>
+                <li>Loa tép / loa cao tần (Tweeter)</li>
+                <li>Loa siêu trầm (Subwoofer)</li>
+                </ul>`
+            },
+            {
+                question: `<p><strong>Câu 22.</strong> Các vùng nén và vùng giãn được phát ra từ màng loa khi màng loa dao động qua lại. Tần số dao động là:</p>
+
+<p>\\[
+f = 50\\,\\text{Hz}
+\\]</p>
+
+<p>Tại điểm $P$ đang có một vùng nén. Hỏi sau bao lâu thì vùng giãn tiếp theo đến điểm $P$?</p>
+
+<p><strong>A.</strong> $0,010\\,\\text{s}$</p>
+<p><strong>B.</strong> $0,020\\,\\text{s}$</p>
+<p><strong>C.</strong> $25\\,\\text{s}$</p>
+<p><strong>D.</strong> $50\\,\\text{s}$</p>
+`,
+                options: [{ id: "A", text: "A" }, { id: "B", text: "B" }, { id: "C", text: "C" }, { id: "D", text: "D" }],
+                correct_answer: "A",
+                level: 'HARD',
+                type: 'Essay',
+                reference: 'Physics 5054/11 Paper 1 Multiple Choice, 2014, Cambridge International Examinations/UCLES; Câu 22, tr. 10.',
+                solution: `<p>Chu kỳ dao động của sóng âm là:</p>
+
+<p>\\[
+T = \\frac{1}{f} = \\frac{1}{50} = 0,020\\,\\text{s}
+\\]</p>
+
+<p>Một vùng nén và vùng giãn liên tiếp cách nhau nửa chu kỳ:</p>
+
+<p>\\[
+t = \\frac{T}{2} = \\frac{0,020}{2} = 0,010\\,\\text{s}
+\\]</p>
+
+<p>Vậy thời gian để vùng giãn tiếp theo đến điểm $P$ là:</p>
+
+<p>\\[
+0,010\\,\\text{s}
+\\]</p>
+
+<p><strong>Đáp án đúng: A.</strong></p>`
+            },
+            {
+                question: `<p><strong>Câu 1.</strong> Hai loa $S_1$ và $S_2$ được nối với một máy phát tín hiệu. Hai loa phát ra các sóng âm kết hợp.</p>
+
+<p><strong>(a)</strong> Hãy nêu ý nghĩa của thuật ngữ <strong>kết hợp</strong>.</p>
+
+<p>....................................................................................................................</p>
+<p>.................................................................................................................... [1]</p>
+
+<p><strong>(b)</strong> Một micro được nối với dao động ký. Các điểm $O$, $J$, $K$ và $L$ cùng nằm trên một đường thẳng như hình vẽ. Micro được di chuyển từ $O$ đến $L$.</p>
+
+<div style="font-family: Arial, sans-serif; max-width: 520px; margin: 20px auto; padding: 16px; background: #fff;">
+  <svg width="100%" height="380" viewBox="0 0 520 380">
+    <line x1="280" y1="40" x2="280" y2="310" stroke="black" stroke-width="2"/>
+
+    <circle cx="280" cy="60" r="4" fill="black"/>
+    <text x="292" y="66" font-size="20">L</text>
+
+    <circle cx="280" cy="160" r="4" fill="black"/>
+    <text x="292" y="166" font-size="20">K</text>
+
+    <circle cx="280" cy="205" r="4" fill="black"/>
+    <text x="292" y="211" font-size="20">J</text>
+
+    <circle cx="280" cy="250" r="4" fill="black"/>
+    <text x="292" y="256" font-size="20">O</text>
+
+    <circle cx="120" cy="220" r="4" fill="black"/>
+    <text x="88" y="226" font-size="20" font-weight="bold">S₁</text>
+
+    <circle cx="120" cy="280" r="4" fill="black"/>
+    <text x="88" y="286" font-size="20" font-weight="bold">S₂</text>
+
+    <line x1="120" y1="250" x2="280" y2="250" stroke="gray" stroke-width="2" stroke-dasharray="7,7"/>
+
+    <text x="105" y="350" font-size="18" font-weight="bold">Không theo tỉ lệ</text>
+  </svg>
+</div>
+
+<p>Một loạt cực đại và cực tiểu được quan sát giữa $O$ và $L$.</p>
+
+<p>Micro ghi nhận một cực đại tại $O$. Khi micro di chuyển về phía $L$, cực tiểu đầu tiên được quan sát tại $J$ và cực đại tiếp theo tại $K$.</p>
+
+<p>Khoảng cách giữa $S_1$ và $J$ là $2,00\\,\\text{m}$, khoảng cách giữa $S_2$ và $J$ là $2,08\\,\\text{m}$.</p>
+
+<p>Khoảng cách giữa $S_1$ và $K$ là $2,05\\,\\text{m}$, khoảng cách giữa $S_2$ và $K$ là $2,21\\,\\text{m}$.</p>
+
+<p><strong>(i)</strong> Tính độ lệch đường đi tại điểm $J$ giữa các sóng từ $S_1$ và $S_2$.</p>
+
+<p>Độ lệch đường đi = .................................................. m [1]</p>
+
+<p><strong>(ii)</strong> Nêu độ lệch pha theo radian tại điểm $J$ giữa các sóng từ $S_1$ và $S_2$.</p>
+
+<p>Độ lệch pha = .................................................. rad [1]</p>
+
+<p><strong>(iii)</strong> Chứng minh rằng bước sóng của sóng âm là $0,16\\,\\text{m}$.</p>
+
+<p>.................................................................................................................... [1]</p>
+
+<p><strong>(c)</strong> Tần số của âm được xác định bằng dao động ký.</p>
+
+<p><strong>(i)</strong> Giải thích cách sử dụng dao động ký để xác định tần số.</p>
+
+<p>....................................................................................................................</p>
+<p>....................................................................................................................</p>
+<p>.................................................................................................................... [2]</p>
+
+<p><strong>(ii)</strong> Tần số của âm là $2,1\\,\\text{kHz}$.</p>
+
+<p>Xác định tốc độ $v$ của âm.</p>
+
+<p>$v =$ .................................................. $\\text{m s}^{-1}$ [2]</p>`,
+                options: [],
+                correct_answer: "",
+                level: 'HARD',
+                type: 'Essay',
+                reference: 'AS Level Physics A - H156/02 Depth in Physics, 2021, OCR; Question 1, tr. 2-3/20',
+                solution: `Đáp án đang được đội ngũ PhysicMUT biên soạn`
+            },
+            {
+                question: `<p><strong>Câu 17.</strong> Hình vẽ cho thấy hai loa giống hệt nhau $X$ và $Y$ được nối với một máy phát tín hiệu. Hai loa phát ra sóng âm có cùng biên độ, cùng tần số và cùng pha.</p>
+
+<p>Một micro $M$ được di chuyển dọc theo đường thẳng từ $P_1$ đến $P_3$, và tín hiệu được ghi lại trên dao động ký.</p>
+
+<p><strong>Không theo tỉ lệ</strong></p>
+
+<div style="font-family: Arial, sans-serif; max-width: 760px; margin: 20px auto; padding: 16px; background: #fff;">
+  <svg width="100%" height="360" viewBox="0 0 800 360">
+    <rect x="40" y="120" width="120" height="90" fill="none" stroke="black" stroke-width="2"/>
+    <text x="55" y="155" font-size="18">Máy phát</text>
+    <text x="55" y="180" font-size="18">tín hiệu</text>
+
+    <line x1="160" y1="150" x2="210" y2="150" stroke="black" stroke-width="2"/>
+    <line x1="210" y1="150" x2="210" y2="80" stroke="black" stroke-width="2"/>
+    <line x1="210" y1="80" x2="260" y2="80" stroke="black" stroke-width="2"/>
+
+    <line x1="160" y1="190" x2="210" y2="190" stroke="black" stroke-width="2"/>
+    <line x1="210" y1="190" x2="210" y2="250" stroke="black" stroke-width="2"/>
+    <line x1="210" y1="250" x2="260" y2="250" stroke="black" stroke-width="2"/>
+
+    <rect x="260" y="70" width="25" height="20" fill="white" stroke="black" stroke-width="2"/>
+    <polygon points="285,70 315,58 315,102 285,90" fill="white" stroke="black" stroke-width="2"/>
+    <text x="275" y="50" font-size="22">X</text>
+
+    <rect x="260" y="240" width="25" height="20" fill="white" stroke="black" stroke-width="2"/>
+    <polygon points="285,240 315,228 315,272 285,260" fill="white" stroke="black" stroke-width="2"/>
+    <text x="275" y="230" font-size="22">Y</text>
+
+    <line x1="610" y1="40" x2="610" y2="260" stroke="black" stroke-width="2" stroke-dasharray="10,10"/>
+
+    <circle cx="610" cy="40" r="4" fill="black"/>
+    <text x="580" y="45" font-size="22">P₃</text>
+
+    <circle cx="610" cy="135" r="4" fill="black"/>
+    <text x="580" y="140" font-size="22">P₂</text>
+
+    <circle cx="610" cy="230" r="4" fill="black"/>
+    <text x="580" y="235" font-size="22">P₁</text>
+
+    <circle cx="630" cy="220" r="10" fill="white" stroke="black" stroke-width="2"/>
+    <text x="625" y="205" font-size="22">M</text>
+
+    <line x1="315" y1="125" x2="610" y2="125" stroke="black" stroke-width="1.5"/>
+    <polygon points="315,125 325,120 325,130" fill="black"/>
+    <polygon points="610,125 600,120 600,130" fill="black"/>
+    <text x="455" y="115" font-size="22">$D$</text>
+
+    <line x1="640" y1="220" x2="710" y2="220" stroke="black" stroke-width="2"/>
+    <line x1="640" y1="230" x2="710" y2="230" stroke="black" stroke-width="2"/>
+
+    <rect x="710" y="180" width="70" height="70" fill="white" stroke="black" stroke-width="2"/>
+    <path d="M720 215 C730 185 740 245 750 215 C760 185 770 245 780 215" fill="none" stroke="black" stroke-width="1.5"/>
+    <text x="690" y="165" font-size="18">Dao động ký</text>
+  </svg>
+</div>
+
+<p>Khi micro được di chuyển dọc theo đường từ $P_1$ đến $P_3$, dao động ký cho thấy tín hiệu cực đại tại $P_1$, tín hiệu bằng không tại $P_2$ và tín hiệu cực đại tiếp theo tại $P_3$.</p>
+
+<p><strong>(a)</strong> Giải thích các quan sát trên.</p>
+
+<p>....................................................................................................................</p>
+<p>....................................................................................................................</p>
+<p>....................................................................................................................</p>
+<p>.................................................................................................................... [2]</p>
+
+<p><strong>(b)</strong> Khoảng cách giữa tâm của $X$ và $Y$ là $70,0\\,\\text{cm}$, khoảng cách $D$ như hình vẽ là $4,00\\,\\text{m}$ và khoảng cách từ $P_1$ đến $P_2$ là $1,25\\,\\text{m}$.</p>
+
+<p>Sử dụng công thức giao thoa hai nguồn để tính tần số của sóng âm.</p>
+
+<p>Cho tốc độ âm:</p>
+
+<p>\\[
+v = 340\\,\\text{m s}^{-1}
+\\]</p>
+
+<p><strong>(c)</strong> Loa $Y$ bây giờ được thay bằng một loa tạo ra sóng âm có biên độ gấp đôi biên độ ban đầu.</p>
+
+<p>Mô tả sự thay đổi của tín hiệu quan sát được trên dao động ký khi micro được di chuyển dọc theo đường từ $P_1$ đến $P_3$.</p>
+
+<p>....................................................................................................................</p>
+<p>....................................................................................................................</p>
+<p>....................................................................................................................</p>
+<p>.................................................................................................................... [2]</p>`,
+                options: [],
+                correct_answer: "",
+                level: 'HARD',
+                type: 'Essay',
+                reference: 'A Level Physics A - H556/02 Exploring Physics, 2024, OCR; mục (b)-(c), quanh tr. 14-15/32',
+                solution: `Đáp án đang được đội ngũ PhysicMUT biên soạn`
             }
+
         ]
     );
 
@@ -961,12 +1512,12 @@ $W_{d} = \\frac{1,333 \\cdot 10^{-12}}{1,6 \\cdot 10^{-13}} \\approx 8,33 \\text
 
     <section>
         <h2 style="color: #2980b9;">1. Định nghĩa và Chức năng</h2>
-        <p><strong>Định nghĩa:</strong> Máy quang phổ khối (khối phổ kế) là một thiết bị dùng để tách các ion (hạt mang điện) có khối lượng khác nhau dựa trên sự lệch hướng của chúng trong từ trường [1].</p>
+        <p><strong>Định nghĩa:</strong> Máy quang phổ khối (khối phổ kế) là một thiết bị dùng để tách các ion (hạt mang điện) có khối lượng khác nhau dựa trên sự lệch hướng của chúng trong từ trường.</p>
         <p><strong>Chức năng chính:</strong></p>
         <ul>
-            <li>Đo khối lượng của các hạt cơ bản (electron, proton...) hoặc các ion nguyên tử/phân tử [2].</li>
-            <li>Xác định thành phần đồng vị của một nguyên tố hóa học [2], [3].</li>
-            <li>Phân tích cấu trúc phân tử trong hóa học và sinh học [3].</li>
+            <li>Đo khối lượng của các hạt cơ bản (electron, proton...) hoặc các ion nguyên tử/phân tử.</li>
+            <li>Xác định thành phần đồng vị của một nguyên tố hóa học.</li>
+            <li>Phân tích cấu trúc phân tử trong hóa học và sinh học.</li>
         </ul>
     </section>
 
@@ -975,7 +1526,7 @@ $W_{d} = \\frac{1,333 \\cdot 10^{-12}}{1,6 \\cdot 10^{-13}} \\approx 8,33 \\text
         <p>Quá trình hoạt động gồm các giai đoạn chính:</p>
         <ul>
             <li>
-                <strong>1. Buồng ion hoá:</strong> Biến các nguyên tử/phân tử của mẫu chất thành ion mang điện tích \\( q \\) [12].
+                <strong>1. Buồng ion hoá:</strong> Biến các nguyên tử/phân tử của mẫu chất thành ion mang điện tích \\( q \\).
             </li>
             <li>
                 <strong>2. Buồng gia tốc:</strong> Dưới tác dụng của một hiệu điện thế mạnh \\( U \\), các ion được gia tốc. Theo định lý biến thiên động năng (bỏ qua vận tốc đầu), ta có:
@@ -984,13 +1535,13 @@ $W_{d} = \\frac{1,333 \\cdot 10^{-12}}{1,6 \\cdot 10^{-13}} \\approx 8,33 \\text
                 </div>
             </li>
             <li>
-                <strong>3. Buồng phân tích (vùng từ trường):</strong> Ion đi vào từ trường đều \\( \\vec{B} \\) theo phương vuông góc với các đường sức từ. Lực từ (lực Lorentz) có độ lớn \\( F = |q|vB \\) đóng vai trò là lực hướng tâm làm ion chuyển động theo quỹ đạo tròn [12, 13]:
+                <strong>3. Buồng phân tích (vùng từ trường):</strong> Ion đi vào từ trường đều \\( \\vec{B} \\) theo phương vuông góc với các đường sức từ. Lực từ (lực Lorentz) có độ lớn \\( F = |q|vB \\) đóng vai trò là lực hướng tâm làm ion chuyển động theo quỹ đạo tròn:
                 <div style="background-color: #f1f1f1; padding: 10px; border-left: 5px solid #8e44ad; overflow-x: auto; text-align: center; margin: 10px 0;">
                     $$ F_{ht} = F_{Lorentz} \\Rightarrow \\frac{m \\cdot v^2}{r} = |q| \\cdot v \\cdot B \\Rightarrow r = \\frac{m \\cdot v}{|q| \\cdot B} $$
                 </div>
             </li>
         </ul>
-        <p>Do bán kính quỹ đạo \\( r \\) phụ thuộc vào tỉ số \\( \\frac{m}{|q|} \\), các ion nặng nhẹ khác nhau sẽ bị lệch theo các đường cong khác nhau và rơi vào những vị trí khác biệt trên bản phim máy dò [12, 14].</p>
+        <p>Do bán kính quỹ đạo \\( r \\) phụ thuộc vào tỉ số \\( \\frac{m}{|q|} \\), các ion nặng nhẹ khác nhau sẽ bị lệch theo các đường cong khác nhau và rơi vào những vị trí khác biệt trên bản phim máy dò.</p>
     </section>
 
     <section>
@@ -999,7 +1550,7 @@ $W_{d} = \\frac{1,333 \\cdot 10^{-12}}{1,6 \\cdot 10^{-13}} \\approx 8,33 \\text
         <ul>
             <li>Hai đồng vị có cùng điện tích q, cùng được tăng tốc bởi U &rArr; cùng năng lượng.</li>
             <li>Do khối lượng khác nhau (m<sub>22</sub> > m<sub>20</sub>) nên bán kính quỹ đạo khác nhau (R<sub>22</sub> > R<sub>20</sub>).</li>
-            <li>Chúng sẽ đập vào tấm phim tại hai vạch riêng biệt. Khoảng cách giữa hai vạch giúp tính toán chính xác khối lượng hoặc xác định tỉ lệ phần trăm đồng vị [7].</li>
+            <li>Chúng sẽ đập vào tấm phim tại hai vạch riêng biệt. Khoảng cách giữa hai vạch giúp tính toán chính xác khối lượng hoặc xác định tỉ lệ phần trăm đồng vị.</li>
         </ul>
     </section>
 </div>
@@ -1062,7 +1613,7 @@ $W_{d} = \\frac{1,333 \\cdot 10^{-12}}{1,6 \\cdot 10^{-13}} \\approx 8,33 \\text
         }],
 
         [{
-            title: 'Bài toán Máy quang phổ khối (Ví dụ)',
+            title: 'Bài toán Máy quang phổ khối',
             problem: `
 <p>
     Một máy quang phổ khối (khối phổ kế) được dùng để tách hai đồng vị của nguyên tố Kali là \\( ^{39}K \\) và \\( ^{41}K \\). Các nguyên tử Kali bị ion hóa một lần (mang điện tích \\( q = +e \\)), sau đó được tăng tốc bởi hiệu điện thế \\( U = 2000 \\text{ V} \\) rồi đi vào từ trường đều \\( B = 0,8 \\text{ T} \\) theo phương vuông góc với đường sức từ.
@@ -1119,6 +1670,36 @@ $W_{d} = \\frac{1,333 \\cdot 10^{-12}}{1,6 \\cdot 10^{-13}} \\approx 8,33 \\text
             status: 'ACTIVE'
         }],
         [
+            // Base Problem
+            {
+                question: `<p><strong>Câu 2.</strong> Để xác định các chất trong một mẫu, người ta dùng một máy được gọi là <strong>máy quang phổ khối</strong> hay khối phổ kế. Khi cho mẫu vào máy này, hạt có khối lượng $m$ bị ion hóa sẽ mang điện tích $q$. Sau đó, hạt được tăng tốc đến tốc độ $v$ nhờ hiệu điện thế $U$. Tiếp theo, hạt sẽ chuyển động vào vùng từ trường theo phương vuông góc với cảm ứng từ $\\vec{B}$.</p>
+
+<p>Lực từ tác dụng lên hạt có độ lớn $F = Bv|q|$, có phương vuông góc với cảm ứng từ $\\vec{B}$ và với vận tốc $\\vec{v}$ của hạt. Bán kính quỹ đạo tròn của hạt trong vùng có từ trường là $r$. Dựa trên tỉ số $\\dfrac{|q|}{m}$, có thể xác định được các chất trong mẫu.</p>
+
+<p><strong>a)</strong> Tốc độ của hạt bị thay đổi do tác dụng của từ trường trong máy.</p>
+
+<p><strong>b)</strong> Bỏ qua tốc độ ban đầu của hạt. Sau khi được tăng tốc bởi hiệu điện thế $U$, tốc độ của hạt là:</p>
+
+<p>\\[
+v = \\sqrt{\\dfrac{2|q|U}{m}}
+\\]</p>
+
+<p><strong>c)</strong> Tỉ số giữa độ lớn điện tích và khối lượng của hạt là:</p>
+
+<p>\\[
+\\dfrac{|q|}{m} = \\dfrac{2U}{B^2r^2}
+\\]</p>
+
+<p><strong>d)</strong> Biết $U = 3,00\\,\\text{kV}$; $B = 3,00\\,\\text{T}$; $1\\,\\text{amu} = 1,66\\cdot10^{-27}\\,\\text{kg}$; $|e| = 1,60\\cdot10^{-19}\\,\\text{C}$. Bán kính quỹ đạo của ion âm $^{35}\\text{Cl}^{-}$ trong vùng có từ trường là $r = 0,0156\\,\\text{m}$.</p>`,
+                options: [],
+                correct_answer: "",
+                level: 'HARD',
+                type: 'Essay',
+                status: 'ACTIVE',
+                reference: 'Đề minh họa THPT 2025 của Bộ Giáo dục',
+                solution: `Đáp án đang được đội ngũ PhysicMUT biên soạn`
+
+            },
             // PROBLEM 1
             {
                 question: `
@@ -1251,7 +1832,438 @@ $D = 2r = 2 \\cdot 20 \\text{ cm} = 40 \\text{ cm}$.</p>
 
 <p><strong>d) Sai.</strong> Khi ion đi vào buồng phân tách có từ trường $B'$, lực từ đóng vai trò là lực hướng tâm, ta có: <br> $qvB' = m\\frac{v^2}{R} \\Rightarrow R = \\frac{mv}{qB'}$. <br> Từ điều kiện chuyển động thẳng trong buồng hãm vận tốc, ta có $v = \\frac{E}{B}$. Thay vào biểu thức bán kính, ta được: <br> $R = \\frac{m}{qB'} \\cdot \\frac{E}{B} = \\frac{mE}{qBB'}$. <br> Do đó, biểu thức $R = \\frac{1}{B'} \\sqrt{\\frac{mE}{qB}}$ là không chính xác.</p>
         `
+            },
+            {
+                question: `Chọn đáp án ĐÚNG/SAI: <p><strong>Câu 1.</strong> Hình bên cho thấy các thành phần cơ bản của một máy quang phổ khối, có thể được sử dụng để đo khối lượng của một ion. Một ion có khối lượng $m$, điện tích $q$ được tạo ra ở nguồn $S$.</p>
+
+<p>Ion ban đầu đứng yên và được tăng tốc đến tốc độ $v$ nhờ hiệu điện thế $U$. Tiếp theo, ion đi vào buồng phân tách, trong đó có một từ trường đều $\\vec{B}$ vuông góc với quỹ đạo của ion.</p>
+
+<p>Lực từ tác dụng lên ion có độ lớn:</p>
+
+<p>\\[
+F = Bv|q|
+\\]</p>
+
+<p>có phương vuông góc với cảm ứng từ $\\vec{B}$ và với vận tốc $\\vec{v}$ của hạt.</p>
+
+<p>Bán kính quỹ đạo tròn của ion trong vùng có từ trường là $r$. Một cảm biến rộng nằm dọc theo đáy của buồng. Từ trường làm cho ion chuyển động tròn và va chạm vào cảm biến.</p>
+
+<div style="font-family: Arial, sans-serif; max-width: 640px; margin: 20px auto; padding: 18px; border: 1px solid #ddd; border-radius: 8px; background: #fff;">
+  <h4 style="text-align:center; margin-bottom:12px;">Mô hình máy quang phổ khối</h4>
+
+  <svg width="100%" height="360" viewBox="0 0 640 360">
+    <defs>
+      <marker id="arrowMassSpec2" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+        <path d="M0,0 L10,5 L0,10 Z" fill="black"/>
+      </marker>
+    </defs>
+
+    <rect x="220" y="40" width="350" height="160" fill="none" stroke="#4b43ff" stroke-width="4"/>
+
+    <g fill="#29d329">
+      <circle cx="250" cy="70" r="5"/><circle cx="290" cy="70" r="5"/><circle cx="330" cy="70" r="5"/><circle cx="370" cy="70" r="5"/><circle cx="410" cy="70" r="5"/><circle cx="450" cy="70" r="5"/><circle cx="490" cy="70" r="5"/><circle cx="530" cy="70" r="5"/>
+      <circle cx="250" cy="110" r="5"/><circle cx="290" cy="110" r="5"/><circle cx="330" cy="110" r="5"/><circle cx="370" cy="110" r="5"/><circle cx="410" cy="110" r="5"/><circle cx="450" cy="110" r="5"/><circle cx="490" cy="110" r="5"/><circle cx="530" cy="110" r="5"/>
+      <circle cx="250" cy="150" r="5"/><circle cx="290" cy="150" r="5"/><circle cx="330" cy="150" r="5"/><circle cx="370" cy="150" r="5"/><circle cx="410" cy="150" r="5"/><circle cx="450" cy="150" r="5"/><circle cx="490" cy="150" r="5"/><circle cx="530" cy="150" r="5"/>
+    </g>
+
+    <text x="370" y="125" font-size="20" font-style="italic">B</text>
+
+    <line x1="100" y1="200" x2="530" y2="200" stroke="#cc7a00" stroke-width="4"/>
+    <text x="500" y="182" font-size="15">Cảm biến</text>
+
+    <rect x="80" y="285" width="45" height="45" fill="#d5f4ef" stroke="#333" stroke-width="2"/>
+    <text x="96" y="314" font-size="18" font-style="italic">S</text>
+
+    <line x1="102" y1="285" x2="102" y2="240" stroke="black" stroke-width="2"/>
+    <line x1="102" y1="240" x2="80" y2="240" stroke="black" stroke-width="2"/>
+    <line x1="80" y1="240" x2="80" y2="200" stroke="black" stroke-width="2"/>
+    <line x1="80" y1="200" x2="220" y2="200" stroke="black" stroke-width="2"/>
+
+    <line x1="65" y1="245" x2="95" y2="245" stroke="black" stroke-width="2"/>
+    <line x1="70" y1="260" x2="90" y2="260" stroke="black" stroke-width="2"/>
+    <text x="55" y="238" font-size="18">−</text>
+    <text x="55" y="270" font-size="18">+</text>
+
+    <line x1="125" y1="285" x2="125" y2="245" stroke="black" stroke-width="2"/>
+    <line x1="125" y1="245" x2="220" y2="245" stroke="black" stroke-width="2"/>
+
+    <line x1="220" y1="245" x2="220" y2="200" stroke="black" stroke-width="2" stroke-dasharray="8,6"/>
+    <circle cx="220" cy="240" r="5" fill="red"/>
+    <text x="230" y="240" font-size="16" fill="red">+q</text>
+
+    <path d="M220 200 A120 120 0 0 1 460 200" fill="none" stroke="#666" stroke-width="2" stroke-dasharray="8,6" marker-end="url(#arrowMassSpec2)"/>
+    <line x1="340" y1="200" x2="460" y2="80" stroke="#777" stroke-width="2"/>
+    <text x="405" y="135" font-size="18" font-style="italic">r</text>
+
+    <line x1="220" y1="225" x2="460" y2="225" stroke="#999" stroke-width="2"/>
+    <line x1="220" y1="218" x2="220" y2="232" stroke="#999" stroke-width="2"/>
+    <line x1="460" y1="218" x2="460" y2="232" stroke="#999" stroke-width="2"/>
+    <text x="335" y="245" font-size="18" font-style="italic">x</text>
+  </svg>
+</div>
+
+<p><strong>a)</strong> Tốc độ của ion bị thay đổi do tác dụng của lực từ trường trong máy.</p>
+
+<p><strong>b)</strong> Biết $B = 80\\,\\text{mT}$, $U = 1000\\,\\text{V}$ và các ion có điện tích $q = +1,6\\cdot10^{-19}\\,\\text{C}$ va chạm vào cảm biến tại một điểm nằm ở vị trí $x = 1,6254\\,\\text{m}$. Khối lượng $m$ của các ion xấp xỉ là $3,4\\cdot10^{-25}\\,\\text{kg}$. <em>(Kết quả làm tròn đến hàng phần chục)</em></p>
+
+<p><strong>c)</strong> Sau khi được tăng tốc bởi hiệu điện thế $U$, tốc độ của ion là:</p>
+
+<p>\\[
+v = \\sqrt{\\frac{2|q|U}{m}}
+\\]</p>
+
+<p><strong>d)</strong> Giá trị của $x$ được xác định là:</p>
+
+<p>\\[
+x = \\sqrt{\\frac{2mU}{|q|B^2}}
+\\]</p>`,
+                options: [],
+                correct_answer: "",
+                level: 'HARD',
+                type: 'Essay',
+                reference: 'Đề khảo sát kỳ thi tốt nghiệp THPT năm học 2024-2025 - Môn Vật lí, 2025, Sở GD&ĐT Hải Phòng; Phần II, Câu 1, tr. 3/5',
+                solution: `Đáp án đang được đội ngũ PhysicMUT biên soạn`
+            },
+            {
+                question: `<p><strong>Câu 2.</strong> Máy quang phổ khối là thiết bị tách các ion theo tỷ lệ điện tích trên khối lượng của chúng. Một phiên bản cụ thể là máy quang phổ khối Bainbridge được minh họa như hình dưới.</p>
+
+<p>Các ion được tạo ra từ nguồn trước tiên được tăng tốc và đưa qua khu vực chọn vận tốc, là khu vực tồn tại đồng thời điện trường đều có cường độ điện trường $\\vec{E}$ và từ trường đều có cảm ứng từ $\\vec{B}$.</p>
+
+<p>Trong khu vực này, lực điện và lực từ tác dụng lên ion cân bằng nhau. Lực từ tác dụng lên ion mang điện tích $q$ có độ lớn:</p>
+
+<p>\\[
+F = Bv|q|
+\\]</p>
+
+<p>có phương vuông góc với cảm ứng từ $\\vec{B}$ và với vận tốc $\\vec{v}$ của nó.</p>
+
+<p>Tiếp theo, các ion đi vào trong vùng có từ trường đều có cảm ứng từ $\\vec{B_0}$, trong vùng này chúng chuyển động theo quỹ đạo là đường tròn bán kính $R$. Người ta dùng máy dò hạt để xác định bán kính quỹ đạo $R$ này.</p>
+
+<div style="font-family: Arial, sans-serif; max-width: 680px; margin: 20px auto; padding: 18px; border: 1px solid #ddd; border-radius: 8px; background: #fff;">
+  <h4 style="text-align:center; margin-bottom:12px;">Máy quang phổ khối Bainbridge</h4>
+
+  <svg width="100%" height="420" viewBox="0 0 680 420">
+    <defs>
+      <marker id="arrowBainbridge" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+        <path d="M0,0 L10,5 L0,10 Z" fill="black"/>
+      </marker>
+    </defs>
+
+    <text x="245" y="30" font-size="16">Nguồn</text>
+    <line x1="270" y1="35" x2="270" y2="90" stroke="black" stroke-width="2" marker-end="url(#arrowBainbridge)"/>
+
+    <rect x="185" y="45" width="80" height="10" fill="#aaa" stroke="black"/>
+    <rect x="285" y="45" width="80" height="10" fill="#aaa" stroke="black"/>
+    <rect x="185" y="70" width="80" height="10" fill="#aaa" stroke="black"/>
+    <rect x="285" y="70" width="80" height="10" fill="#aaa" stroke="black"/>
+
+    <rect x="220" y="95" width="40" height="105" fill="#ddd" stroke="black" stroke-width="2"/>
+    <rect x="285" y="95" width="40" height="105" fill="#ddd" stroke="black" stroke-width="2"/>
+
+    <text x="235" y="125" font-size="20">−</text>
+    <text x="235" y="160" font-size="20">−</text>
+    <text x="235" y="190" font-size="20">−</text>
+
+    <text x="300" y="125" font-size="20">+</text>
+    <text x="300" y="160" font-size="20">+</text>
+    <text x="300" y="190" font-size="20">+</text>
+
+    <text x="175" y="120" font-size="18">$\\vec{B}$</text>
+    <text x="340" y="120" font-size="18">$\\vec{E}$</text>
+    <text x="340" y="145" font-size="15">Khu vực chọn</text>
+    <text x="340" y="165" font-size="15">vận tốc</text>
+
+    <g font-size="20">
+      <text x="265" y="115">×</text><text x="265" y="145">×</text><text x="265" y="175">×</text>
+      <text x="280" y="115">×</text><text x="280" y="145">×</text><text x="280" y="175">×</text>
+      <text x="245" y="130">×</text><text x="300" y="130">×</text>
+      <text x="245" y="160">×</text><text x="300" y="160">×</text>
+    </g>
+
+    <line x1="270" y1="80" x2="270" y2="250" stroke="black" stroke-width="2" stroke-dasharray="6,5"/>
+
+    <rect x="185" y="210" width="80" height="10" fill="#aaa" stroke="black"/>
+    <rect x="285" y="210" width="80" height="10" fill="#aaa" stroke="black"/>
+    <rect x="185" y="235" width="80" height="10" fill="#aaa" stroke="black"/>
+    <rect x="285" y="235" width="80" height="10" fill="#aaa" stroke="black"/>
+
+    <g font-size="20">
+      <text x="220" y="270">×</text><text x="295" y="270">×</text><text x="390" y="270">×</text><text x="470" y="270">×</text><text x="555" y="270">×</text>
+      <text x="220" y="310">×</text><text x="295" y="310">×</text><text x="390" y="310">×</text><text x="470" y="310">×</text><text x="555" y="310">×</text>
+      <text x="220" y="350">×</text><text x="295" y="350">×</text><text x="390" y="350">×</text><text x="470" y="350">×</text><text x="555" y="350">×</text>
+      <text x="220" y="390">×</text><text x="295" y="390">×</text><text x="390" y="390">×</text><text x="470" y="390">×</text><text x="555" y="390">×</text>
+    </g>
+
+    <text x="565" y="300" font-size="18">$\\vec{B_0}$</text>
+
+    <path d="M270 250 A120 120 0 0 0 510 250" fill="none" stroke="black" stroke-width="2" stroke-dasharray="7,5"/>
+    <line x1="390" y1="250" x2="505" y2="365" stroke="black" stroke-width="2"/>
+    <text x="455" y="315" font-size="18">$R$</text>
+
+    <rect x="515" y="210" width="30" height="45" fill="#aaa" stroke="black" stroke-width="2"/>
+    <text x="485" y="195" font-size="16">Máy dò hạt</text>
+    <line x1="530" y1="255" x2="510" y2="250" stroke="black" stroke-width="2" stroke-dasharray="6,4"/>
+  </svg>
+</div>
+
+<p><strong>a)</strong> Mối quan hệ giữa tỉ lệ độ lớn điện tích trên khối lượng $\\dfrac{|q|}{m}$ và bán kính $R$ là:</p>
+
+<p>\\[
+\\frac{|q|}{m} = \\frac{E}{BB_0R}
+\\]</p>
+
+<p><strong>b)</strong> Trong khu vực chọn vận tốc, ion chuyển động thẳng đều.</p>
+
+<p><strong>c)</strong> Trong vùng từ trường đều $\\vec{B_0}$, lực từ làm ion chuyển động theo quỹ đạo tròn.</p>
+
+<p><strong>d)</strong> Các ion thoát ra được khỏi khu vực chọn vận tốc đều có tốc độ:</p>
+
+<p>\\[
+v = \\frac{B}{E}
+\\]</p>`,
+                options: [],
+                correct_answer: "",
+                level: 'HARD',
+                type: 'Essay',
+                reference: 'Đề thi thử tốt nghiệp THPT lần 1 năm 2026 - Môn Vật lí, 2026, Sở GD&ĐT Tuyên Quang / Trường THPT Chuyên; Phần 2 Câu 2, bắt đầu từ tr. 3/4',
+                solution: `Đáp án đang được đội ngũ PhysicMUT biên soạn`
+            },
+            {
+                question: `<p><strong>Câu 3(a).</strong> Phổ khối lượng của nguyên tố magnesium được cho như hình dưới đây.</p>
+
+<div style="font-family: Arial, sans-serif; max-width: 640px; margin: 20px auto; padding: 18px; border: 1px solid #ddd; border-radius: 8px; background: #fff;">
+  <h4 style="text-align:center; margin-bottom:12px;">Phổ khối lượng của magnesium</h4>
+
+  <svg width="100%" height="420" viewBox="0 0 640 420">
+    <line x1="100" y1="340" x2="560" y2="340" stroke="black" stroke-width="2"/>
+    <line x1="100" y1="40" x2="100" y2="340" stroke="black" stroke-width="2"/>
+
+    <g stroke="#999" stroke-width="1">
+      <line x1="100" y1="300" x2="560" y2="300"/>
+      <line x1="100" y1="260" x2="560" y2="260"/>
+      <line x1="100" y1="220" x2="560" y2="220"/>
+      <line x1="100" y1="180" x2="560" y2="180"/>
+      <line x1="100" y1="140" x2="560" y2="140"/>
+      <line x1="100" y1="100" x2="560" y2="100"/>
+      <line x1="100" y1="60" x2="560" y2="60"/>
+    </g>
+
+    <text x="20" y="170" font-size="18">độ phổ biến</text>
+    <text x="20" y="195" font-size="18">tương đối</text>
+    <text x="20" y="220" font-size="18">(%)</text>
+
+    <text x="70" y="345" font-size="18">0</text>
+    <text x="60" y="185" font-size="18">50</text>
+
+    <text x="185" y="365" font-size="18">23</text>
+    <text x="275" y="365" font-size="18">24</text>
+    <text x="365" y="365" font-size="18">25</text>
+    <text x="455" y="365" font-size="18">26</text>
+    <text x="545" y="365" font-size="18">27</text>
+
+    <text x="330" y="400" font-size="20">m/e</text>
+
+    <line x1="280" y1="340" x2="280" y2="80" stroke="black" stroke-width="5"/>
+    <line x1="370" y1="340" x2="370" y2="300" stroke="black" stroke-width="5"/>
+    <line x1="460" y1="340" x2="460" y2="295" stroke="black" stroke-width="5"/>
+  </svg>
+</div>
+
+<p><strong>(i)</strong> Từ phổ khối lượng, hãy hoàn thành bảng với độ phổ biến tương đối của ba đồng vị.</p>
+
+<table style="border-collapse: collapse; margin: 16px auto; width: 380px; text-align: center;">
+  <tr>
+    <th style="border:1px solid #555; padding:8px;">Đồng vị</th>
+    <th style="border:1px solid #555; padding:8px;">Độ phổ biến tương đối</th>
+  </tr>
+  <tr>
+    <td style="border:1px solid #555; padding:8px;">$^{24}\\text{Mg}$</td>
+    <td style="border:1px solid #555; padding:8px;"></td>
+  </tr>
+  <tr>
+    <td style="border:1px solid #555; padding:8px;">$^{25}\\text{Mg}$</td>
+    <td style="border:1px solid #555; padding:8px;"></td>
+  </tr>
+  <tr>
+    <td style="border:1px solid #555; padding:8px;">$^{26}\\text{Mg}$</td>
+    <td style="border:1px solid #555; padding:8px;"></td>
+  </tr>
+</table>
+
+<p><strong>(ii)</strong> Sử dụng các giá trị ở phần (i) để tính nguyên tử khối tương đối $A_r$ của magnesium, làm tròn đến hai chữ số thập phân.</p>
+
+<p style="text-align:right;">$A_r(\\text{Mg}) =$ ........................................ [1]</p>`,
+                options: [],
+                correct_answer: "",
+                level: 'HARD',
+                type: 'Essay',
+                reference: 'Chemistry 9701/41 Paper 4 Structured Questions, 2015, Cambridge International Examinations/UCLES; Question 3(a), tr. 4-5/20',
+                solution: `Đáp án đang được đội ngũ PhysicMUT biên soạn`
+            },
+            {
+                question: `<p><strong>Câu 5.</strong> Hợp chất $X$ chỉ chứa các nguyên tử carbon, hydrogen và oxygen.</p>
+
+<p>Phổ khối lượng của $X$ được ghi lại. Thông tin về hai peak có giá trị $m/e$ lớn hơn 100 được thể hiện trong Hình 5.1.</p>
+
+<div style="font-family: Arial, sans-serif; max-width: 560px; margin: 20px auto; padding: 18px; border: 1px solid #ddd; border-radius: 8px; background: #fff;">
+  <h4 style="text-align:center; margin-bottom:12px;">Hình 5.1. Phổ khối lượng của hợp chất $X$</h4>
+
+  <svg width="100%" height="430" viewBox="0 0 560 430">
+    <defs>
+      <marker id="arrowMassSpectrumX" markerWidth="10" markerHeight="10" refX="8" refY="5" orient="auto">
+        <path d="M0,0 L10,5 L0,10 Z" fill="black"/>
+      </marker>
+    </defs>
+
+    <line x1="120" y1="350" x2="440" y2="350" stroke="black" stroke-width="2"/>
+    <line x1="120" y1="350" x2="120" y2="60" stroke="black" stroke-width="2" marker-end="url(#arrowMassSpectrumX)"/>
+
+    <text x="35" y="205" font-size="18">độ phổ biến</text>
+    <text x="35" y="230" font-size="18">tương đối</text>
+
+    <text x="185" y="375" font-size="18">100</text>
+    <text x="255" y="375" font-size="18">101</text>
+    <text x="325" y="375" font-size="18">102</text>
+    <text x="395" y="375" font-size="18">103</text>
+
+    <line x1="190" y1="350" x2="190" y2="360" stroke="black"/>
+    <line x1="260" y1="350" x2="260" y2="360" stroke="black"/>
+    <line x1="330" y1="350" x2="330" y2="360" stroke="black"/>
+    <line x1="400" y1="350" x2="400" y2="360" stroke="black"/>
+
+    <text x="275" y="410" font-size="18">$m/e$</text>
+
+    <line x1="330" y1="350" x2="330" y2="80" stroke="black" stroke-width="2"/>
+    <text x="315" y="70" font-size="18">100</text>
+
+    <line x1="400" y1="350" x2="400" y2="330" stroke="black" stroke-width="2"/>
+    <text x="388" y="320" font-size="18">6.5</text>
+  </svg>
+
+  <p style="text-align:center; font-weight:bold;">Fig. 5.1</p>
+</div>
+
+<p><strong>(a)</strong> Một phân tử của $X$ chứa 6 nguyên tử carbon.</p>
+
+<p>Hãy chứng minh điều này là đúng bằng cách sử dụng thông tin từ Hình 5.1. Trình bày cách làm.</p>
+
+<p>.................................................................................................................... [2]</p>
+
+<p><strong>(b)</strong> Đề xuất công thức phân tử của $X$ bằng cách sử dụng thông tin từ Hình 5.1.</p>
+
+<p>.................................................................................................................... [1]</p>
+
+<p><strong>(c)</strong> Đề xuất công thức phân tử của mảnh ion của $X$ tại $m/e = 31$.</p>
+
+<p>.................................................................................................................... [1]</p>`,
+                options: [],
+                correct_answer: "",
+                level: 'HARD',
+                type: 'Essay',
+                reference: 'Specimen for examination from 2022, 2022, Cambridge/UCLES; Question 5(a)-(c), tr. 14-15/18.',
+                solution: `Đáp án đang được đội ngũ PhysicMUT biên soạn`
+            },
+            {
+                question: `<p><strong>(b)</strong> Phổ khối lượng của 1-iodopentane được cho như hình dưới đây.</p>
+
+<div style="font-family: Arial, sans-serif; max-width: 660px; margin: 20px auto; padding: 18px; border: 1px solid #ddd; border-radius: 8px; background: #fff;">
+  <h4 style="text-align:center; margin-bottom:12px;">Phổ khối lượng của 1-iodopentane</h4>
+
+  <svg width="100%" height="420" viewBox="0 0 660 420">
+    <line x1="120" y1="340" x2="580" y2="340" stroke="black" stroke-width="2"/>
+    <line x1="120" y1="40" x2="120" y2="340" stroke="black" stroke-width="2"/>
+    <line x1="580" y1="40" x2="580" y2="340" stroke="black" stroke-width="2"/>
+    <line x1="120" y1="40" x2="580" y2="40" stroke="black" stroke-width="2"/>
+
+    <text x="25" y="170" font-size="18">cường độ</text>
+    <text x="25" y="195" font-size="18">tương đối</text>
+
+    <text x="90" y="345" font-size="16">0</text>
+    <text x="85" y="295" font-size="16">20</text>
+    <text x="85" y="235" font-size="16">40</text>
+    <text x="85" y="175" font-size="16">60</text>
+    <text x="85" y="115" font-size="16">80</text>
+    <text x="75" y="55" font-size="16">100</text>
+
+    <text x="140" y="365" font-size="16">20</text>
+    <text x="195" y="365" font-size="16">40</text>
+    <text x="250" y="365" font-size="16">60</text>
+    <text x="305" y="365" font-size="16">80</text>
+    <text x="360" y="365" font-size="16">100</text>
+    <text x="420" y="365" font-size="16">120</text>
+    <text x="480" y="365" font-size="16">160</text>
+    <text x="545" y="365" font-size="16">200</text>
+
+    <text x="330" y="395" font-size="18">$m/z$</text>
+
+    <line x1="160" y1="340" x2="160" y2="285" stroke="black" stroke-width="2"/>
+    <line x1="190" y1="340" x2="190" y2="310" stroke="black" stroke-width="2"/>
+    <line x1="200" y1="340" x2="200" y2="260" stroke="black" stroke-width="2"/>
+    <line x1="207" y1="340" x2="207" y2="55" stroke="black" stroke-width="3"/>
+    <line x1="235" y1="340" x2="235" y2="315" stroke="black" stroke-width="2"/>
+
+    <line x1="272" y1="340" x2="272" y2="135" stroke="black" stroke-width="3"/>
+    <line x1="405" y1="340" x2="405" y2="335" stroke="black" stroke-width="2"/>
+    <line x1="438" y1="340" x2="438" y2="336" stroke="black" stroke-width="2"/>
+    <line x1="472" y1="340" x2="472" y2="334" stroke="black" stroke-width="2"/>
+    <line x1="574" y1="340" x2="574" y2="325" stroke="black" stroke-width="2"/>
+
+    <text x="187" y="100" font-size="20" font-weight="bold">Z</text>
+    <text x="252" y="160" font-size="20" font-weight="bold">Y</text>
+    <text x="552" y="320" font-size="20" font-weight="bold">X</text>
+  </svg>
+</div>
+
+<p><strong>(i)</strong> Peak được kí hiệu $X$ cho biết thông tin gì? Biết $m/z = 198$.</p>
+
+<p>.................................................................................................................... [1]</p>
+
+<p><strong>(ii)</strong> Viết công thức cấu tạo của các ion tạo ra các peak được kí hiệu $Y$ và $Z$.</p>
+
+<p>$Y$ $(m/z = 71)$ ....................................................................................................................</p>
+
+<p>$Z$ $(m/z = 43)$ .................................................................................................................... [2]</p>
+
+<p><strong>(c)</strong> 2-iodo-2-methylbutane là một đồng phân của 1-iodopentane.</p>
+
+<p><strong>(i)</strong> Vẽ cấu trúc của 2-iodo-2-methylbutane.</p>
+
+<p>.................................................................................................................... [1]</p>
+
+<p><strong>(ii)</strong> Đề xuất <strong>một điểm giống nhau</strong> và <strong>một điểm khác nhau</strong> giữa phổ khối lượng của 1-iodopentane và 2-iodo-2-methylbutane.</p>
+
+<p>Điểm giống nhau ....................................................................................................................</p>
+
+<p>....................................................................................................................</p>
+
+<p>Điểm khác nhau ....................................................................................................................</p>
+
+<p>.................................................................................................................... [2]</p>`,
+                options: [],
+                correct_answer: "",
+                level: 'HARD',
+                type: 'Essay',
+                reference: 'Chemistry A - H032/02 Depth in Chemistry, 2019, OCR; Question 3(b)-(c), tr. 9-10/20',
+                solution: `Đáp án đang được đội ngũ PhysicMUT biên soạn`
             }
+            // {
+            //     question: ``,
+            //     options: [],
+            //     correct_answer: "",
+            //     level: 'HARD',
+            //     type: 'Essay',
+            //     reference: 'GCSE (9-1) Chemistry A J248/04, 2021, OCR; mục (a), tr. 29',
+            //     solution: `Đáp án đang được đội ngũ PhysicMUT biên soạn`
+            // },
+            // {
+            //     question: ``,
+            //     options: [],
+            //     correct_answer: "",
+            //     level: 'HARD',
+            //     type: 'Essay',
+            //     reference: 'A Level Chemistry B (Salters) Fundamentals of Chemistry, 2024, OCR; mục (f), quanh tr. 36',
+            //     solution: `Đáp án đang được đội ngũ PhysicMUT biên soạn`
+            // },
         ]
     );
 

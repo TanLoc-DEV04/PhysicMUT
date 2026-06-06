@@ -46,7 +46,10 @@ function Exercise({ exercises = [] }: ExerciseProps) {
                 <div id={`exercise-${item.id}`} className="scroll-mt-24">
                 <Card 
                     title={<div className="flex justify-between items-center w-full">
-                        <span className="font-bold">Câu hỏi</span>
+                        <div className="flex items-baseline gap-2">
+                            <span className="font-bold">Câu hỏi</span>
+                            {item.reference && <span className="text-xs text-gray-400 font-normal">{item.reference}</span>}
+                        </div>
                         <Tag color={item.level === 'EASY' ? 'green' : item.level === 'MEDIUM' ? 'orange' : 'red'}>
                             {item.level}
                         </Tag>

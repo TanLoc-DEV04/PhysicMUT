@@ -30,7 +30,15 @@ function Example({ examples = [] }: ExampleProps) {
             return (
               <List.Item>
                 <div id={`example-${item.id}`} className="scroll-mt-24">
-                <Card title={item.title} className="hover:shadow-md transition-shadow">
+                <Card 
+                  title={
+                    <div className="flex items-baseline gap-2">
+                        <span>{item.title}</span>
+                        {item.reference && <span className="text-xs text-gray-400 font-normal">{item.reference}</span>}
+                    </div>
+                  } 
+                  className="hover:shadow-md transition-shadow"
+                >
                   <MathJaxRenderer className="font-semibold mb-2" html={item.problem} />
                   
                   <Collapse ghost 
