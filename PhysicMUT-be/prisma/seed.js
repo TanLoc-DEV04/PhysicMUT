@@ -127,24 +127,48 @@ async function main() {
     // --- 1. CONTENT CREATION ---
     console.log('Creating 3D Model Content...');
 
+    // KỸ THUẬT CHỐNG TRÀN RAM (OOM) TRÊN RAILWAY: CHIA NHỎ MẢNG DỮ LIỆU
+    const chunkArray = (array, size) => {
+        const chunks = [];
+        for (let i = 0; i < array.length; i += size) {
+            chunks.push(array.slice(i, i + size));
+        }
+        return chunks;
+    };
+
+    // Hàm chèn dữ liệu theo từng nhóm nhỏ, cho phép Garbage Collection hoạt động
+    const seedInBatches = async (dataArray, modelDelegate, typeName) => {
+        if (!dataArray || dataArray.length === 0) return;
+        const BATCH_SIZE = 10; // Đẩy 10 bản ghi một lúc
+        const chunks = chunkArray(dataArray, BATCH_SIZE);
+        
+        for (let i = 0; i < chunks.length; i++) {
+            await modelDelegate.createMany({ data: chunks[i] });
+            console.log(`  - Đã seed ${typeName} chunk ${i + 1}/${chunks.length}`);
+            
+            // Nghỉ 100ms giữa các lần insert để RAM tự dọn dẹp, chống Crash
+            await new Promise(resolve => setTimeout(resolve, 100));
+        }
+    };
+
     // Helper to create content — links Theory/Example/Exercise directly to Model3D via model_type_name
     const createModelContent = async (modelData, theories, examples, exercises) => {
         const { model_type_name } = modelData;
 
-        // Inject type name into each content item
-        const theoriesWithType = theories.map(t => ({ ...t, theory_type_name: model_type_name }));
-        const examplesWithType = examples.map(e => ({ ...e, example_type_name: model_type_name }));
-        const exercisesWithType = exercises.map(ex => ({ ...ex, exercise_type_name: model_type_name }));
+        // 1. Tạo Model3D trước
+        await prisma.model3D.create({ data: modelData });
 
-        await prisma.model3D.create({
-            data: {
-                ...modelData,
-                theories: { create: theoriesWithType },
-                examples: { create: examplesWithType },
-                exercises: { create: exercisesWithType },
-            }
-        });
-        console.log(`Created Model3D: ${model_type_name}`);
+        // 2. Gắn Foreign Key (model_type_name) vào tất cả các item trước khi insert
+        const theoriesWithType = theories.map(t => ({ ...t, model_type_name, theory_type_name: model_type_name }));
+        const examplesWithType = examples.map(e => ({ ...e, model_type_name, example_type_name: model_type_name }));
+        const exercisesWithType = exercises.map(ex => ({ ...ex, model_type_name, exercise_type_name: model_type_name }));
+
+        // 3. Sử dụng Chunking để chèn từ từ vào Database
+        await seedInBatches(theoriesWithType, prisma.theory, 'Theories');
+        await seedInBatches(examplesWithType, prisma.example, 'Examples');
+        await seedInBatches(exercisesWithType, prisma.exercise, 'Exercises');
+
+        console.log(`✅ Hoàn tất Model3D: ${model_type_name}\n`);
     };
 
     // 1. CYCLOTRON

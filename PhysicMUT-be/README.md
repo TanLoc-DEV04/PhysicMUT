@@ -105,3 +105,94 @@ railway run npx prisma db push
 # Chạy seed lên database của Railway
 railway run npx prisma db seed
 ```
+
+
+### Cách 3: Dùng "Custom Start Command" trên Railway (Tự động khi Deploy)
+
+Nếu bạn không dùng gói Premium của Railway hoặc muốn quá trình cập nhật database hoàn toàn tự động mỗi lần deploy code mới, bạn có thể thiết lập **Custom Start Command** trong phần cấu hình (Settings) của service trên Railway.
+
+Thay vì chỉ khởi động app bằng `node dist/index.js`, hãy nhập lệnh sau vào ô Custom Start Command:
+
+```bash
+npx prisma migrate deploy && npx prisma db seed && node dist/index.js
+```
+
+**Giải thích lệnh:**
+1. `npx prisma migrate deploy`: Áp dụng các thay đổi schema (migration) mới nhất lên database của Railway.
+2. `npx prisma db seed`: Tự động chạy lệnh seed để nạp/cập nhật dữ liệu vào database.
+3. `node dist/index.js`: Cuối cùng, khởi động server backend của bạn sau khi database đã sẵn sàng.
+
+> **Lưu ý quan trọng cho lệnh seed:** Để `npx prisma db seed` chạy được, bạn phải chắc chắn trong file `package.json` đã có khai báo phần `"prisma": { "seed": "node prisma/seed.js" }` (hoặc lệnh tương ứng chạy file seed của bạn).
+
+---
+
+### Quy trình cập nhật khi có Commit mới trên GitHub
+
+Khi bạn push commit mới lên GitHub, Railway sẽ tự động kích hoạt (trigger) quá trình build và deploy lại dự án. Để quản trị quá trình cập nhật database mà không gặp lỗi, bạn có 2 cách thực hiện:
+
+#### Cách 1: Quy trình thủ công (Chuyển đổi lệnh qua lại trên Railway)
+1. **Khi commit có cập nhật DB (Schema) hoặc cần chạy dữ liệu Seed mới:**
+   - **Bước 1:** Lên Railway Dashboard, chuyển đổi **Custom Start Command** thành:
+     ```bash
+     npx prisma migrate deploy && npx prisma db seed && node dist/index.js
+     ```
+   - **Bước 2:** Thực hiện push commit mới lên GitHub. Railway sẽ chạy lệnh này, tự động nâng cấp DB và seed dữ liệu mới.
+   - **Bước 3:** Sau khi ứng dụng deploy thành công (dữ liệu đã vào DB), hãy đổi **Custom Start Command** về lại:
+     ```bash
+     npx prisma migrate deploy && node dist/index.js
+     ```
+     *(Điều này giúp tránh việc chạy lại file Seed gây lỗi trùng lặp dữ liệu nếu ứng dụng của bạn tự động restart hoặc deploy các commit sau)*.
+
+2. **Khi commit chỉ sửa code logic thông thường (Không đổi DB, không cần Seed lại):**
+   - Giữ nguyên lệnh: `npx prisma migrate deploy && node dist/index.js`. Lệnh này chỉ chạy migration (nếu có file migration mới phát sinh) mà không chạy lại seed, giúp deploy diễn ra trơn tru.
+
+#### Cách 2: Quy trình tự động tối ưu (Khuyên dùng - Không cần đổi lệnh qua lại)
+Để tránh phải đổi cấu hình trên Railway thủ công, bạn hãy tối ưu hóa file `prisma/seed.js` để có thể **chạy đi chạy lại nhiều lần mà không bị lỗi trùng dữ liệu** (Idempotent):
+
+1. **Sử dụng `upsert` thay vì `create`:**
+   Nếu dùng `upsert`, Prisma sẽ kiểm tra xem bản ghi đó đã tồn tại chưa (dựa vào trường Unique/ID). Nếu có rồi thì chỉ cập nhật (update), chưa có thì mới tạo mới (create).
+2. **Kiểm tra số lượng dữ liệu trước khi Seed:**
+   ```javascript
+   const recordCount = await prisma.user.count(); // hoặc tên bảng khác của bạn
+   if (recordCount === 0) {
+     // Chỉ chèn dữ liệu mẫu nếu bảng đó chưa có dữ liệu nào
+   }
+   ```
+
+Khi file `seed.js` đã an toàn (chạy nhiều lần không lỗi), bạn có thể **luôn luôn** giữ **Custom Start Command** cố định là:
+```bash
+npx prisma migrate deploy && npx prisma db seed && node dist/index.js
+```
+Mỗi lần push commit mới lên GitHub, Railway sẽ tự động migrate và chạy seed mà không bao giờ gặp lỗi trùng dữ liệu.
+
+---
+
+## 5. Khắc phục lỗi thường gặp trên Railway (Troubleshooting)
+
+### Lỗi 1: `ERROR (catatonit:2): failed to exec pid1: No such file or directory` (ở phía Postgres)
+* **Nguyên nhân:** Đây là lỗi phân rã hình ảnh container của Railway (cơ chế cache image bị lỗi hoặc hỏng runtime). Nó khiến container khởi tạo Postgres bị crash-loop liên tục.
+* **Cách xử lý:**
+  1. Vào dashboard của Railway, bấm chọn service **Postgres**.
+  2. Mở Command Palette bằng tổ hợp phím `Ctrl + K` (Windows) hoặc `Cmd + K` (macOS).
+  3. Gõ tìm kiếm lệnh: **"Redeploy source image"** và chọn nó.
+  4. Railway sẽ tải lại image sạch của Postgres và tự động chạy lại mà không mất dữ liệu hiện có trong volume.
+
+### Lỗi 2: `Error: P1001: Can't reach database server at postgres.railway.internal:5432` (ở phía Backend/Express)
+* **Nguyên nhân:** Prisma Client ở phía backend không kết nối được tới database PostgreSQL. Nguyên nhân chính thường là do service Postgres đang bị sập (như Lỗi 1 ở trên).
+* **Cách xử lý:**
+  1. Kiểm tra trạng thái của service Postgres trước. Hãy sửa lỗi bên Postgres trước (áp dụng Cách khắc phục Lỗi 1).
+  2. Sau khi Postgres báo trạng thái **Active** xanh lá, hãy vào dịch vụ Backend của bạn và bấm **Re-deploy** hoặc **Restart** để server kết nối lại.
+
+### Lỗi 3: `Connection terminated unexpectedly` (Kết nối bị ngắt đột ngột)
+* **Nguyên nhân:** Lỗi này có thể xảy ra ở cả pgAdmin, Prisma Client (ở máy local hoặc trên Railway) khi đang chạy truy vấn/migration. Các nguyên nhân phổ biến gồm:
+  1. **Postgres bị crash/restart:** Do database gặp lỗi container (như Lỗi 1) hoặc bị quá tải tài nguyên (RAM/CPU của gói miễn phí bị tràn), khiến Railway tự động ngắt kết nối.
+  2. **Quá giới hạn kết nối (Connection Pool):** Số lượng kết nối mở đồng thời vượt quá giới hạn cho phép của gói Database.
+  3. **Mạng/Proxy chập chờn:** Đường truyền mạng hoặc proxy trung gian của Railway bị nghẽn.
+* **Cách xử lý:**
+  - **Khắc phục nhanh:** Kiểm tra xem Postgres có đang hoạt động ổn định không. Nếu Postgres đang crash-loop, hãy chạy **"Redeploy source image"** cho Postgres. Tiếp theo, hãy bấm **Re-deploy** lại service Backend.
+  - **Giới hạn Connection Pool:** Trong chuỗi kết nối `DATABASE_URL` (ở cả `.env` local và biến môi trường trên Railway), hãy giới hạn số lượng kết nối đồng thời và tăng thời gian timeout bằng cách thêm các tham số này vào cuối URL:
+    ```env
+    DATABASE_URL="postgresql://...&connection_limit=5&connect_timeout=30&pool_timeout=30"
+    ```
+    *(Thay đổi số `5` tùy thuộc vào giới hạn kết nối của gói Database bạn đang dùng)*.
+
